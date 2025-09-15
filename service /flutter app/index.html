@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Code Regime-Flutter</title>
+</head>
+<body>
+    <header class="header">
+        <img src="images/background.png" alt="Gradient Background" class="bg-img">
+
+        <nav class="navbar">
+            <div class="logo"><img src="images/logo.png" alt=""></div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us <img src="images/nav-arrow.png" alt="nav-arrow"></a></li>
+                <li><a href="#">Services <img src="images/nav-arrow.png" alt="nav-arrow"></a></li>
+                <li><a href="#">Products <img src="images/nav-arrow.png" alt="nav-arrow"></a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
+            <a href="" class="contact-btn">Contact Us</a>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Flutter App Development Company</h1>
+            <p>Flutter App Development Services brings a dynamic approach by giving a power-packed framework that allows developers to make visually appealing and high-standard quality apps with a single code base. Code Regime Technologies is a premium Flutter App Development Company, experts in deploying quality Flutter app development services crafted to meet the specific needs of your business, ensuring a flawless user experience and enlarging your ROI.</p>
+            <a href="#" class="cta-btn">Let's get started</a>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+            
+            if (!navbar.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Close menu when window is resized to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 640) {
+                document.getElementById('navLinks').classList.remove('active');
+            }
+        });
+    </script>
+<!--Second section-->
+    <section class="app-section">
+        <div class="container">
+            <div class="image-container">
+                <img src="images/second-img.png" alt="Tech Illustration">
+            </div>
+            <div class="content">
+                <h2>Boosting Your App with One Code Base</h2>
+                <p>
+                    One of the most prominent advantages of using Flutter App Development 
+                    Services is the ability to write a single code base that can be delivered<br> 
+                    across all platforms, including iOS and Android.
+                </p>
+                <p>
+                    Code Regime Technologies is one of the finest Flutter App Development 
+                    Company, our professional Flutter developers integrate the efficiency of <br>
+                    Flutter to make responsive and engaging apps that run flawlessly on all 
+                    devices. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--why choose section-->
+    <section class="choose-flutter">
+        <h2>Why Choose App Development Using <br> Flutter?</h2>
+        <div class="cards">
+            <div class="card large">
+                <div class="icon"><img src="images/cost.png" alt="Cost-worthy"></div>
+                <h3>Cost-worthy</h3>
+                <p>By choosing Flutter App Development Services, you save on making <br> costs without compromising on high quality.</p>
+            </div>
+
+            <div class="card large">
+                <div class="icon"><img src="images/market.png" alt="Market Reach"></div>
+                <h3>Market Reach</h3>
+                <p>Using Flutter to develop and launch your app at your needful time. <br> The framework's effective features are real-time, boosting the <br> making process and fixing error-free time.</p>
+            </div>
+        </div>
+
+        <div class="small-cards">
+            <div class="card small">
+                <div class="icon"><img src="images/high.png" alt="High Standard Quality"></div>
+                <h3>High Standard Quality</h3>
+                <p>Using Flutter’s rich set of widgets and extensive <br> libraries, developers can create feature-rich <br> applications that give a native-like experience <br> on both Android and iOS platforms.</p>
+            </div>
+
+            <div class="card small">
+                <div class="icon"><img src="images/bespoke.png" alt="Bespoke Solutions"></div>
+                <h3>Bespoke Solutions</h3>
+                <p>Flutter’s comprehensive methods allow the developers to customize every aspect of your app, from its design <br> to its operational functions.</p>
+            </div>
+
+            <div class="card small">
+                <div class="icon"><img src="images/effective.png" alt="Effective Technical Support"></div>
+                <h3>Effective Technical Support</h3>
+                <p>We mean continuous improvements, extensive documentation, and a wealth of resources at <br> your deployment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- unique section -->
+    <section class="unique-section">
+        <h1 class="section-title2">Unique Flutter Development Service from <br> Code Regime Technologies </h1>
+        <p class="section-subtitle">Code Regime Technologies, the best Flutter App Development Company, can understand that your business has specific needs <br> and difficulties. Our Flutter App Development Services are crafted to give bespoke solutions that match your business needs.</p>
+        
+        <div class="unique-grid">
+          <div class="unique-item">
+            <img src="images/flutter.png" alt="Flutter Consulting" class="unique-image">
+            <h2 class="unique-title">Flutter Consulting</h2>
+            <p class="unique-description"> We are here to understand your business plan, specific 
+                target audience, and the features you want to add to 
+                the app. 
+            </p>
+          </div>
+
+          <div class="unique-item">
+            <img src="images/crafted.png" alt="Crafted-Making Process" class="unique-image">
+            <h2 class="unique-title">Crafted-Making Process</h2>
+            <p class="unique-description"> Our making process is highly convertible and collaborative. From the start to the final delivery, we ensure your app is created to maximize standard quality. 
+            </p>
+          </div>
+
+          <div class="unique-item">
+            <img src="images/user-centric.png" alt="User-Centric View" class="unique-image">
+            <h2 class="unique-title">User-Centric View</h2>
+            <p class="unique-description">User experience so our developers use Flutter’s enriched number of widgets to create intuitive, engaging, and user-friendly interfaces. </p>
+          </div>
+          
+          <div class="unique-item">
+            <img src="images/reliable.png" alt="Reliable Solutions" class="unique-image">
+            <h2 class="unique-title">Reliable Solutions</h2>
+            <p class="unique-description">Our Flutter App Development Services are reliable, 
+                allowing you to include the latest specifications 
+                and operations as your business expands. </p>
+          </div>
+
+          <div class="unique-item">
+            <img src="images/tech.png" alt="Tech Support" class="unique-image">
+            <h2 class="unique-title">Tech Support</h2>
+            <p class="unique-description"> We give overall deployment support, ensuring your 
+                app remains up-to-date with innovative technologies. </p>
+          </div>
+        </div>
+      </section>
+
+    <!--FAQ section-->
+    <!-- Faq Section -->
+ <section class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+       
+        <div class="faq-container">
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span class="faq-question-text"> What makes Flutter app development a good choice for my business?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">Flutter allows you to build high-quality apps for both iOS and Android from a single code base, saving development time and cost. With its rich widget library and native-like performance, it delivers responsive and engaging apps that boost user experience and ROI.</p>
+                </div>
+            </div>
+   
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Why should I choose Code Regime Technologies for Flutter development?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">Code Regime Technologies is a premium Flutter App Development Company known for delivering bespoke and reliable app solutions. Our expert team focuses on user-centric design, quality assurance, and tailored development to meet your business goals efficiently.</p>
+                </div>
+            </div>
+   
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Will my Flutter app work smoothly on both Android and iOS?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">Yes. Flutter is built to ensure seamless performance across both platforms using a single code base. Our developers at Code Regime Technologies make sure your app feels and functions like a native app on all devices.</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="faq-item">
+            <div class="faq-question">
+                <span class="faq-question-text">Do you provide ongoing support after the app is launched?</span>
+                <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-answer">
+                <p class="faq-answer-text">Absolutely. We offer full-scale technical support and maintenance even after deployment. Our team ensures your app stays updated with the latest features, performance enhancements, and bug fixes.</p>
+            </div>
+        </div>
+ 
+        <div class="faq-item">
+            <div class="faq-question">
+                <span class="faq-question-text">Can you customize the app based on my specific business requirements?</span>
+                <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-answer">
+                <p class="faq-answer-text">Yes. We specialize in bespoke Flutter app development. Whether it’s UI/UX design, feature integration, or specific workflows, we tailor every aspect of the app to align with your business needs and target audience.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+           
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+               
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                   
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+     <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-about">
+          <img src="images/logo.png" alt="Code Regime Logo" class="footer-logo">
+          <p>At Code Regime Technologies, we specialize in innovative software development.</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/company/72574091/admin/dashboard/" class="social-icon linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
+            <a href="https://x.com/RegimeCode" class="social-icon twitter"><img src="images/twitterx.png" alt="twitter"></a>
+            <a href="https://www.facebook.com/profile.php?id=61572308472454" class="social-icon facebook"><img src="images/facebook.png" alt="twitter"></a>
+            <a href="https://www.instagram.com/coderegimetechnologies/?hl=en" class="social-icon instagram"><img src="images/instagram.png" alt="twitter"></a>
+            <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo" class="social-icon threads"><img src="images/threads.png" alt="twitter"></a>
+          </div>
+        </div>
+  
+        <!-- Useful Links -->
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Legal -->
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Us -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 231c, 3rd Floor, Kamarajar Salai, Madurai, TamilNadu 625009</p>
+          <p><i class="fas fa-phone"></i> +91 7418802770</p>
+          <p><i class="fas fa-envelope"></i> coderegime@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Copyright 2025, All Rights Reserved by Code Regime</p>
+      </div>
+    </footer>
+</body>
+</html>

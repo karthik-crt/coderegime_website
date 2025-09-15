@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Regime - iOS App Development Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+   <!-- Header -->
+  <header>
+    <div class="hero-container">
+      <div class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="/">
+            <img src="images/logo.png" alt="Code Regime Logo">
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav id="nav-menu">
+          <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li class="dropdown">
+              <a href="#">About Us <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#">Services <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#">Products <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span></a>
+            </li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact Button -->
+        <div class="contact-btn">
+          <a href="/contact" class="btn-outline">Contact Us</a>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>
+          iOS APP
+          <span class="highlight">DEVELOPMENT</span>
+          <br>COMPANY
+        </h1>
+        <p>
+          Code Regime Technologies is a complete digital software solution for creating innovative 
+          and robust iOS applications that match the requirements of premium clients all over the globe. We 
+          are the leading competitor in the core industry, iOS App Development Company.
+        </p>
+        <div class="cta-button">
+          <a href="#" class="btn-primary">Let's get started <span class="arrow">›</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- Hero image example -->
+    <!-- <div class="hero-image">
+      <img src="images/head phone.png" alt="head phone">
+    </div> -->
+  </section>
+
+  <script>
+    // Mobile menu toggle functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
+
+    <section class="services-section">
+        <div class="container">
+            <div class="services-content">
+                <div class="text-content">
+                    <h2>we Offer Custom iOS App Development Services</h2>
+                    <p class="initial-text">
+                        At Code Regime Technologies, we pride ourselves on being a versatile iOS App Development Company that brings custom solutions to businesses of all cadres.
+                    </p>
+                    <div class="additional-text" id="additional-text">
+                        <p>
+                            Our team of experienced developers and designers works collaboratively with clients to understand their unique needs and create apps that not only meet but exceed expectations. We follow an agile development process, from plan gathering and crafted design to development and deployment, ensuring that every side of your app is crafted to perfection.
+                        </p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleText()">
+                        <span id="read-more-text">Read more</span>
+                        <img src="images/icon.png" alt="arrow" class="arrow-icon">
+                    </button>
+                </div>
+                <div class="image-container">
+                    <img src="images/second-img.png" alt="second sec img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple script to toggle the additional text
+        function toggleText() {
+            var additionalText = document.getElementById("additional-text");
+            var readMoreText = document.getElementById("read-more-text");
+            
+            if (additionalText.style.display === "block") {
+                additionalText.style.display = "none";
+                readMoreText.textContent = "Read more";
+            } else {
+                additionalText.style.display = "block";
+                readMoreText.textContent = "Read less";
+            }
+        }
+        
+        // Hide the additional text when page loads
+        document.getElementById("additional-text").style.display = "none";
+    </script>
+
+<section class="services-section">
+    <div class="container">
+        <div class="services-header">
+            <div class="services-title">
+                <h2>Code Regime's iOS App Development Services</h2>
+            </div>
+            <div class="services-intro">
+                <p>We bring a wide range of iOS app development services designed to meet the various requirements of businesses across so many industries. Our experts excel in digital software solutions that will empower enterprises.</p>
+            </div>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="images/custom.png" alt="Custom iOS App Development">
+                </div>
+                <div class="service-content">
+                    <h3>Custom iOS App Development</h3>
+                    <p>Our custom iOS app development service focuses on making bespoke applications that will perfectly align with your business objectives. If you need an enterprise-grade solution or a consumer-dealing app, we have the experts to build an app that meets your project needs.</p>
+                </div>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="images/uiux.png" alt="iOS UI/UX Design">
+                </div>
+                <div class="service-content">
+                    <h3>iOS UI/UX Design</h3>
+                    <p>Our skilled designers work perfectly with clients to create exceptional, visually appealing interfaces that make the way to user engagement and satisfaction. We prioritize user engagement and guaranteed accessibility, we set the stage in the crowded ios marketplace.</p>
+                </div>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="images/testing.png" alt="iOS App Testing Nets">
+                </div>
+                <div class="service-content">
+                    <h3>iOS App Testing Nets</h3>
+                    <p>Quality is at the core of our development process rather than costs. Our professional QA team conducts complete testing to ensure that your app is free of bugs and performs digitally across all iOS devices. We can test it automated method to clear error-free experiences.</p>
+                </div>
+            </div>
+            
+            <!-- Service Card 4 -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="images/deployment.png" alt="iOS App Deployment">
+                </div>
+                <div class="service-content">
+                    <h3>iOS App Deployment</h3>
+                    <p>Code  Regime Technologies is always ready to treat technical issues at any time of clients' specific needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="ios-app-container">
+    <div class="ios-app-header">
+        <div class="ios-app-title">
+            <h1>Why Choose an iOS App for Business?</h1>
+        </div>
+        <div class="ios-app-description">
+            <p>The iOS sector brings enormous benefits that create a <br> suggested choice for businesses looking to make <br> mobile applications.</p>
+        </div>
+    </div>
+    
+    <div class="ios-app-content-section">
+        <div class="ios-app-image-container">
+            <div class="ios-app-image-wrapper">
+                <img src="images/why.png" alt="iPhone showing iOS apps">
+            </div>
+        </div>
+        
+        <div class="ios-app-accordion-container">
+            <div class="ios-app-accordion-item">
+                <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
+                    <h3>Premium Standards</h3>
+                    <div class="ios-app-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ios-app-accordion-content">
+                    <p>Apple's strict guidelines ensure that iOS apps maintain high standard quality and performance, offering users a stable and flawless experience.</p>
+                </div>
+            </div>
+            
+            <div class="ios-app-accordion-item">
+                <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
+                    <h3>Security Patches</h3>
+                    <div class="ios-app-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ios-app-accordion-content">
+                    <p>With iOS's unpatched security measures, you can protect your app and user information from untapped potential threats, building hope for your customers.</p>
+                </div>
+            </div>
+            
+            <div class="ios-app-accordion-item">
+                <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
+                    <h3>iOS Users</h3>
+                    <div class="ios-app-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ios-app-accordion-content">
+                    <p>iOS App users typically spend more hours, making them more likely to make in-app purchases and invest them in subscribing to premium services.</p>
+                </div>
+            </div>
+            
+            <div class="ios-app-accordion-item">
+                <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
+                    <h3>Global Reach</h3>
+                    <div class="ios-app-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ios-app-accordion-content">
+                    <p>By bringing an iOS app, you untap into a global market of tech expert users who value standard quality and the latest technologies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleIosAccordion(element) {
+        // Remove active class from all items
+        const allItems = document.querySelectorAll('.ios-app-accordion-item');
+        allItems.forEach(item => {
+            if (item !== element.parentElement) {
+                item.classList.remove('ios-app-active');
+            }
+        });
+        
+        // Toggle active class on clicked item
+        element.parentElement.classList.toggle('ios-app-active');
+    }
+</script>
+
+<section class="lead-section">
+    <div class="container2">
+        <div class="lead-header2">
+            <div class="lead-title2">
+                <h2>Our ios App to Lead your Business</h2>
+            </div>
+            <div class="lead-intro2">
+                <p>ios app can bring numerous benefits to your business, enhancing your secured functions, complete 
+                    operational efficiency, brand loyalty, user engagement, and business profits.  <br> <br>As a promising 
+                    iOS App Development Company, Code Regime Technologies is committed to launching high-quality, 
+                    bespoke iOS applications that drive businesses to achieve their aim. If you are looking to 
+                    create the latest app from zero or enhance an existing one, our team is dedicated to bringing 
+                    your vision to the project.</p>
+            </div>
+        </div>
+        </div>
+
+        <section class="experience-section">
+            <div class="experience-container">
+                <div class="experience-image-wrapper">
+                    <div class="iphone-image">
+                        <img src="images/enhanced.png" alt="iPhone with apps on screen">
+                    </div>
+                </div>
+                <div class="experience-content">
+                    <div class="experience-label">User Experience</div>
+                    <h2 class="experience-heading">Enhanced User Experience</h2>
+                    <div class="experience-text">
+                        <p>iOS apps are renowned for their superior performance and user experience, which can help build a positive brand image and foster customer loyalty.</p>
+                        <p id="hidden-paragraph" class="hidden-text">A seamless and intuitive interface improves user satisfaction, making interactions smoother and more engaging.</p>
+                    </div>
+                    <button id="read-more-button" class="read-more-btn">Read more <span class="arrow">›</span></button>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            // JavaScript for Read More functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const readMoreBtn = document.getElementById('read-more-button');
+                const hiddenParagraph = document.getElementById('hidden-paragraph');
+                
+                readMoreBtn.addEventListener('click', function() {
+                    hiddenParagraph.classList.toggle('show');
+                    
+                    if (hiddenParagraph.classList.contains('show')) {
+                        readMoreBtn.innerHTML = 'Read less <span class="arrow">‹</span>';
+                    } else {
+                        readMoreBtn.innerHTML = 'Read more <span class="arrow">›</span>';
+                    }
+                });
+            });
+        </script>
+
+        <!-- Security Patches Section -->
+    <section class="feature-section">
+        <div class="feature-container">
+            <div class="feature-content">
+                <div class="feature-label">Security</div>
+                <h2 class="feature-heading">Security Patches</h2>
+                <div class="feature-text">
+                    <p>With iOS's unpatched security measures, you can protect your app and user information from untapped potential threats, building hope for your customers.</p>
+                    <p id="security-hidden-paragraph" class="hidden-text">Regular updates address vulnerabilities and protect against potential threats. Implementing the latest security patches safeguards sensitive data.</p>
+                </div>
+                <button id="security-read-more-button" class="read-more-btn">Read more <span class="arrow">›</span></button>
+            </div>
+            <div class="feature-image-wrapper">
+                <div class="phone-image">
+                    <img src="images/security.png" alt="iPhone showing security features">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Potential Section -->
+    <section class="feature-section">
+        <div class="feature-container reverse">
+            <div class="feature-content">
+                <div class="feature-label">Business Potential</div>
+                <h2 class="feature-heading">Increased Business Potential</h2>
+                <div class="feature-text">
+                    <p>iOS App users typically spend more hours, making them more likely to make in-app purchases and invest them in subscribing to premium services.</p>
+                    <p id="business-hidden-paragraph" class="hidden-text">Adopting new technologies and optimizing operations unlocks growth opportunities. Improved efficiency, better customer engagement, and streamlined workflows contribute to higher productivity.</p>
+                </div>
+                <button id="business-read-more-button" class="read-more-btn">Read more <span class="arrow">›</span></button>
+            </div>
+            <div class="feature-image-wrapper">
+                <div class="phone-image">
+                    <img src="images/increased.png" alt="iPhone showing business application">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Accessibility Section -->
+    <section class="feature-section">
+        <div class="feature-container">
+            <div class="feature-content">
+                <div class="feature-label">Accessibility</div>
+                <h2 class="feature-heading">Market Accessibility</h2>
+                <div class="feature-text">
+                    <p>By bringing an iOS app, you untap into a global market of tech expert users who value standard quality and the latest technologies.</p>
+                    <p id="market-hidden-paragraph" class="hidden-text">Expanding to diverse markets requires adaptability and inclusivity. Ensuring compatibility across multiple platforms, languages, and regions maximizes reach.</p>
+                </div>
+                <button id="market-read-more-button" class="read-more-btn">Read more <span class="arrow">›</span></button>
+            </div>
+            <div class="feature-image-wrapper">
+                <div class="phone-image">
+                    <img src="images/market.png" alt="iPhone showing global features">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for Read More functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Security section
+            const securityBtn = document.getElementById('security-read-more-button');
+            const securityHiddenParagraph = document.getElementById('security-hidden-paragraph');
+            
+            securityBtn.addEventListener('click', function() {
+                securityHiddenParagraph.classList.toggle('show');
+                
+                if (securityHiddenParagraph.classList.contains('show')) {
+                    securityBtn.innerHTML = 'Read less <span class="arrow">‹</span>';
+                } else {
+                    securityBtn.innerHTML = 'Read more <span class="arrow">›</span>';
+                }
+            });
+
+            // Business section
+            const businessBtn = document.getElementById('business-read-more-button');
+            const businessHiddenParagraph = document.getElementById('business-hidden-paragraph');
+            
+            businessBtn.addEventListener('click', function() {
+                businessHiddenParagraph.classList.toggle('show');
+                
+                if (businessHiddenParagraph.classList.contains('show')) {
+                    businessBtn.innerHTML = 'Read less <span class="arrow">‹</span>';
+                } else {
+                    businessBtn.innerHTML = 'Read more <span class="arrow">›</span>';
+                }
+            });
+
+            // Market section
+            const marketBtn = document.getElementById('market-read-more-button');
+            const marketHiddenParagraph = document.getElementById('market-hidden-paragraph');
+            
+            marketBtn.addEventListener('click', function() {
+                marketHiddenParagraph.classList.toggle('show');
+                
+                if (marketHiddenParagraph.classList.contains('show')) {
+                    marketBtn.innerHTML = 'Read less <span class="arrow">‹</span>';
+                } else {
+                    marketBtn.innerHTML = 'Read more <span class="arrow">›</span>';
+                }
+            });
+        });
+    </script>
+</section>
+
+<section class="technologies-section">
+    <div class="technology-container">
+        <div class="tech-left">
+            <span class="subtitle">Emerging Technologies</span>
+            <h2 class="main-title">Our iOS App Leverages Emerging Technologies</h2>
+            <p class="description">
+                We are starting the way iOS app development companies make the latest and most high-functional applications.
+                <span class="hidden-content" id="main-hidden-content">Code Regime uses the finest technology <strong>SwiftUI</strong>, Apple's modern UI framework.</span>
+            </p>
+            <button class="read-more-btn" data-target="main-hidden-content">
+                Read more <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div class="tech-right">
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Machine Learning</h3>
+                <p>
+                    Another vital smart solution is machine learning with Core ML, which switches the insertion of excellent features like
+                    <span class="hidden-content" id="ml-hidden-content">image identities, Automated language recognition, and predictive metrics hits into iOS apps, it provides you with user experiences with personalized recommendations and context-aware functionalities.</span>
+                </p>
+                <button class="read-more-btn" data-target="ml-hidden-content">
+                    Read more <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-vr-cardboard"></i>
+                </div>
+                <h3>Augmented Reality (AR)</h3>
+                <p>
+                    Has also been frequently in traction, thanks to Apple's ARKit, allowing iOS app development companies to make solid
+                    <span class="hidden-content" id="ar-hidden-content">AR interfaces that keep users engaged.</span>
+                </p>
+                <button class="read-more-btn" data-target="ar-hidden-content">
+                    Read more <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud Computing</h3>
+                <p>
+                    Cloud computing and edge computing are becoming leveraging for iOS app development companies to access
+                    <span class="hidden-content" id="cloud-hidden-content">data and digital power more efficiently, ensuring quicker load times and better app functions.</span>
+                </p>
+                <button class="read-more-btn" data-target="cloud-hidden-content">
+                    Read more <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>Blockchain Technology</h3>
+                <p>
+                    Finally, blockchain technology is being prepared for its untapped potential to enhance robust security, transparency,
+                    <span class="hidden-content" id="blockchain-hidden-content">and data leveraging in mobile apps, making it a feel-good corner for tomorrow's iOS app development.</span>
+                </p>
+                <button class="read-more-btn" data-target="blockchain-hidden-content">
+                    Read more <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const readMoreButtons = document.querySelectorAll('.read-more-btn');
+        
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                
+                if (targetContent.classList.contains('show')) {
+                    targetContent.classList.remove('show');
+                    this.innerHTML = 'Read more <i class="fas fa-arrow-right"></i>';
+                } else {
+                    targetContent.classList.add('show');
+                    this.innerHTML = 'Read less <i class="fas fa-arrow-up"></i>';
+                }
+            });
+        });
+    });
+</script>
+<section class="sector-section">
+    <div class="sector-container">
+        <div class="sector-header">
+            <div class="title-container2">
+                <h2 class="section-title1">Code Regime's iOS App Services across all Sectors</h2>
+            </div>
+            <div class="description-container1">
+                <p class="section-description1">
+                    We have as many skilled professional experts, who built an application along with all these platforms iPhone, iPad, Apple TV, and Apple Watch, and using live time metrics, Geo-mapping, live video streams, and more industries.
+                </p>
+            </div>
+        </div>
+        
+        <div class="services-diagram">
+            <div class="diagram-top">
+                <div class="diagram-box top-box">
+                    <p>we have as many skilled professional experts, who built an application</p>
+                </div>
+            </div>
+            
+            <div class="diagram-connector">
+                <div class="connector-line vertical"></div>
+                <div class="connector-line horizontal"></div>
+            </div>
+            
+            <div class="sector-grid">
+                <div class="service-item">
+                    <div class="service-icon-container">
+                        <img src="images/tra.png" alt="Travel Icon" class="service-icon">
+                    </div>
+                    <h3 class="service-name">Travel</h3>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon-container">
+                        <img src="images/hospital.png" alt="Hospitality Icon" class="service-icon">
+                    </div>
+                    <h3 class="service-name">Hospitality</h3>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon-container">
+                        <img src="images/online.png" alt="Online Delivery Business Icon" class="service-icon">
+                    </div>
+                    <h3 class="service-name">Online Delivery Business</h3>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon-container">
+                        <img src="images/insurance.png" alt="Insurance Icon" class="service-icon">
+                    </div>
+                    <h3 class="service-name">Insurance</h3>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon-container">
+                        <img src="images/politics.png" alt="Politics Communication Icon" class="service-icon">
+                    </div>
+                    <h3 class="service-name">Politics Communication</h3>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon-container">
+                        <img src="images/beauty.png" alt="Beauty And Cosmetics Icon" class="service-icon">
+                    </div>
+                    <h3 class="service-name">Beauty And Cosmetics</h3>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon-container">
+                        <img src="images/logistics.png" alt="Logistics Supply Chains Icon" class="service-icon">
+                    </div>
+                    <h3 class="service-name">Logistics Supply Chains</h3>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon-container">
+                        <img src="images/asset.png" alt="Asset Management Icon" class="service-icon">
+                    </div>
+                    <h3 class="service-name">Asset Management</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="headfaq-container">
+    <!-- FAQ Title Section -->
+    <div class="title-section">
+        <h1 class="faq-title">
+            Frequently<br>
+            Asked Questions<br>
+            (FAQ)
+        </h1>
+    </div>
+
+    <!-- FAQ Items Section -->
+    <div class="faq-container">
+        <!-- FAQ Item 1 - Open by default -->
+        <div class="faq-item active">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What is Mobbin?</span>
+                <span class="faq-icon">×</span>
+            </div>
+            <div class="faq-answer">
+                <p>We can deliver and launch the app in 4 to 6 months on average it is processed, developed, and launched.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What is the estimated cost of iOS App development?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The cost of iOS app development varies based on complexity, features, and timeline. Contact us for a detailed quote tailored to your specific requirements.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Do you provide Technical support?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we provide comprehensive technical support including maintenance, updates, bug fixes, and ongoing development support for all our applications.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Which platforms do you utilize to develop iOS Apps?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We utilize Xcode, Swift, Objective-C, React Native, and Flutter for iOS app development, choosing the best platform based on your project requirements.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleFaq(element) {
+        const faqItem = element.parentElement;
+        const icon = element.querySelector('.faq-icon');
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem) {
+                item.classList.remove('active');
+                const otherIcon = item.querySelector('.faq-icon');
+                otherIcon.textContent = '+';
+            }
+        });
+        
+        // Toggle current FAQ item
+        if (isActive) {
+            faqItem.classList.remove('active');
+            icon.textContent = '+';
+        } else {
+            faqItem.classList.add('active');
+            icon.textContent = '×';
+        }
+    }
+
+    // Initialize - ensure first item is open
+    document.addEventListener('DOMContentLoaded', function() {
+        const firstItem = document.querySelector('.faq-item');
+        if (firstItem) {
+            firstItem.classList.add('active');
+            const firstIcon = firstItem.querySelector('.faq-icon');
+            firstIcon.textContent = '×';
+        }
+    });
+</script>
+
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-about">
+        <img src="images/white-logo.png" alt="Code Regime Logo" class="footer-logo">
+        <p>At Code Regime Technologies, we specialize in innovative software development.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/72574091/admin/dashboard/" class="social-icon linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
+          <a href="https://x.com/RegimeCode" class="social-icon twitter"><img src="images/twitterx.png" alt="twitter"></a>
+          <a href="https://www.facebook.com/profile.php?id=61572308472454" class="social-icon facebook"><img src="images/facebook.png" alt="twitter"></a>
+          <a href="https://www.instagram.com/coderegimetechnologies/?hl=en" class="social-icon instagram"><img src="images/instagram.png" alt="twitter"></a>
+          <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo" class="social-icon threads"><img src="images/threads.png" alt="twitter"></a>
+        </div>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-legal">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 231c, 3rd Floor, Kamarajar Salai, Madurai, TamilNadu 625009</p>
+        <p><i class="fas fa-phone"></i> +91 7418802770</p>
+        <p><i class="fas fa-envelope"></i> coderegime@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Copyright 2025, All Rights Reserved by Code Regime</p>
+    </div>
+  </footer>
+</body>
+</html>

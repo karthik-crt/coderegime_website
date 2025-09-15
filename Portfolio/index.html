@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+    <title>Portfolio</title>
+    
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <a href="index.html">
+                <img src="image/CodeRegimePNG 3.png" alt="logo">
+            </a>
+            
+            <div class="nav-links">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/code_regime_website/index.html">Home</a></li>
+                    <li><a href="">About Us <i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="">Services <i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="">Products <i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="http://127.0.0.1:5500/product%20page/Blog%20section/index.html">Blog</a></li>
+                    <li><a href=""> Portfolio</a></li>
+                    <button>Contact Us</button>
+                </ul>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+        <main>
+            <div class="container">
+                <h1>Successful Case Studies From Our Project Portfolio</h1>
+                
+                <div class="case-studies-grid">
+                    <!-- Case Study 1 -->
+                    <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/toll gate.png" alt="Toll Gate Pass App">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">GRECA</h3>
+                            <h4 class="case-study-subtitle">(Toll Gate Pass App)</h4>
+                            <p class="case-study-description">Developed a comprehensive toll collection system that integrates with Greece's existing</p>
+                            <a class="learn-more" data-modal="modal-1">Learn more</a>
+                        </div>
+                    </div>
+    
+                    <!-- Case Study 2 -->
+                    <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/beauty.png" alt="Beauty And Cosmetic">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">LALOO COSMETICS</h3>
+                            <h4 class="case-study-subtitle">(Beauty and Cosmetic)</h4>
+                            <p class="case-study-description">Built a feature-rich e-commerce mobile application for Laloo Cosmetics that offers</p>
+                            <a class="learn-more" data-modal="modal-2">Learn more</a>
+                        </div>
+                    </div>
+    
+                    <!-- Case Study 3 -->
+                    <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/logistics.png" alt="Logistics Feature App">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">NU LIVERER</h3>
+                            <h4 class="case-study-subtitle">(Logistics Feature App)</h4>
+                            <p class="case-study-description">Developed a comprehensive logistics management solution with powerful admin panel for package </p>
+                            <a class="learn-more" data-modal="modal-3">Learn more</a>
+                        </div>
+                    </div>
+    
+                    <!-- Case Study 4 -->
+                    <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/insurance.png" alt="Insurance App">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">INSURANCE APP</h3>
+                            <p class="case-study-description">Enhanced an existing insurance platform with AI capabilities for automated claim</p>
+                            <a class="learn-more" data-modal="modal-4">Learn more</a>
+                        </div>
+                    </div>
+    
+                    <!-- Case Study 5 -->
+                    <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/homemade.png" alt="Food Delivery Scripts">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">COOKR</h3>
+                            <h4 class="case-study-subtitle">(Homemade Food Delivery Scripts)</h4>
+                            <p class="case-study-description">Created a platform connecting home cooks with hungry customers in local neighborhoods.</p>
+                            <a class="learn-more" data-modal="modal-5">Learn more</a>
+                        </div>
+                    </div>
+    
+                    <!-- Case Study 6 -->
+                    <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/super.png" alt="Super Apps">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">CIRCLE EXPERT</h3>
+                            <h4 class="case-study-subtitle">(Super Apps)</h4>
+                            <p class="case-study-description">Developed a comprehensive service marketplace platform that connects customers  </p>
+                            <a class="learn-more" data-modal="modal-6">Learn more</a>
+                        </div>
+                    </div>
+
+                     <!-- Case Study 7 -->
+                     <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/doctor.png" alt="Super Apps">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">DOCTOR-PATIENT APP</h3>
+                            <!-- <h4 class="case-study-subtitle">NETA NATION</h4> -->
+                            <p class="case-study-description">Developed a comprehensive healthcare platform connecting patients with doctors for virtual </p>
+                            <a class="learn-more" data-modal="modal-7">Learn more</a>
+                        </div>
+                    </div>
+
+                     <!-- Case Study 8 -->
+                     <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/asset.png" alt="Super Apps">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">ASSET MANAGEMENT APP</h3>
+                            <!-- <h4 class="case-study-subtitle">CIRCLE EXPERT</h4> -->
+                            <p class="case-study-description">Created a powerful financial platform enabling users to track, manage, and optimize diverse</p>
+                            <a class="learn-more" data-modal="modal-8">Learn more</a>
+                        </div>
+                    </div>
+
+                     <!-- Case Study 9 -->
+                     <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/handyman.png" alt="Super Apps">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">HANDYMAN APP</h3>
+                            <!-- <h4 class="case-study-subtitle">CIRCLE EXPERT</h4> -->
+                            <p class="case-study-description">Built a service marketplace connecting homeowners with qualified home service  </p>
+                            <a class="learn-more" data-modal="modal-9">Learn more</a>
+                        </div>
+                    </div>
+
+                     <!-- Case Study 10 -->
+                     <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/swiggy.png" alt="Super Apps">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">BRING IT BACK</h3>
+                            <h4 class="case-study-subtitle">(Swiggy Clone App)</h4>
+                            <p class="case-study-description">Developed a comprehensive food delivery platform connecting users with local restaurants.  </p>
+                            <a class="learn-more" data-modal="modal-10">Learn more</a>
+                        </div>
+                    </div>
+
+                     <!-- Case Study 11 -->
+                     <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/testing.png" alt="Super Apps">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">SAGOR APP</h3>
+                            <h4 class="case-study-subtitle">(Testing App)</h4>
+                            <p class="case-study-description">Created an automated software testing platform that allows developers and QA teams to create,</p>
+                            <a class="learn-more" data-modal="modal-11">Learn more</a>
+                        </div>
+                    </div>
+
+                     <!-- Case Study 12 -->
+                     <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/super.png" alt="Super Apps">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">BEST CYBERNETICS</h3>
+                            <h4 class="case-study-subtitle">(Beauty and Cosmetics)</h4>
+                            <p class="case-study-description">Developed an AR-powered beauty and cosmetics e-commerce platform that allows users to </p>
+                            <a class="learn-more" data-modal="modal-12">Learn more</a>
+                        </div>
+                    </div>
+
+                     <!-- Case Study 13 -->
+                     <div class="case-study-card">
+                        <div class="case-study-image">
+                            <img src="image/people.png" alt="Super Apps">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">NETA NATION</h3>
+                            <h4 class="case-study-subtitle">(People-Politician-Shop Seller Interaction App)</h4>
+                            <p class="case-study-description">Built a civic engagement platform that connects citizens with elected officials and local businesses </p>
+                            <a class="learn-more" data-modal="modal-13">Learn more</a>
+                        </div>
+                    </div>
+    
+                    <!-- Add more case studies as needed -->
+                    <!-- Remaining cards from before -->
+                </div>
+            </div>
+        </main>
+    
+        <!-- Modals -->
+        <div class="modal" id="modal-1">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">Toll Gate Pass App</h2>
+                <h3 class="modal-subtitle">GRECA</h3>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Developed a comprehensive toll collection system that integrates with Greece's existing toll gate infrastructure. 
+                        The app enables seamless payments, real-time toll tracking, and multiple payment methods for drivers.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Payment Gateway</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Contactless toll payment system</li>
+                        <li>Multi-language support (Greek, English)</li>
+                        <li>Trip history and expense reporting</li>
+                        <li>Real-time toll fare calculation</li>
+                        <li>Secure payment processing</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>50% decrease in toll plaza congestion</li>
+                        <li>97% user satisfaction rate</li>
+                        <li>30% increase in collection efficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal" id="modal-2">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">Beauty And Cosmetic</h2>
+                <h3 class="modal-subtitle">LALOO COSMETICS</h3>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Built a feature-rich e-commerce mobile application for Laloo Cosmetics that offers personalized beauty product recommendations
+                        based on user preferences, skin type, and past purchase history.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">AI Recommendation</span>
+                        <span class="tech-tag">AR Try-on</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>AR makeup try-on capabilities</li>
+                        <li>Product recommendation engine</li>
+                        <li>Multi-currency support</li>
+                        <li>Loyalty program integration</li>
+                        <li>Skin analysis tool</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>200% increase in online sales</li>
+                        <li>40% reduction in product return rates</li>
+                        <li>35% increase in average order value</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal" id="modal-3">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">Logistics Feature App</h2>
+                <h3 class="modal-subtitle">NU LIVERER</h3>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Developed a comprehensive logistics management solution with powerful admin panel for package tracking, delivery optimization, 
+                        and fleet management. The system integrates with multiple shipping carriers and offers real-time analytics.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">MapBox API</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Real-time delivery tracking</li>
+                        <li>Route optimization algorithms</li>
+                        <li>Driver performance analytics</li>
+                        <li>Delivery time prediction</li>
+                        <li>Multi-warehouse inventory management</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>22% reduction in fuel costs</li>
+                        <li>30% increase in on-time deliveries</li>
+                        <li>15% improvement in overall operational efficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal" id="modal-4">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">INSURANCE APP</h2>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Enhanced an existing insurance platform with AI capabilities for automated claim processing, fraud detection, and 
+                        personalized customer service. Resolved critical bugs affecting policy management and premium calculations.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">ML/AI</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>AI-driven claim assessment</li>
+                        <li>Document OCR and verification</li>
+                        <li>Risk prediction models</li>
+                        <li>Personalized policy recommendations</li>
+                        <li>Automated fraud detection system</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>80% reduction in claim processing time</li>
+                        <li>40% decrease in fraudulent claims</li>
+                        <li>95% system uptime improvement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal" id="modal-5">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">Homemade Food Delivery Scripts</h2>
+                <h3 class="modal-subtitle">COOKR</h3>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Created a platform connecting home cooks with hungry customers in local neighborhoods. The app enables food enthusiasts 
+                        to sell homemade meals while providing customers with authentic, home-cooked food options.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Google Maps</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Chef verification system</li>
+                        <li>Food safety compliance checks</li>
+                        <li>Real-time order tracking</li>
+                        <li>In-app messaging between chefs and customers</li>
+                        <li>Recipe sharing community</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>10,000+ registered home chefs</li>
+                        <li>25,000+ active monthly users</li>
+                        <li>Average rating of 4.8/5 on app stores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal" id="modal-6">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">Super Apps</h2>
+                <h3 class="modal-subtitle">CIRCLE EXPERT</h3>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Developed a comprehensive service marketplace platform that connects customers with experts across multiple service categories. 
+                        The super app consolidates various service needs into one seamless experience.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Expert verification and background checks</li>
+                        <li>Real-time availability calendar</li>
+                        <li>In-app service booking and payment</li>
+                        <li>Video consultation capabilities</li>
+                        <li>Comprehensive rating system</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>5,000+ registered service providers</li>
+                        <li>45% month-over-month growth in bookings</li>
+                        <li>92% customer satisfaction rate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="modal" id="modal-7">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">DOCTOR-PATIENT APP</h2>
+                <!-- <h3 class="modal-subtitle">COOKR</h3> -->
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Developed a comprehensive healthcare platform connecting patients with doctors for virtual and in-person consultations. The application streamlines appointment scheduling, medical record management, and follow-up care to improve healthcare accessibility.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Secure patient-doctor video consultations</li>
+                        <li>Digital medical records and prescription management</li>
+                        <li>Intelligent doctor matching based on specialization and availability</li>
+                        <li>Appointment scheduling with reminders</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>15,000+ registered users (8,000 patients, 7,000+ healthcare providers)</li>
+                        <li>35% reduction in appointment no-shows</li>
+                        <li>88% patient satisfaction rate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-8">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">ASSET MANAGEMENT APP</h2>
+                <!-- <h3 class="modal-subtitle">COOKR</h3> -->
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Created a powerful financial platform enabling users to track, manage, and optimize diverse investment portfolios across multiple asset classes. The application provides real-time analytics and data visualization for informed decision-making.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Plaid API</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Multi-asset portfolio tracking (stocks, bonds, crypto, real estate)</li>
+                        <li>Performance analytics with custom date ranges</li>
+                        <li>Automated tax document organization</li>
+                        <li>Goal-based financial planning tools</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>$2.3 billion in assets managed through the platform</li>
+                        <li>40% reduction in portfolio management time</li>
+                        <li>52% increase in user financial literacy (based on in-app assessments)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-9">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">HANDYMAN APP</h2>
+                <!-- <h3 class="modal-subtitle">COOKR</h3> -->
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Built a service marketplace connecting homeowners with qualified home service professionals. The platform simplifies finding, booking, and paying for household repairs and maintenance services through an intuitive interface.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native </span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Service provider verification and background checks</li>
+                        <li>Real-time location-based technician matching</li>
+                        <li>In-app quotation and negotiation system</li>
+                        <li>Job scheduling with automated reminders</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>12,000+ registered service providers</li>
+                        <li>25,000+ monthly active users</li>
+                        <li>78% of jobs completed within 24 hours of posting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-10">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">SWIGGY CLONE APP</h2>
+                <!-- <h3 class="modal-subtitle">COOKR</h3> -->
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Developed a comprehensive food delivery platform connecting users with local restaurants. The application provides end-to-end ordering capabilities with real-time delivery tracking and various payment options.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flutter </span>
+                        <span class="tech-tag"> Firebase</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Smart restaurant recommendations based on user preferences</li>
+                        <li>Real-time order and delivery tracking</li>
+                        <li>In-app loyalty program and rewards</li>
+                        <li>Multiple payment methods including digital wallets</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>150,000+ app downloads in first quarter</li>
+                        <li>Partnership with 3,000+ restaurants</li>
+                        <li>65% user retention rate after 3 months</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-11">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">TESTING APP</h2>
+                <h3 class="modal-subtitle">(SAGOR APP)</h3>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Created an automated software testing platform that allows developers and QA teams to create, manage, and execute test cases across multiple platforms and devices with minimal configuration.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React </span>
+                        <span class="tech-tag"> Python</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Jenkins</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Cross-platform test automation</li>
+                        <li>Visual test case builder (no-code)</li>
+                        <li>Parallel test execution</li>
+                        <li>Comprehensive test analytics and reporting</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>75% reduction in test creation time</li>
+                        <li>90% increase in test coverage</li>
+                        <li>Identified 40% more critical bugs compared to manual testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-12">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">(BEST CYBERNETICS)</h2>
+                <h3 class="modal-subtitle">BEAUTY AND COSMETICS</h3>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Developed an AR-powered beauty and cosmetics e-commerce platform that allows users to virtually try products before purchase. The app includes personalized recommendations based on skin type, preferences, and trends.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native </span>
+                        <span class="tech-tag"> TensorFlow</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Shopify</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>AR makeup and skincare product trials</li>
+                        <li>AI-powered skin analysis and product recommendations</li>
+                        <li>Product ingredient scanner and allergen alerts</li>
+                        <li>Subscription service for regular products</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>200,000+ active monthly users</li>
+                        <li>57% conversion rate (browse to purchase)</li>
+                        <li>42% decrease in product returns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-13">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">(PEOPLE-POLITICIAN-SHOP SELLER INTERACTION APP)</h2>
+                <h3 class="modal-subtitle">NETA NATION</h3>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Project Overview</h4>
+                    <p class="modal-description">
+                        Built a civic engagement platform that connects citizens with elected officials and local businesses to strengthen community involvement and economic development. The app facilitates transparent communication between all stakeholders.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flutter </span>
+                        <span class="tech-tag"> Firebase </span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Google Maps API</span>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features">
+                        <li>Direct messaging with elected officials</li>
+                        <li>Community issue reporting with visual evidence</li>
+                        <li>Local business discovery and promotions</li>
+                        <li>Town hall meeting scheduling and reminders</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Results</h4>
+                    <ul class="results-list">
+                        <li>Deployed in 75+ municipalities</li>
+                        <li>45% increase in civic participation</li>
+                        <li>30% faster response time to community issues</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Modal functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get all learn more links
+                const learnMoreLinks = document.querySelectorAll('.learn-more');
+                
+                // Add click event to each learn more link
+                learnMoreLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        const modalId = this.getAttribute('data-modal');
+                        const modal = document.getElementById(modalId);
+                        if (modal) {
+                            modal.classList.add('active');
+                            document.body.style.overflow = 'hidden'; // Prevent scrolling
+                        }
+                    });
+                });
+                
+                // Get all close buttons
+                const closeButtons = document.querySelectorAll('.close-modal');
+                
+                // Add click event to each close button
+                closeButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const modal = this.closest('.modal');
+                        if (modal) {
+                            modal.classList.remove('active');
+                            document.body.style.overflow = ''; // Re-enable scrolling
+                        }
+                    });
+                });
+                
+                // Close modal when clicking outside of it
+                window.addEventListener('click', function(event) {
+                    if (event.target.classList.contains('modal')) {
+                        event.target.classList.remove('active');
+                        document.body.style.overflow = ''; // Re-enable scrolling
+                    }
+                });
+            });
+        </script>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+              <!-- Left Section -->
+              <div class="footer-about">
+                <img src="image/CodeRegimePNG 3.png" alt="Code Regime Logo" class="footer-logo">
+                <p>At Code Regime Technologies, we specialize in innovative software development.</p>
+                <div class="social-icons">
+                  <a href="https://www.linkedin.com/company/72574091/admin/dashboard/" class="social-icon linkedin"><img src="image/linkedin.png" alt="linkedin"></a>
+                  <a href="https://x.com/RegimeCode" class="social-icon twitter"><img src="image/twitterx.png" alt="twitter"></a>
+                  <a href="https://www.facebook.com/profile.php?id=61572308472454" class="social-icon facebook"><img src="image/facebook.png" alt="facebook"></a>
+                  <a href="https://www.instagram.com/coderegimetechnologies/?hl=en" class="social-icon instagram"><img src="image/instagram.png" alt="instagram"></a>
+                  <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo" class="social-icon threads"><img src="image/threads.png" alt="threads"></a>
+                </div>
+              </div>
+        
+              <!-- Useful Links -->
+              <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="http://127.0.0.1:5500/product%20page/Blog%20section/index.html">Blog</a></li>
+                  <li><a href="#">Contact Us</a></li>  
+                </ul>
+              </div> 
+        
+              <!-- Legal -->
+              <div class="footer-legal">
+                <h4>Legal</h4>
+                <ul>
+              <li><a href="http://127.0.0.1:5500/privacy%20policy/index.html">Privacy Policy</a></li>
+              <li><a href="http://127.0.0.1:5500/Refund%20policy/image/index.html">Refund Policy</a></li>
+              <li><a href="http://127.0.0.1:5500/Security%20Policy/index.html">Support</a></li>
+              <li><a href="http://127.0.0.1:5500/Disclaimer/index.html">Disclaimer</a></li>
+                </ul>
+              </div> 
+        
+              <!-- Contact Us -->
+              <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 231c, 3rd Floor, Kamarajar Salai, Madurai, TamilNadu 625009</p>
+                <p><i class="fas fa-phone"></i> +91 7418802770</p>
+                <p><i class="fas fa-envelope"></i> mailto:coderegime@gmail.com</p>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>© Copyright 2025, All Rights Reserved by Code Regime</p>
+            </div>
+          </footer> 
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Code Regime-Android</title>
+</head>
+<body>
+    <header class="header">
+        <img src="images/gradient background.png" alt="Gradient Background" class="bg-image">
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+    
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+    
+            <li class="dropdown">
+              <a href="#">About Us <img src="images/nav dropdown.png" alt=""></a>
+              <ul class="submenu">
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Team</a></li>
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+              <a href="#">Services <img src="images/nav dropdown.png" alt=""></a>
+              <ul class="submenu">
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">UI/UX Design</a></li>
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+              <a href="#">Products <img src="images/nav dropdown.png" alt=""></a>
+              <ul class="submenu">
+                <li><a href="#">Product A</a></li>
+                <li><a href="#">Product B</a></li>
+              </ul>
+            </li>
+    
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Portfolio</a></li>
+          </ul>
+    
+          <a href="#" class="contact-btn">Contact Us</a>
+    
+          <!-- Hamburger -->
+          <button class="menu-toggle" id="menuToggle">☰</button>
+        </nav>
+    
+        <!-- Hero -->
+        <div class="hero">
+          <h1>Android App Development Company</h1>
+          <p>Code Regime Technologies is a leading Android App Development Company. Our talented team excels in well-crafted Android app solutions that solve the specific niche of the business industry globally.</p>
+          <a href="#" class="get-started">Let's get started</a>
+        </div>
+      </header>
+    
+      <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+    
+        // Toggle main menu
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+    
+        // Dropdown toggle for mobile
+        const dropdowns = document.querySelectorAll('.dropdown > a');
+        dropdowns.forEach(link => {
+          link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              link.parentElement.classList.toggle('active');
+            }
+          });
+        });
+      </script>
+    <div class="container">
+        <div class="section-title">
+            <h2>We Offer Custom Android App Development <br> Services</h2>
+        </div>
+
+        <div class="services-wrapper">
+            <!-- Service Item 1 -->
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="images/app consulting.png" alt="Android App Consulting">
+                </div>
+                <div class="service-content">
+                    <div class="service-tag">APP CONSULTING</div>
+                    <h3>We suggest the android app consulting</h3>
+                    <p>Our team at Code Regime Technologies delves into Android app consultation services that are designed to gather your business goals, plans, regional target audience, and specific needs.</p>
+                    <div class="hidden-content" id="hidden-content-1">
+                        <p>We provide expert guidance to navigate the challenges of Android app development, ensuring that your app can perform with your business objectives and deliver a flawless user experience.</p>
+                        
+                    </div>
+                    <a class="read-more-btn" onclick="toggleContent('hidden-content-1')">Read more</a>
+                </div>
+            </div>
+
+            <!-- Service Item 2 -->
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="images/android version.png" alt="Latest Android Version Designs">
+                </div>
+                <div class="service-content">
+                    <div class="service-tag">ANDROID VERSION</div>
+                    <h3>Latest android version designs</h3>
+                    <p>At Code Regime Technologies, our design team is an expert in making perfect visually appealing, and user-friendly interfaces that stay in user usage and engagement. Our designers focus on making</p>
+                    <div class="hidden-content" id="hidden-content-2">
+                        <p> a UI/UX that not only looks attractive but also provides a quick, exciting, smooth, and happiest experience for users, ultimately leading to higher customer reach and comfort.</p>
+                        
+                    </div>
+                    <a class="read-more-btn" onclick="toggleContent('hidden-content-2')">Read more</a>
+                </div>
+            </div>
+
+            <!-- Service Item 3 -->
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="images/custom android.png" alt="Custom Android App Development">
+                </div>
+                <div class="service-content">
+                    <div class="service-tag">CUSTOM ANDROID</div>
+                    <h3>The approach of custom android app</h3>
+                    <p>As a leading Android App Development Company as per expert guidance, a well-structured approach integrates plan gathering, custom app development process, and continuous guidance loops.</p>
+                    <div class="hidden-content" id="hidden-content-3">
+                        <p>This ensures that your app is developed within the time limit, reduces additional costs, and the high performance. Code Regime Technologies serves various industry sectors such as Travel, Hospitality, Online food delivery systems, Insurance, E-commerce platforms, and supply chain logistics.</p>
+                        
+                    </div>
+                    <a class="read-more-btn" onclick="toggleContent('hidden-content-3')">Read more</a>
+                </div>
+            </div>
+
+            <!-- Service Item 4 -->
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="images/android testing.png" alt="Android Testing">
+                </div>
+                <div class="service-content">
+                    <div class="service-tag">ANDROID TESTING</div>
+                    <h3>Frequent android testing nets</h3>
+                    <p>We performed frequent Android software testing to find bug fixes and resolve any issues before delivery or launch. Our testing process integrates operational testing, user experience, user interface, performance</p>
+                    <div class="hidden-content" id="hidden-content-4">
+                        <p> testing, and technical security testing, ensuring that your app performs endlessly across all devices, platforms, and operating systems</p>
+                        
+                    </div>
+                    <a class="read-more-btn" onclick="toggleContent('hidden-content-4')">Read more</a>
+                </div>
+            </div>
+
+            <!-- Service Item 5 -->
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="images/deployment.png" alt="Android App Deployment">
+                </div>
+                <div class="service-content">
+                    <div class="service-tag">DEPLOYMENT</div>
+                    <h3>Process of android app deployment</h3>
+                    <p>Code Regime Technologies tested your app at every nook of the corner for delivery, from the beginning stage of your app to the Google Play Store to configuring server settings.</p>
+                    <div class="hidden-content" id="hidden-content-5">
+                        <p>and optimizing high performance. Our aim is to ensure that your app reaches your regional target audience without any issues, We set you on stage for long-term success.</p>
+                        
+                    </div>
+                    <a class="read-more-btn" onclick="toggleContent('hidden-content-5')">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+<section class="sectors-section">
+    <div class="sectors-container">
+        <div class="sectors-heading">
+            <h2>Sector We Serve</h2>
+        </div>
+        
+        <div class="sectors-grid">
+            <!-- Travel -->
+            <div class="sector-card">
+                <div class="sector-header"></div>
+                <div class="sector-content">
+                    <div class="sector-icon">
+                        <img src="images/Travel.png" alt="Travel">
+                    </div>
+                    <h3 class="sector-title">Travel</h3>
+                </div>
+            </div>
+            
+            <!-- Hospitality -->
+            <div class="sector-card">
+                <div class="sector-header"></div>
+                <div class="sector-content">
+                    <div class="sector-icon">
+                        <img src="images/Hospitality.png" alt="Hospitality">
+                    </div>
+                    <h3 class="sector-title">Hospitality</h3>
+                </div>
+            </div>
+            
+            <!-- Online Delivery -->
+            <div class="sector-card">
+                <div class="sector-header"></div>
+                <div class="sector-content">
+                    <div class="sector-icon">
+                        <img src="images/Online Delivery.png" alt="Online Delivery">
+                    </div>
+                    <h3 class="sector-title">Online Delivery</h3>
+                </div>
+            </div>
+            
+            <!-- Insurance -->
+            <div class="sector-card">
+                <div class="sector-header"></div>
+                <div class="sector-content">
+                    <div class="sector-icon">
+                        <img src="images/Insurance.png" alt="Insurance">
+                    </div>
+                    <h3 class="sector-title">Insurance</h3>
+                </div>
+            </div>
+            
+            <!-- E-Commerce -->
+            <div class="sector-card">
+                <div class="sector-header"></div>
+                <div class="sector-content">
+                    <div class="sector-icon">
+                        <img src="images/E-Commerce.png" alt="E-Commerce">
+                    </div>
+                    <h3 class="sector-title">E-Commerce</h3>
+                </div>
+            </div>
+            
+            <!-- On-Demand -->
+            <div class="sector-card">
+                <div class="sector-header"></div>
+                <div class="sector-content">
+                    <div class="sector-icon">
+                        <img src="images/On-Demand.png" alt="On-Demand">
+                    </div>
+                    <h3 class="sector-title">On-Demand</h3>
+                </div>
+            </div>
+            
+            <!-- Supply Chain -->
+            <div class="sector-card">
+                <div class="sector-header"></div>
+                <div class="sector-content">
+                    <div class="sector-icon">
+                        <img src="images/Supply Chain.png" alt="Supply Chain">
+                    </div>
+                    <h3 class="sector-title">Supply Chain</h3>
+                </div>
+            </div>
+            
+            <!-- Political -->
+            <div class="sector-card">
+                <div class="sector-header"></div>
+                <div class="sector-content">
+                    <div class="sector-icon">
+                        <img src="images/Political.png" alt="Political">
+                    </div>
+                    <h3 class="sector-title">Political</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="features-container">
+    <!-- AI-Driven Tools Section -->
+    <div class="feature-card ai-driven-tools-section">
+        <div class="feature-icon">
+            <img src="images/benefits.png" alt="benefits">
+        </div>
+        <div class="feature-content">
+            <h2 class="feature-title">Here are the benefits of having our AI-Driven tools</h2>
+            <div class="feature-description">
+                <div class="feature-text">
+                    <p>Integrating Innovative AI-driven Tools into your Android app can permanently enhance its functionality, operational efficiency, and user experience.</p>
+                    <p>We are the advanced-thinkers Android App Development Company, we inserted AI technologies such as machine learning, natural language processing, and predictive metrics into our apps.</p>
+                    <p>These features and tools enable your app to launch AI usage, improve planning methods, and give valuable insights into the user interface, giving your business a competitive world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cross-Platform Section -->
+    <div class="feature-card cross-platform-section">
+        <div class="feature-icon">
+            <img src="images/andoid.png" alt="andoid">
+        </div>
+        <div class="feature-content">
+            <h2 class="feature-title">Our custom android apps meet across all platforms</h2>
+            <div class="feature-description">
+                <div class="feature-text">
+                    <p>Code Regime Technologies assures that your app not only operates on Android devices but also flawlessly integrates across platforms such as iOS, Windows, and web applications.</p>
+                    <p>This cross-platform approach maximizes your app's reach and accessibility, allowing you to untap a niche audience and increase your market values.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Revenue Section -->
+    <div class="feature-card business-revenue-section">
+        <div class="feature-icon">
+            <img src="images/business.png" alt="business">
+        </div>
+        <div class="feature-content">
+            <h2 class="feature-title">Does code regime's android app impact the business revenue</h2>
+            <div class="feature-description">
+                <div class="feature-text">
+                    <p>Leveraging an Android app can play a vital role in your business. A well-developed Android app ensures user engagement, integrates operations, and gate-free new revenue platforms.</p>
+                    <p>By partnering with Code Regime Technologies a reputable Android App Development Company you can leverage the untapped potential of Android apps to increase your business profitability.</p>
+                    <p>These are the platforms such as in-app purchases, subscriptions, or enhanced client loyalty, the perfect Android app can make significant growth and success</p>
+                    
+                    <div id="hiddenContent" class="hidden-content">
+                         <p>At <strong>Code Regime Technologies</strong>, we pride ourselves on being a promising partner in your digital journey. Our skilled team from <strong>Android App Development Company</strong> ensures that you receive unmatch solutions designed to your business major needs. From consultation to deployment, we are committed to delivering excellence at every stage of the development process, helping you achieve your business goals and stay ahead of the competitors.</p>
+                    </div>
+                    
+                    <a class="read-more-btn" id="readMoreBtn">
+                        Read more
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const readMoreBtn = document.getElementById('readMoreBtn');
+        const hiddenContent = document.getElementById('hiddenContent');
+        
+        readMoreBtn.addEventListener('click', function() {
+            // Toggle visibility
+            if (hiddenContent.style.display === 'block') {
+                hiddenContent.style.display = 'none';
+                readMoreBtn.innerHTML = 'Read more <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
+            } else {
+                hiddenContent.style.display = 'block';
+                readMoreBtn.innerHTML = 'Read less <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>';
+            }
+        });
+    });
+</script>
+<section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    
+    <div class="faq-container">
+        <div class="faq-item active">
+            <div class="faq-question">
+                <span class="faq-question-text">What is the below-average timeline for android app development?</span>
+                <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-answer">
+                <p class="faq-answer-text">We can deliver and launch the app in 3 to 6 months on average it is processed, developed, and launched.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span class="faq-question-text">What is the estimated cost of android app development?</span>
+                <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-answer">
+                <p class="faq-answer-text">Our developers prioritize your specific business needs. whether it depends upon the complexity of projects, or additional features it may vary.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span class="faq-question-text">Do you provide technical support?</span>
+                <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-answer">
+                <p class="faq-answer-text">Yes, we offer ongoing Technical maintenance and support services to ensure the latest features and security patches.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-about">
+        <img src="images/CodeRegimePNG 3.png" alt="Code Regime Logo" class="footer-logo">
+        <p>At Code Regime Technologies, we specialize in innovative software development.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/72574091/admin/dashboard/" class="social-icon linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
+          <a href="https://x.com/RegimeCode" class="social-icon twitter"><img src="images/twitterx.png" alt="twitter"></a>
+          <a href="https://www.facebook.com/profile.php?id=61572308472454" class="social-icon facebook"><img src="images/facebook.png" alt="facebook"></a>
+          <a href="https://www.instagram.com/coderegimetechnologies/?hl=en" class="social-icon instagram"><img src="images/instagram.png" alt="twitter"></a>
+          <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo" class="social-icon threads"><img src="images/threads.png" alt="twitter"></a>
+        </div>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-legal">
+        <h4>Legal</h4>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/privacy%20policy/index.html">Privacy Policy</a></li>
+            <li><a href="http://127.0.0.1:5500/Refund%20policy/image/index.html">Refund Policy</a></li>
+            <li><a href="http://127.0.0.1:5500/Security%20Policy/index.html">Support</a></li>
+            <li><a href="http://127.0.0.1:5500/Disclaimer/index.html">Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 231c, 3rd Floor, Kamarajar Salai, Madurai, TamilNadu 625009</p>
+        <p><i class="fas fa-phone"></i> +91 7418802770</p>
+        <p><i class="fas fa-envelope"></i> coderegime@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Copyright 2025, All Rights Reserved by Code Regime</p>
+    </div>
+  </footer>
+</body>
+</html>

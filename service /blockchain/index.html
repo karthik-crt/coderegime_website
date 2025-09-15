@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <title>Code Regime-Blockchain</title>
+</head>
+<body>
+    <header class="header">
+        <img src="images/head-bg.png" alt="Gradient Background" class="bg-img">
+
+        <nav class="navbar">
+            <div class="logo"><img src="images/logo.png" alt=""></div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us <img src="images/nav-dropdown.png" alt="dropdown"></a></li>
+                <li><a href="#">Services <img src="images/nav-dropdown.png" alt="dropdown"></a></li>
+                <li><a href="#">Products <img src="images/nav-dropdown.png" alt="dropdown"></a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
+            <a href="#" class="contact-btn">Contact Us</a>
+        </nav>
+
+        <div class="hero-content">
+            <h1><span class="gradient-text">Blockchain Development Company</span></h1>
+            <p>In today's rapidly evolving digital landscape, businesses must stay ahead by leveraging cutting-edge technology to remain competitive. However, off-the-shelf software solutions often fall short of meeting the unique needs and challenges of every business. That's where bespoke software development comes in, providing tailored solutions that align perfectly with your specific requirements. At Code Regime Technologies, we pride ourselves on being a leading bespoke software development company, offering personalized software solutions that empower your business to thrive </p>
+            <a href="#" class="cta-btn">Let's get started <span>></span></a>
+        </div>
+    </header>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const hamburger = document.getElementById('hamburger');
+            
+            if (!navLinks.contains(event.target) && !mobileToggle.contains(event.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                const navLinks = document.getElementById('navLinks');
+                const hamburger = document.getElementById('hamburger');
+                
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+
+    <div class="service-container">
+        <div class="services-header">
+            <div class="services-tag">Our Services</div>
+            <h1 class="services-title">Our Blockchain Development Services</h1>
+            <p class="services-description">
+                At Code Regime Technologies, we have a multiple suite of blockchain development services crafted to unlock the dynamic transformative technology. Whether you're concentrating on making a bespoke blockchain application, implementing smart contracts, or building a decentralized platform, our team has the experience to bring your vision to product launch.
+            </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7-7H4a2 2 0 0 0-2 2v4"></path>
+                        <path d="M14 2v6h6"></path>
+                        <path d="M2 14h12"></path>
+                        <path d="M2 18h12"></path>
+                        <path d="M2 10h12"></path>
+                    </svg>
+                </div>
+                <h3>Crafting Blockchain</h3>
+                <p>Code Regime Technologies can develop bespoke blockchain solutions in all the industry sectors with client's niche.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                        <line x1="12" y1="22" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+                <h3>Smart Contract</h3>
+                <p>Digital business processes can led by secured digital agreements.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3>Blockchain Consulting</h3>
+                <p>Consult with our experts can meet your project needs.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Tokenization Solutions</h3>
+                <p>Change your documents into digital property for your secured business needs.</p>
+            </div>
+        </div>
+    </div>
+    <div class="solution-container">
+        <!-- Header Section -->
+        <!-- <header>
+            <button class="solutions-btn">Solutions</button>
+        </header> -->
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h1>Code Regime's Blockchain Solution</h1>
+                <p class="description">
+                    As a leading blockchain development company, Code Regime Technologies <br> provides the latest blockchain solutions that meet world business challenges <br> and opportunities
+                </p>
+                
+                <!-- Decorative Image -->
+                <div class="image-containerblock">
+                    <img src="images/solution.png" 
+                         alt="Blockchain Visualization">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Right Column - Grid -->
+            <div class="services-gridbox">
+                <!-- Supply Chain Card -->
+                <div class="service-cardbox">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                        <line x1="2" y1="10" x2="22" y2="10"></line>
+                        <line x1="10" y1="2" x2="10" y2="22"></line>
+                    </svg>
+                    <h3>Supply Chain</h3>
+                    <p>Using this solution we can trace the packed supply goods and we can create the safest authentication process.</p>
+                </div>
+
+                <!-- Financial Service Card -->
+                <div class="service-cardbox">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                        <path d="M10 6h4"></path>
+                        <path d="M10 10h4"></path>
+                        <path d="M10 14h4"></path>
+                        <path d="M10 18h4"></path>
+                    </svg>
+                    <h3>Financial Service</h3>
+                    <p>Our solutions have secured, faster and more reliable transactions from end to end.</p>
+                </div>
+
+                <!-- Healthcare Solution Card -->
+                <div class="service-cardbox">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path>
+                    </svg>
+                    <h3>Healthcare Solution</h3>
+                    <p>Our solutions ensure the protection of doctor-patient data and their business operations</p>
+                </div>
+
+                <!-- Identity Management Card -->
+                <div class="service-cardbox">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"></path>
+                        <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
+                    </svg>
+                    <h3>Identity Management</h3>
+                    <p>This solution has to identify the personality with the safest blockchain solutions.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="block-container">
+        <div class="process-headers">
+            <div class="process-buttons">Process</div>
+            <h1 class="process-title">Blockchain Development Process</h1>
+            <p class="process-description">
+                At Code Regime Technologies, Our blockchain development services follow an enriching process 
+                to guarantee the successful completion  of your project.
+            </p>
+        </div>
+        
+        <div class="blockchain-cube">
+            <div class="cube">
+                <!-- Cube faces -->
+                <div class="cube-face front">
+                    <svg class="bitcoin-logo" width="100" height="100" viewBox="0 0 24 24" fill="#f7931a">
+                        <path d="M23.638 14.904c-1.602 6.425-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.52 2.75 2.08z"/>
+                    </svg>
+                </div>
+                <div class="cube-face back">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="#1e88e5">
+                        <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm-1.35 3.9c0-.15.15-.3.3-.3h2.1c.15 0 .3.15.3.3v2.1c0 .15-.15.3-.3.3h-2.1c-.15 0-.3-.15-.3-.3V3.9zm6.9 15.3H6.45c-.15 0-.3-.15-.3-.3v-1.8c0-.15.15-.3.3-.3h4.5v-1.5h-2.7c-.15 0-.3-.15-.3-.3v-1.8c0-.15.15-.3.3-.3h2.7V12h-4.5c-.15 0-.3-.15-.3-.3V9.9c0-.15.15-.3.3-.3h11.1c.15 0 .3.15.3.3v1.8c0 .15-.15.3-.3.3h-4.5v1.5h2.7c.15 0 .3.15.3.3v1.8c0 .15-.15.3-.3.3h-2.7v1.5h4.5c.15 0 .3.15.3.3v1.8c0 .15-.15.3-.3.3z"/>
+                    </svg>
+                </div>
+                <div class="cube-face right">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="#00bcd4">
+                        <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.5-8.5l3.5-3.5-3.5-3.5L10 5l5 5-5 5-1.5-1.5z"/>
+                    </svg>
+                </div>
+                <div class="cube-face left">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="#7986cb">
+                        <path d="M16.895 0h-9.75C3.086 0 0 3.086 0 6.895v10.21C0 20.915 3.086 24 6.895 24h10.21C20.915 24 24 20.914 24 17.105V6.895C24 3.086 20.914 0 17.105 0h-.21zM12 18.9c-3.8 0-6.9-3.1-6.9-6.9s3.1-6.9 6.9-6.9 6.9 3.1 6.9 6.9-3.1 6.9-6.9 6.9z"/>
+                    </svg>
+                </div>
+                <div class="cube-face top">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="#ff9800">
+                        <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm-1.35 16.5c0 .15-.15.3-.3.3h-1.8c-.15 0-.3-.15-.3-.3V7.5c0-.15.15-.3.3-.3h1.8c.15 0 .3.15.3.3v9zm5.7 0c0 .15-.15.3-.3.3h-1.8c-.15 0-.3-.15-.3-.3V7.5c0-.15.15-.3.3-.3h1.8c.15 0 .3.15.3.3v9z"/>
+                    </svg>
+                </div>
+                <div class="cube-face bottom">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="#4caf50">
+                        <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm0 21c-4.962 0-9-4.038-9-9s4.038-9 9-9 9 4.038 9 9-4.038 9-9 9zm4.5-11.5h-9v3h9v-3z"/>
+                    </svg>
+                </div>
+                
+                <!-- Add some lights and doors to make it look technological -->
+                <div class="cube-door" style="top: 30%; left: 90%; transform: translateZ(150px)"></div>
+                <div class="cube-door" style="top: 60%; left: 20%; transform: translateZ(150px)"></div>
+                <div class="cube-light" style="top: 20%; left: 30%; transform: translateZ(150px)"></div>
+                <div class="cube-light" style="top: 70%; left: 80%; transform: translateZ(150px)"></div>
+                <div class="cube-light" style="top: 40%; left: 50%; transform: translateZ(150px)"></div>
+            </div>
+        </div>
+        
+        <div class="process-steps">
+            <!-- Step boxes around the cube -->
+            <div class="step step-1">
+                <div class="step-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#ff55ff">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                    </svg>
+                </div>
+                <div class="step-text">Requirement Gathering</div>
+            </div>
+            
+            <div class="step step-2">
+                <div class="step-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#55aaff">
+                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                    </svg>
+                </div>
+                <div class="step-text">Development Process</div>
+            </div>
+            
+            <div class="step step-3">
+                <div class="step-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#00cccc">
+                        <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                    </svg>
+                </div>
+                <div class="step-text">Machine Testing</div>
+            </div>
+            
+            <div class="step step-4">
+                <div class="step-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#55cc55">
+                        <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <div class="step-text">Product Integration</div>
+            </div>
+            
+            <div class="step step-5">
+                <div class="step-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#aa55ff">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+                    </svg>
+                </div>
+                <div class="step-text">Best in Support</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-container">
+        <div class="body-header">
+            <div class="process-badge">Process</div>
+            <h1 class="main-title">Body Of Work</h1>
+        </div>
+
+        <div class="grid">
+            <!-- Challenge 1: Well Secure Dealings -->
+            <div class="card">
+                <h2 class="card-type">Challenges</h2>
+                <h3 class="card-title">Well Secure Dealings</h3>
+                <p class="card-description">
+                    Proceeding blockchain to ensure well-secure, 
+                    safeguarded transactions was challenging due to the 
+                    detailed encryption protocols needed.
+                </p>
+                <div class="card-image security-image"><img src="images/well.png" alt=""></div>
+            </div>
+
+            <!-- Challenge 2: Real-Time Data Processing -->
+            <div class="card">
+                <h2 class="card-type">Challenges</h2>
+                <h3 class="card-title">Real - Time Data Processing</h3>
+                <p class="card-description">
+                    Integrating blockchain while maintaining real-time data 
+                    processing for fast trading decisions was technically 
+                    demanding.
+                </p>
+                <div class="card-image realtime-image"><img src="images/real-time.png" alt=""></div>
+            </div>
+
+            <!-- Solution 1: Robust Blockchain Integration -->
+            <div class="card">
+                <h2 class="card-type">Solutions</h2>
+                <h3 class="card-title">Robust Blockchain Integration</h3>
+                <p class="card-description">
+                    Code Regime Technologies developed a secure 
+                    blockchain framework for Infinity CXE, ensuring all 
+                    transactions are transparent, immutable, and safe from 
+                    fraudulent activities.
+                </p>
+                <div class="card-image integration-image"><img src="images/robust.png" alt=""></div>
+            </div>
+
+            <!-- Solution 2: Optimized Data Processing -->
+            <div class="card">
+                <h2 class="card-type">Solutions</h2>
+                <h3 class="card-title">Optimized Data Processing</h3>
+                <p class="card-description">
+                    The team implemented a highly efficient data 
+                    management system, combining blockchain with 
+                    advanced algorithms, enabling seamless real-time 
+                    trading without compromising speed or security.
+                </p>
+                <div class="card-image optimization-image"><img src="images/optimized.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="process-container">
+        <div class="process-header">
+            <div class="process-button">Process</div>
+            <h1 class="process-title">Blockchain Development Process</h1>
+            <p class="process-description">
+                At Code Regime Technologies, Our blockchain development services follow an enriching process 
+                to guarantee the successful completion of your project.
+            </p>
+        </div>
+        
+        <div class="platforms-grid">
+            <div class="platform-card">
+                <img src="images/ethereum.png" alt="Ethereum" class="platform-icon">
+                <div class="platform-name">ETHEREUM</div>
+            </div>
+            
+            <div class="platform-card">
+                <img src="images/hyper.png" alt="Hyperledger Fabric" class="platform-icon">
+                <div class="platform-name">HYPERLEDGER FABRIC</div>
+            </div>
+            
+            <div class="platform-card">
+                <img src="images/binance.png" alt="Binance Smart Chain" class="platform-icon">
+                <div class="platform-name">BINANCE SMART CHAIN</div>
+            </div>
+            
+            <div class="platform-card">
+                <img src="images/polkadat.png" alt="Polkadot" class="platform-icon">
+                <div class="platform-name">POLKADOT</div>
+            </div>
+            
+            <div class="platform-card">
+                <img src="images/solana.png" alt="Solana" class="platform-icon">
+                <div class="platform-name">SOLANA</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="process-container">
+        <div class="process-header">
+            <div class="process-button">Why Us</div>
+            <h1 class="process-title">Why Choose Us</h1>
+            <p class="process-description">
+                Choosing Code Regime Technologies as your blockchain development company means
+                collaborating with a team of talented professionals. Here’s why businesses around the world choose us
+                for their blockchain development services: 
+            </p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="images/proven.png" alt="Expert working with blockchain" class="feature-image">
+                <div class="feature-title">Proven Expertise</div>
+            </div>
+            
+            <div class="feature-card">
+                <img src="images/bespoke-img.png" alt="Bespoke blockchain solutions" class="feature-image">
+                <div class="feature-title">Bespoke Solutions</div>
+            </div>
+            
+            <div class="feature-card">
+                <img src="images/full-fledged-img.png" alt="Full-fledged blockchain services" class="feature-image">
+                <div class="feature-title">Full-fledged Services</div>
+            </div>
+            
+            <div class="feature-card">
+                <img src="images/client.png" alt="Client-focus approach" class="feature-image">
+                <div class="feature-title">Client-Focus Approach</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-content">
+            <div class="faq-intro">
+                <h2 class="faq-heading">Frequently</h2>
+                <h2 class="faq-heading">Asked Questions</h2>
+                <div class="faq-full-form">(FAQ)</div>
+                <p class="faq-description">Our professional experts bring you secure, scalable blockchain solutions highly depending on innovation and client requirements.</p>
+            </div>
+            
+            <div class="faq-questions">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">What services does Code Regime Technologies provide for blockchain?</div>
+                            <div class="accordion-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-text">Our talented team brings you bespoke blockchain, smart contracts, Dapp development, and blockchain consultation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">How can blockchain break through my venture?</div>
+                            <div class="accordion-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-text">Code Regime Technologies enhances data security, transparency, and process automation, benefiting industries like finance, food, healthcare and supply chain.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">What commercial entity do you provide with blockchain services?</div>
+                            <div class="accordion-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-text">Our team includes Tourism, healthcare, logistics, E-commerce, and Food with bespoke blockchain solutions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">How do Code Regime Technologies develop blockchain solutions?</div>
+                            <div class="accordion-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-text">Our process includes requirement analysis, design, platform selection, coding, and rigorous testing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">Why choose Code Regime Technologies for blockchain development?</div>
+                            <div class="accordion-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-text">Our professional experts bring you secure, scalable blockchain solutions highly demanding on innovation and client requirements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                
+                header.addEventListener('click', () => {
+                    // Close all items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>    
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-container">
+          <!-- Left Section -->
+          <div class="footer-about">
+            <img src="images/logo.png" alt="Code Regime Logo" class="footer-logo">
+            <p>At Code Regime Technologies, we specialize in innovative software development.</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/company/72574091/admin/dashboard/" class="social-icon linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
+              <a href="https://x.com/RegimeCode" class="social-icon twitter"><img src="images/twitter x.png" alt="twitter"></a>
+              <a href="https://www.facebook.com/profile.php?id=61572308472454" class="social-icon facebook"><img src="images/facebook.png" alt="facebook"></a>
+              <a href="https://www.instagram.com/coderegimetechnologies/?hl=en" class="social-icon instagram"><img src="images/instagram.png" alt="twitter"></a>
+              <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo" class="social-icon threads"><img src="images/threads.png" alt="threads"></a>
+            </div>
+          </div>
+    
+          <!-- Useful Links -->
+          <div class="footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+    
+          <!-- Legal -->
+          <div class="footer-legal">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Refund Policy</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Disclaimer</a></li>
+            </ul>
+          </div>
+    
+          <!-- Contact Us -->
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 231c, 3rd Floor, Kamarajar Salai, Madurai, TamilNadu 625009</p>
+            <p><i class="fas fa-phone"></i> +91 7418802770</p>
+            <p><i class="fas fa-envelope"></i>coderegime@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© Copyrights 2025, All Rights Reserved by Code Regime</p>
+        </div>
+      </footer>
+</body>
+</html>
