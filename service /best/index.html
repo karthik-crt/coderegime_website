@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Regime - Web App Development</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+          <div class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="/">
+                <img src="image/logo.png" alt="Code Regime Logo">
+              </a>
+            </div>
+    
+            <!-- Hamburger Menu -->
+            <button class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+    
+            <!-- Navigation -->
+            <nav id="nav-menu">
+              <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li class="dropdown">
+                  <a href="#">About Us <span class="dropdown-arrow"><img src="image/dropdown.png" alt=""></span></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#">Services <span class="dropdown-arrow"><img src="image/dropdown.png" alt=""></span></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#">Products <span class="dropdown-arrow"><img src="image/dropdown.png" alt=""></span></a>
+                </li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+              </ul>
+            </nav>
+    
+            <!-- Contact Button -->
+            <div class="contact-btn">
+              <a href="/contact" class="btn-outline">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>
+              <span class="highlight">Best Web</span> App Development Services Company
+            </h1>
+            <p>
+              Once you plan to do business, the Web app plays a crucial role in today's world digital market. 
+              If you are ready to do a small-scale or a large-scale business, custom web app development services 
+              can boost your online promotions and purposeful functional efficiency. At Code Regime Technologies, 
+              we proudly say Web App Development Company that brings you well-crafted solutions to satisfy the 
+              specific needs of our valuable clients.
+            </p>
+            <div class="cta-button">
+              <a href="#" class="btn-primary">Let's get started <span class="arrow">›</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="image/header-tablet.png" alt="iOS Application Example">
+        </div>
+      </section>
+    
+      <!-- Script -->
+      <script>
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
+    
+        hamburger.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+          hamburger.classList.toggle("open");
+        });
+      </script>
+
+    <div class="why-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Why Choose Code Regime <br> Technologies?</h1>
+            <p>We will make you as a Brand. Get ready to collaborate with us.</p>
+        </div>
+
+        <!-- Top Row Features -->
+        <div class="features-grid">
+            <!-- Core Expertise -->
+            <div class="feature-card">
+                <div class="icon-container">
+                    <img src="image/core.png" alt="">
+                </div>
+                <h3 class="feature-title">Core Expertise</h3>
+                <p class="feature-description">Our team has talented developers with over years of experience in designing web applications.</p>
+            </div>
+
+            <!-- Custom Solutions -->
+            <div class="feature-card">
+                <div class="icon-container">
+                    <img src="image/custom-solution.png" alt="">
+                </div>
+                <h3 class="feature-title">Custom Solutions</h3>
+                <p class="feature-description">We team has talented developers with over years of experience in designing web applications.</p>
+            </div>
+        </div>
+
+        <!-- Bottom Row Features -->
+        <div class="features-grid">
+            <!-- Trustworthiness -->
+            <div class="feature-card">
+                <div class="icon-container">
+                    <img src="image/trustworthiness.png" alt="">
+                </div>
+                <h3 class="feature-title">Trustworthiness</h3>
+                <p class="feature-description">As a leading Web App Development Company, we bring you transparency and accuracy. The final result will be your happiness and satisfaction without any hidden costs.</p>
+            </div>
+
+            <!-- Reliability -->
+            <div class="feature-card">
+                <div class="icon-container">
+                    <img src="image/reliability.png" alt="">
+                </div>
+                <h3 class="feature-title">Reliability</h3>
+                <p class="feature-description">Our designs of web application development for your business grow relevant to your success.</p>
+            </div>
+
+            <!-- Clearance Handling -->
+            <div class="feature-card">
+                <div class="icon-container">
+                    <img src="image/clearance-handling.png" alt="">
+                </div>
+                <h3 class="feature-title">Clearance Handling</h3>
+                <p class="feature-description">Our team aims to launch your web app timely and prioritize on-time support availability.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="code-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Code Regime's Web App <br> Development Integrations</h1>
+            <p>Our web-app development process is designed to ensure that every project <br> we undertake meets the consistency of quality and higher reliability.</p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <!-- Service 1: Collecting Overall Ideas -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="image/collecting.png" alt="Team discussing ideas">
+                </div>
+                <h3 class="service-title">Collecting Overall Ideas</h3>
+                <p class="service-description">Firstly, we gather all that information as per the plans and requirements needed for your business.</p>
+            </div>
+
+            <!-- Service 2: Crafted Design -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="image/crafted.png" alt="Designer working on UI design">
+                </div>
+                <h3 class="service-title">Crafted Design</h3>
+                <p class="service-description">Our Team gives you the best vision and usage of the web app. It will be your brand so we work perfectly with each nook of the corner.</p>
+            </div>
+
+            <!-- Service 3: Development Process -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="image/development.png" alt="Developers coding">
+                </div>
+                <h3 class="service-title">Development Process</h3>
+                <p class="service-description">Our Developer's brings out the best design web apps with secure, robust, and high-performance</p>
+            </div>
+
+            <!-- Service 4: Test Nets -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="image/test.png" alt="Testing environment">
+                </div>
+                <h3 class="service-title">Test Nets</h3>
+                <p class="service-description">We will make assure of web app quality testing, fixing errors, bugs, and any kind of issues. The Launch will be error-free delivery.</p>
+            </div>
+
+            <!-- Service 5: Final Launch -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="image/final.png" alt="Team reviewing final product">
+                </div>
+                <h3 class="service-title">Final Launch</h3>
+                <p class="service-description">We check the overall operational functions and set your niche industry target audience.</p>
+            </div>
+
+            <!-- Service 6: Tech Support -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="image/tech.png" alt="Technical support">
+                </div>
+                <h3 class="service-title">Tech Support</h3>
+                <p class="service-description">we ensure post-launch security protocols of your web app and provide you with on-time technical support.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="custom-web-apps">
+        <h2>What are the Custom <br> Web Apps We Develop?</h2>
+        <p>Code Regime Technologies specializes in making various custom web <br> applications that are needed by our valuable clients.</p>
+        <div class="grid-container">
+            <div class="card">
+                <img src="image/ecommerce.png" alt="E-Commerce Platforms">
+                <h3>E-Commerce Platforms</h3>
+                <p>We create dynamic e-commerce web applications that provide scalable shopping models, multiple secure payment methods, and user-friendly interfaces.</p>
+            </div>
+            <div class="card">
+                <img src="image/erp.png" alt="ERP Software Solutions">
+                <h3>(ERP) Software Solutions</h3>
+                <p>Our ERP systems are useful for running overall operations and managing day-to-day tasks.</p>
+            </div>
+            <div class="card">
+                <img src="image/crm.png" alt="CRM Software Solutions">
+                <h3>(CRM) Software Solutions</h3>
+                <p>Our team develops CRM systems that will exceed customer interactions and data system precision efficiently.</p>
+            </div>
+            <div class="card">
+                <img src="image/content.png" alt="Content Management Solutions">
+                <h3>Content Management Solutions (CMS)</h3>
+                <p>Our CMS software enhances overall operations to manage and modify digital content with tools that support multiple users in an integrated environment.</p>
+            </div>
+            <div class="card">
+                <img src="image/web.png" alt="Web Portals Software">
+                <h3>Web Portals Software</h3>
+                <p>Our team develops web portals that make the web more effective and information-rich.</p>
+            </div>
+        </div>
+    </section>
+    <div class="industry-container">
+        <!-- Left Column - Introduction -->
+        <div class="intro-column">
+            <h1 class="intro-title">Industries We Serve</h1>
+            <p class="intro-text">Code Regime's Experts excel in working in various industries in Web App development services.</p>
+        </div>
+        
+        <!-- Right Column - Industries List -->
+        <div class="industries-column">
+            <!-- Healthcare Sector -->
+            <div class="industry-card">
+                <div class="industry-number">I</div>
+                <div class="industry-content">
+                    <h3 class="industry-title">Healthcare Sector</h3>
+                    <p class="industry-description">Developing secure and efficient web apps for patient management, telemedicine, and healthcare administration.</p>
+                </div>
+            </div>
+            
+            <!-- Insurance -->
+            <div class="industry-card insurance">
+                <div class="industry-number">II</div>
+                <div class="industry-content">
+                    <h3 class="industry-title">Insurance</h3>
+                    <p class="industry-description">Crafting long-term insurance software solutions for insurance services.</p>
+                </div>
+            </div>
+            
+            <!-- Retail -->
+            <div class="industry-card">
+                <div class="industry-number">III</div>
+                <div class="industry-content">
+                    <h3 class="industry-title">Retail</h3>
+                    <p class="industry-description">Creating exciting and transactional e-commerce zones that convert money and customers higher in usage.</p>
+                </div>
+            </div>
+            
+            <!-- Asset Management Software -->
+            <div class="industry-card">
+                <div class="industry-number">IV</div>
+                <div class="industry-content">
+                    <h3 class="industry-title">Asset Management Software</h3>
+                    <p class="industry-description">Our Talented team creates an overall user experience in one app and is considering the best promotions for large-scale enterprising companies.</p>
+                </div>
+            </div>
+            
+            <!-- Logistics Software -->
+            <div class="industry-card">
+                <div class="industry-number">V</div>
+                <div class="industry-content">
+                    <h3 class="industry-title">Logistics Software</h3>
+                    <p class="industry-description">As a leading Web App Development company, Our team has designed a web app used for supply chain goods, automated invoice generators, and billing systems.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<section class="services-section">
+    <div class="services-grid">
+        <!-- Top left content -->
+        <div class="services-content">
+            <h2>How a Web App Would be Profitable to Your Business?</h2>
+            <p>
+                In the presence of the latest tech world, a business move in a web app development 
+                company can rapidly strengthen your business's profit. Our custom web app planned 
+                operations reduce manual work, and provide real-time metrics, allowing for AI-driven 
+                smart moves that increase efficiency and profit. So, web apps improve customer 
+                engagement by bringing endless user experiences, transforming into increased 
+                customer engagement and loyalty.
+            </p>
+            <p>
+                Our team provides you scalability of web apps ensuring that your business can grow 
+                without the need for costly infrastructure. Finally, partnering with Code Region's web 
+                app development company is a key move to preserving long-term profitability and 
+                maintaining a competitive role in the market.
+            </p>
+        </div>
+
+        <!-- Top right image -->
+        <div class="services-image-top">
+            <img src="image/profitable.png" alt="Dashboard on tablet showing business metrics and analytics">
+        </div>
+
+        <!-- Bottom left image -->
+        <div class="services-image-bottom">
+            <img src="image/joining.png" alt="Two business professionals discussing web app development">
+        </div>
+
+        <!-- Bottom right content -->
+        <div class="benefits-contentbelow">
+            <h2>Benefits of Joining With Us:</h2>
+            <p>
+                In any kind of business, having a custom web application designed for your business 
+                is important for evolving more competitively. Code Region Technologies is the 
+                best Web App Development Company, we can deliver you multiple web app 
+                development services that are highly secured, robust, and crafted to help your business 
+                be successful.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <h2 class="faq-title">FAQ</h2>
+    
+    <div class="faq-item">
+        <div class="faq-question">
+            What is the overall cost of creating a web application?
+            <div class="faq-toggle active"></div>
+        </div>
+        <div class="faq-answer active">
+            <p>We focus on delivering the utmost quality rather than cost so it is negotiable.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="faq-question">
+            How many days to develop a web application?
+            <div class="faq-toggle"></div>
+        </div>
+        <div class="faq-answer">
+            <p>The timeline can vary from just a few weeks to a few months.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="faq-question">
+            How long Can Code Regime support?
+            <div class="faq-toggle"></div>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, Our team will assure you the technical support whenever you need it.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="faq-question">
+            Do you make web app development services for Beginners?
+            <div class="faq-toggle"></div>
+        </div>
+        <div class="faq-answer">
+            <p>Our Team is proficient in developing web app services for startups</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // JavaScript for toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const questions = document.querySelectorAll('.faq-question');
+        
+        questions.forEach(question => {
+            question.addEventListener('click', function() {
+                const toggle = this.querySelector('.faq-toggle');
+                const answer = this.nextElementSibling;
+                
+                toggle.classList.toggle('active');
+                answer.classList.toggle('active');
+            });
+        });
+    });
+</script>
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-about">
+        <img src="image/logo.png" alt="Code Regime Logo" class="footer-logo">
+        <p>At Code Regime Technologies, we specialize in innovative software development.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/72574091/admin/dashboard/" class="social-icon linkedin"><img src="image/linkedin.png" alt="linkedin"></a>
+            <a href="https://x.com/RegimeCode" class="social-icon twitter"><img src="image/twitterx.png" alt="twitter"></a>
+            <a href="https://www.facebook.com/profile.php?id=61572308472454" class="social-icon facebook"><img src="image/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/coderegimetechnologies/?hl=en" class="social-icon instagram"><img src="image/instagram.png" alt="instagram"></a>
+            <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo" class="social-icon threads"><img src="image/threads.png" alt="twitter"></a>
+        </div>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-legal">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 231c, 3rd Floor, Kamarajar Salai, Madurai, TamilNadu 625009</p>
+        <p><i class="fas fa-phone"></i> +91 7418802770</p>
+        <p><i class="fas fa-envelope"></i>coderegime@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Copyright 2025, All Rights Reserved by Code Regime</p>
+    </div>
+  </footer>
+</body>
+</html>

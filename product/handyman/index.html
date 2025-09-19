@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Handyman Clone</title>
+</head>
+
+<body>
+  <div class="header">
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/color-logo.png" alt="logo">
+        </a>
+        
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="">Services <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="">Products <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Portfolio</a></li>
+            </ul>
+            <button class="contact-btn">Contact Us</button>
+        </div>
+    </nav>
+    
+    <div class="wave">
+        <img src="images/wave.png" alt="wave">
+    </div>
+
+    <div class="mobile">
+        <img src="images/header-img.png" alt="mobile app mockup">
+    </div>
+
+    <div class="container">
+        <h1 class="heading">Handyman<br>Clone App</h1>
+        <p class="description">The Uber for Handyman app, developed by Code Regime Technologies, is a mastering software solution. Our skilled team is connected to customers with a professional handyman for multiple house-issue tasks.</p>
+        <button class="cta-button">Let's Get Started</button>
+    </div>
+</div>
+
+<script>
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    // Ensure elements exist before adding event listeners
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Hamburger clicked'); // Debug log
+            
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'auto';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close menu when clicking on a link or button
+        const navLinkItems = navLinks.querySelectorAll('a, .contact-btn');
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Don't prevent default for actual links
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when clicking outside (on the overlay)
+        navLinks.addEventListener('click', (e) => {
+            // Only close if clicking on the overlay background, not the content
+            if (e.target === navLinks) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+</script>
+    <!-- second section -->
+    <section class="uber-clone-section">
+        <div class="content-container">
+          <!-- Text Content -->
+          <div class="text-contents">
+            <h1>What is Uber for Handyman?</h1>
+            <p>In this  Digital Era, Services have been changed to the latest technology methods and also
+                the on-delivery and on-demand digital software solutions. The Uber for Handyman app,
+                developed by Code Regime Technologies, is a mastering software solution. <br> <br> Our skilled team is
+                connected to customers with a professional handyman for multiple house-issue tasks. It may be
+                like plumbing, electrical work, or general maintenance, Our app customer users to register
+                online services very easily through their mobile phones, ensuring trustability and scalability.</p>
+          </div>
+          <!-- Image uberclone -->
+            <img src="images/second-img.jpg" alt="Uber Clone App Phone" class="phone-image">
+        </div>
+      </section>
+
+      <!--Benefits-section-->
+    <section class="benefits-section">
+        <div class="curve-container">
+            <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
+          </div>
+        <h1 class="section-benefits-title">
+            Why choose Code Regime Technologies <br> for your Handyman App?
+        </h1>
+        <p class="section-subwords">
+            Code Regime Technologies stands out as a premier provider of Code Regime Technologies stands out as a <br> premier provider of Uber for Handyman solutions, offering:
+
+        </p>
+        <div class="benefits-container">
+          <div class="benefit-card">
+            <div class="icon" >
+                <img src="images/customization.png" alt="Customization">
+            </div>
+            <h3>Customization</h3>
+            <p>
+                We can deliver it to your specific needs and specialize in customization.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="icon">
+                <img src="images/high-level.png" alt="High-level Security">
+            </div>
+            <h3>High-level Security</h3>
+            <p>
+                Code Regime Technology is a promising platform for managing <br> and accessing your data and source coding files.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="icon">
+                <img src="images/long-term.png" alt="Long-Term Support">
+            </div>
+            <h3>Long-Term Support</h3>
+            <p>
+                Our Skilled team will provide you a seamless 24/7 support from scratch to launch the app, we will assure you to the part of endless support.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Third section -->
+      <div class="ai-container1">
+        <div class="top-title1">ARTIFICIAL INTELLIGENCE</div>
+        <h1>The Handyman App Like Uber Process:</h1>
+        <p>The process flow of a handyman app like Uber is designed for efficiency and user satisfaction:</p>
+        
+        <div class="features-section1">
+            <div class="tabs-container1">
+                <div class="tab active" data-tab="ai">
+                    <div class="tab-icon"><img src="images/user-onboarding.png" alt=""></div>
+                    <div class="tab-content">
+                        <div class="tab-title">User Onboarding</div>
+                        <div class="tab-desc">Customers register with the app using a simple, secure
+                          process that collects essential details and service preferences.</div>
+                    </div>
+                </div>
+                
+                <div class="tab" data-tab="analytics">
+                    <div class="tab-icon"><img src="images/service-selection.png" alt=""></div>
+                    <div class="tab-content">
+                        <div class="tab-title">Service Selection</div>
+                        <div class="tab-desc">Users browse through a categorized list of handyman services, selecting the one that matches their immediate needs.</div>
+                    </div>
+                </div>
+                
+                <div class="tab" data-tab="routing">
+                    <div class="tab-icon"><img src="images/faster-registering.png" alt=""></div>
+                    <div class="tab-content">
+                        <div class="tab-title">Faster Registering</div>
+                        <div class="tab-desc">Our app aide convenience to the customers, They can book a service quickly or Reschedule it for the upcoming days.</div>
+                    </div>
+                </div>
+                
+                <div class="tab" data-tab="chatbots">
+                    <div class="tab-icon"><img src="images/click.png" alt=""></div>
+                    <div class="tab-content">
+                        <div class="tab-title">Click to Easy Pay</div>
+                        <div class="tab-desc">A well-secured, easy click to pay provides multiple options for Mind-free transfers.</div>
+                    </div>
+                </div>
+                
+                <div class="tab" data-tab="pricing">
+                    <div class="tab-icon"><img src="images/feedback.png" alt=""></div>
+                    <div class="tab-content">
+                        <div class="tab-title">Service Execution & Feedback</div>
+                        <div class="tab-desc">Post-service, customers can provide ratings and reviews, contributing to the platform's continuous improvement.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <div class="triangle"></div>
+                <img src="images/ai-panel.png" alt="AI Illustration showing a person surrounded by digital elements">
+            </div>
+        </div>
+        
+        
+  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const contentAreas = document.querySelectorAll('.content-area');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all content areas
+                    contentAreas.forEach(area => area.classList.remove('active'));
+                    
+                    // Show the corresponding content area
+                    const tabName = this.getAttribute('data-tab');
+                    const contentToShow = document.getElementById(tabName + '-content');
+                    if (contentToShow) {
+                        contentToShow.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- How-it-works -->
+    <section class="work-section">
+        <div class="work-container">
+            <!-- Left Column: Text Content -->
+            <div class="work-text">
+                <p class="subheading-work">Uses of a Handyman</p>
+                <h2 class="main-heading-work">Do  you want to know the uses  of a handyman app like uber?</h2>
+                <p class="description-work">
+                    Implementing a handyman app like Uber delivers significant advantages for both
+                    businesses and customers:
+                </p>
+                <ul class="work-list">
+                  <div class="work-list1st-box">
+                    <li>
+        
+                      <div class="list-content">
+                          <strong>1. Enhanced Accessibility:</strong>  Customers can easily access skilled handymen
+                          without the need for extensive searches or referrals.
+                      </div>
+                  </li>
+
+                  </div>
+                    
+                    <li>
+                        
+                        <div class="list-content">
+                            <strong>2. Optimized Time Management:</strong> The app streamlines service requests, reducing
+                            the time customers spend securing reliable help.
+                        </div>
+                    </li>
+                    <li>
+                        
+                        <div class="list-content">
+                            <strong>3. Transparent Operations:</strong> With clear pricing structures and customer reviews,
+                            users can make informed decisions quickly.
+                        </div>
+                    </li>
+                    <li>
+                     
+                      <div class="list-content">
+                          <strong>4. 24/7 Availability:</strong> The app ensures that service providers are available at any
+                          time, increasing customer satisfaction and engagement
+                      </div>
+                  </li>
+                  <li>
+                    
+                    <div class="list-content">
+                        <strong>5. Security and Trust:</strong> The platform's secure architecture, developed by Code
+                        Regime Technologies, ensures data protection and trustworthy transactions.
+                    </div>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="work-image">
+                <img src="images/uses-of-handyman.png" alt="Mobile App Features">
+            </div>
+        </div>
+    </section>
+
+     <!-- Increases Earnings section -->
+     <section class="earning-section">
+        <div class="earning-container">
+            <!-- Left Column: Text Content -->
+            <div class="work-text">
+                <p class="subheading-earning">Increases Earnings</p>
+                <h2 class="main-heading-earning">How a Handyman App Like Uber Increases Earnings</h2>
+                <p class="description-earning">
+                    For service providers, a handyman app like Uber represents a significant business opportunity:
+                </p>
+                <ul class="earning-list">
+                  <div class="earning-list1st-box">
+                    <li>
+        
+                      <div class="list-content">
+                          <strong>1. Enlarge the Customers:</strong>  This app can aide you to reach the client near and far
+                          away from you.
+                      </div>
+                  </li>
+
+                  </div>
+                    
+                    <li>
+                        
+                        <div class="list-content">
+                            <strong>2. Tune Daily Jobs:</strong> With the app, clients who can register their services are likely
+                            to tune the handyman jobs regularly.
+                        </div>
+                    </li>
+                    <li>
+                        
+                        <div class="list-content">
+                            <strong>3. Reschedule the Jobs:</strong> The service provider can manage and access their work
+                            or jobs during peak time.
+                        </div>
+                    </li>
+                    <li>
+                     
+                      <div class="list-content">
+                          <strong>4. Revenue Growth:</strong> The payment and works will automatically be entered through
+                          the app.
+                      </div>
+                  </li>
+                  <li>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="earning-image">
+                <img src="images/increse-earning.png" alt="increse earning">
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="curve-container">
+            <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
+          </div>
+        <h1 class="section-benefits-title">
+            Standard Features of an Uber <br> For Handyman App
+        </h1>
+        <p class="section-subwords">
+            The standard features offered by an Uber for Handyman app <br> are essential for a seamless
+            user experience
+  
+        </p>
+        <section class="box-section">
+          <div class="box">
+            <div class="icon">
+              <img src="images/upgraded-ui.png" alt="Live-Time Order Icon">
+            </div>
+            <h3>Upgraded UI</h3>
+            <p>Moreover everyone will like to use this app because our skilled
+                teams have set up a world-class user app.</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img src="images/gps-tracker.png" alt="Digital Payment Icon">
+            </div>
+            <h3>GPS Tracker</h3>
+            <p>After booking, customers can view the handyman's arrival
+                using this smart <br> feature.</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img src="images/blockchain-tech.png" alt="Advanced Search Filters Icon">
+            </div>
+            <h3>Blockchain Tech</h3>
+            <p>Code Regime provides you with the latest innovative
+                blockchain technology for easy and well-secured transactions.</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img src="images/service-review.png" alt="Push Notifications Icon">
+            </div>
+            <h3>Service Reviewing System</h3>
+            <p>Customer can give their feedback to the
+                handyman. It helps to make the reputation around the business and the handyman.</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img src="images/notification.png" alt="Loyalty Programs Icon">
+            </div>
+            <h3>Automated Notifications</h3>
+            <p>Push notifications keep users informed about service
+                bookings, updates, and promotions.</p>
+          </div>
+        </section>
+
+        <!-- Extra addon Section -->
+      <section class="addons-section">
+        <div class="curve-container3">
+            <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
+          </div>
+        <h1 class="section-title2">Advanced Addons for <br> Handyman Clone</h1>
+        <p class="section-subtitle">For business that want to stay ahead, we offer advanced features like.</p>
+        
+        <div class="addons-grid">
+          <div class="addon-item">
+            <img src="images/global.jpg" alt="Order Placement" class="addon-image">
+            <h2 class="addon-title">Global Language & Currency Integration</h2>
+            <p class="addon-description"> All around the globe, we may give
+                you these additional benefits to the clients.
+            </p>
+          </div>
+
+          <div class="addon-item">
+            <img src="images/inapp.jpg" alt="Order Processing" class="addon-image">
+            <h2 class="addon-title">In-App Communication</h2>
+            <p class="addon-description"> Facilitate direct communication between customers <br> and handymen for better service coordination and <br> issue resolution.
+            </p>
+          </div>
+
+          <div class="addon-item">
+            <img src="images/service-subscription.jpg" alt="Delivery Assignment" class="addon-image">
+            <h2 class="addon-title">Service Subscription</h2>
+            <p class="addon-description">Offer customers subscription-based packages for <br> regular maintenance service at discounted rates.</p>
+          </div>
+          
+          <div class="addon-item">
+            <img src="images/service-support.png" alt="Order Tracking" class="addon-image">
+            <h2 class="addon-title">AI Service Support</h2>
+            <p class="addon-description">This AI will show you the professional and conventional handyman in front of you quickly.</p>
+          </div>
+
+          <div class="addon-item">
+            <img src="images/useful-dashboard.png" alt="Order Completion" class="addon-image">
+            <h2 class="addon-title">Useful Dashboard</h2>
+            <p class="addon-description"> Our app has a professional insight tool for the <br> dashboard to
+                know the service ratings, feedback,<br> market analysis.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies section -->
+      <section class="technologies-section">
+        <div class="curve-container3">
+            <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
+          </div>
+        <h1 class="section-title2">Technologies Behind Uber <br> For Handyman Apps</h1>
+
+      <div class="tech-section1">
+        <div class="tech-content">
+            <h2>AI & ML</h2>
+            <p>We integrate all those tasks, service bookings, and service recommendations with the help of AI and Machine learning.</p>
+        </div>
+        <div class="tech-image">
+            <img src="images/ai-ml.png" alt="AI & ML">
+        </div>
+    </div>
+
+    <div class="tech-section2">
+        <div class="tech-image">
+            <img src="images/robust.png" alt="AI & ML">
+        </div>
+
+        <div class="tech-content">
+            <h2>Robust APIs</h2>
+            <p>Our team can integrate any other <br> services externally and also
+                their <br> operational functionalities.</p>
+        </div>
+    </div>
+
+    <div class="tech-section3">
+        <div class="tech-content">
+            <h2>Uber For Handyman</h2>
+            <p>The Uber for Handyman app is an unimaginary <br> tool that meets the enlarging demand for<br> 
+                on-demand services.</p>
+            <!-- <a href="#" class="btn">Learn more ></a> -->
+        </div>
+        <div class="tech-image">
+            <img src="images/uber-handyman.png" alt="AI & ML">
+        </div>
+    </div>
+
+    <!-- Faq Section -->
+    <div class="faq-container">
+      <div class="faq-container">
+        <div class="faq-title">
+          <h1>Frequently Asked Questions (FAQ)</h1>
+          <p>To make your Clone even better. We offer some special services through which you can easily complete the marketing work on social media.</p>
+        </div>
+        
+        <div class="faq-content">
+          <div class="faq-item">
+            <div class="faq-question">
+              What services can I find on the Uber Handyman app?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>You can access a variety of services like plumbing, electrical work, carpentry, and home repairs, all through the Uber Handyman app developed by Code Regime Technologies.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              How does the Uber Handyman app ensure reliable professionals?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>Uber Handyman app ensures reliable professionals through a thorough vetting process, background checks, skill verification, and a rating system that allows customers to review past performance.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              Is the Uber Handyman app customizable for my business needs?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, the Uber Handyman app offers business customization options including branded interfaces, service catalog customization, and integration capabilities with your existing business systems.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              Can I track the handyman's arrival in real time?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, the app features real-time GPS tracking that allows you to monitor your handyman's location and estimated time of arrival, similar to how you can track drivers in the regular Uber app.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I handle payments on the Uber Handyman app?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>Payments are handled securely through the app with multiple options including credit/debit cards, digital wallets, and in some regions, cash payments. All transactions are receipted and recorded for your convenience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question');
+          
+          question.addEventListener('click', () => {
+            // Close all other items
+            faqItems.forEach(otherItem => {
+              if (otherItem !== item && otherItem.classList.contains('active')) {
+                otherItem.classList.remove('active');
+              }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+          });
+        });
+        
+        // Open the first FAQ item by default
+        faqItems[0].classList.add('active');
+      });
+    </script>
+  
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-about">
+          <img src="images/color-logo.png" alt="Code Regime Logo" class="footer-logo">
+          <p>At Code Regime Technologies, we specialize in innovative software development.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon youtube"  ><img src="images/youtube.png" alt="youtube"></a>
+            <a href="#" class="social-icon linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
+            <a href="#" class="social-icon twitter"><img src="images/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+  
+        <!-- Useful Links -->
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Legal -->
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Refund Policy</a></li>
+              <li><a href="">Support</a></li>
+              <li><a href="">Disclaimer</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Us -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 231c, 3rd Floor, Kamarajar Salai, Madurai, TamilNadu 625009</p>
+          <p><i class="fas fa-phone"></i> +91 7418802770</p>
+          <p><i class="fas fa-envelope"></i> coderegime@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Copyright 2025, All Rights Reserved by Code Regime</p>
+      </div>
+    </footer>
+</body>
+</html>
