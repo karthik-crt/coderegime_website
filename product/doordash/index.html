@@ -6,42 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
     <title>Doordash Clone</title>
 </head>
 <body>
-    <div class="header">
-        <nav>
-            <a href="index.html"><img src="images/CodeRegimePNG 4.png" alt="logo"></a>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Us <i class="fa-solid fa-angle-down"></i></a></li>
-                    <li><a href="">Services <i class="fa-solid fa-angle-down"></i></a></li>
-                    <li><a href="">Products <i class="fa-solid fa-angle-down"></i></a></li>
-                    <li><a href="http://127.0.0.1:5500/product%20page/Blog%20section/index.html">Blog</a></li>
-                    <li><a href=""> Portfolio</a></li>
-                    <button>Contact Us</button>
-                </ul>
-            </div>
-        </nav>
-        <div class="wave">
-            <img src="images/wave.png" alt="wave">
+  <div class="header">
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/color-logo.png" alt="CodeRegime Logo">
+            </a>
         </div>
-
-        <div class="mobile">
-            <img src="images/header img.png" alt="mobile">
+        
+        <div class="nav-links" id="navLinks">
+            <button class="close-menu" onclick="toggleMenu()">&times;</button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="#services">Services <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="#products">Products <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+            <button class="contact-btn">Contact Us</button>
         </div>
+        
+        <button class="mobile-menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
 
-        <div class="container">
-            <h1 class="heading">Doordash<br>Clone App</h1>
-            <p class="description">Get Ready to start an Online food delivery business, Our Doordash  Clone is a great option. It’s a
-                well-built solution that lets you take a food delivery app similar to Doordash. Let's delve into what a
-                Doordash Clone is, how AI can help you, and why Code Regime Technologies is a valuable choice for
-                all.</p>
+    <div class="wave">
+        <img src="images/wave.png" alt="wave background">
+    </div>
+
+    <div class="main-content">
+        <div class="content-text">
+            <h1 class="heading">DoorDash<br>Clone App</h1>
+            <p class="description">
+                Get Ready to start an Online food delivery business, Our DoorDash Clone is a great option. It's a well-built solution that lets you take a food delivery app similar to DoorDash. Let's delve into what a DoorDash Clone is, how AI can help you, and why Code Regime Technologies is a valuable choice for all.
+            </p>
             <button class="cta-button">Let's Get Started</button>
         </div>
+        
+        <div class="hero-image">
+            <img src="images/header-img.png" alt="DoorDash Clone Mobile App" class="mobile-img">
+        </div>
     </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        const body = document.body;
+        
+        navLinks.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navLinks.classList.contains('active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    }
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const navLinks = document.getElementById('navLinks');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        
+        if (!navLinks.contains(e.target) && !toggle.contains(e.target) && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Add smooth scroll behavior for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add loading animation
+    window.addEventListener('load', () => {
+        document.body.style.opacity = '1';
+    });
+</script>
     <!-- second section -->
     <section class="uber-clone-section">
         <div class="content-container">
@@ -53,7 +118,7 @@
                 efficient, reliable, and sustainable.</p>
           </div>
           <!-- Image uberclone -->
-            <img src="images/second sec img.jpg" alt="Uber Clone App Phone" class="phone-image">
+            <img src="images/second-img.jpg" alt="Uber Clone App Phone" class="phone-image">
         </div>
       </section>
        <!-- Third section -->
@@ -66,9 +131,9 @@
           <div class="ai-benefits-column">
             <div class="ai-benefit-box ai-active" id="ai-ordering" onclick="toggleAiBenefit('ai-ordering')">
               <div class="ai-benefit-row">
-                <div class="ai-benefit-icon-wrappers">
-                  <img src="images/ease on ordering.png" alt="Ease on Ordering">
-                </div>
+                <!-- <div class="ai-benefit-icon-wrappers">
+                  <img src="images/ease.png" alt="Ease on Ordering">
+                </div> -->
                 <div class="ai-benefit-name">Ease on Ordering</div>
               </div>
               <p class="ai-benefit-description">AI can learn what customers like and suggest dishes they might want to order, which can increase sales</p>
@@ -77,9 +142,9 @@
             
             <div class="ai-benefit-box" id="ai-navigation" onclick="toggleAiBenefit('ai-navigation')">
               <div class="ai-benefit-row">
-                <div class="ai-benefit-icon-wrapper">
-                  <img src="images/smart navigation.png" alt="Smart Navigations">
-                </div>
+                <!-- <div class="ai-benefit-icon-wrapper">
+                  <img src="images/smart-navigation.png" alt="Smart Navigations">
+                </div> -->
                 <div class="ai-benefit-name">Smart Navigations</div>
               </div>
               <p class="ai-benefit-description ai-hidden-content" id="ai-navigation-content">AI can find traffic-free roads for food deliveries, it can save time and fuel.</p>
@@ -87,9 +152,9 @@
             
             <div class="ai-benefit-box" id="ai-support" onclick="toggleAiBenefit('ai-support')">
               <div class="ai-benefit-row">
-                <div class="ai-benefit-icon-wrapper">
-                  <img src="images/customer support.png" alt="Customer Support">
-                </div>
+                <!-- <div class="ai-benefit-icon-wrapper">
+                  <img src="images/customer-support.png" alt="Customer Support">
+                </div> -->
                 <div class="ai-benefit-name">Customer Support</div>
               </div>
               <p class="ai-benefit-description ai-hidden-content" id="ai-support-content">AI-powered chatbots can answer customer questions 24/7, Our App AI ensures your customers are always happy.</p>
@@ -97,7 +162,7 @@
           </div>
           
           <div class="ai-visual-column">
-            <img src="images/ai img.png" alt="AI and Human Handshake" class="ai-showcase-image">
+            <img src="images/ai-img.png" alt="AI and Human Handshake" class="ai-showcase-image">
           </div>
         </div>
       </div>
@@ -142,7 +207,7 @@
         <div class="benefits-container">
           <div class="benefit-card">
             <div class="icon" >
-                <img src="images/money saves.png" alt="money saves">
+                <img src="images/money-saves.png" alt="money saves">
             </div>
             <h3>Money Saves</h3>
             <p>
@@ -206,7 +271,7 @@
 
             <!-- Right Column: Image -->
             <div class="why-image">
-                <img src="images/whychoose img.png" alt="Mobile App Features">
+                <img src="images/whychoose-img.png" alt="Mobile App Features">
             </div>
         </div>
     </section>
@@ -216,7 +281,7 @@
         <div class="content-wrap">
             <!-- Image Section -->
             <div class="image-wrap">
-                <img src="images/global growth img.png" alt="Globe in Hands">
+                <img src="images/global.png" alt="Globe in Hands">
             </div>
             <!-- Text Section -->
             <div class="text-page">
@@ -270,15 +335,15 @@
             </div>
             <!-- Right Column: Image -->
             <div class="offer-image">
-                <img src="images/offer img.png" alt="Mobile App Features">
+                <img src="images/offer.png" alt="Mobile App Features">
             </div>
         </div>
     </section>
     <!-- Extra Addon section -->
     <section class="extra-section">
-        <div class="curve-container2">
+        <!-- <div class="curve-container2">
             <img src="images/Vector.png" alt="Decorative Curve" class="curve-image2">
-          </div>
+          </div> -->
         <h2 class="section-title-extra">Extra Addons For <br> Doordash Clone?</h2>
         <p class="section-description-extra">
             To make your Doordash Clone even better. We offer some special options <br> and discounts through which you can easily complete the marketing work <br> on online.  
@@ -295,7 +360,7 @@
           </div>
           <div class="extra-box">
             <div class="icon-container">
-              <img src="images/real time tracking.png" alt="Payment Icon" class="feature-icon">
+              <img src="images/real-time.png" alt="Payment Icon" class="feature-icon">
             </div>
             <h3 class="extra-title">Real-Time Tracking</h3>
             <p class="extra-description">
@@ -304,7 +369,7 @@
           </div>
           <div class="extra-box">
             <div class="icon-container">
-              <img src="images/promotion and discount.png" alt="Chatbot Icon" class="feature-icon">
+              <img src="images/promotion.png" alt="Chatbot Icon" class="feature-icon">
             </div>
             <h3 class="extra-title">Promotions and discounts</h3>
             <p class="extra-description">
@@ -324,23 +389,23 @@
           
           <div class="addons-grid">
             <div class="addon-item">
-              <img src="images/ai recommendation.png" alt="AI Recommendations" class="addon-image">
+              <img src="images/ai-recommendation.png" alt="AI Recommendations" class="addon-image">
               <h2 class="addon-title">AI Recommendations</h2>
               <p class="addon-description">We display all those dishes, menus, and food <br> varieties to you.</p>
             </div>
             <div class="addon-item">
-              <img src="images/voice search.png" alt="Voice Search" class="addon-image">
+              <img src="images/voice-search.png" alt="Voice Search" class="addon-image">
               <h2 class="addon-title">Voice Search</h2>
               <p class="addon-description">We enhance the facility as much useful <br> to the customers.</p>
             </div>
             <div class="addon-item">
-              <img src="images/loyality program.png" alt="Loyalty Programs" class="addon-image">
+              <img src="images/loyality-program.png" alt="Loyalty Programs" class="addon-image">
               <h2 class="addon-title">Loyalty Programs</h2>
               <p class="addon-description">Recent discounts and rewards can be <br> purchased.</p>
             </div>
             
             <div class="addon-item">
-              <img src="images/trip history (2).jpg" alt="Trip history" class="addon-image">
+              <img src="images/trip-history.jpg" alt="Trip history" class="addon-image">
               <h2 class="addon-title">Trip history</h2>
               <p class="addon-description">The App can let you know the details of <br> your riding history.</p>
             </div>
@@ -462,7 +527,7 @@
       <div class="footer-container">
         <!-- Left Section -->
         <div class="footer-about">
-          <img src="images/CodeRegimePNG 4.png" alt="Code Regime Logo" class="footer-logo">
+          <img src="images/color-logo.png" alt="Code Regime Logo" class="footer-logo">
           <p>At Code Regime Technologies, we specialize in innovative software development.</p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/company/72574091/admin/dashboard/" class="social-icon linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
@@ -481,7 +546,7 @@
             <li><a href="#">Services</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Portfolio</a></li>
-            <li><a href="http://127.0.0.1:5500/product%20page/Blog%20section/index.html">Blog</a></li>
+            <li><a href="">Blog</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
@@ -490,10 +555,10 @@
         <div class="footer-legal">
           <h4>Legal</h4>
           <ul>
-            <li><a href="http://127.0.0.1:5500/privacy%20policy/index.html">Privacy Policy</a></li>
-              <li><a href="http://127.0.0.1:5500/Refund%20policy/image/index.html">Refund Policy</a></li>
-              <li><a href="http://127.0.0.1:5500/Security%20Policy/index.html">Support</a></li>
-              <li><a href="http://127.0.0.1:5500/Disclaimer/index.html">Disclaimer</a></li>
+            <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Refund Policy</a></li>
+              <li><a href="">Support</a></li>
+              <li><a href="">Disclaimer</a></li>
           </ul>
         </div>
   
