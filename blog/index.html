@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Regime - iOS App Development Company</title>
+    <title>Code Regime - Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -15,42 +15,100 @@
         
         <!-- Navigation Bar -->
         <nav class="navbar">
-            <img src="image/logo.png" alt="Code Regime Logo" class="logo">
+            <img src="image/color-logo.png" alt="Code Regime Logo" class="logo">
             
-            <div class="nav-links">
-                <a href="http://127.0.0.1:5500/index.html">Home</a>
-                <a href="#" class="dropdown">About Us <span class="dropdown-icon"><img src="image/dropdown.png" alt=""></span></a>
-                <a href="#" class="dropdown">Services <span class="dropdown-icon"><img src="image/dropdown.png" alt=""></span></a>
-                <a href="#" class="dropdown">Products <span class="dropdown-icon"><img src="image/dropdown.png" alt=""></span></a>
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="">Home</a>
+                <a href="#" class="dropdown">
+                    About Us 
+                    <span class="dropdown-icon">
+                        <img src="image/dropdown.png" alt="">
+                    </span>
+                </a>
+                <a href="#" class="dropdown">
+                    Services 
+                    <span class="dropdown-icon">
+                        <img src="image/dropdown.png" alt="">
+                    </span>
+                </a>
+                <a href="#" class="dropdown">
+                    Products 
+                    <span class="dropdown-icon">
+                        <img src="image/dropdown.png" alt="">
+                    </span>
+                </a>
                 <a href="#">Blog</a>
                 <a href="#">Portfolio</a>
                 <button class="contact-btn">Contact Us</button>
             </div>
         </nav>
         
-        <!-- Blogs Tag -->
-        <div class="blogs-tag">
-            <button class="blogs-btn">BLOGS</button>
-        </div>
-        
-        <!-- Hero Section -->
-        <div class="hero-section">
-            <h1 class="hero-title">A Leading Software <span class="highlight">Development</span></h1>
-            <h1 class="hero-title">Company in Greater Madurai</h1>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Blogs Tag -->
+            <div class="blogs-tag">
+                <button class="blogs-btn">BLOGS</button>
+            </div>
             
-            <p class="hero-description">
-                In  this Techno-Based Digital time, Each and Every business sector needs robust, innovative, 
-                and reliable software solutions to thrive. Code Regime Technologies, located in the heart 
-                of Greater Madurai, excels as a premier software development company. From crafting 
-                sharpened mobile apps to delivering blockchain-driven innovations, our expertise spans 
-                a wide range of digital solutions. Below, you may explore our core offerings and services 
-                and how we empower businesses with world-class app and software development services.
-
-            </p>
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <h1 class="hero-title">A Leading Software <span class="highlight">Development</span></h1>
+                <h1 class="hero-title">Company in Greater Madurai</h1>
+                
+                <p class="hero-description">
+                    In this Techno-Based Digital time, Each and Every business sector needs robust, innovative, 
+                    and reliable software solutions to thrive. Code Regime Technologies, located in the heart 
+                    of Greater Madurai, excels as a premier software development company. From crafting 
+                    sharpened mobile apps to delivering blockchain-driven innovations, our expertise spans 
+                    a wide range of digital solutions. Below, you may explore our core offerings and services 
+                    and how we empower businesses with world-class app and software development services.
+                </p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                
+                navLinks.classList.remove('active');
+                toggle.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navLinks = document.getElementById('navLinks');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const navbar = document.querySelector('.navbar');
+            
+            if (!navbar.contains(e.target)) {
+                navLinks.classList.remove('active');
+                toggle.classList.remove('active');
+            }
+        });
+    </script>
+
     <!--Second Section-->
-    <div class="container">
+    <div class="second-container">
         <div class="heading">
             <h1>How We Developing and Evolving</h1>
         </div>
@@ -74,7 +132,7 @@
                 
                 <div class="service-features">
                     <div class="feature">
-                        <img src="image/Custom Software Solutions.png" alt="Custom Software Icon" class="feature-icon">
+                        <img src="image/custom.png" alt="Custom Software Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Custom Software Solutions</h3>
                             <p>We design and develop software designed to your unique business thoughts.</p>
@@ -82,7 +140,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/Scalable and Secure.png" alt="Scalable and Secure Icon" class="feature-icon">
+                        <img src="image/scalable-secure.png" alt="Scalable and Secure Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Scalable and Secure</h3>
                             <p>Our solutions are made with scalability and security as top priorities.</p>
@@ -90,7 +148,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/Integration Support.png" alt="Integration Support Icon" class="feature-icon">
+                        <img src="image/integration.png" alt="Integration Support Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Integration Support</h3>
                             <p>Seamlessly integrate our software with your existing systems for enhanced functionality.</p>
@@ -100,14 +158,14 @@
             </div>
             
             <div class="service-image-container">
-                <img src="image/software development.png" alt="Software Development Team" class="service-image">
+                <img src="image/software-development.png" alt="Software Development Team" class="service-image">
             </div>
         </div>
         
         <!-- Mobile App Development Row -->
         <div class="service-row">
             <div class="service-image-container">
-                <img src="image/mobile app development.png" alt="Mobile Development Team" class="service-image">
+                <img src="image/mobile-app-development.png" alt="Mobile Development Team" class="service-image">
             </div>
             
             <div class="service-content">
@@ -116,7 +174,7 @@
                 
                 <div class="service-features light-bg">
                     <div class="feature">
-                        <img src="image/Native and Cross-Platform Apps.png" alt="Native Apps Icon" class="feature-icon">
+                        <img src="image/native.png" alt="Native Apps Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Native and Cross-Platform Apps</h3>
                             <p>Our team develops high-performing apps for Android and iOS platforms.</p>
@@ -124,7 +182,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/User-Centric Design.png" alt="User-Centric Design Icon" class="feature-icon">
+                        <img src="image/user-centric.png" alt="User-Centric Design Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>User-Centric Design</h3>
                             <p>Each app is crafted with intuitive interfaces to boost user engagement.</p>
@@ -132,7 +190,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/End-to-End Services.png" alt="End-to-End Services Icon" class="feature-icon">
+                        <img src="image/end-to-end.png" alt="End-to-End Services Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>End-to-End Services</h3>
                             <p>From ideation to last, we can manage the entire app development lifecycle process.</p>
@@ -149,7 +207,7 @@
                 
                 <div class="service-features3">
                     <div class="feature">
-                        <img src="image/Feature-Rich Applications.png" alt="Feature-Rich Applications" class="feature-icon">
+                        <img src="image/feature-rich.png" alt="Feature-Rich Applications" class="feature-icon">
                         <div class="feature-text">
                             <h3>Feature-Rich Applications</h3>
                             <p>Leverage our expertise in creating innovative and feature-rich iOS apps.</p>
@@ -157,7 +215,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/Optimized for Performance.png" alt="Optimized for Performance Icon" class="feature-icon">
+                        <img src="image/optimized-performance.png" alt="Optimized for Performance Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Optimized for Performance</h3>
                             <p>Our apps are designed to work flawlessly across all Apple devices.</p>
@@ -165,7 +223,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/App Store Deployment.png" alt="App Store Deployment Icon" class="feature-icon">
+                        <img src="image/app-store.png" alt="App Store Deployment Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>App Store Deployment</h3>
                             <p>We ensure a smooth process for listing your app on the App Store.</p>
@@ -175,7 +233,7 @@
             </div>
             
             <div class="service-image-container">
-                <img src="image/ios app development.png" alt="Software Development Team" class="service-image">
+                <img src="image/ios-app-development.png" alt="Software Development Team" class="service-image">
             </div>
         </div>
         <!--Blockchain Development section-->
@@ -190,7 +248,7 @@
                 
                 <div class="service-features light-bg2">
                     <div class="feature">
-                        <img src="image/Smart Contract Development.png" alt="Smart Contract Development Icon" class="feature-icon">
+                        <img src="image/smart-contract.png" alt="Smart Contract Development Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Smart Contract Development</h3>
                             <p>Automate processes and enhance trust with secure smart contracts.</p>
@@ -198,7 +256,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/Decentralized Applications (DApps).png" alt="Decentralized Applications (DApps) Icon" class="feature-icon">
+                        <img src="image/decentral.png" alt="Decentralized Applications (DApps) Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Decentralized Applications (DApps)</h3>
                             <p>Build transparent and decentralized outlets.</p>
@@ -206,7 +264,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/Blockchain Consulting.png" alt="blockchain consulting Icon" class="feature-icon">
+                        <img src="image/blockchain-consult.png" alt="blockchain consulting Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Blockchain Consulting</h3>
                             <p>Get wisdom into how blockchain can revolutionize your firm.</p>
@@ -223,7 +281,7 @@
                 
                 <div class="service-featuresandroid">
                     <div class="feature">
-                        <img src="image/Customized Android Apps.png" alt="Customized android Icon" class="feature-icon">
+                        <img src="image/custom.png" alt="Customized android Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Customized Android Apps</h3>
                             <p>Our solutions integrate AI-driven features for enhanced functionality and engagement.</p>
@@ -231,7 +289,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/AI-Driven Features.png" alt="ai driven Icon" class="feature-icon">
+                        <img src="image/ai.png" alt="ai driven Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>AI-Driven Features</h3>
                             <p>Integrate artificial intelligence for smarter user interactions.</p>
@@ -239,7 +297,7 @@
                     </div>
                     
                     <div class="feature">
-                        <img src="image/Testing Nets.png" alt="Testing Nets Icon" class="feature-icon">
+                        <img src="image/testing-nets.png" alt="Testing Nets Icon" class="feature-icon">
                         <div class="feature-text">
                             <h3>Testing Nets</h3>
                             <p>These networks help identify vulnerabilities and optimize smart contract performance.</p>
@@ -249,13 +307,13 @@
             </div>
             
             <div class="service-image-container">
-                <img src="image/android app development.png" alt="Software Development Team" class="service-image">
+                <img src="image/android-app-develop.png" alt="Software Development Team" class="service-image">
             </div>
         </div>
        <!--clone section-->
        <div class="service-row">
         <div class="service-image-container">
-            <img src="image/clone app development.png" alt="clone " class="service-image">
+            <img src="image/cloe-app.png" alt="clone " class="service-image">
         </div>
         
         <div class="service-content">
@@ -264,7 +322,7 @@
             
             <div class="service-features light-bg3">
                 <div class="feature">
-                    <img src="image/Rapid Deployment.png" alt="Rapid Deployment Icon" class="feature-icon">
+                    <img src="image/rapid.png" alt="Rapid Deployment Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Rapid Deployment</h3>
                         <p>Reduce development time by leveraging our ready-made clone scripts.</p>
@@ -272,7 +330,7 @@
                 </div>
                 
                 <div class="feature">
-                    <img src="image/Highly Customizable.png" alt="Highly Customizable Icon" class="feature-icon">
+                    <img src="image/highly.png" alt="Highly Customizable Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Highly Customizable</h3>
                         <p>Adapt our scripts to align with your branding and business requirements.</p>
@@ -280,7 +338,7 @@
                 </div>
                 
                 <div class="feature">
-                    <img src="image/Cost-Effective.png" alt="blockchain consulting Icon" class="feature-icon">
+                    <img src="image/cost.png" alt="blockchain consulting Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Cost-Effective</h3>
                         <p> Achieve high-quality apps at a fraction of the cost of building from ideation.</p>
@@ -297,7 +355,7 @@
             
             <div class="service-featuresdelivery">
                 <div class="feature">
-                    <img src="image/Ordered Logistics Solutions.png" alt="Ordered Logistics Solutions Icon" class="feature-icon">
+                    <img src="image/order-logistic.png" alt="Ordered Logistics Solutions Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Ordered Logistics Solutions</h3>
                         <p>Empower businesses with efficient delivery and tracking features.</p>
@@ -305,7 +363,7 @@
                 </div>
                 
                 <div class="feature">
-                    <img src="image/Multi-Platform Accessibility.png" alt="Multi-Platform Icon" class="feature-icon">
+                    <img src="image/multi-platform.png" alt="Multi-Platform Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Multi-Platform Accessibility</h3>
                         <p>Ensure your app works smoothly on mobile and web platforms.</p>
@@ -313,7 +371,7 @@
                 </div>
                 
                 <div class="feature">
-                    <img src="image/Real-Time Updates.png" alt="real time updates Icon" class="feature-icon">
+                    <img src="image/real-time.png" alt="real time updates Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Real-Time Updates</h3>
                         <p>Provide customers and businesses with live updates on deliveries.</p>
@@ -323,13 +381,13 @@
         </div>
         
         <div class="service-image-container">
-            <img src="image/delivery app development.png" alt="Software Development Team" class="service-image">
+            <img src="image/delivery-app.png" alt="Software Development Team" class="service-image">
         </div>
     </div>
     <!--on demand section-->
     <div class="service-row">
         <div class="service-image-container">
-            <img src="image/on demand.png" alt="on demand " class="service-image">
+            <img src="image/on-demand.png" alt="on demand " class="service-image">
         </div>
         
         <div class="service-content">
@@ -338,7 +396,7 @@
             
             <div class="service-features light-bg4">
                 <div class="feature">
-                    <img src="image/Diverse Industries Served.png" alt="Diverse Industries Served Icon" class="feature-icon">
+                    <img src="image/diverse.png" alt="Diverse Industries Served Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Diverse Industries Served</h3>
                         <p>From healthcare to carrier, our on-demand apps match various sectors.</p>
@@ -346,7 +404,7 @@
                 </div>
                 
                 <div class="feature">
-                    <img src="image/Feature-Packed Apps.png" alt="Feature-Packed Apps Icon" class="feature-icon">
+                    <img src="image/feature-pack.png" alt="Feature-Packed Apps Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Feature-Packed Apps</h3>
                         <p>Enable bookings, payments, and real-time tracking seamlessly.</p>
@@ -354,7 +412,7 @@
                 </div>
                 
                 <div class="feature">
-                    <img src="image/Scalable Infrastructure.png" alt="Scalable Infrastructure Icon" class="feature-icon">
+                    <img src="image/scalable-infracstructure.png" alt="Scalable Infrastructure Icon" class="feature-icon">
                     <div class="feature-text">
                         <h3>Scalable Infrastructure</h3>
                         <p>Our cloud-based solutions optimize resources, enabling seamless scalability.</p>
@@ -374,7 +432,7 @@
             <!-- Feature 1 -->
             <div class="feature-card">
                 <div class="card-image">
-                    <img src="image/Expertise Across Domains.png" alt="Developers working on computers">
+                    <img src="image/expertise.png" alt="Developers working on computers">
                 </div>
                 <div class="card-content">
                     <div class="tag">E A D</div>
@@ -386,7 +444,7 @@
             <!-- Feature 2 -->
             <div class="feature-card">
                 <div class="card-image">
-                    <img src="image/Bespoke Solutions.png" alt="Business people discussing in front of screens">
+                    <img src="image/bespoke.png" alt="Business people discussing in front of screens">
                 </div>
                 <div class="card-content">
                     <div class="tag">B S P</div>
@@ -398,7 +456,7 @@
             <!-- Feature 3 -->
             <div class="feature-card">
                 <div class="card-image">
-                    <img src="image/Most delinquent Technologies.png" alt="Technology professionals in modern office">
+                    <img src="image/most.png" alt="Technology professionals in modern office">
                 </div>
                 <div class="card-content">
                     <div class="tag">M D T</div>
@@ -410,7 +468,7 @@
             <!-- Feature 4 -->
             <div class="feature-card">
                 <div class="card-image">
-                    <img src="image/Customer-Centric Approach.png" alt="Business meeting">
+                    <img src="image/customer-centric.png" alt="Business meeting">
                 </div>
                 <div class="card-content">
                     <div class="tag">C C A</div>
@@ -422,7 +480,7 @@
             <!-- Feature 5 -->
             <div class="feature-card">
                 <div class="card-image">
-                    <img src="image/Proven Track Record.png" alt="Business executive speaking">
+                    <img src="image/proven-track.png" alt="Business executive speaking">
                 </div>
                 <div class="card-content">
                     <div class="tag">P T R</div>
@@ -434,7 +492,7 @@
             <!-- Feature 6 -->
             <div class="feature-card">
                 <div class="card-image">
-                    <img src="image/AI & Automation for Efficiency.png" alt="Automated factory robots">
+                    <img src="image/ai-automation.png" alt="Automated factory robots">
                 </div>
                 <div class="card-content">
                     <div class="tag">A F E</div>
@@ -449,7 +507,7 @@
         <h1 class="growth-title">How We Drive Firm Growth</h1>
         <div class="growth-grid">
             <div class="growth-item">
-                <img src="image/Efficiency Boost.png" alt="Efficiency Boost" class="growth-image">
+                <img src="image/efficiency.png" alt="Efficiency Boost" class="growth-image">
                 <div class="growth-content">
                     <span class="growth-tag">E B</span>
                     <h2 class="growth-title-item">Efficiency Boost</h2>
@@ -457,7 +515,7 @@
                 </div>
             </div>
             <div class="growth-item">
-                <img src="image/Enhanced User Engagement.png" alt="Enhanced User Engagement" class="growth-image">
+                <img src="image/enhanced.png" alt="Enhanced User Engagement" class="growth-image">
                 <div class="growth-content">
                     <span class="growth-tag">E U E</span>
                     <h2 class="growth-title-item">Enhanced User Engagement</h2>
@@ -465,7 +523,7 @@
                 </div>
             </div>
             <div class="growth-item">
-                <img src="image/Revenue Generation.png" alt="Revenue Generation" class="growth-image">
+                <img src="image/revenue-generation.png" alt="Revenue Generation" class="growth-image">
                 <div class="growth-content">
                     <span class="growth-tag">R G</span>
                     <h2 class="growth-title-item">Revenue Generation</h2>
@@ -473,7 +531,7 @@
                 </div>
             </div>
             <div class="growth-item">
-                <img src="image/Global Competitiveness.png" alt="Global Competitiveness" class="growth-image">
+                <img src="image/global.png" alt="Global Competitiveness" class="growth-image">
                 <div class="growth-content">
                     <span class="growth-tag">G C</span>
                     <h2 class="growth-title-item">Global Competitiveness</h2>
@@ -481,7 +539,7 @@
                 </div>
             </div>
             <div class="growth-item">
-                <img src="image/Technology Adoption.png" alt="Technology Adoption" class="growth-image">
+                <img src="image/technology-adopt.png" alt="Technology Adoption" class="growth-image">
                 <div class="growth-content">
                     <span class="growth-tag">T A</span>
                     <h2 class="growth-title-item">Technology Adoption</h2>
@@ -489,7 +547,7 @@
                 </div>
             </div>
             <div class="growth-item">
-                <img src="image/Strong Leadership.png" alt="Strong Leadership" class="growth-image">
+                <img src="image/strong.png" alt="Strong Leadership" class="growth-image">
                 <div class="growth-content">
                     <span class="growth-tag">S L</span>
                     <h2 class="growth-title-item">Strong Leadership</h2>
@@ -528,7 +586,7 @@
                         <div class="endeavors-grid-item-title">Travel and Hospitality</div>
                     </div>
                     <div class="endeavors-grid-item">
-                        <img src="image/real estate.jpg" alt="Real Estate">
+                        <img src="image/real-estate.jpg" alt="Real Estate">
                         <div class="endeavors-grid-item-title">Real Estate</div>
                     </div>
                     <div class="endeavors-grid-item">
@@ -536,7 +594,7 @@
                         <div class="endeavors-grid-item-title">Beauty and Cosmetics</div>
                     </div>
                     <div class="endeavors-grid-item">
-                        <img src="image/blockchain tech.png" alt="Blockchain Technology">
+                        <img src="image/blockchain-tech.png" alt="Blockchain Technology">
                         <div class="endeavors-grid-item-title">Blockchain Technology</div>
                     </div>
                 </div>
@@ -546,14 +604,14 @@
                 <h1 class="action-plot-title">Our Action Plot</h1>
                 <div class="action-plot-grid">
                     <div class="action-plot-item">
-                        <img src="image/Requirement Analysis.png" alt="Requirement Analysis" class="action-plot-image">
+                        <img src="image/requirement.png" alt="Requirement Analysis" class="action-plot-image">
                         <div class="action-plot-content">
                             <h2 class="action-plot-heading">Requirement Analysis</h2>
                             <p class="action-plot-description">We cooperate with clients to understand their business needs and objectives.</p>
                         </div>
                     </div>
                     <div class="action-plot-item">
-                        <img src="image/Design and Prototyping.png" alt="Design and Prototyping" class="action-plot-image">
+                        <img src="image/design.png" alt="Design and Prototyping" class="action-plot-image">
                         <div class="action-plot-content">
                             <h2 class="action-plot-heading">Design and Prototyping</h2>
                             <p class="action-plot-description">Our team creates wireframes and prototypes to visualize the end product.</p>
@@ -574,14 +632,14 @@
                         </div>
                     </div>
                     <div class="action-plot-item">
-                        <img src="image/Deployment and Support.png" alt="Deployment and Support" class="action-plot-image">
+                        <img src="image/deployment-support.png" alt="Deployment and Support" class="action-plot-image">
                         <div class="action-plot-content">
                             <h2 class="action-plot-heading">Deployment and Support</h2>
                             <p class="action-plot-description">Once live, we provide continuous support and updates to keep your solution running smoothly.</p>
                         </div>
                     </div>
                     <div class="action-plot-item">
-                        <img src="image/Task Breakdown.png" alt="Task Breakdown" class="action-plot-image">
+                        <img src="image/task-break.png" alt="Task Breakdown" class="action-plot-image">
                         <div class="action-plot-content">
                             <h2 class="action-plot-heading">Task Breakdown</h2>
                             <p class="action-plot-description">Break down the project into smaller sprints (2-4 weeks).</p>
@@ -591,7 +649,7 @@
             </div>
             <div class="coderegime-section">
                 <div class="coderegime-meeting-image">
-                    <img src="image/card img.png" alt="Team meeting at Code Regime Technologies">
+                    <img src="image/card-img.png" alt="Team meeting at Code Regime Technologies">
                 </div>
                 <div class="coderegime-info">
                     <h1 class="coderegime-title">Mate with Code Regime Technologies Today</h1>
@@ -603,12 +661,13 @@
                     </p>
                 </div>
             </div>
+
             <!-- Footer -->
    <footer class="footer">
     <div class="footer-container">
       <!-- Left Section -->
       <div class="footer-about">
-        <img src="image/logo.png" alt="Code Regime Logo" class="footer-logo">
+        <img src="image/color-logo.png" alt="Code Regime Logo" class="footer-logo">
         <p>At Code Regime Technologies, we specialize in innovative software development.</p>
         <div class="social-icons">
           <a href="https://www.linkedin.com/company/72574091/admin/dashboard/" class="social-icon linkedin"><img src="image/linkedin.png" alt="linkedin"></a>
@@ -627,7 +686,7 @@
           <li><a href="#">Services</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Portfolio</a></li>
-          <li><a href="http://127.0.0.1:5500/product%20page/Blog%20section/index.html#">Blog</a></li>
+          <li><a href="">Blog</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
@@ -636,10 +695,10 @@
       <div class="footer-legal">
         <h4>Legal</h4>
         <ul>
-            <li><a href="http://127.0.0.1:5500/privacy%20policy/index.html">Privacy Policy</a></li>
-            <li><a href="http://127.0.0.1:5500/Refund%20policy/image/index.html">Refund Policy</a></li>
-            <li><a href="http://127.0.0.1:5500/Security%20Policy/index.html">Support</a></li>
-            <li><a href="http://127.0.0.1:5500/Disclaimer/index.html">Disclaimer</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refund Policy</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">Disclaimer</a></li>
         </ul>
       </div>
 
