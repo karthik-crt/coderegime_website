@@ -87,6 +87,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
+  padding-top: 10px;
 }
 
 nav {
@@ -1868,7 +1869,7 @@ nav {
 }
 
 .contact-info {
-  font-size: 16px; /* Adjust font size as needed */
+  font-size: 14px; /* Adjust font size as needed */
 }
 
 .contact-info .icon {
