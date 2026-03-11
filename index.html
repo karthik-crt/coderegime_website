@@ -127,18 +127,7 @@
           <a href="#" class="nav-link active">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            About Us
-            <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span>
-          </a>
-          <ul class="dropdown">
-            <li class="dropdown-item">
-              <a href="#" class="dropdown-link">Software Customization</a>
-            </li>
-            <li class="dropdown-item">
-              <a href="#" class="dropdown-link">Software Startup</a>
-            </li>
-          </ul>
+          <a href="about-us/index.html" class="nav-link">About Us</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
@@ -184,7 +173,8 @@
             <li class="dropdown-item">
               <a href="product/handyman/index.html" class="dropdown-link">Uber For Handyman</a>
             </li>
-            <li class="dropdown-item">
+            <!-- 
+<li class="dropdown-item">
               <a href="product/foodora/index.html" class="dropdown-link">Foodora Clone</a>
             </li>
             <li class="dropdown-item">
@@ -193,10 +183,8 @@
             <li class="dropdown-item">
               <a href="product/doordash/index.html" class="dropdown-link">Doordash Clone</a>
             </li>
+-->
           </ul>
-        </li>
-        <li class="nav-item">
-          <a href="blog/index.html" class="nav-link">Blog</a>
         </li>
         <li class="nav-item">
           <a href="Portfolio/index.html" class="nav-link">Portfolio</a>
@@ -484,16 +472,15 @@
         <div class="col-lg-4 col-md-4 col-sm-12">
           <div class="development-box">
             <div class="development-pic">
-              <img src="images/customized-solutions.webp" alt="Customized Solutions" title="Bespoke Software" />
+              <img src="images/customized-solutions.webp" alt="Bespoke Software" title="Bespoke Software" />
             </div>
-            <h4>Customized Solutions for Every Business Need</h4>
+            <h3>Customized Solutions for Every Business Need</h3>
             <p class="mb-0">At Code Regime Technologies, we understand that no two businesses are alike. That's why we
               offer custom
               software development services designed to address the specific </p>
             <div class="extra-content extra-content1">
               <p>challenges and goals of your business.</p>
             </div>
-            <a class="learn-more-btn" data-target=".extra-content1">Learn More</a>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
@@ -502,7 +489,7 @@
               <img src="images/expertise-the-latest- technology.webp" alt="Expertise the Latest Technology"
                 title="Savvy In Technology  " />
             </div>
-            <h4>Expertise in the Latest Technologies</h4>
+            <h3>Expertise in the Latest Technologies</h3>
             <p class="mb-0">Staying updated with the latest technological advancements is crucial in software
               development. Code
               Regime Technologies prides itself on being at the forefront of innovation. </p>
@@ -510,7 +497,6 @@
               <p>Our developers are proficient
                 in all programming languages and frameworks, including Python, Java, React, and others.</p>
             </div>
-            <a class="learn-more-btn" data-target=".extra-content2">Learn More</a>
           </div>
 
         </div>
@@ -519,7 +505,7 @@
             <div class="development-pic">
               <img src="images/agile-development.webp" alt="Agile Development" title="Software Development Process" />
             </div>
-            <h4>Agile Development for Faster Delivery</h4>
+            <h3>Agile Development for Faster Delivery</h3>
             <p class="mb-0">Our software development company employs agile methodologies to ensure rapid delivery of
               high-quality
               software. By breaking down the development process into manageable sprints, </p>
@@ -527,7 +513,6 @@
               <p>we can quickly adapt to
                 changes and deliver solutions that are perfectly aligned with your evolving business needs.</p>
             </div>
-            <a class="learn-more-btn" data-target=".extra-content3">Learn More</a>
           </div>
         </div>
       </div>
@@ -1029,7 +1014,6 @@
                 <!-- FAQ Description Container -->
                 <div class="col-md-6">
                   <div class="description-container" id="descriptionContainer">
-                    <h4 id="activeTitle">What industries does Code Regime Technologies specialize in?</h4>
                     <p id="activePara">Code Regime Technologies specializes in various industries, including mobile
                       application development, web application development, and services like finance, healthcare,
                       e-commerce, travel, aviation, and logistics.</p>
@@ -1098,11 +1082,10 @@
         <div class="footer-section">
           <h3>Useful Links</h3>
           <ul class="footer-links">
-            <li><a href="#about">About Us</a></li>
+            <li><a href="about-us/index.html">About Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#blog">Blog</a></li>
             <li> <a href="#" class="contact-us" data-bs-toggle="modal" data-bs-target="#contactPopup">Contact Us</a>
             </li>
           </ul>
@@ -1331,14 +1314,12 @@
 
     // Function to update the description area
     function updateDescription(title, para) {
-      $('#activeTitle').text(title);
       $('#activePara').text(para);
     }
 
     // Get all the FAQ titles
     // Select all FAQ items
     const faqItems = document.querySelectorAll('.faq-title');
-    const activeTitle = document.getElementById('activeTitle');
     const activePara = document.getElementById('activePara');
 
     // Add click event listener to each FAQ item
@@ -1351,16 +1332,13 @@
         this.classList.add('active');
 
         // Update the title and paragraph in the description container
-        const title = this.getAttribute('data-title');
         const para = this.getAttribute('data-para');
-        activeTitle.innerText = title;
         activePara.innerText = para;
       });
     });
 
     // Automatically set the first FAQ as active on page load
     faqItems[0].classList.add('active');
-    activeTitle.innerText = faqItems[0].getAttribute('data-title');
     activePara.innerText = faqItems[0].getAttribute('data-para');
 
 
