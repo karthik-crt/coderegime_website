@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <title>Enterprise App</title>
 </head>
+
 <body>
     <header id="head-nav">
         <nav>
@@ -15,15 +19,15 @@
             <a href="/index.html" class="logo">
                 <img src="image/color-logo.png" alt="logo">
             </a>
-    
+
             <!-- Navigation Menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="/index.html" class="nav-link active">Home</a>
                 </li>
                 <li class="nav-item">
-          <a href="/about-us/index.html" class="nav-link">About Us</a>
-        </li>
+                    <a href="/about-us/index.html" class="nav-link">About Us</a>
+                </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         Services
@@ -31,7 +35,8 @@
                     </a>
                     <ul class="dropdown">
                         <li class="dropdown-item">
-                            <a href="/service/blockchain/index.html" class="dropdown-link">Blockchain Development Services</a>
+                            <a href="/service/blockchain/index.html" class="dropdown-link">Blockchain Development
+                                Services</a>
                         </li>
                         <li class="dropdown-item">
                             <a href="/service/custom/index.html" class="dropdown-link">Mobile App Development</a>
@@ -46,11 +51,12 @@
                             <a href="/service/android/index.html" class="dropdown-link">Android App Development</a>
                         </li>
                         <li class="dropdown-item">
-                          <a href="/service/best/index.html" class="dropdown-link">Web App Development Services</a>
-                      </li>
-                      <li class="dropdown-item">
-                        <a href="/service/enterprise/index.html" class="dropdown-link">Enterprise App Development</a>
-                    </li>
+                            <a href="/service/best/index.html" class="dropdown-link">Web App Development Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/service/enterprise/index.html" class="dropdown-link">Enterprise App
+                                Development</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -85,10 +91,10 @@
                     <a href="/Portfolio/index.html" class="nav-link">Portfolio</a>
                 </li>
             </ul>
-    
+
             <!-- Contact Button -->
             <a href="#" class="contact-btn" data-bs-toggle="modal" data-bs-target="#contactPopup">Contact Us</a>
-    
+
             <!-- Mobile Menu Toggle -->
             <div class="mobile-toggle">
                 <span class="hamburger"></span>
@@ -97,32 +103,34 @@
             </div>
         </nav>
     </header>
-      
-        <div class="hero-content">
-          <h1><span class="gradient-text">Enterprise Application Development Services Company</span></h1>
-          <p>Once you plan to do business, the Web app plays a crucial role in today's world digital market. If you are ready to do a small-scale or a large-scale business, Enterprise Application Development Services can boost your online promotions and purposeful functional efficiency.</p>
-          <a href="#" class="cta-btn">Let’s get started ></a>
-        </div>
-      
-        <img src="image/head-img.png" alt="Team Working" class="code-regime-hero-image">
-      </header>
-      
-      <script>
+
+    <div class="hero-content">
+        <h1><span class="gradient-text">Enterprise Application Development Services Company</span></h1>
+        <p>Once you plan to do business, the Web app plays a crucial role in today's world digital market. If you are
+            ready to do a small-scale or a large-scale business, Enterprise Application Development Services can boost
+            your online promotions and purposeful functional efficiency.</p>
+        <a href="#" class="cta-btn">Let’s get started ></a>
+    </div>
+
+    <img src="image/head-img.png" alt="Team Working" class="Enterprise development">
+    </header>
+
+    <script>
         // Mobile menu toggle functionality
         const mobileToggle = document.querySelector('.mobile-toggle');
         const navMenu = document.querySelector('.nav-menu');
         const dropdownItems = document.querySelectorAll('.nav-item');
-    
+
         mobileToggle.addEventListener('click', () => {
             mobileToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-    
+
         // Mobile dropdown functionality
         dropdownItems.forEach(item => {
             const link = item.querySelector('.nav-link');
             const dropdown = item.querySelector('.dropdown');
-           
+
             if (dropdown) {
                 link.addEventListener('click', (e) => {
                     if (window.innerWidth <= 768) {
@@ -132,7 +140,7 @@
                 });
             }
         });
-    
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
@@ -140,7 +148,7 @@
                 mobileToggle.classList.remove('active');
             }
         });
-    
+
         // Close mobile menu on window resize
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
@@ -152,43 +160,47 @@
             }
         });
     </script>
-      
-      
 
-<!--Why choose section-->
+
+
+    <!--Why choose section-->
     <div class="why-choose-section">
         <h2 class="section-heading">Why choose Code Regime Technologies?</h2>
         <p class="section-subheading">We will make you as a Brand. We ready to collaborate with us.</p>
-        
+
         <div class="features-grid">
             <!-- Core Expertise Card -->
             <div class="feature-card" id="core-expertise-card">
                 <div class="feature-icon">
-                    <img src="image/core-expertise.png" alt="Code Icon">
+                    <img src="image/core-expertise.png" alt="collecting information">
                 </div>
                 <h3 class="feature-title">Core Expertise</h3>
-                <p class="feature-description">Our team has talented developers with over years of experience in designing web applications.</p>
+                <p class="feature-description">Our team has talented developers with over years of experience in
+                    designing web applications.</p>
             </div>
-            
+
             <!-- Custom Solutions Card -->
             <div class="feature-card" id="custom-solutions-card">
                 <div class="feature-icon">
                     <img src="image/custom.png" alt="Custom Solutions Icon">
                 </div>
                 <h3 class="feature-title">Custom Solutions</h3>
-                <p class="feature-description">We understand that every business is essential, so we bring custom enterprise application development services that can be cost-effective.</p>
+                <p class="feature-description">We understand that every business is essential, so we bring custom
+                    enterprise application development services that can be cost-effective.</p>
             </div>
-            
+
             <!-- Trust Worthiness Card -->
             <div class="feature-card" id="trust-worthiness-card">
                 <div class="feature-icon">
                     <img src="image/trust.png" alt="Trust Icon">
                 </div>
                 <h3 class="feature-title">Trust Worthiness</h3>
-                <p class="feature-description">As a leading Enterprise application development services, we bring you transparency and guiding principles that ensure security, reliability, and satisfaction without any hidden costs.</p>
+                <p class="feature-description">As a leading Enterprise application development services, we bring you
+                    transparency and guiding principles that ensure security, reliability, and satisfaction without any
+                    hidden costs.</p>
             </div>
         </div>
-        
+
         <div class="features-grid-second-row">
             <!-- Reliability Card -->
             <div class="feature-card" id="reliability-card">
@@ -196,24 +208,27 @@
                     <img src="image/Reliability.png" alt="Reliability Icon">
                 </div>
                 <h3 class="feature-title">Reliability</h3>
-                <p class="feature-description">Our designs of enterprise application development for your business grow inherent by our services.</p>
+                <p class="feature-description">Our designs of enterprise application development for your business grow
+                    inherent by our services.</p>
             </div>
-            
+
             <!-- Clearance Handling Card -->
             <div class="feature-card" id="clearance-handling-card">
                 <div class="feature-icon">
                     <img src="image/clearance.png" alt="Clearance Icon">
                 </div>
                 <h3 class="feature-title">Clearance Handling</h3>
-                <p class="feature-description">Our team aims to launch your enterprise applications timely and provides on-time support instantly.</p>
+                <p class="feature-description">Our team aims to launch your enterprise applications timely and provides
+                    on-time support instantly.</p>
             </div>
         </div>
     </div>
 
     <div class="enterprise-applications-section">
         <h2 class="section-heading">What are the Custom Enterprise <br>Applications We Develop?</h2>
-        <p class="section-subheading">Code Regime Technologies specializes in creating various enterprise applications development services and has expertise for any industry sectors.</p>
-        
+        <p class="section-subheading">Code Regime Technologies specializes in creating various enterprise applications
+            development services and has expertise for any industry sectors.</p>
+
         <div class="applications-grid">
             <!-- E-commerce Platforms -->
             <div class="application-card" id="ecommerce-platforms-card">
@@ -222,10 +237,11 @@
                 </div>
                 <div class="application-content">
                     <h3 class="application-title">E-commerce Platforms</h3>
-                    <p class="application-description">Our ecommerce development company will handle all aspects that you've always imagined including Blockchain payment solutions and convenient checkout.</p>
+                    <p class="application-description">Our ecommerce development company will handle all aspects that
+                        you've always imagined including Blockchain payment solutions and convenient checkout.</p>
                 </div>
             </div>
-            
+
             <!-- ERP Software Solutions -->
             <div class="application-card" id="erp-solutions-card">
                 <div class="application-image-container">
@@ -233,10 +249,11 @@
                 </div>
                 <div class="application-content">
                     <h3 class="application-title">(ERP) Software Solutions</h3>
-                    <p class="application-description">For Enterprise Resource Planning (ERP) services make your business strong in day to day basis.</p>
+                    <p class="application-description">For Enterprise Resource Planning (ERP) services make your
+                        business strong in day to day basis.</p>
                 </div>
             </div>
-            
+
             <!-- CRM Software Solutions -->
             <div class="application-card" id="crm-solutions-card">
                 <div class="application-image-container">
@@ -244,10 +261,11 @@
                 </div>
                 <div class="application-content">
                     <h3 class="application-title">(CRM) Software Solutions</h3>
-                    <p class="application-description">We provide customer relationship management software solutions that monitor your user acquisition and other marketing efforts efficiently.</p>
+                    <p class="application-description">We provide customer relationship management software solutions
+                        that monitor your user acquisition and other marketing efforts efficiently.</p>
                 </div>
             </div>
-            
+
             <!-- Content Management Solutions -->
             <div class="application-card" id="cms-solutions-card">
                 <div class="application-image-container">
@@ -255,7 +273,8 @@
                 </div>
                 <div class="application-content">
                     <h3 class="application-title">Content Management Solutions(CMS)</h3>
-                    <p class="application-description">We provide content management solutions that allow users to edit content easily without coding skills or knowledge in development.</p>
+                    <p class="application-description">We provide content management solutions that allow users to edit
+                        content easily without coding skills or knowledge in development.</p>
                 </div>
             </div>
         </div>
@@ -264,85 +283,96 @@
     <!-- industry section -->
     <div class="industries-container">
         <div class="industries-header">
-            <h1>Industries We Serve</h1>
-            <p>Code Alchemy Experts assist in providing in various industries in Enterprise application development services</p>
+            <h2>Industries We Serve</h2>
+            <p>Code Alchemy Experts assist in providing in various industries in Enterprise application development
+                services</p>
         </div>
-        
+
         <div class="industries-grid">
             <!-- Healthcare Card -->
             <div class="industry-card healthcare">
                 <div class="industry-image">
-                    <img src="image/healthcare.png" alt="Healthcare Sector" onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Healthcare'">
+                    <img src="image/healthcare.png" alt="Healthcare Sector"
+                        onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Healthcare'">
                 </div>
                 <div class="industry-content">
                     <h3>Healthcare Sector</h3>
-                    <p>Developing state-of-the-art enterprise apps for Patient management, healthcare services, Pharmacy availability apps, Drug supply chain systems, and healthcare administration.</p>
+                    <p>Developing state-of-the-art enterprise apps for Patient management, healthcare services, Pharmacy
+                        availability apps, Drug supply chain systems, and healthcare administration.</p>
                 </div>
             </div>
-            
+
             <!-- Insurance Card -->
             <div class="industry-card insurance">
                 <div class="industry-image">
-                    <img src="image/insurance.png" alt="Insurance Sector" onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Insurance'">
+                    <img src="image/insurance.png" alt="Insurance Sector"
+                        onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Insurance'">
                 </div>
                 <div class="industry-content">
                     <h3>Insurance</h3>
                     <p>Crafting long-term insurance software solutions for insurance services.</p>
                 </div>
             </div>
-            
+
             <!-- Asset Management Card -->
             <div class="industry-card asset-management">
                 <div class="industry-image">
-                    <img src="image/asset.png" alt="Asset Management Software" onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Asset+Management'">
+                    <img src="image/asset.png" alt="Asset Management Software"
+                        onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Asset+Management'">
                 </div>
                 <div class="industry-content">
                     <h3>Asset Management Software</h3>
-                    <p>Our talented team has created an evolved user experience in real-app and is considering the best parameters for large-scale enterprise complexes.</p>
+                    <p>Our talented team has created an evolved user experience in real-app and is considering the best
+                        parameters for large-scale enterprise complexes.</p>
                 </div>
             </div>
-            
+
             <!-- Logistics Card -->
             <div class="industry-card logistics">
                 <div class="industry-image">
-                    <img src="image/logistics.png" alt="Logistics Software" onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Logistics'">
+                    <img src="image/logistics.png" alt="Logistics Software"
+                        onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Logistics'">
                 </div>
                 <div class="industry-content">
                     <h3>Logistics Software</h3>
-                    <p>As a leading Enterprise application development services, Our team has developed an enterprise app used for supply chain goods, automated invoice generators, and billing systems, which management solutions.</p>
+                    <p>As a leading Enterprise application development services, Our team has developed an enterprise
+                        app used for supply chain goods, automated invoice generators, and billing systems, which
+                        management solutions.</p>
                 </div>
             </div>
-            
+
             <!-- Hospitality Card -->
             <div class="industry-card hospitality">
                 <div class="industry-image">
-                    <img src="image/Hospitality.png" alt="Hospitality" onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Hospitality'">
+                    <img src="image/Hospitality.png" alt="Hospitality"
+                        onerror="this.src='https://via.placeholder.com/400x250/141460/4a8cff?text=Hospitality'">
                 </div>
                 <div class="industry-content">
                     <h3>Hospitality</h3>
-                    <p>We can make solutions for Online food ordering apps, Travel booking solutions, and Cab booking reservation systems.</p>
+                    <p>We can make solutions for Online food ordering apps, Travel booking solutions, and Cab booking
+                        reservation systems.</p>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script>
         // 3D Hover Effect
         document.querySelectorAll('.industry-card').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left; 
+                const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
+
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
-                
+
                 const rotateX = (y - centerY) / -15;
                 const rotateY = (x - centerX) / 15;
-                
+
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
             });
-            
+
             card.addEventListener('mouseleave', () => {
                 card.style.transform = '';
             });
@@ -356,27 +386,27 @@
                 Would Be Profitable to Your
                 Business
             </h2>
-            
+
             <p class="description">
-                In the presence of the latest tech world, a business move in Enterprise Application 
-                Development Services can rapidly strengthen your business's profit. Our custom<br> 
+                In the presence of the latest tech world, a business move in Enterprise Application
+                Development Services can rapidly strengthen your business's profit. Our custom<br>
                 enterprise application planned operations reduce manual work, and provide <br>
                 live-time metrics, allowing for AI-driven smart moves that increase efficiency <br>and profit.
             </p>
-            
+
             <p class="description">
-                So, enterprise applications improve customer engagement by bringing endless user experiences, 
-                transforming into increased customer engagement and loyalty. Our team provides you scalability 
-                of enterprise applications ensuring that your business can grow without the need for costly 
+                So, enterprise applications improve customer engagement by bringing endless user experiences,
+                transforming into increased customer engagement and loyalty. Our team provides you scalability
+                of enterprise applications ensuring that your business can grow without the need for costly
                 infrastructure.
             </p>
-            
+
             <p class="description">
-                Finally, partnering with Code Regime’s Enterprise application development services is a Key move 
+                Finally, partnering with Code Regime’s Enterprise application development services is a Key move
                 to processing long-term profitability and maintaining a competitive nook in the market.
             </p>
         </div>
-        
+
         <div class="image-container">
             <img src="image/enterprise.png" alt="Enterprise Application Technology" class="enterprise-image">
         </div>
@@ -386,12 +416,15 @@
         <div class="image-container">
             <img src="image/benefits.png" alt="Enterprise Technology Illustration" class="benefits-image">
         </div>
-        
+
         <div class="content-container">
             <h2 class="section-heading">Benefits of Joining With Us</h2>
-            
+
             <p class="section-text">
-                In any kind of business, having a custom enterprise application designed for your business niche is important for evolving more competitively. Code Regime Technologies is the best Enterprise Application Development services, we can deliver you multiple Enterprise Application Development services that are highly secured, robust, and crafted to help your business be successful.
+                In any kind of business, having a custom enterprise application designed for your business niche is
+                important for evolving more competitively. Code Regime Technologies is the best Enterprise Application
+                Development services, we can deliver you multiple Enterprise Application Development services that are
+                highly secured, robust, and crafted to help your business be successful.
             </p>
         </div>
     </section>
@@ -399,10 +432,12 @@
     <section class="enterprise-benefits-section">
         <div class="enterprise-benefits-container">
             <div class="enterprise-benefits-header">
-                <h2 class="enterprise-benefits-title">Benefits of Enterprise Application <span> <br> Development Services</span></h2>
-                <p class="enterprise-benefits-subtitle">Our Enterprise Application Development Services provide you with accuracy and high-speed performance that can take you up.</p>
+                <h2 class="enterprise-benefits-title">Benefits of Enterprise Application <span> <br> Development
+                        Services</span></h2>
+                <p class="enterprise-benefits-subtitle">Our Enterprise Application Development Services provide you with
+                    accuracy and high-speed performance that can take you up.</p>
             </div>
-            
+
             <div class="enterprise-benefits-list">
                 <!-- Benefit 1 -->
                 <div class="enterprise-benefit-item active">
@@ -418,10 +453,11 @@
                         </div>
                     </div>
                     <div class="enterprise-benefit-content">
-                        Automate AI tasks and order difficult processes, reduce work time and resources for strategic plans.
+                        Automate AI tasks and order difficult processes, reduce work time and resources for strategic
+                        plans.
                     </div>
                 </div>
-                
+
                 <!-- Benefit 2 -->
                 <div class="enterprise-benefit-item">
                     <div class="enterprise-benefit-header">
@@ -436,10 +472,11 @@
                         </div>
                     </div>
                     <div class="enterprise-benefit-content" style="display: none;">
-                        AI-driven solutions will help you to make better improvement decisions for your business improvisation.
+                        AI-driven solutions will help you to make better improvement decisions for your business
+                        improvisation.
                     </div>
                 </div>
-                
+
                 <!-- Benefit 3 -->
                 <div class="enterprise-benefit-item">
                     <div class="enterprise-benefit-header">
@@ -454,10 +491,11 @@
                         </div>
                     </div>
                     <div class="enterprise-benefit-content" style="display: none;">
-                        Facilitate better communication and collaboration across departments with an integrated enterprise application that connects <br> your entire organization.
+                        Facilitate better communication and collaboration across departments with an integrated
+                        enterprise application that connects <br> your entire organization.
                     </div>
                 </div>
-                
+
                 <!-- Benefit 4 -->
                 <div class="enterprise-benefit-item">
                     <div class="enterprise-benefit-header">
@@ -472,23 +510,24 @@
                         </div>
                     </div>
                     <div class="enterprise-benefit-content" style="display: none;">
-                        By optimizing processes and reducing manual work, our Enterprise Application Development Services can lead to significant <br> cost savings over time
+                        By optimizing processes and reducing manual work, our Enterprise Application Development
+                        Services can lead to significant <br> cost savings over time
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <script>
         // Simple accordion functionality
         document.querySelectorAll('.enterprise-benefit-header').forEach(header => {
             header.addEventListener('click', () => {
                 const parent = header.parentElement;
                 const content = header.nextElementSibling;
-                
+
                 // Toggle active class
                 parent.classList.toggle('active');
-                
+
                 // Toggle content display
                 if (parent.classList.contains('active')) {
                     content.style.display = 'block';
@@ -503,68 +542,78 @@
             <!-- Header -->
             <div class="integration-header">
                 <h2 class="integration-title">Code Regime's Enterprise Application <br> Development Integrations</h2>
-                <p class="integration-subtitle">Our enterprise application development process is designed to <br> ensure that every project we undertake meets the consistency <br> of quality and higher reliability.</p>
+                <p class="integration-subtitle">Our enterprise application development process is designed to <br>
+                    ensure that every project we undertake meets the consistency <br> of quality and higher reliability.
+                </p>
             </div>
-            
+
             <!-- Main Image -->
             <div class="integration-image-container">
-                <img src="image/black-boximg.png" alt="Digital transformation visualization with hand and glowing particles" class="integration-image">
+                <img src="image/black-boximg.png"
+                    alt="Digital transformation visualization with hand and glowing particles"
+                    class="integration-image">
             </div>
-            
+
             <!-- Features Grid -->
             <div class="integration-features">
                 <!-- Feature 1 -->
                 <div class="integration-feature">
                     <div class="feature-icon">
-                        <img src="image/collecting.png" alt="">
+                        <img src="image/collecting.png" alt="collect information">
                     </div>
                     <h3 class="feature-title">Collecting Overall Ideas</h3>
-                    <p class="feature-description">First, we gather all the information to see the plans and requirements needed for your business.</p>
+                    <p class="feature-description">First, we gather all the information to see the plans and
+                        requirements needed for your business.</p>
                 </div>
-                
+
                 <!-- Feature 2 -->
                 <div class="integration-feature">
                     <div class="feature-icon">
-                        <img src="image/craft.png" alt="">
+                        <img src="image/craft.png" alt="craft design">
                     </div>
                     <h3 class="feature-title">Craft Design</h3>
-                    <p class="feature-description">Our team gives you the best vision and scope of the enterprise applications, so that they'll be rated as we work perfectly when they hit the server.</p>
+                    <p class="feature-description">Our team gives you the best vision and scope of the enterprise
+                        applications, so that they'll be rated as we work perfectly when they hit the server.</p>
                 </div>
-                
+
                 <!-- Feature 3 -->
                 <div class="integration-feature">
                     <div class="feature-icon">
-                        <img src="image/develop.png" alt="">
+                        <img src="image/develop.png" alt="Development Process">
                     </div>
                     <h3 class="feature-title">Development Process</h3>
-                    <p class="feature-description">Our team develops optimal potential internal applications software solutions.</p>
+                    <p class="feature-description">Our team develops optimal potential internal applications software
+                        solutions.</p>
                 </div>
-                
+
                 <!-- Feature 4 -->
                 <div class="integration-feature">
                     <div class="feature-icon">
-                        <img src="image/test.png" alt="">
+                        <img src="image/test.png" alt="Test Nets">
                     </div>
                     <h3 class="feature-title">Test Nets</h3>
-                    <p class="feature-description">We will make assured of enterprise application quality before fixing errors, bugs, and any kind of issues.</p>
+                    <p class="feature-description">We will make assured of enterprise application quality before fixing
+                        errors, bugs, and any kind of issues.</p>
                 </div>
-                
+
                 <!-- Feature 5 -->
                 <div class="integration-feature">
                     <div class="feature-icon">
-                        <img src="image/final.png" alt="">
+                        <img src="image/final.png" alt="Final Launch">
                     </div>
                     <h3 class="feature-title">Final Launch</h3>
-                    <p class="feature-description">We check the overall operational functions and set your code industry target audience.</p>
+                    <p class="feature-description">We check the overall operational functions and set your code industry
+                        target audience.</p>
                 </div>
-                
+
                 <!-- Feature 6 -->
                 <div class="integration-feature">
                     <div class="feature-icon">
-                        <img src="image/tech.png" alt="">
+                        <img src="image/tech.png" alt="Tech Support">
                     </div>
                     <h3 class="feature-title">Tech Support</h3>
-                    <p class="feature-description">We ensure post-launch security protocols of your enterprise applications and provide you with on-time technical support.</p>
+                    <p class="feature-description">We ensure post-launch security protocols of your enterprise
+                        applications and provide you with on-time technical support.</p>
                 </div>
             </div>
         </div>
@@ -575,38 +624,39 @@
         <div class="faq-container">
             <h2 class="faq-title">FAQs</h2>
             <p class="faq-description">Answers to the most frequently asked questions.</p>
-            
+
             <div class="faq-list">
                 <!-- FAQ Item 1 -->
                 <div class="faq-item">
                     <div class="faq-question">What is the overall cost of creating an enterprise application?</div>
-                    <div class="faq-answer">
-                        <p>We focus on delivering the utmost quality rather than cost so it is negotiable.</p>
-                    </div>
+
+                    <p>We focus on delivering the utmost quality rather than cost so it is negotiable.</p>
+
                 </div>
-                
+
                 <!-- FAQ Item 2 -->
                 <div class="faq-item">
                     <div class="faq-question">How many days to develop an enterprise application?</div>
-                    <div class="faq-answer">
-                        <p>The timeline can vary from just a few weeks to a few months.</p>
-                    </div>
+
+                    <p>The timeline can vary from just a few weeks to a few months.</p>
+
                 </div>
-                
+
                 <!-- FAQ Item 3 -->
                 <div class="faq-item">
                     <div class="faq-question">How long can Code Regime support?</div>
-                    <div class="faq-answer">
-                        <p>Yes, Our team will assure you the technical support whenever you need it.</p>
-                    </div>
+
+                    <p>Yes, Our team will assure you the technical support whenever you need it.</p>
+
                 </div>
-                
+
                 <!-- FAQ Item 4 -->
                 <div class="faq-item">
-                    <div class="faq-question">Do you make enterprise application development services for beginners?</div>
-                    <div class="faq-answer">
-                        <p>Our Team is proficient in developing enterprise application services for startups</p>
+                    <div class="faq-question">Do you make enterprise application development services for beginners?
                     </div>
+
+                    <p>Our Team is proficient in developing enterprise application services for startups</p>
+
                 </div>
             </div>
         </div>
@@ -617,14 +667,14 @@
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;
-                
+
                 // Close all other items
                 document.querySelectorAll('.faq-item').forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
-                
+
                 // Toggle current item
                 item.classList.toggle('active');
             });
@@ -643,34 +693,43 @@
                         At Code Regime Technologies, we specialize in innovative software development.
                     </p>
                     <div class="social-media">
-                        <a href="https://www.linkedin.com/company/coderegime/posts/?feedView=all" class="social-icon linkedin" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/coderegime/posts/?feedView=all"
+                            class="social-icon linkedin" aria-label="LinkedIn">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                             </svg>
                         </a>
                         <a href="https://x.com/RegimeCode%22" class="social-icon twitter" aria-label="Twitter">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=61572308472454%22" class="social-icon facebook" aria-label="Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61572308472454%22" class="social-icon facebook"
+                            aria-label="Facebook">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/coderegimetechnologies/?hl=en%22" class="social-icon instagram" aria-label="Instagram">
+                        <a href="https://www.instagram.com/coderegimetechnologies/?hl=en%22"
+                            class="social-icon instagram" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo%22"class="social-icon threads" aria-label="Threads">
+                        <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo%22"
+                            class="social-icon threads" aria-label="Threads">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.810 11.618 4.810c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z"/>
+                                <path
+                                    d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.810 11.618 4.810c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z" />
                             </svg>
                         </a>
                     </div>
                 </div>
-     
+
                 <!-- Useful Links -->
                 <div class="footer-section">
                     <h3>Useful Links</h3>
@@ -679,10 +738,11 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="/Portfolio/index.html">Portfolio</a></li>
-                        <li> <a href="#" class="contact-us" data-bs-toggle="modal" data-bs-target="#contactPopup">Contact Us</a></li>
+                        <li> <a href="#" class="contact-us" data-bs-toggle="modal"
+                                data-bs-target="#contactPopup">Contact Us</a></li>
                     </ul>
                 </div>
-     
+
                 <!-- Legal -->
                 <div class="footer-section">
                     <h3>Legal</h3>
@@ -693,14 +753,15 @@
                         <li><a href="/policy/disclaimer/index.html">Disclaimer</a></li>
                     </ul>
                 </div>
-     
+
                 <!-- Contact Us -->
                 <div class="footer-section">
                     <h3>Contact Us</h3>
                     <ul class="contact-infos">
                         <li>
                             <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                             </svg>
                             <div class="contact-text">
                                 231c, 3rd Floor, Kamarajar Salai,<br>
@@ -709,26 +770,29 @@
                         </li>
                         <li>
                             <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                             </svg>
                             <span class="contact-text">+91 8072218602</span>
                         </li>
                         <li>
                             <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                             </svg>
                             <span class="contact-text">sales.coderegime@gmail.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
-     
+
             <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <p class="copyright">© Copyright 2025, All Rights Reserved by Code Regime</p>
             </div>
         </div>
     </footer>
-     
+
 </body>
+
 </html>

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+
 </head>
+
 <body>
     <header id="head-nav">
         <nav>
@@ -17,15 +21,15 @@
             <a href="/index.html" class="logo">
                 <img src="image/logo.png" alt="logo">
             </a>
-    
+
             <!-- Navigation Menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="/index.html" class="nav-link active">Home</a>
                 </li>
                 <li class="nav-item">
-          <a href="/about-us/index.html" class="nav-link">About Us</a>
-        </li>
+                    <a href="/about-us/index.html" class="nav-link">About Us</a>
+                </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         Services
@@ -33,7 +37,8 @@
                     </a>
                     <ul class="dropdown">
                         <li class="dropdown-item">
-                            <a href="/service/blockchain/index.html" class="dropdown-link">Blockchain Development Services</a>
+                            <a href="/service/blockchain/index.html" class="dropdown-link">Blockchain Development
+                                Services</a>
                         </li>
                         <li class="dropdown-item">
                             <a href="/service/custom/index.html" class="dropdown-link">Mobile App Development</a>
@@ -48,11 +53,12 @@
                             <a href="/service/android/index.html" class="dropdown-link">Android App Development</a>
                         </li>
                         <li class="dropdown-item">
-                          <a href="/service/best/index.html" class="dropdown-link">Web App Development Services</a>
-                      </li>
-                      <li class="dropdown-item">
-                        <a href="/service/enterprise/index.html" class="dropdown-link">Enterprise App Development</a>
-                    </li>
+                            <a href="/service/best/index.html" class="dropdown-link">Web App Development Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/service/enterprise/index.html" class="dropdown-link">Enterprise App
+                                Development</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -87,10 +93,10 @@
                     <a href="/Portfolio/index.html" class="nav-link">Portfolio</a>
                 </li>
             </ul>
-    
+
             <!-- Contact Button -->
             <a href="#" class="contact-btn" data-bs-toggle="modal" data-bs-target="#contactPopup">Contact Us</a>
-    
+
             <!-- Mobile Menu Toggle -->
             <div class="mobile-toggle">
                 <span class="hamburger"></span>
@@ -100,44 +106,45 @@
         </nav>
     </header>
 
-    
+
     <section class="hero-section">
         <div class="hero-text">
-          <h1>Custom Mobile App <br> Development Services</h1>
-          <p>
-            Code Regime delves into mobile app development services, explores custom 
-            frameworks and AI-driven features, and Displays the development process, 
-            and we ensure why Code Regime Technologies is your dynamic partner for 
-            mobile app development.
-          </p>
-          <a href="#services" class="hero__cta">
-            Let's get started
-            <svg class="hero__cta-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                <path d="M8.5 3L13.5 8L8.5 13M13 8H3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
+            <h1>Custom Mobile App <br> Development Services</h1>
+            <p>
+                Code Regime delves into mobile app development services, explores custom
+                frameworks and AI-driven features, and Displays the development process,
+                and we ensure why Code Regime Technologies is your dynamic partner for
+                mobile app development.
+            </p>
+            <a href="#services" class="hero__cta">
+                Let's get started
+                <svg class="hero__cta-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M8.5 3L13.5 8L8.5 13M13 8H3" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
         </div>
         <div class="hero-image">
-          <img src="image/head-mobile.png" alt="Mobile App Illustration">
+            <img src="image/head-mobile.png" alt="Mobile App Illustration">
         </div>
-      </section>
+    </section>
 
-      <script>
+    <script>
         // Mobile menu toggle functionality
         const mobileToggle = document.querySelector('.mobile-toggle');
         const navMenu = document.querySelector('.nav-menu');
         const dropdownItems = document.querySelectorAll('.nav-item');
-    
+
         mobileToggle.addEventListener('click', () => {
             mobileToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-    
+
         // Mobile dropdown functionality
         dropdownItems.forEach(item => {
             const link = item.querySelector('.nav-link');
             const dropdown = item.querySelector('.dropdown');
-           
+
             if (dropdown) {
                 link.addEventListener('click', (e) => {
                     if (window.innerWidth <= 768) {
@@ -147,7 +154,7 @@
                 });
             }
         });
-    
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
@@ -155,7 +162,7 @@
                 mobileToggle.classList.remove('active');
             }
         });
-    
+
         // Close mobile menu on window resize
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
@@ -171,9 +178,11 @@
     <section class="section-container">
         <div class="content-wrapper">
             <span class="badge">ANDROID VERSION</span>
-            <h1 class="section-title">Mobile app development company</h1>
+            <h2 class="section-title">Mobile app development company</h2>
             <p class="section-description">
-                It started only for interactions and entertainment but now it is booming into profitability too. Our Mobile App Development Services enable businesses to engage with target audiences, keep brand loyalty, and transform into sales by giving a flawless experience on all mobile devices. 
+                It started only for interactions and entertainment but now it is booming into profitability too. Our
+                Mobile App Development Services enable businesses to engage with target audiences, keep brand loyalty,
+                and transform into sales by giving a flawless experience on all mobile devices.
             </p>
         </div>
         <div class="image-wrapper">
@@ -184,9 +193,12 @@
 
     <section class="services-section">
         <div class="section-header">
-            <h1 class="section-title">What are the services of mobile apps we develop?</h1>
+            <h2 class="section-title">What are the services of mobile apps we develop?</h2>
             <p class="section-description">
-                Code Regime Technologies is the Best choice for custom Mobile App Development Services frameworks. Businesses need custom frameworks so we assure and craft the solution for their specific need. At Code Regime Technologies, we specialize in developing mobile apps using advanced frameworks such as React Native, Flutter, and Swift.
+                Code Regime Technologies is the Best choice for custom Mobile App Development Services frameworks.
+                Businesses need custom frameworks so we assure and craft the solution for their specific need. At Code
+                Regime Technologies, we specialize in developing mobile apps using advanced frameworks such as React
+                Native, Flutter, and Swift.
             </p>
         </div>
 
@@ -196,12 +208,10 @@
                 <div class="service-content">
                     <h3 class="service-title">React Native</h3>
                     <p class="service-description">
-                        React Native is a famous framework that switches to the development of cross-platform mobile apps.
-                        <span class="hidden-content">
-                            Our React Native developers deliver high-quality, native-like applications that work seamlessly across iOS and Android platforms with a single codebase.
-                        </span>
+                        React Native is a famous framework that switches to the development of cross-platform mobile
+                        apps. Our React Native developers deliver high-quality, native-like applications that work
+                        seamlessly across iOS and Android platforms with a single codebase.
                     </p>
-                    <button class="read-more-btn">Read more</button>
                 </div>
             </div>
 
@@ -210,12 +220,14 @@
                 <div class="service-content">
                     <h3 class="service-title">Flutter</h3>
                     <p class="service-description">
-                        With an enriched set of pre-module widgets and live-time code editing features. Using the framework, our team creates.
-                        <span class="hidden-content">
-                            beautiful, natively compiled applications for mobile, web, and desktop from a single codebase with impressive performance and pixel-perfect designs.
-                        </span>
+                        With an enriched set of pre-module widgets and live-time code editing features. Using the
+                        framework, our team creates.
+
+                        beautiful, natively compiled applications for mobile, web, and desktop from a single codebase
+                        with impressive performance and pixel-perfect designs.
+
                     </p>
-                    <button class="read-more-btn">Read more</button>
+
                 </div>
             </div>
 
@@ -224,12 +236,14 @@
                 <div class="service-content">
                     <h3 class="service-title">Swift</h3>
                     <p class="service-description">
-                        Code Regime Technologies delivers a dynamic language for iOS app development using this framework.
-                        <span class="hidden-content">
-                            Our Swift experts create modern, safe, and high-performance iOS applications with clean code and rich user experiences that fully leverage Apple's ecosystem.
-                        </span>
+                        Code Regime Technologies delivers a dynamic language for iOS app development using this
+                        framework.
+
+                        Our Swift experts create modern, safe, and high-performance iOS applications with clean code and
+                        rich user experiences that fully leverage Apple's ecosystem.
+
                     </p>
-                    <button class="read-more-btn">Read more</button>
+
                 </div>
             </div>
         </div>
@@ -238,10 +252,10 @@
     <script>
         // Add event listeners to all Read more buttons
         document.querySelectorAll('.read-more-btn').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 // Find the hidden content within this card
                 const hiddenContent = this.previousElementSibling.querySelector('.hidden-content');
-                
+
                 // Toggle visibility
                 if (hiddenContent.style.display === 'inline' || hiddenContent.style.display === '') {
                     hiddenContent.style.display = 'none';
@@ -254,387 +268,423 @@
         });
     </script>
 
-<section class="process-section">
-    <div class="section-header">
-        <h1 class="section-title">Development process of mobile app development</h1>
-        <p class="section-description">
-            Code Regime's Technologies follows a successful well structured development process for small, medium, and large-scale enterprises
-        </p>
-    </div>
-
-    <div class="process-grid">
-        <div class="process-card">
-            <h2 class="process-number">01</h2>
-            <h3 class="process-title">Detailed Planning</h3>
-            <p class="process-description">
-                Our Mobile App Development Services focus on your business needs and objectives.
+    <section class="process-section">
+        <div class="section-header">
+            <h2 class="section-title">Development process of mobile app development</h2>
+            <p class="section-description">
+                Code Regime's Technologies follows a successful well structured development process for small, medium,
+                and large-scale enterprises
             </p>
         </div>
 
-        <div class="process-card">
-            <h2 class="process-number">02</h2>
-            <h3 class="process-title">User Design</h3>
-            <p class="process-description">
-                This is an important method because it will show your brand loyalty to users so our team is focused on giving potential designed features. We can make the designing frameworks.
-            </p>
-        </div>
-
-        <div class="process-card">
-            <h2 class="process-number">03</h2>
-            <h3 class="process-title">App Development</h3>
-            <p class="process-description">
-                Our Skilled Team uses agile methods to develop the app with our latest technologies and fulfill your niche. we continuously testing and gathering the feedbacks to improve the app smartly.
-            </p>
-        </div>
-    </div>
-
-    <div class="process-grid-second">
-        <div class="process-card">
-            <h2 class="process-number">04</h2>
-            <h3 class="process-title">Testnets</h3>
-            <p class="process-description">
-                We test the apps rigorously to identify any issues and feedback to improve. Our team ensures that the app can perform in any operational system and device.
-            </p>
-        </div>
-
-        <div class="process-card">
-            <h2 class="process-number">05</h2>
-            <h3 class="process-title">Deployment</h3>
-            <p class="process-description">
-                Passed from testnets, we can deliver and launch the app on specific target audiences. We assure to give you technical support from us in anytime you need.
-            </p>
-        </div>
-    </div>
-</section>
-
-<div class="why-container">
-    <div class="section-header">
-        <h2>Why Choose Code Regime Technologies?</h2>
-    </div>
-
-    <div class="benefits-grid">
-        <!-- Benefit Card 1 -->
-        <div class="benefit-card">
-            <span class="card-number">01</span>
-            <div class="card-image">
-                <img src="image/our-teams.png" alt="Our Teams">
+        <div class="process-grid">
+            <div class="process-card">
+                <h3 class="process-number">01</h3>
+                <h3 class="process-title">Detailed Planning</h3>
+                <p class="process-description">
+                    Our Mobile App Development Services focus on your business needs and objectives.
+                </p>
             </div>
-            <div class="card-content">
-                <h3>Our Teams</h3>
-                <p>We boast cutting-edge App Development Services and Code Regime Technologies stands out as a force in the industry. Our team of experienced developers, designers, and experts work collaboratively to deliver mobile apps that exceed your expectations.</p>
-            </div>
-        </div>
-        
 
-        <!-- Benefit Card 2 -->
-        <div class="benefit-card">
-            <span class="card-number">02</span>
-            <div class="card-image">
-                <img src="image/core.png" alt="Core Experts">
+            <div class="process-card">
+                <h3 class="process-number">02</h3>
+                <h3 class="process-title">User Design</h3>
+                <p class="process-description">
+                    This is an important method because it will show your brand loyalty to users so our team is focused
+                    on giving potential designed features. We can make the designing frameworks.
+                </p>
             </div>
-            <div class="card-content">
-                <h3>Core Experts</h3>
-                <p>We have a team of specialists and core experts developing mobile apps for various service industries such as the healthcare sector, enterprise E-commerce, beauty & cosmetics, political interactions, Online food delivery business, travel bookings, insurance, and more.</p>
+
+            <div class="process-card">
+                <h3 class="process-number">03</h3>
+                <h3 class="process-title">App Development</h3>
+                <p class="process-description">
+                    Our Skilled Team uses agile methods to develop the app with our latest technologies and fulfill your
+                    niche. we continuously testing and gathering the feedbacks to improve the app smartly.
+                </p>
             </div>
         </div>
 
-        <!-- Benefit Card 3 -->
-        <div class="benefit-card">
-            <span class="card-number">03</span>
-            <div class="card-image">
-                <img src="image/focusing.png" alt="Focusing Client's Niche">
+        <div class="process-grid-second">
+            <div class="process-card">
+                <h3 class="process-number">04</h3>
+                <h3 class="process-title">Testnets</h3>
+                <p class="process-description">
+                    We test the apps rigorously to identify any issues and feedback to improve. Our team ensures that
+                    the app can perform in any operational system and device.
+                </p>
             </div>
-            <div class="card-content">
-                <h3>Focusing Client's Niche</h3>
-                <p>Code Regime Technologies is ensuring a client-centric approach to meet today's market trend. Our team specializes in creating custom apps to meet the business goals and objectives and the brand's vision.</p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<section class="how-section">
-    <div class="how-header">
-        <h1 class="sectionhow-title">How mobile apps will be profitable for a business?</h1>
-        <p class="sectionhow-description">
-            We leverage AI-driven features and tools of our Mobile App Development Services can lead your business forward.
-        </p>
-    </div>
-
-    <div class="ios-app-content-section">
-        <div class="ios-app-image-container">
-            <div class="ios-app-image-wrapper">
-                <img src="image/how.png" alt="iPhone showing iOS apps">
+            <div class="process-card">
+                <h3 class="process-number">05</h3>
+                <h3 class="process-title">Deployment</h3>
+                <p class="process-description">
+                    Passed from testnets, we can deliver and launch the app on specific target audiences. We assure to
+                    give you technical support from us in anytime you need.
+                </p>
             </div>
         </div>
-        
-        <div class="ios-app-accordion-container">
-            <div class="ios-app-accordion-item">
-                <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
-                    <h3>User Engagement</h3>
-                    <div class="ios-app-arrow">
-                        <img src="image/arrow.png" alt="arrow">
-                    </div>
-                </div>
-                <div class="ios-app-accordion-content">
-                    <p>Our team built interaction facilities tools and features. And also we provide alert notifications, chatbots, chatting platforms that will engage your users and targeted audience more satisfactorily and happiness.</p>
-                </div>
-            </div>
-            
-            <div class="ios-app-accordion-item">
-                <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
-                    <h3>High on Brand Vision</h3>
-                    <div class="ios-app-arrow">
-                        <img src="image/arrow.png" alt="arrow">
-                    </div>
-                </div>
-                <div class="ios-app-accordion-content">
-                    <p>Our design team delivers you enriched designed features so 
-                        users can be increased by that. we focus on technical support. </p>
-                </div>
-            </div>
-            
-            <div class="ios-app-accordion-item">
-                <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
-                    <h3>Operational Process</h3>
-                    <div class="ios-app-arrow">
-                        <img src="image/arrow.png" alt="arrow">
-                    </div>
-                </div>
-                <div class="ios-app-accordion-content">
-                    <p>Our developer's team assures you of automated business operations with streamlined tools and features. It reduces your operational costs and improves customer service.</p>
-                </div>
-            </div>
-        </section>
-<script>
-    function toggleIosAccordion(element) {
-        // Remove active class from all items
-        const allItems = document.querySelectorAll('.ios-app-accordion-item');
-        allItems.forEach(item => {
-            if (item !== element.parentElement) {
-                item.classList.remove('ios-app-active');
-            }
-        });
-        
-        // Toggle active class on clicked item
-        element.parentElement.classList.toggle('ios-app-active');
-    }
-</script>
-
-<div class="invest-container">
-    <h2 class="heading">AI-Driven mobile app development</h2>
-    <p class="subheading">Code Regime Technologies integrates the AI system for User convenience to improve your business as well.</p>
-    <div class="content">
-        <div class="image-section">
-            <img src="image/ai.png" alt="App Transforms Profitable">
-        </div>
-        <div class="text-section">
-            <h3>AI Predictive metrics</h3>
-            <p>This allows us to know the usage of the apps efficiently increasing 
-                demands on the crafted products and services. Starting your 
-                business in Mobile App Development Services is crucial for 
-                any business looking to thrive.</p> <br>
-            <p>Whether your goal is to enhance user engagement, and business 
-                operations, or integrate AI features, Code Regime Technologies 
-                is your promising partner in mobile app development. Our tech-savvy, client-focus approach and commitment to quality ensure that we launch mobile apps that drive business success. </p> <br> 
-            
-        </div>
-    </div>
-</div>
-
-<div class="feature-container">
-    <div class="feature">
-        <div class="feature-text">
-            <h3>AI Tech Support</h3>
-            <p>This improves business operations functions 
-                and sales. Code Regime will support you 
-                endlessly. </p>
-        </div>
-        <div class="feature-image">
-            <img src="image/tech-support.png" alt="Customer Engagement">
-        </div>
-    </div>
-
-    <div class="feature">
-        <div class="feature-text">
-            <h3>AI Personalized Recommendations</h3>
-            <p>Our AI can notify the personalized recommendations so 
-                it drives into marketing and sales. </p>
-        </div>
-        <div class="feature-image">
-            <img src="image/personalized.png" alt="Operations & Functions">
-        </div>
-    </div>
-
-    <section class="faq-section">
-        <h2 class="faq-title">Frequently Asked Questions</h2>
-        
-        <div class="faq-container">
-            <div class="faq-item active">
-                <div class="faq-question">
-                    <span class="faq-question-text">What is the below-average timeline for mobile app development?</span>
-                    <span class="faq-toggle"></span>
-                </div>
-                <div class="faq-answer">
-                    <p class="faq-answer-text">We can deliver and launch the app in 3 to 6 months on average it is processed, developed, and launched.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span class="faq-question-text">What is the estimated cost of mobile app development?</span>
-                    <span class="faq-toggle"></span>
-                </div>
-                <div class="faq-answer">
-                    <p class="faq-answer-text">Our developers prioritize your specific business needs. whether it depends upon the complexity of projects, or additional features it may vary.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span class="faq-question-text">Do you provide Technical support?</span>
-                    <span class="faq-toggle"></span>
-                </div>
-                <div class="faq-answer">
-                    <p class="faq-answer-text">Yes, we offer ongoing Technical maintenance and support services to ensure the latest features and security patches.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <span class="faq-question-text">Which platforms do you utilize to develop mobile apps?</span>
-                <span class="faq-toggle"></span>
-            </div>
-            <div class="faq-answer">
-                <p class="faq-answer-text">React Native, Flutter, and Swift are the platforms we used to develop mobile apps that suit both iOS and Android mobiles.</p>
-            </div>
-        </div>
-
-        
     </section>
-    
+
+    <div class="why-container">
+        <div class="section-header">
+            <h2>Why Choose Code Regime Technologies?</h2>
+        </div>
+
+        <div class="benefits-grid">
+            <!-- Benefit Card 1 -->
+            <div class="benefit-card">
+                <span class="card-number">01</span>
+                <div class="card-image">
+                    <img src="image/our-teams.png" alt="Our Teams">
+                </div>
+                <div class="card-content">
+                    <h3>Our Teams</h3>
+                    <p>We boast cutting-edge App Development Services and Code Regime Technologies stands out as a force
+                        in the industry. Our team of experienced developers, designers, and experts work collaboratively
+                        to deliver mobile apps that exceed your expectations.</p>
+                </div>
+            </div>
+
+
+            <!-- Benefit Card 2 -->
+            <div class="benefit-card">
+                <span class="card-number">02</span>
+                <div class="card-image">
+                    <img src="image/core.png" alt="Core Experts">
+                </div>
+                <div class="card-content">
+                    <h3>Core Experts</h3>
+                    <p>We have a team of specialists and core experts developing mobile apps for various service
+                        industries such as the healthcare sector, enterprise E-commerce, beauty & cosmetics, political
+                        interactions, Online food delivery business, travel bookings, insurance, and more.</p>
+                </div>
+            </div>
+
+            <!-- Benefit Card 3 -->
+            <div class="benefit-card">
+                <span class="card-number">03</span>
+                <div class="card-image">
+                    <img src="image/focusing.png" alt="Focusing Client's Niche">
+                </div>
+                <div class="card-content">
+                    <h3>Focusing Client's Niche</h3>
+                    <p>Code Regime Technologies is ensuring a client-centric approach to meet today's market trend. Our
+                        team specializes in creating custom apps to meet the business goals and objectives and the
+                        brand's vision.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="how-section">
+        <div class="how-header">
+            <h2 class="sectionhow-title">How mobile apps will be profitable for a business?</h2>
+            <p class="sectionhow-description">
+                We leverage AI-driven features and tools of our Mobile App Development Services can lead your business
+                forward.
+            </p>
+        </div>
+
+        <div class="ios-app-content-section">
+            <div class="ios-app-image-container">
+                <div class="ios-app-image-wrapper">
+                    <img src="image/how.png" alt="mobile app development service">
+                </div>
+            </div>
+
+            <div class="ios-app-accordion-container">
+                <div class="ios-app-accordion-item">
+                    <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
+                        <h3>User Engagement</h3>
+                        <div class="ios-app-arrow">
+                            <img src="image/arrow.png" alt="arrow">
+                        </div>
+                    </div>
+                    <div class="ios-app-accordion-content">
+                        <p>Our team built interaction facilities tools and features. And also we provide alert
+                            notifications, chatbots, chatting platforms that will engage your users and targeted
+                            audience more satisfactorily and happiness.</p>
+                    </div>
+                </div>
+
+                <div class="ios-app-accordion-item">
+                    <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
+                        <h3>High on Brand Vision</h3>
+                        <div class="ios-app-arrow">
+                            <img src="image/arrow.png" alt="arrow">
+                        </div>
+                    </div>
+                    <div class="ios-app-accordion-content">
+                        <p>Our design team delivers you enriched designed features so
+                            users can be increased by that. we focus on technical support. </p>
+                    </div>
+                </div>
+
+                <div class="ios-app-accordion-item">
+                    <div class="ios-app-accordion-header" onclick="toggleIosAccordion(this)">
+                        <h3>Operational Process</h3>
+                        <div class="ios-app-arrow">
+                            <img src="image/arrow.png" alt="arrow">
+                        </div>
+                    </div>
+                    <div class="ios-app-accordion-content">
+                        <p>Our developer's team assures you of automated business operations with streamlined tools and
+                            features. It reduces your operational costs and improves customer service.</p>
+                    </div>
+                </div>
+    </section>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                
-                question.addEventListener('click', () => {
-                    // Close all other items
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('active')) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current item
-                    item.classList.toggle('active');
-                });
+        function toggleIosAccordion(element) {
+            // Remove active class from all items
+            const allItems = document.querySelectorAll('.ios-app-accordion-item');
+            allItems.forEach(item => {
+                if (item !== element.parentElement) {
+                    item.classList.remove('ios-app-active');
+                }
             });
-        });
+
+            // Toggle active class on clicked item
+            element.parentElement.classList.toggle('ios-app-active');
+        }
     </script>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-company">
-                    <div class="footer-logo">
-                        <a href="/index.html" class="logo"><img src="image/logo.png" alt=""></a>
-                    </div>
-                    <p class="company-description">
-                        At Code Regime Technologies, we specialize in innovative software development.
-                    </p>
-                    <div class="social-media">
-                        <a href="https://www.linkedin.com/company/coderegime/posts/?feedView=all" class="social-icon linkedin" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/RegimeCode%22" class="social-icon twitter" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61572308472454%22" class="social-icon facebook" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/coderegimetechnologies/?hl=en%22" class="social-icon instagram" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo%22"class="social-icon threads" aria-label="Threads">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.810 11.618 4.810c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-     
-                <!-- Useful Links -->
-                <div class="footer-section">
-                    <h3>Useful Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="/about-us/index.html">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="/Portfolio/index.html">Portfolio</a></li>
-                        <li> <a href="#" class="contact-us" data-bs-toggle="modal" data-bs-target="#contactPopup">Contact Us</a></li>
-                    </ul>
-                </div>
-     
-                <!-- Legal -->
-                <div class="footer-section">
-                    <h3>Legal</h3>
-                    <ul class="footer-links">
-                        <li><a href="/policy/privacy-policy/index.html">Privacy Policy</a></li>
-                        <li><a href="/policy/refund-policy/index.html">Refund Policy</a></li>
-                        <li><a href="/policy/security-policy/index.html">Support</a></li>
-                        <li><a href="/policy/disclaimer/index.html">Disclaimer</a></li>
-                    </ul>
-                </div>
-     
-                <!-- Contact Us -->
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-infos">
-                        <li>
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <div class="contact-text">
-                                231c, 3rd Floor, Kamarajar Salai,<br>
-                                Madurai, TamilNadu 625009
-                            </div>
-                        </li>
-                        <li>
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                            </svg>
-                            <span class="contact-text">+91 8072218602</span>
-                        </li>
-                        <li>
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            <span class="contact-text">sales.coderegime@gmail.com</span>
-                        </li>
-                    </ul>
-                </div>
+    <div class="invest-container">
+        <h2 class="heading">AI-Driven mobile app development</h2>
+        <p class="subheading">Code Regime Technologies integrates the AI system for User convenience to improve your
+            business as well.</p>
+        <div class="content">
+            <div class="image-section">
+                <img src="image/ai.png" alt="ai metrics">
             </div>
-     
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p class="copyright">© Copyright 2025, All Rights Reserved by Code Regime</p>
+            <div class="text-section">
+                <h3>AI Predictive metrics</h3>
+                <p>This allows us to know the usage of the apps efficiently increasing
+                    demands on the crafted products and services. Starting your
+                    business in Mobile App Development Services is crucial for
+                    any business looking to thrive.</p> <br>
+                <p>Whether your goal is to enhance user engagement, and business
+                    operations, or integrate AI features, Code Regime Technologies
+                    is your promising partner in mobile app development. Our tech-savvy, client-focus approach and
+                    commitment to quality ensure that we launch mobile apps that drive business success. </p> <br>
+
             </div>
         </div>
-    </footer>
-           
-          
+    </div>
+
+    <div class="feature-container">
+        <div class="feature">
+            <div class="feature-text">
+                <h3>AI Tech Support</h3>
+                <p>This improves business operations functions
+                    and sales. Code Regime will support you
+                    endlessly. </p>
+            </div>
+            <div class="feature-image">
+                <img src="image/tech-support.png" alt="ai tech support">
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-text">
+                <h3>AI Personalized Recommendations</h3>
+                <p>Our AI can notify the personalized recommendations so
+                    it drives into marketing and sales. </p>
+            </div>
+            <div class="feature-image">
+                <img src="image/personalized.png" alt="ai recommendations">
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <div class="faq-question-text">What is the below-average timeline for mobile app
+                            development?</div>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">We can deliver and launch the app in 3 to 6 months on average it is
+                            processed, developed, and launched.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <div class="faq-question-text">What is the estimated cost of mobile app development?</div>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">Our developers prioritize your specific business needs. whether it
+                            depends upon the complexity of projects, or additional features it may vary.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <div class="faq-question-text">Do you provide Technical support?</div>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">Yes, we offer ongoing Technical maintenance and support services to
+                            ensure the latest features and security patches.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-question-text">Which platforms do you utilize to develop mobile apps?</div>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">React Native, Flutter, and Swift are the platforms we used to develop
+                        mobile apps that suit both iOS and Android mobiles.</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+
+                    question.addEventListener('click', () => {
+                        // Close all other items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item && otherItem.classList.contains('active')) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+
+                        // Toggle current item
+                        item.classList.toggle('active');
+                    });
+                });
+            });
+        </script>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <!-- Company Info -->
+                    <div class="footer-company">
+                        <div class="footer-logo">
+                            <a href="/index.html" class="logo"><img src="image/logo.png" alt=""></a>
+                        </div>
+                        <p class="company-description">
+                            At Code Regime Technologies, we specialize in innovative software development.
+                        </p>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/company/coderegime/posts/?feedView=all"
+                                class="social-icon linkedin" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a href="https://x.com/RegimeCode%22" class="social-icon twitter" aria-label="Twitter">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61572308472454%22"
+                                class="social-icon facebook" aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/coderegimetechnologies/?hl=en%22"
+                                class="social-icon instagram" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.threads.net/@coderegimetechnologies?xmt=AQGzGNFG3s02stPlkCkFbZeuWzwyVd18DP6TJjrrKSF5gXo%22"
+                                class="social-icon threads" aria-label="Threads">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.810 11.618 4.810c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Useful Links -->
+                    <div class="footer-section">
+                        <h3>Useful Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="/about-us/index.html">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="/Portfolio/index.html">Portfolio</a></li>
+                            <li> <a href="#" class="contact-us" data-bs-toggle="modal"
+                                    data-bs-target="#contactPopup">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal -->
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul class="footer-links">
+                            <li><a href="/policy/privacy-policy/index.html">Privacy Policy</a></li>
+                            <li><a href="/policy/refund-policy/index.html">Refund Policy</a></li>
+                            <li><a href="/policy/security-policy/index.html">Support</a></li>
+                            <li><a href="/policy/disclaimer/index.html">Disclaimer</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Us -->
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-infos">
+                            <li>
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                                <div class="contact-text">
+                                    231c, 3rd Floor, Kamarajar Salai,<br>
+                                    Madurai, TamilNadu 625009
+                                </div>
+                            </li>
+                            <li>
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                                <span class="contact-text">+91 8072218602</span>
+                            </li>
+                            <li>
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                                <span class="contact-text">sales.coderegime@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <p class="copyright">© Copyright 2025, All Rights Reserved by Code Regime</p>
+                </div>
+            </div>
+        </footer>
+
+
 </body>
+
 </html>
