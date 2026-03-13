@@ -3,21 +3,101 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- Home -->
 <url>
-  <loc>https://www.coderegimetechnologies.com/</loc>
-  <lastmod>2024-12-19T13:29:33+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://www.coderegimetechnologies.com/</loc>
+<priority>1.00</priority>
 </url>
+
+<!-- Main Pages -->
 <url>
-  <loc>https://www.coderegimetechnologies.com/index.html</loc>
-  <lastmod>2024-12-19T13:29:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.coderegimetechnologies.com/about-us/</loc>
+<priority>0.80</priority>
 </url>
+
 <url>
-  <loc>https://www.coderegimetechnologies.com/portfolio.html</loc>
-  <lastmod>2024-12-19T12:49:23+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.coderegimetechnologies.com/Portfolio/</loc>
+<priority>0.80</priority>
 </url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/contact-us/</loc>
+<priority>0.80</priority>
+</url>
+
+<!-- Policies -->
+<url>
+<loc>https://www.coderegimetechnologies.com/privacy-policy/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/refund-policy/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/security-policy/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/disclaimer/</loc>
+<priority>0.80</priority>
+</url>
+
+<!-- Products -->
+<url>
+<loc>https://www.coderegimetechnologies.com/uber-clone/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/ubereats-clone/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/Uber-for-Handyman-app/</loc>
+<priority>0.80</priority>
+</url>
+
+<!-- Services -->
+<url>
+<loc>https://www.coderegimetechnologies.com/blockchain-development-services/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/mobile-app-development/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/ios-app-development/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/flutter-app-development/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/android-app-development/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/web-app-development/</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/enterprise-app-development/</loc>
+<priority>0.80</priority>
+</url>
+
 </urlset>
