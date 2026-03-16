@@ -21,6 +21,7 @@
   
   p {
     font-family: 'roboto', sans-serif; 
+    line-height: 1.6;
   }
   
   button {
@@ -905,7 +906,7 @@ nav {
   p {
     font-size: 0.95rem;
     color: #38404A;
-    line-height: 1.5;
+    line-height: 1.6;
   }
   
   /* ---------- RESPONSIVE DESIGN ---------- */
@@ -1053,7 +1054,7 @@ h1 {
 
 .tab-desc {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   display: none;
 }
 
@@ -1636,7 +1637,7 @@ cursor: pointer;
   font-size: 14px;
   color: #38404A;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Small Mobile Devices (320px and up) */
@@ -1965,6 +1966,8 @@ cursor: pointer;
 .addon-description {
   font-size: 0.94rem;
   color: #747980;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* Tablet: 768px and up */

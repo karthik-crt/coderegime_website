@@ -1250,6 +1250,7 @@ html {
   /* Card Content */
   .card-content {
     padding: 25px;
+    text-align: center;
   }
   
   /* Tag */
@@ -1271,6 +1272,10 @@ html {
     font-weight: bold;
     color: #111827;
     margin-bottom: 15px;
+    min-height: 66px; /* Space for 2 lines */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   /* Card Description */
@@ -1404,7 +1409,7 @@ html {
   
   .growth-content {
     padding: 20px;
-    text-align: left;
+    text-align: center;
   }
   
   /* Tag */
@@ -1426,6 +1431,10 @@ html {
     margin-bottom: 12px;
     font-weight: bold;
     color: #111827;
+    min-height: 66px; /* Space for 2 lines */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   /* Card Description */

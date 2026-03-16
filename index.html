@@ -990,50 +990,50 @@
               <div class="row">
                 <div class="col-md-6">
                   <!-- FAQ Items -->
-                  <div class="faq-title" data-title="What industries does Code Regime Technologies specialize in?"
-                    data-para="Code Regime Technologies specializes in various industries, including mobile application development, web application development, blockchain development and services like Finance, Healthcare, E-Commerce, Travel, Aviation, Education and Logistics.">
+                  <div class="faq-title" data-title="What industries does Code Regime Technologies specialize in?">
                     <div class="faq-box-title">
                       <span class="faq-round"></span> What industries does Code Regime Technologies specialize in?
                       <i class="fa-solid fa-chevron-right"></i>
                     </div>
+                    <p class="faq-para" style="display:none;">Code Regime Technologies specializes in various industries, including mobile application development, web application development, and services like finance, healthcare, e-commerce, travel, aviation, and logistics.</p>
                   </div>
 
-                  <div class="faq-title" data-title="What services does Code Regime Technologies offer?"
-                    data-para="Code Regime Technologies offers a wide range of services, including Custom Software Development, Blockchain Technologies, Mobile Apps, and Web Solutions.">
+                  <div class="faq-title" data-title="What services does Code Regime Technologies offer?">
                     <div class="faq-box-title">
                       <span class="faq-round"></span> What services does Code Regime Technologies offer?
                       <i class="fa-solid fa-chevron-right"></i>
                     </div>
+                    <p class="faq-para" style="display:none;">Code Regime Technologies offers a wide range of services, including custom software development, blockchain technologies, mobile apps, and web solutions.</p>
                   </div>
 
                   <div class="faq-title"
-                    data-title="What kind of support does Code Regime Technologies offer post-deployment?"
-                    data-para="We offer comprehensive post-deployment support, including maintenance, updates, and troubleshooting.">
+                    data-title="What kind of support does Code Regime Technologies offer post-deployment?">
                     <div class="faq-box-title">
                       <span class="faq-round"></span> What kind of support does Code Regime Technologies offer
                       post-deployment?
                       <i class="fa-solid fa-chevron-right"></i>
                     </div>
+                    <p class="faq-para" style="display:none;">We offer comprehensive post-deployment support, including maintenance, updates, and troubleshooting.</p>
                   </div>
 
                   <div class="faq-title"
-                    data-title="Can Code Regime Technologies integrate new software with our existing systems?"
-                    data-para="Yes, we specialize in endless integration with your existing systems to ensure smooth operation.">
+                    data-title="Can Code Regime Technologies integrate new software with our existing systems?">
                     <div class="faq-box-title">
                       <span class="faq-round"></span> Can Code Regime Technologies integrate new software with our
                       existing systems?
                       <i class="fa-solid fa-chevron-right"></i>
                     </div>
+                    <p class="faq-para" style="display:none;">Yes, we specialize in endless integration with your existing systems to ensure smooth operation.</p>
                   </div>
 
                   <div class="faq-title"
-                    data-title="Is Code Regime Technologies experienced in developing mobile applications?"
-                    data-para="Absolutely! Our team has extensive experience in developing user-friendly mobile applications for Android and iOS platforms.">
+                    data-title="Is Code Regime Technologies experienced in developing mobile applications?">
                     <div class="faq-box-title">
                       <span class="faq-round"></span> Is Code Regime Technologies experienced in developing mobile
                       applications?
                       <i class="fa-solid fa-chevron-right"></i>
                     </div>
+                    <p class="faq-para" style="display:none;">Absolutely! Our team has extensive experience in developing user-friendly mobile applications for Android and iOS platforms.</p>
                   </div>
                 </div>
 
@@ -1424,14 +1424,14 @@
         this.classList.add('active');
 
         // Update the title and paragraph in the description container
-        const para = this.getAttribute('data-para');
+        const para = this.querySelector('.faq-para').innerText;
         activePara.innerText = para;
       });
     });
 
     // Automatically set the first FAQ as active on page load
     faqItems[0].classList.add('active');
-    activePara.innerText = faqItems[0].getAttribute('data-para');
+    activePara.innerText = faqItems[0].querySelector('.faq-para').innerText;
 
 
     // Get the current year

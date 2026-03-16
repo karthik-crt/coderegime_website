@@ -1434,7 +1434,8 @@ p {
 
 .section-title {
   color: #3E76FE;
-  font-size: 12px;
+  font-size: 24px;
+  /* Mobile H2 size */
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -1442,9 +1443,10 @@ p {
   display: inline-block;
 }
 
-.main-heading {
-  font-size: 28px;
-  font-weight: 700;
+.main-heading-text {
+  font-size: 16px;
+  /* Mobile P size */
+  font-weight: 400;
   color: #111827;
   margin-bottom: 16px;
   line-height: 1.3;
@@ -1548,12 +1550,14 @@ p {
   }
 
   .section-title {
-    font-size: 13px;
+    font-size: 28px;
+    /* Tablet H2 size */
     margin-bottom: 10px;
   }
 
-  .main-heading {
-    font-size: 36px;
+  .main-heading-text {
+    font-size: 17px;
+    /* Tablet P size */
     margin-bottom: 18px;
     line-height: 1.4;
   }
@@ -1614,12 +1618,14 @@ p {
   }
 
   .section-title {
-    font-size: 14px;
+    font-size: 32px;
+    /* Desktop H2 size */
     margin-bottom: 12px;
   }
 
-  .main-heading {
-    font-size: 42px;
+  .main-heading-text {
+    font-size: 18px;
+    /* Desktop P size */
     margin-bottom: 20px;
   }
 
@@ -1656,13 +1662,15 @@ p {
     gap: 80px;
   }
 
-  .main-heading {
-    font-size: 48px;
-    line-height: 1.2;
+  .section-title {
+    font-size: 36px;
+    /* Large Desktop H2 size */
   }
 
-  .description {
+  .main-heading-text {
     font-size: 19px;
+    /* Large Desktop P size */
+    line-height: 1.2;
   }
 
   .features-list1st-box li {
@@ -1680,12 +1688,14 @@ p {
     gap: 100px;
   }
 
-  .main-heading {
-    font-size: 52px;
+  .section-title {
+    font-size: 38px;
+    /* XL Desktop H2 size */
   }
 
-  .description {
+  .main-heading-text {
     font-size: 20px;
+    /* XL Desktop P size */
   }
 }
 
@@ -1701,18 +1711,14 @@ p {
   }
 
   .section-title {
-    font-size: 11px;
+    font-size: 20px;
+    /* Small Mobile H2 size */
     margin-bottom: 6px;
   }
 
-  .main-heading {
-    font-size: 24px;
-    margin-bottom: 14px;
-    line-height: 1.3;
-  }
-
-  .description {
+  .main-heading-text {
     font-size: 15px;
+    /* Small Mobile P size */
     margin-bottom: 20px;
   }
 
@@ -1880,7 +1886,7 @@ p {
 }
 
 .main-heading-text {
-  font-size: 36px;
+  font-size: 16px;
   font-weight: 600;
   color: #111827;
   margin-bottom: 20px;
@@ -2208,7 +2214,7 @@ p {
   border: 2px solid #C7D0F9;
   border-radius: 20px;
   padding: 25px;
-  text-align: left;
+  text-align: center;
   width: 300px;
   max-width: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -2235,6 +2241,10 @@ p {
   font-size: 18px;
   color: #111827;
   margin-bottom: 10px;
+  min-height: 54px; /* Space for 2 lines */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-description {
