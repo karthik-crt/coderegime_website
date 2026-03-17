@@ -246,8 +246,7 @@
               strive to create the finest technology where your businesses of any size can incorporate the approach of
               technology to meet your requirements and better comeback in a frequently aligning digital region.</p>
             <div class="hero-btn">
-              <a href="javascript:void(0)" class="get-btn" data-bs-toggle="modal" data-bs-target="#contactPopup">Get
-                Started</a>
+              <a href="/contact-us/index.html" class="get-btn">Demo Request</a>
               <!-- <a href="javascript:void(0)" class="watch-btn"><i class="fa-solid fa-circle-play"></i> Watch a demo</a> -->
             </div>
           </div>
@@ -326,7 +325,6 @@
             <p>With 6+ years of experience and
               a passion for the latest, we are focused on helping our clients address the
               difficulties of digital solutions.</p>
-            <a href="#service-section" class="btn-item">Explore Services</a>
           </div>
         </div>
         <div class="col-lg-5 col-md-5 col-sm-12">
@@ -338,7 +336,51 @@
     </div>
   </section>
 
+  <section class="stats-section">
+    <div class="stats-container">
+      <img alt="rocket" loading="lazy" width="63" height="50" decoding="async" class="rocket-img"
+        src="/images/rocket_dzex3j.webp">
+      <img alt="spring" loading="lazy" width="165" height="146" decoding="async" class="spring-img"
+        src="/images/spring1_mrdaid.webp">
 
+      <div class="countview my-md-3 pb-md-3">
+        <div class="row justify-content-center">
+          <div class="col-lg-2 col-md-6 col-12 smallround">
+            <div class="counttext active">
+              <h3 class="special"><span class="counter" data-target="50">0</span> +</h3>
+              <h3>Happy Clients</h3>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12 smallround">
+            <div class="counttext">
+              <h3 class="special"><span class="counter" data-target="100">0</span> +</h3>
+              <h3>Successful Projects</h3>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12 smallround">
+            <div class="counttext">
+              <h3 class="special"><span class="counter" data-target="8">0</span> +</h3>
+              <h3>Countries Served</h3>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12 smallround">
+            <div class="counttext">
+              <h3 class="special"><span class="counter" data-target="10">0</span> +</h3>
+              <h3>Expert Team Members</h3>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12 smallround">
+            <div class="counttext">
+              <h3 class="special"><span class="counter" data-target="5">0</span> +</h3>
+              <h3>Years of Experience</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<br>
   <section class="service-section" id="service-section">
     <div class="container">
       <div class="row">
@@ -475,7 +517,6 @@
               streamline operations, enhance customer experiences, and drive growth.</p>
             <p>This is where a software development company like Code Regime Technologies steps in, offering
               cutting-edge software solutions tailored to meet your unique business needs.</p>
-            <a href="#service-section" class="btn-item">Explore Services</a>
           </div>
         </div>
         <div class="col-lg-5 col-md-5 col-sm-12">
@@ -1589,6 +1630,72 @@
             // Change button text based on visibility
             this.textContent = isVisible ? "Learn More" : "Less More";
           }
+        });
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 200; // The lower the number, the slower the animation
+
+      const animateCounter = (counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+
+          // Calculate the increment step
+          const inc = target / speed;
+
+          // Check if current count is less than target
+          if (count < target) {
+            // Add increment and update text, rounding up to avoid decimals
+            counter.innerText = Math.ceil(count + inc);
+            // Call function every ms to animate
+            setTimeout(updateCount, 15);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      };
+
+      // Use IntersectionObserver to trigger animation only when scrolled into view
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Triggers when 50% of the element is visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            // Stop observing once animated so it doesn't repeat every time you scroll past
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      counters.forEach(counter => {
+        observer.observe(counter);
+      });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      // Select all the cards you want the effect applied to
+      const cards = document.querySelectorAll(".counttext");
+
+      cards.forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          // Get the bounding rectangle of the specific card
+          const rect = card.getBoundingClientRect();
+
+          // Calculate mouse position relative to the card
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          // Set the CSS variables for the spotlight position
+          card.style.setProperty("--mouse-x", `${x}px`);
+          card.style.setProperty("--mouse-y", `${y}px`);
         });
       });
     });

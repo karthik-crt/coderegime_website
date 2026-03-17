@@ -2670,3 +2670,15 @@ p {
       margin-bottom: 15px;
   }
 }
+.get-btn {
+  background: #FFB72B;
+  color:#fff;
+  border-radius: 100px;
+  padding: 11px 17px;
+  font-weight: 600;
+}
+
+.get-btn:hover, .watch-btn:hover {
+  color: var(--white-color);
+  background: var(--link-color);
+}

@@ -470,7 +470,7 @@ nav {
   }
   .gradient-text {
     font-size: 42px;
-    background: linear-gradient(26deg, #fff, #71717a);
+    background: #fff;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -2243,3 +2243,9 @@ nav {
         margin-bottom: 15px;
     }
   }
+/* .Enterprise-development{
+    margin-left: 100px;
+} */
+ .lets-talk{
+    text-align: center;
+ }
