@@ -188,10 +188,26 @@
     }
 
     /* --- OG Colors for Contact Icons --- */
-    .cr-footer__contact-list li:nth-child(1) .cr-footer__contact-icon { color: #25D366; } /* WhatsApp */
-    .cr-footer__contact-list li:nth-child(2) .cr-footer__contact-icon { color: #34b7f1; } /* Phone */
-    .cr-footer__contact-list li:nth-child(3) .cr-footer__contact-icon { color: #EA4335; } /* Address */
-    .cr-footer__contact-list li:nth-child(4) .cr-footer__contact-icon { color: #4285F4; } /* Email */
+    .cr-footer__contact-list li:nth-child(1) .cr-footer__contact-icon {
+      color: #25D366;
+    }
+
+    /* WhatsApp */
+    .cr-footer__contact-list li:nth-child(2) .cr-footer__contact-icon {
+      color: #34b7f1;
+    }
+
+    /* Phone */
+    .cr-footer__contact-list li:nth-child(3) .cr-footer__contact-icon {
+      color: #EA4335;
+    }
+
+    /* Address */
+    .cr-footer__contact-list li:nth-child(4) .cr-footer__contact-icon {
+      color: #4285F4;
+    }
+
+    /* Email */
 
     .cr-footer__contact-text {
       font-size: 15px;
@@ -290,12 +306,26 @@
     }
 
     /* --- OG Colors for Social Icons --- */
-    .cr-footer__social-icons a[aria-label*="LinkedIn"] { color: #0077b5; }
-    .cr-footer__social-icons a[aria-label*="Twitter"], 
-    .cr-footer__social-icons a[aria-label*="X"] { color: #ffffff; }
-    .cr-footer__social-icons a[aria-label*="Instagram"] { color: #E4405F; }
-    .cr-footer__social-icons a[aria-label*="Facebook"] { color: #1877F2; }
-    .cr-footer__social-icons a[aria-label*="Threads"] { color: #ffffff; }
+    .cr-footer__social-icons a[aria-label*="LinkedIn"] {
+      color: #0077b5;
+    }
+
+    .cr-footer__social-icons a[aria-label*="Twitter"],
+    .cr-footer__social-icons a[aria-label*="X"] {
+      color: #ffffff;
+    }
+
+    .cr-footer__social-icons a[aria-label*="Instagram"] {
+      color: #E4405F;
+    }
+
+    .cr-footer__social-icons a[aria-label*="Facebook"] {
+      color: #1877F2;
+    }
+
+    .cr-footer__social-icons a[aria-label*="Threads"] {
+      color: #ffffff;
+    }
 
     .cr-footer__social-icons a:hover {
       background: #252525;
@@ -495,12 +525,8 @@
       <div class="cr-footer__grid">
 
         <!-- Column 1: Brand -->
-                <div class="cr-footer__col">
-                    <div class="footer-logo">
-                        <img src="/images/color-logo.png" alt="Code Regime Technologies"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="logo-text" style="display:none;">Code <span>Regime</span></div>
-                    </div>
+        <div class="cr-footer__col">
+          <h4>Code Regime</h4>
           <p class="cr-footer__desc">
             Code Regime Technologies is a leading software development company delivering innovative web, mobile, and
             enterprise solutions, as well as a ready-made clone script product. We help businesses grow with scalable
@@ -659,9 +685,9 @@
         </div>
       </div><!-- /bottom -->
       <hr class="cr-footer__divider">
-    <p class="cr-footer__copyright">
-      © Copyright <span id="year"></span>, All Rights Reserved by Code Regime Technologies.
-    </p>
+      <p class="cr-footer__copyright">
+        © Copyright <span id="year"></span>, All Rights Reserved by Code Regime Technologies.
+      </p>
     </div><!-- /inner -->
   </footer>
 
@@ -739,7 +765,7 @@
     activePara.innerText = faqItems[0].getAttribute('data-para');
 
 
-    
+
 
     // Show or hide the button based on scroll position
     window.onscroll = function () {
