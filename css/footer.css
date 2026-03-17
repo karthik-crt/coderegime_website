@@ -1,12 +1,19 @@
+/* ── ROOT RESET ── */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 /* ── FOOTER WRAPPER ── */
 .cr-footer {
   background: #0e0e0e;
   color: #b0b0b0;
   padding-top: 56px;
+  margin-bottom: 0 !important;
 }
 
 .cr-footer__inner {
-  max-width: 1260px;
+  /* max-width: 1260px; */
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -16,8 +23,9 @@
   display: grid;
   grid-template-columns: 1.7fr 0.9fr 1fr 1.1fr 0.85fr 1.3fr;
   gap: 36px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   align-items: start;
+  /* ← KEY FIX: all columns start at same top */
 }
 
 /* ── Brand column ── */
@@ -49,7 +57,7 @@
 }
 
 .cr-footer__desc {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.75;
   color: #777;
   margin-bottom: 20px;
@@ -62,7 +70,7 @@
 }
 
 .cr-footer__office-block h5 {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
@@ -71,14 +79,14 @@
 }
 
 .cr-footer__office-block p {
-  font-size: 12.5px;
+  font-size: 15px;
   color: #666;
   line-height: 1.7;
 }
 
 /* ── Column headings ── */
 .cr-footer__col h4 {
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 18px;
@@ -97,7 +105,7 @@
 .cr-footer__list li a {
   color: #777;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.45;
   transition: color 0.18s;
 }
@@ -138,7 +146,7 @@
 }
 
 .cr-footer__contact-text {
-  font-size: 12.5px;
+  font-size: 15px;
   color: #777;
   line-height: 1.6;
 }
@@ -155,7 +163,7 @@
 
 .cr-footer__contact-text strong {
   display: block;
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 700;
   color: #4f4f4f;
   text-transform: uppercase;
@@ -174,16 +182,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 28px 0 28px;
+  /* padding: 0 0 28px; */
   gap: 40px;
 }
 
-.cr-footer__disclaimer {
+/* .cr-footer__disclaimer {
   max-width: 520px;
-}
+} */
 
 .cr-footer__disclaimer h5 {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 8px;
@@ -192,7 +200,7 @@
 }
 
 .cr-footer__disclaimer p {
-  font-size: 12px;
+  font-size: 13px;
   color: #555;
   line-height: 1.75;
 }
@@ -207,7 +215,7 @@
 }
 
 .cr-footer__social-label {
-  font-size: 12.5px;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 8px;
@@ -248,7 +256,10 @@
 .cr-footer__copyright {
   font-size: 11.5px;
   color: #3d3d3d;
-  text-align: right;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0 30px;
+  background: #0e0e0e;
 }
 
 /* ── WATERMARK ── */
@@ -318,3 +329,4 @@
     letter-spacing: -1px;
   }
 }
+
