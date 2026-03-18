@@ -792,6 +792,7 @@
     var stickyOffset = 300; // Set the offset to 300px
 
     function stickyHeader() {
+      if (!header) return;
       if (window.pageYOffset > stickyOffset) {
         header.classList.add("sticky"); // Add sticky class
       } else {

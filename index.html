@@ -144,7 +144,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W396DGWQ" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <header id="head-nav">
+  <header id="head-nav" class="header">
     <nav>
       <!-- Logo -->
       <a href="/index.html" class="logo">
@@ -1434,6 +1434,7 @@
     var stickyOffset = 300; // Set the offset to 300px
 
     function stickyHeader() {
+      if (!header) return;
       if (window.pageYOffset > stickyOffset) {
         header.classList.add("sticky"); // Add sticky class
       } else {
