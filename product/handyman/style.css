@@ -451,22 +451,23 @@ nav {
 }
 
 .cta-button {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.125rem;
-    padding: 1rem 2rem;
-    background-color: #E0A123;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #E0A123;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
 }
 
 .cta-button:hover {
-    background-color: #c8921f;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(224, 161, 35, 0.3);
+  background-color: #c8921f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(224, 161, 35, 0.3);
 }
 
 /* Tablet Styles - 768px to 1024px */
@@ -505,10 +506,7 @@ nav {
         max-width: 550px;
     }
 
-    .cta-button {
-        padding: 0.875rem 1.75rem;
-        font-size: 1rem;
-    }
+
 }
 
 /* Mobile Styles - 768px and below */
@@ -613,10 +611,7 @@ nav {
         margin-bottom: 1.5rem;
     }
 
-    .cta-button {
-        padding: 0.875rem 1.5rem;
-        font-size: 1rem;
-    }
+
 
     .logo img {
         width: 90px;
@@ -641,10 +636,7 @@ nav {
         font-size: 0.9rem;
     }
 
-    .cta-button {
-        padding: 0.75rem 1.25rem;
-        font-size: 0.9rem;
-    }
+
 
     .mobile img {
         max-height: 250px;
@@ -669,10 +661,7 @@ nav {
         font-size: 0.875rem;
     }
 
-    .cta-button {
-        padding: 0.625rem 1rem;
-        font-size: 0.875rem;
-    }
+
 
     .mobile img {
         max-height: 200px;
@@ -698,10 +687,7 @@ nav {
         max-width: 700px;
     }
 
-    .cta-button {
-        padding: 1.25rem 2.5rem;
-        font-size: 1.25rem;
-    }
+
 
     .mobile {
         max-width: 50%;

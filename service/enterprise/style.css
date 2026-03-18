@@ -483,17 +483,29 @@ nav {
     margin: 20px 0;
     
   }
-  .cta-btn {
-    display: inline-block;
-    padding: 12px 25px;
+  .get-started {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
     background-color: #09090B;
     color: #A1A1AA;
-    border-radius: 25px;
+    border-radius: 50px;
     text-decoration: none;
     font-size: 16px;
-    transition: 0.3s;
+    font-weight: 500;
+    transition: all 0.3s ease;
   }
-  .cta-btn:hover { opacity:0.8; }
+  
+  .get-started:hover {
+    opacity: 0.8;
+  }
+  
+  .get-started::after {
+    content: ">";
+    font-family: monospace;
+    font-weight: bold;
+  }
 
   .code-regime-hero-image {
     width: 100%;
@@ -514,7 +526,7 @@ nav {
   @media (max-width:480px) {
     .gradient-text { font-size: 22px; }
     .hero-content p { font-size:14px; }
-    .cta-btn { font-size:14px; padding:10px 20px; }
+    .get-started { font-size:14px; padding:10px 20px; }
   }
   
   

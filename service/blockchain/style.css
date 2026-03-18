@@ -467,23 +467,30 @@ nav {
     line-height: 1.6;
 }
 
-.cta-btn {
-    display: inline-block;
-    padding: 12px 25px;
+.get-started {
     background-color: #141414;
-    color: #ffffff;
-    border-radius: 12px;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
-    font-size: 16px;
     font-weight: 500;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     margin-top: 20px;
     border-top: 1px solid #22D3EE;
     border-bottom: 1px solid #22D3EE;
 }
 
-.cta-btn:hover {
-    opacity: 0.8;
+.get-started:hover {
+    background-color: #2a2a2a;
+}
+
+.get-started::after {
+    content: ">";
+    font-family: monospace;
+    font-weight: bold;
 }
 
 .hero-content span {
@@ -592,7 +599,7 @@ nav {
         font-size: 14px;
     }
 
-    .cta-btn {
+    .get-started {
         font-size: 14px;
         padding: 10px 20px;
     }

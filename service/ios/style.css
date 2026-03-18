@@ -240,22 +240,30 @@ nav {
     text-align: center;
 }
 
-.btn-primary {
-    display: inline-block;
-    padding: 12px 25px;
+.get-started {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
     background-color: #A22CF7;
-    color: #ffffff;
-    border-radius: 8px;
+    color: white;
+    border-radius: 50px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     margin-top: 10px;
 }
 
-.btn-primary:hover {
+.get-started:hover {
     background-color: #8a2be2;
+}
+
+.get-started::after {
+    content: ">";
+    font-family: monospace;
+    font-weight: bold;
 }
 
 .arrow {
@@ -446,7 +454,7 @@ nav {
         font-size: 14px;
     }
 
-    .btn-primary {
+    .get-started {
         padding: 10px 20px;
         font-size: 14px;
     }

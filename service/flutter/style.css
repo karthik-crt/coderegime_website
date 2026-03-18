@@ -501,21 +501,29 @@ nav {
     line-height: 1.6;
   }
   
-  .cta-btn {
-    display: inline-block;
-    padding: 12px 25px;
+  .get-started {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
     background-color: #FFB2B3;
     color: #0D0D12;
-    border-radius: 25px;
+    border-radius: 50px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     margin-top: 20px;
   }
   
-  .cta-btn:hover {
+  .get-started:hover {
     opacity: 0.8;
+  }
+  
+  .get-started::after {
+    content: ">";
+    font-family: monospace;
+    font-weight: bold;
   }
   
   /* Mobile menu toggle button (hidden by default on desktop) */
@@ -604,7 +612,7 @@ nav {
       font-size: 14px;
     }
   
-    .cta-btn {
+    .get-started {
       padding: 10px 20px;
       font-size: 14px;
     }

@@ -504,46 +504,28 @@ nav {
     color: #666;
 }
 
-.hero__cta {
+.get-started {
+    background-color: #3b82f6;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    /* was var(--spacing-xs) */
-    padding: 12px 20px;
-    /* was var(--spacing-md) var(--spacing-lg) */
-    background-color: #3b82f6;
-    /* was var(--color-primary) */
-    color: #ffffff;
-    /* was var(--color-text-light) */
-    border-radius: 8px;
-    /* was var(--border-radius-md) */
-    font-weight: 600;
-    font-size: 18px;
-    /* was var(--font-size-lg) */
-    transition: all 0.3s ease;
-    /* was var(--transition-base) */
+    gap: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* was var(--shadow-md) */
 }
 
-.hero__cta:hover,
-.hero__cta:focus-visible {
+.get-started:hover {
     background-color: #2563eb;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-    /* was var(--shadow-lg) */
-    outline: 2px solid #3b82f6;
-    /* was var(--color-primary) */
-    outline-offset: 2px;
 }
 
-.hero__cta-icon {
-    transition: all 0.3s ease;
-    /* was var(--transition-base) */
-}
-
-.hero__cta:hover .hero__cta-icon {
-    transform: translateX(4px);
+.get-started::after {
+    content: ">";
+    font-family: monospace;
+    font-weight: bold;
 }
 
 
@@ -585,7 +567,7 @@ nav {
         font-size: 14px;
     }
 
-    .hero-btn {
+    .get-started {
         font-size: 14px;
         padding: 12px 24px;
     }

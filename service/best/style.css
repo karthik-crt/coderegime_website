@@ -428,20 +428,27 @@ nav {
   line-height: 1.6;
 }
 
-.btn-primary {
-  display: inline-block;
-  padding: 12px 25px;
+.get-started {
   background-color: #5173F3;
-  color: #ffffff;
-  border-radius: 8px;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
   text-decoration: none;
-  font-size: 16px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.btn-primary:hover {
+.get-started:hover {
   background-color: #1447ff;
+}
+
+.get-started::after {
+  content: ">";
+  font-family: monospace;
+  font-weight: bold;
 }
 
 .arrow {
@@ -553,7 +560,7 @@ nav {
     font-size: 15px;
   }
 
-  .btn-primary {
+  .get-started {
     padding: 10px 20px;
     font-size: 14px;
   }

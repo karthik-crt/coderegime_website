@@ -556,19 +556,23 @@ nav {
 }
 
 .cta-button {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  display: inline-block;
   padding: 15px 30px;
   background-color: #FFB72B;
   color: white;
-  border: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
 }
 
 .cta-button:hover {
-  background-color: #e09c1f;
+  background-color: #e6a527;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 183, 43, 0.3);
 }
 
 /* Tablet Styles */
@@ -661,10 +665,7 @@ nav {
       margin-bottom: 25px;
   }
 
-  .cta-button {
-      padding: 12px 25px;
-      font-size: 16px;
-  }
+
 
   .mobile {
       position: static;
@@ -701,10 +702,7 @@ nav {
       font-size: 14px;
   }
 
-  .cta-button {
-      padding: 10px 20px;
-      font-size: 14px;
-  }
+
 
   .mobile img {
       max-height: 200px;
