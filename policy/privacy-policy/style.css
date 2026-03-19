@@ -81,6 +81,8 @@ nav {
   align-items: center;
   margin: 0;
   padding: 0;
+  flex: 1;
+  justify-content: center;
 }
  
 .nav-item {

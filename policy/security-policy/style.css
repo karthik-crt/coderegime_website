@@ -100,6 +100,8 @@ nav {
   list-style: none;
   gap: 30px;
   align-items: center;
+  flex: 1;
+  justify-content: center;
 }
  
 .nav-item {
