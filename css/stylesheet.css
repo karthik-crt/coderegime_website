@@ -199,7 +199,11 @@ nav {
   list-style: none;
   gap: 30px;
   align-items: center;
+  margin: 0; /* REMOVE margin-right */
+  flex: 1;
+  justify-content: center; /* centers menu perfectly */
 }
+
 
 .nav-item {
   position: relative;
@@ -320,7 +324,7 @@ nav {
 }
 
 .mobile-toggle.active .hamburger:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-7px, 7px);
 }
 
 .mobile-toggle.active .hamburger:nth-child(2) {
