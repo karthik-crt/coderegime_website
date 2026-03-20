@@ -36,7 +36,7 @@ button {
 .header-container {
   width: 100%;
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -496,7 +496,7 @@ nav {
 
 /* Main Content */
 .main-content {
-  flex: 1;
+  flex: 0.4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -506,7 +506,7 @@ nav {
 }
 
 .blogs-tag {
-  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 .blogs-btn {
@@ -708,17 +708,20 @@ html {
 .second-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
-  display: flex;
+  padding: 0px 20px;
+  /* display: flex; */
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 80px;
+    text-align: center;
 }
 
 /* Left Column */
 .heading {
   flex: 1;
   min-width: 500px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 /* Right Column */
@@ -812,7 +815,7 @@ p {
 .services-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 0px 20px;
 }
 
 .section-title {
@@ -973,7 +976,7 @@ p {
 .services-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .section-title {
@@ -1413,7 +1416,7 @@ p {
 ========================== */
 .firm-growth-container {
   max-width: 1200px;
-  margin: 100px auto 0 auto;
+  margin: 14px auto 0 auto;
   padding: 40px 20px;
 }
 
@@ -1581,7 +1584,7 @@ p {
    Endeavors Section
 ========================== */
 .endeavors-container {
-  margin-top: 100px;
+  margin-top: 20px;
   padding: 0 20px;
 }
 
@@ -1689,7 +1692,7 @@ p {
 ========================== */
 .action-plot-container {
   max-width: 1200px;
-  margin: 100px auto 0;
+  margin: 20px auto 0;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
 }
@@ -2259,11 +2262,61 @@ p {
     margin-bottom: 15px;
   }
 }
+
 /* Bulletproof Landscape Fix */
 @media screen and (max-height: 600px) and (orientation: landscape) {
-    .main-content {
-        justify-content: flex-start !important;
-        padding-top: 90px !important; 
-        padding-bottom: 40px; /* Gives a little breathing room at the bottom so text doesn't touch the screen edge */
-    }
+  .main-content {
+    justify-content: flex-start !important;
+    padding-top: 90px !important;
+    padding-bottom: 40px;
+    /* Gives a little breathing room at the bottom so text doesn't touch the screen edge */
+  }
+}
+
+/* ============================================
+   Standardized Font Sizes for Headings & Paragraphs
+   Ensures consistent sizing across ALL sections.
+   h1 = 60px base, scaled down proportionally.
+   ============================================ */
+h1 {
+  font-size: 53px !important;
+  font-weight: 700 !important;
+  line-height: 72px !important;
+}
+
+h2 {
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  line-height: 58px !important;
+}
+
+h3 {
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  line-height: 43px !important;
+}
+
+h4 {
+  font-size: 21px !important;
+  font-weight: 600 !important;
+  line-height: 34px !important;
+}
+
+h5 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: 29px !important;
+}
+
+h6 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+}
+
+p {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  line-height: 28px !important;
 }
