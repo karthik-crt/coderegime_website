@@ -37,7 +37,7 @@ button {
 .headers {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -454,16 +454,22 @@ nav {
 }
 
 .hero-content {
-  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 25px;
-  padding: 0 15px;
+  padding: 70px 15px 60px;
+  position: relative;
 }
 
 .hero-content h1 {
   font-size: 60px;
   font-weight: bold;
   color: white;
+  max-width: 850px;
+  width: 100%;
 }
 
 .hero-content p {
@@ -471,6 +477,8 @@ nav {
   color: #ffffff;
   margin: 20px 0;
   line-height: 1.6;
+  max-width: 850px;
+  width: 100%;
 }
 
 .get-started {
@@ -616,7 +624,7 @@ nav {
 /* Extra Small Screens */
 @media (max-width: 480px) {
   .hero-content {
-    margin-top: 150px;
+    margin-top: 0px;
   }
 
   .hero-content h1 {
@@ -755,7 +763,7 @@ nav {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1rem;
-  margin-top: 100px;
+  margin-top: 50px;
 
 }
 
@@ -911,7 +919,7 @@ h1 {
 .block-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 0px 20px;
   position: relative;
 }
 
@@ -1181,6 +1189,11 @@ h1 {
     max-width: 180px;
     height: auto;
     padding: 20px;
+  }
+
+  .headers {
+    height: 0vh;
+
   }
 
   .step-1,
@@ -2260,6 +2273,7 @@ h1 {
     margin-bottom: 15px;
   }
 }
+
 /* ============================================
    Standardized Font Sizes for Headings & Paragraphs
    Ensures consistent sizing across ALL sections.
@@ -2306,4 +2320,4 @@ p {
   font-size: 17px !important;
   font-weight: 600 !important;
   line-height: 28px !important;
-} 
+}
