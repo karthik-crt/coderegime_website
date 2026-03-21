@@ -471,7 +471,7 @@ nav {
 /* Hero Section */
 .hero-content {
     max-width: 800px;
-    margin: 200px auto 0;
+    margin: 115px auto 0;
     padding: 0 20px;
     align-items: center;
 }
@@ -539,7 +539,7 @@ nav {
     }
 
     .hero-content {
-        margin-top: 150px;
+        margin-top: 65px;
     }
 
     .gradient-text {
@@ -1183,7 +1183,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 5rem;
+    padding: 0rem 5rem;
     min-height: 220px;
     gap: 2rem;
 }

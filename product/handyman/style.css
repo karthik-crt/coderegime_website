@@ -496,7 +496,7 @@ nav {
     }
 
     .container {
-        padding: 1.5rem;
+        padding: 4.5rem;
     }
 
     .heading {
@@ -583,7 +583,7 @@ nav {
         transform: none;
         text-align: center;
         max-width: 80%;
-        margin: 2rem auto 0;
+        margin: 5rem auto 0;
     }
 
     .mobile img {
@@ -627,7 +627,7 @@ nav {
 /* Small Mobile - 480px and below */
 @media screen and (max-width: 480px) {
     .container {
-        padding: 5rem 1rem 2rem;
+        padding: 2rem 1rem 4rem;
     }
 
     .heading {
@@ -774,7 +774,7 @@ nav {
   
   @media (max-width: 768px) {
     .uber-clone-section {
-      padding: 40px 15px;
+      padding: 30px 15px;
     }
   
     .text-contents h1 {
@@ -814,7 +814,7 @@ nav {
   /*Benefits section*/
   .benefits-section {
     text-align: center;
-    padding: 100px 20px;
+    padding: 60px 20px;
     background-color: #ffffff;
     position: relative;
   }
@@ -951,9 +951,8 @@ nav {
 /*Section Wrapper*/
 .ai-container1 {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 20px;
-  
 }
 
 .top-title1 {
@@ -1143,10 +1142,8 @@ h1 {
 .work-section {
   max-width: 1440px;
   margin: 50px auto;
-  /* padding: 80px; */
-  display: flex;
-  align-items: left;
-  margin-top: 100px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .work-container{
@@ -1230,7 +1227,7 @@ cursor: pointer;
 
 .work-section {
   max-width: 1440px;
-  margin: 100px auto 50px auto;
+  margin: 40px auto;
   display: flex;
   align-items: flex-start;
 }
@@ -1343,8 +1340,8 @@ cursor: pointer;
 /* Mobile */
 @media (max-width: 768px) {
   .work-section {
-    margin: 60px auto 40px auto;
-    padding: 0 20px;
+    margin: 30px auto;
+    padding: 0 15px;
   }
 
   .main-heading-work {
@@ -1377,7 +1374,7 @@ cursor: pointer;
 /*earnings section*/
 .earning-section {
   max-width: 1440px;
-  margin: 50px auto;
+  margin: 40px auto;
   display: flex;
   align-items: flex-start;
 }
@@ -1490,8 +1487,8 @@ cursor: pointer;
 /* Mobile */
 @media (max-width: 768px) {
   .earning-section {
-    margin: 60px auto 40px auto;
-    padding: 0 20px;
+    margin: 30px auto;
+    padding: 0 15px;
   }
 
   .main-heading-earning {
@@ -1525,7 +1522,7 @@ cursor: pointer;
 /* Base Styles - Mobile First Approach */
 .benefits-section {
   margin: 0 auto;
-  padding: 30px 15px;
+  padding: 40px 15px;
   text-align: center;
   max-width: 100%;
   overflow-x: hidden;
@@ -1848,7 +1845,7 @@ cursor: pointer;
 /* Extra Large Desktop (1440px and up) */
 @media screen and (min-width: 1440px) {
   .benefits-section {
-    padding: 80px 60px;
+    padding: 50px 60px;
   }
   
   .section-title-features {
@@ -1884,7 +1881,7 @@ cursor: pointer;
 /*Extra-Addons section*/
 .addons-section {
   text-align: center;
-  padding: 60px 10px;
+  padding: 40px 15px;
   background-color: #fff;
 }
 
@@ -2027,7 +2024,7 @@ cursor: pointer;
   /* Section Container */
   .technologies-section {
     text-align: center;
-    padding: 80px 20px;
+    padding: 40px 15px;
     background-color: #fff;
   }
   .curve-container3 img{
@@ -2295,7 +2292,7 @@ cursor: pointer;
   @media (min-width: 1024px) {
     .faq-container {
       gap: 90px;
-      padding: 48px 28px;
+      padding: 0px 28px;
     }
     .faq-title {
       flex: 0 0 300px;

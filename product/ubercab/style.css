@@ -1042,7 +1042,7 @@ h1 {
 /* ===== Base Styles (Desktop First with Responsive Adjustments) ===== */
 .benefits-section {
   text-align: center;
-  padding: 60px 20px;
+  padding: 0px 20px;
   background-color: #ffffff;
   position: relative;
   margin-top: 100px;
@@ -1656,7 +1656,7 @@ p {
 /* ===== Base Styles (Desktop First) ===== */
 .features-section {
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 0px 20px;
   text-align: center;
   margin-top: 100px;
 }
