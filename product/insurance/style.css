@@ -23,6 +23,16 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; }
 p { font-family: 'Roboto', sans-serif; }
 button { font-family: 'Roboto', sans-serif; font-weight: 500; }
 
+/* Global Section Animation Enhancement */
+section {
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+}
+
+[data-aos] {
+  transition-property: transform, opacity !important;
+}
+
+
 /* =============================================
    HEADER & NAV
    ============================================= */
@@ -69,8 +79,23 @@ nav {
   align-items: center;
   gap: 5px;
   transition: color 0.3s ease;
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4285f4;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
 }
 .nav-link:hover { color: #4285f4; }
+
 
 .dropdown {
   position: absolute;
@@ -197,12 +222,34 @@ body { padding-top: 70px; }
   transition: all 0.3s ease;
   min-width: 200px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: pulse-glow 3s infinite;
 }
 .cta-button:hover {
   background-color: #4169E1;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(82,139,244,0.3);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(82,139,244,0.4);
 }
+
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(147, 112, 219, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(147, 112, 219, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(147, 112, 219, 0); }
+}
+
+/* Floating Animation for Illustrations */
+.hero-illustration svg, .image-content1 svg, .image-content svg, .image-wrap svg, .offer-image svg {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
 
 /* =============================================
    WHAT IS SECTION  (uber-clone-section)
@@ -294,9 +341,11 @@ body { padding-top: 70px; }
 }
 .tab.active { background-color: mediumpurple; color: white; }
 .tab:hover:not(.active) {
-  transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: mediumpurple;
 }
+
 
 .tab-icon {
   min-width: 44px; min-height: 44px;
@@ -403,10 +452,11 @@ body { padding-top: 70px; }
   cursor: pointer;
 }
 .benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(66,133,244,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(82,139,244,0.2);
   border-color: mediumpurple;
 }
+
 
 .benefit-card .icon {
   width: 52px; height: 52px;
@@ -481,9 +531,10 @@ body { padding-top: 70px; }
 }
 .features-list1st-box li:hover {
   background-color: #d1e0fb;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(62,118,254,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(62,118,254,0.15);
 }
+
 
 .features-list li {
   display: flex;
@@ -623,10 +674,11 @@ body { padding-top: 70px; }
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
 }
 .feature-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(66,133,244,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(66,133,244,0.18);
   border-color: mediumpurple;
 }
+
 .icon-container { margin-bottom: 18px; }
 .feature-icon { width: 52px; height: 52px; }
 .feature-title {
@@ -769,9 +821,11 @@ body { padding-top: 70px; }
   position: relative;
 }
 .addon-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 28px rgba(66,133,244,0.14);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(66,133,244,0.16);
+  border-color: mediumpurple;
 }
+
 
 .process-step-num {
   position: absolute;
@@ -1338,9 +1392,11 @@ p {
 }
 
 .timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 28px rgba(147, 112, 219, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(147, 112, 219, 0.25);
+    border-color: mediumpurple;
 }
+
 
 .timeline-content .addon-title {
     margin: 0 0 10px 0; /* Override previous grid margins */
