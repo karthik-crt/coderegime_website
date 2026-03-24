@@ -610,7 +610,7 @@ body { padding-top: 70px; }
   color: #111827;
   margin-bottom: 5px;
   font-weight: 600;
-  text-decoration: underline 1px;
+  /* text-decoration: underline 1px; */
 }
 .list-content p { color: #5E6570; font-size: 14px; margin: 0; }
 
@@ -737,25 +737,40 @@ body { padding-top: 70px; }
 }
 /* Enhanced Hover for Feature Boxes */
 .features-container .feature-box {
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  overflow: visible;
+  will-change: transform;
 }
 
+/* Hover effect: Continuous zoom in/out pulse */
 .features-container .feature-box:hover {
-  background-color: mediumpurple !important;
-  transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(147, 112, 219, 0.4);
-  border-color: mediumpurple !important;
+  animation: zoom-pulse 2s infinite ease-in-out;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  z-index: 10;
 }
 
-.feature-box:hover .feature-title,
-.feature-box:hover .feature-description {
-  color: #ffffff !important;
+/* SVG shake only */
+.features-container .feature-box:hover svg {
+  display: inline-block;     /* important for transform */
+  animation: shake 0.4s ease-in-out;
 }
 
-.feature-box:hover .feature-icon path,
-.feature-box:hover .feature-icon circle {
-  stroke: #ffffff !important;
+/* Shake animation for SVG */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
 }
+
+/* Zoom in/out pulse animation for the box */
+@keyframes zoom-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
 
 .icon-container { margin-bottom: 18px; }
 .feature-icon { width: 52px; height: 52px; }
