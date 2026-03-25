@@ -5,13 +5,11 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<!-- Home -->
 <url>
 <loc>https://www.coderegimetechnologies.com/</loc>
 <priority>1.00</priority>
 </url>
 
-<!-- Main Pages -->
 <url>
 <loc>https://www.coderegimetechnologies.com/about-us/</loc>
 <priority>0.80</priority>
@@ -27,7 +25,6 @@
 <priority>0.80</priority>
 </url>
 
-<!-- Policies -->
 <url>
 <loc>https://www.coderegimetechnologies.com/privacy-policy/</loc>
 <priority>0.80</priority>
@@ -48,14 +45,13 @@
 <priority>0.80</priority>
 </url>
 
-<!-- Products -->
 <url>
-<loc>https://www.coderegimetechnologies.com/uber-clone//</loc>
+<loc>https://www.coderegimetechnologies.com/uber-clone/</loc>
 <priority>0.80</priority>
 </url>
 
 <url>
-<loc>https://www.coderegimetechnologies.com/ubereats-clone//</loc>
+<loc>https://www.coderegimetechnologies.com/ubereats-clone/</loc>
 <priority>0.80</priority>
 </url>
 
@@ -64,7 +60,11 @@
 <priority>0.80</priority>
 </url>
 
-<!-- Services -->
+<url>
+<loc>https://coderegimetechnologies.com/product/insurance/</loc>
+<priority>0.80</priority>
+</url>
+
 <url>
 <loc>https://www.coderegimetechnologies.com/blockchain-development-services/</loc>
 <priority>0.80</priority>
