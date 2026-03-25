@@ -7,96 +7,115 @@
 
 <url>
 <loc>https://www.coderegimetechnologies.com/</loc>
+<changefreq>daily</changefreq>
 <priority>1.00</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/about-us/</loc>
+<changefreq>weekly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/Portfolio/</loc>
+<changefreq>weekly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/contact-us/</loc>
+<changefreq>weekly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/privacy-policy/</loc>
+<changefreq>weekly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/refund-policy/</loc>
+<changefreq>weekly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/security-policy/</loc>
+<changefreq>weekly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/disclaimer/</loc>
+<changefreq>weekly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/uber-clone/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/ubereats-clone/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
-<loc>https://www.coderegimetechnologies.com/Uber-for-Handyman-app/-app/</loc>
+<loc>https://coderegimetechnologies.com/Uber-for-Handyman-app/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://coderegimetechnologies.com/product/insurance/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/blockchain-development-services/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/mobile-app-development/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/ios-app-development/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/flutter-app-development/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/android-app-development/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/web-app-development/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://www.coderegimetechnologies.com/enterprise-app-development/</loc>
+<changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
 
