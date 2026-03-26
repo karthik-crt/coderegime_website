@@ -580,7 +580,7 @@ nav {
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 0px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -781,7 +781,7 @@ nav {
 .process-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 0px 20px 25px;
 }
 
 .section-header {
@@ -880,7 +880,7 @@ nav {
     margin: 0 auto;
     padding: 60px;
     background-color: #e6e6e6;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     /* Remove fixed height for responsiveness */
     /* height: 650px; */
     box-sizing: border-box;
@@ -1435,7 +1435,7 @@ nav {
     font-size: 48px;
     font-weight: bold;
     margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 0px;
     line-height: 1.2;
 }
 
