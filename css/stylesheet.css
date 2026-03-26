@@ -1579,31 +1579,86 @@ nav {
 
 .development-box {
   background-color: var(--white-color);
-  padding: 22px;
+  padding: 15px;
+  /* Reduced from 18px */
   border-radius: 16px;
   border: 1px solid #dedede;
-  margin-bottom: 30px;
+  margin: 15px auto;
+  /* Add margin for horizontal and vertical gap */
+  width: calc(100% - 30px);
+  /* Subtract margin from width to center it within col */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-align: center;
 }
 
-.development-pic img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #f5f5f5;
+@media (min-width: 992px) {
+  .development-box {
+    aspect-ratio: 1 / 1.1;
+    height: auto;
+  }
+}
+
+.development-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--link-color);
 }
 
 .development-pic {
-  margin-bottom: 35px;
+  margin-bottom: 10px;
+  /* Reduced from 15px */
+  height: 110px;
+  /* Reduced from 140px to give more space for text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcfcfc;
+  border-radius: 12px;
+  padding: 8px;
+  /* Slightly reduced */
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
+.development-pic img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.development-box h3,
 .development-box h4 {
-  font-weight: 600;
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-weight: 700 !important;
+  font-size: 17px !important;
+  /* Slightly smaller to fit up to 3 lines if needed */
+  line-height: 22px !important;
+  margin-bottom: 8px !important;
+  min-height: 44px;
+  /* Adjust for smaller font */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--heading-color);
 }
 
 .development-box p {
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  /* Smaller for better fit */
+  line-height: 16px !important;
+  color: #666 !important;
+  flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* Reduced to 3 lines for high content density areas */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .development-box a {
