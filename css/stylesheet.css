@@ -2784,3 +2784,88 @@ nav {
   width: 165px;
   height: auto;
 }
+
+/* SECTION */
+.development-company {
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+
+/* FLIP CARD */
+.flip-card {
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* HOVER EFFECT */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* FRONT */
+.flip-card-front {
+  background: #fff;
+  text-align: center;
+}
+
+/* BACK */
+.flip-card-back {
+  background: #ffba44;
+  color: #fff;
+  transform: rotateY(180deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* IMAGE */
+.development-pic img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.explore-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #ffba44;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background: #e6e6e6;
+}
+
+/* MOBILE FIX (click feel) */
+@media (max-width: 768px) {
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+}
