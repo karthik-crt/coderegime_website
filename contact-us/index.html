@@ -962,6 +962,11 @@
         }
     </style>
     <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('mtyXCsYdD3ElJGNum'); // ← உங்கள் public key
+        console.log('EmailJS initialized ✅');
+    </script>
 </head>
 
 <body>
@@ -1612,7 +1617,11 @@
     <script>
         function handleSubmit() {
             const fname = document.getElementById('fname').value.trim();
+            const lname = document.getElementById('lname').value.trim();
             const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const company = document.getElementById('company').value.trim();
+            const budget = document.getElementById('budget').value;
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value.trim();
             const agree = document.getElementById('agree').checked;
@@ -1626,8 +1635,45 @@
                 return;
             }
 
-            document.getElementById('contact-form-inner').style.display = 'none';
-            document.getElementById('success-msg').style.display = 'block';
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalBtnHTML = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending…';
+
+            const templateParams = {
+                fname,
+                lname,
+                email,
+                user_email: email,
+                phone: phone || '—',
+                company: company || '—',
+                budget: budget || '—',
+                service,
+                message
+            };
+
+            const SERVICE_ID = 'service_cht9xji';         // ← replace
+            const INTERNAL_TEMPLATE_ID = 'template_uqoo9yi';  // ← replace 
+            const THANKYOU_TEMPLATE_ID = 'template_qv65elf';  // ← replace
+            console.log('Using EmailJS service:', SERVICE_ID, 'templates:', INTERNAL_TEMPLATE_ID, THANKYOU_TEMPLATE_ID);
+            // 1️⃣ Company-க்கு mail
+            emailjs.send(SERVICE_ID, INTERNAL_TEMPLATE_ID, templateParams)
+                .then(() => {
+                    // 2️⃣ User-க்கு thank you mail
+                    return emailjs.send(SERVICE_ID, THANKYOU_TEMPLATE_ID, templateParams);
+                })
+                .then(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHTML;
+                    document.getElementById('contact-form-inner').style.display = 'none';
+                    document.getElementById('success-msg').style.display = 'block';
+                })
+                .catch(err => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHTML;
+                    console.error('EmailJS Error:', err);
+                    alert('Failed to send message. Please try again.\n\nError: ' + (err.text || err));
+                });
         }
 
         function toggleFaq(el) {
