@@ -1115,6 +1115,7 @@ h1 {
   font-size: 14px;
   line-height: 1.5;
   display: none;
+  color: white;
 }
 
 .tab.active .tab-desc {
@@ -1214,10 +1215,12 @@ h1 {
 
   .tab-title {
     font-size: 15px;
+    color: white;
   }
 
   .tab-desc {
     font-size: 13px;
+    color: white;
   }
 
   h1 {

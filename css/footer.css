@@ -343,4 +343,11 @@ html, body {
     letter-spacing: -1px;
   }
 }
-
+hr
+ {
+    margin: 1rem 0 !important;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: 0.25;
+}
