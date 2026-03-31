@@ -2820,7 +2820,7 @@ p {
 }
 
 .tech-marquee.right .tech-marquee-track {
-  animation: scrollRight 40s linear infinite;
+  animation: scrollLeft 40s linear infinite;
 }
 
 .tech-marquee:hover .tech-marquee-track {
@@ -2892,7 +2892,7 @@ p {
 }
 
 .counter-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);

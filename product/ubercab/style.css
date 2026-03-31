@@ -874,6 +874,8 @@ h1 {
   display: flex;
   gap: 30px;
   align-items: flex-start;
+  padding-top: 40px;
+
 }
 
 .tabs-container1 {
@@ -1063,7 +1065,7 @@ h1 {
   padding: 0px 20px;
   background-color: #ffffff;
   position: relative;
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .curve-container {
@@ -3247,13 +3249,23 @@ p {
 }
 
 @keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 15px)); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
 }
 
 @keyframes scrollRight {
-  0% { transform: translateX(calc(-50% - 15px)); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(calc(-50% - 15px));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Responsive */
@@ -3262,6 +3274,7 @@ p {
     font-size: 16px;
     padding: 14px 28px;
   }
+
   .tech-main-title {
     font-size: 28px;
   }
@@ -3278,12 +3291,12 @@ p {
 }
 
 .counter-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-  background: white;
+  background: beige;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
@@ -3478,11 +3491,13 @@ p {
 /* Responsive for Counter & Testimonials */
 @media screen and (max-width: 992px) {
   .counter-container {
-     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
+
   .testimonial-grid {
     grid-template-columns: 1fr;
   }
+
   .counter-item {
     border-right: none;
   }
@@ -3490,7 +3505,7 @@ p {
 
 @media screen and (max-width: 480px) {
   .counter-container {
-     grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -3622,30 +3637,30 @@ p {
 
 /* Secondary Hero CTA */
 .cta-group {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .cta-button.secondary {
-    background: transparent !important;
-    border: 2px solid #FFB72B !important;
-    color: #FFB72B !important;
+  background: transparent !important;
+  border: 2px solid #FFB72B !important;
+  color: #FFB72B !important;
 }
 
 .cta-button.secondary:hover {
-    background: #FFB72B !important;
-    color: #fff !important;
-    transform: translateY(-3px);
+  background: #FFB72B !important;
+  color: #fff !important;
+  transform: translateY(-3px);
 }
 
 @media screen and (max-width: 600px) {
   .walkthrough-title {
     font-size: 28px !important;
   }
+
   .demo-cta-box {
     padding: 40px 20px;
   }
 }
-

@@ -1135,12 +1135,12 @@ section {
 }
 
 .counter-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-  background: white;
+  background: bisque;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
@@ -1160,7 +1160,7 @@ section {
   display: block;
   font-size: 42px;
   font-weight: 700;
-  color: #FFB72B;
+  color: #FF5F64;
   margin-bottom: 5px;
 }
 
@@ -1173,7 +1173,7 @@ section {
 }
 
 .rating-box {
-  color: #FFB72B;
+  color: #FF5F64;
   font-size: 14px;
   margin-bottom: 5px;
 }
