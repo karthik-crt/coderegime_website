@@ -543,7 +543,7 @@ nav {
   justify-content: center;
   align-items: flex-start;
   padding: 100px 60px;
-  height: calc(90vh - 80px);
+  height: calc(95vh - 80px);
   position: relative;
   z-index: 3;
   max-width: 1620px;
@@ -955,6 +955,7 @@ nav {
   margin-left: 0;
   display: flex;
   justify-content: center;
+  height: 383px;
 }
 
 .image-content1 img {
@@ -3179,6 +3180,7 @@ p {
   background: #ffffff;
   position: relative;
   z-index: 10;
+  padding-top: 5%;
 }
 
 .counter-container {
