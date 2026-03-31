@@ -543,7 +543,7 @@ nav {
   justify-content: center;
   align-items: flex-start;
   padding: 100px 60px;
-  height: calc(100vh - 80px);
+  height: calc(130vh - 80px);
   position: relative;
   z-index: 3;
   max-width: 1620px;
@@ -3160,19 +3160,19 @@ p {
    Social Proof - Counter Section
    ============================================ */
 .counter-section {
-  padding: 80px 20px;
+  padding: 0px 20px;
   background: #ffffff;
   position: relative;
   z-index: 10;
 }
 
 .counter-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-  background: white;
+  background: #e6f3ff;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
