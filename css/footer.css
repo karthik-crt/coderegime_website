@@ -23,7 +23,7 @@ html, body {
   display: grid;
   grid-template-columns: 1.7fr 0.9fr 1fr 1.1fr 0.85fr 1.3fr;
   gap: 36px;
-  /* padding-bottom: 40px; */
+  padding-bottom: 40px;
   align-items: start;
   /* ← KEY FIX: all columns start at same top */
 }
@@ -189,7 +189,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* padding: 0 0 28px; */
+  /* padding-top: 32px; */
   gap: 40px;
 }
 
@@ -207,9 +207,9 @@ html, body {
 }
 
 .cr-footer__disclaimer p {
-  font-size: 13px;
+  font-size: 12px !important;
   color: #B6B7D3;
-  line-height: 1.75;
+  line-height: 1.75 !important;
 }
 
 /* Social + copyright */
@@ -269,7 +269,7 @@ html, body {
 }
 
 .cr-footer__copyright {
-  font-size: 11.5px;
+  font-size: 11.5px !important;
   color: #B6B7D3;
   text-align: center;
   margin: 0;
