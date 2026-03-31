@@ -3020,3 +3020,208 @@ p {
   font-weight: 600 !important;
   line-height: 28px !important;
 } 
+/* Technology Stack Section */
+.tech-stack-section {
+  padding: 80px 20px;
+  background-color: #f9f9ff;
+  text-align: center;
+}
+
+.tech-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-header {
+  margin-bottom: 50px;
+}
+
+.tech-subtitle {
+  color: #4285f4;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.tech-main-title {
+  font-size: 36px;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.tech-desc {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #5E6570;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Tech Stack Marquee Styling */
+.tech-marquee-wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.tech-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 10px 0;
+}
+
+.tech-marquee-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+}
+
+.tech-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 30px;
+  min-width: max-content;
+}
+
+.tech-marquee.left .tech-marquee-track {
+  animation: scrollLeft 40s linear infinite;
+}
+
+.tech-marquee.right .tech-marquee-track {
+  animation: scrollRight 40s linear infinite;
+}
+
+.tech-marquee:hover .tech-marquee-track {
+  animation-play-state: paused;
+}
+
+.tech-marquee-item {
+  background: white;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a2e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  min-width: max-content;
+}
+
+.tech-marquee-item i {
+  font-size: 26px;
+}
+
+.tech-marquee-item img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.tech-marquee-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(66, 133, 244, 0.15);
+  border-color: rgba(66, 133, 244, 0.3);
+  color: #4285f4;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 15px)); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(calc(-50% - 15px)); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .tech-marquee-item {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+  .tech-main-title {
+    font-size: 28px;
+  }
+}
+/* ============================================
+   Social Proof - Counter Section
+   ============================================ */
+.counter-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.counter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.counter-item {
+  text-align: center;
+  border-right: 1px solid #efefef;
+  padding: 10px;
+}
+
+.counter-item:last-child {
+  border-right: none;
+}
+
+.counter-number {
+  display: block;
+  font-size: 42px;
+  font-weight: 700;
+  color: #528BF4;
+  margin-bottom: 5px;
+}
+
+.counter-text {
+  font-size: 16px;
+  color: #5E6570 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.rating-box {
+  color: #528BF4;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Responsive for Counter Section */
+@media screen and (max-width: 992px) {
+  .counter-container {
+     grid-template-columns: repeat(2, 1fr);
+  }
+  .counter-item {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .counter-container {
+     grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,64 @@
+<svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0F9FF"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <filter id="sh">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#0369A1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Main gradient background card -->
+  <rect x="30" y="30" width="420" height="460" rx="30" fill="url(#bg)" filter="url(#sh)"/>
+  
+  <!-- Globe/World illustration -->
+  <circle cx="240" cy="200" r="120" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.2"/>
+  <circle cx="240" cy="200" r="80" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.2"/>
+  <circle cx="240" cy="200" r="40" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.2"/>
+  
+  <!-- Continents (simplified) -->
+  <ellipse cx="200" cy="175" rx="35" ry="25" fill="white" opacity="0.2"/>
+  <ellipse cx="275" cy="185" rx="28" ry="20" fill="white" opacity="0.2"/>
+  <ellipse cx="240" cy="230" rx="45" ry="18" fill="white" opacity="0.2"/>
+  
+  <!-- Flight paths (arc lines) -->
+  <path d="M 150 160 Q 240 120 320 175" fill="none" stroke="#FCD34D" stroke-width="2" stroke-dasharray="6,3" opacity="0.8"/>
+  <path d="M 160 210 Q 240 260 310 200" fill="none" stroke="#FCD34D" stroke-width="2" stroke-dasharray="6,3" opacity="0.8"/>
+  <path d="M 180 145 Q 220 90 300 155" fill="none" stroke="white" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  
+  <!-- Plane icons -->
+  <text x="148" y="165" font-size="18" transform="rotate(-30 148 165)">✈</text>
+  <text x="308" y="205" font-size="14" transform="rotate(15 308 205)" fill="white" opacity="0.9">✈</text>
+  
+  <!-- Location pins -->
+  <circle cx="155" cy="162" r="6" fill="#FCD34D"/>
+  <circle cx="318" cy="178" r="6" fill="#FCD34D"/>
+  <circle cx="165" cy="212" r="5" fill="white" opacity="0.8"/>
+  <circle cx="308" cy="200" r="5" fill="white" opacity="0.8"/>
+  
+  <!-- Bottom stats row -->
+  <rect x="50" y="360" width="110" height="80" rx="16" fill="white" opacity="0.15"/>
+  <rect x="185" y="360" width="110" height="80" rx="16" fill="white" opacity="0.15"/>
+  <rect x="320" y="360" width="110" height="80" rx="16" fill="white" opacity="0.15"/>
+  
+  <text x="105" y="395" font-family="Arial" font-size="22" fill="white" font-weight="bold" text-anchor="middle">500+</text>
+  <text x="105" y="415" font-family="Arial" font-size="9" fill="#BAE6FD" text-anchor="middle">Routes</text>
+  <text x="105" y="428" font-family="Arial" font-size="9" fill="#BAE6FD" text-anchor="middle">Worldwide</text>
+  
+  <text x="240" y="395" font-family="Arial" font-size="22" fill="white" font-weight="bold" text-anchor="middle">50+</text>
+  <text x="240" y="415" font-family="Arial" font-size="9" fill="#BAE6FD" text-anchor="middle">Airlines</text>
+  <text x="240" y="428" font-family="Arial" font-size="9" fill="#BAE6FD" text-anchor="middle">Integrated</text>
+  
+  <text x="375" y="395" font-family="Arial" font-size="22" fill="white" font-weight="bold" text-anchor="middle">24/7</text>
+  <text x="375" y="415" font-family="Arial" font-size="9" fill="#BAE6FD" text-anchor="middle">Customer</text>
+  <text x="375" y="428" font-family="Arial" font-size="9" fill="#BAE6FD" text-anchor="middle">Support</text>
+  
+  <!-- App icon at top -->
+  <rect x="200" y="55" width="80" height="80" rx="20" fill="white" opacity="0.2"/>
+  <text x="240" y="107" font-family="Arial" font-size="36" text-anchor="middle">✈</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="teamBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0F9FF"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <filter id="cardSh">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#0369A1" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="480" rx="20" fill="url(#teamBg)"/>
+  
+  <!-- Airplane silhouette background -->
+  <text x="250" y="260" font-family="Arial" font-size="300" text-anchor="middle" fill="#0EA5E9" opacity="0.04">✈</text>
+  
+  <!-- Main team illustration area -->
+  <!-- Central hub -->
+  <circle cx="250" cy="220" r="75" fill="url(#badge)" opacity="0.9" filter="url(#cardSh)"/>
+  <text x="250" y="210" font-family="Arial" font-size="30" text-anchor="middle">✈</text>
+  <text x="250" y="235" font-family="Arial" font-size="11" fill="white" font-weight="bold" text-anchor="middle">FlightRegime</text>
+  <text x="250" y="252" font-family="Arial" font-size="9" fill="#BAE6FD" text-anchor="middle">by Code Regime</text>
+  
+  <!-- Orbiting feature bubbles -->
+  <!-- Top -->
+  <circle cx="250" cy="100" r="40" fill="white" filter="url(#cardSh)"/>
+  <text x="250" y="94" font-family="Arial" font-size="18" text-anchor="middle">🏆</text>
+  <text x="250" y="112" font-family="Arial" font-size="8" fill="#0369A1" font-weight="bold" text-anchor="middle">6+ Years</text>
+  <text x="250" y="126" font-family="Arial" font-size="7" fill="#64748B" text-anchor="middle">Experience</text>
+  
+  <!-- Left -->
+  <circle cx="110" cy="220" r="40" fill="white" filter="url(#cardSh)"/>
+  <text x="110" y="214" font-family="Arial" font-size="18" text-anchor="middle">💰</text>
+  <text x="110" y="232" font-family="Arial" font-size="8" fill="#0369A1" font-weight="bold" text-anchor="middle">Cost</text>
+  <text x="110" y="246" font-family="Arial" font-size="7" fill="#64748B" text-anchor="middle">Effective</text>
+  
+  <!-- Right -->
+  <circle cx="390" cy="220" r="40" fill="white" filter="url(#cardSh)"/>
+  <text x="390" y="214" font-family="Arial" font-size="18" text-anchor="middle">🚀</text>
+  <text x="390" y="232" font-family="Arial" font-size="8" fill="#0369A1" font-weight="bold" text-anchor="middle">Fast</text>
+  <text x="390" y="246" font-family="Arial" font-size="7" fill="#64748B" text-anchor="middle">Delivery</text>
+  
+  <!-- Bottom left -->
+  <circle cx="150" cy="345" r="40" fill="white" filter="url(#cardSh)"/>
+  <text x="150" y="339" font-family="Arial" font-size="18" text-anchor="middle">🛡️</text>
+  <text x="150" y="357" font-family="Arial" font-size="8" fill="#0369A1" font-weight="bold" text-anchor="middle">Secure</text>
+  <text x="150" y="371" font-family="Arial" font-size="7" fill="#64748B" text-anchor="middle">Platform</text>
+  
+  <!-- Bottom right -->
+  <circle cx="350" cy="345" r="40" fill="white" filter="url(#cardSh)"/>
+  <text x="350" y="339" font-family="Arial" font-size="18" text-anchor="middle">🔧</text>
+  <text x="350" y="357" font-family="Arial" font-size="8" fill="#0369A1" font-weight="bold" text-anchor="middle">24/7</text>
+  <text x="350" y="371" font-family="Arial" font-size="7" fill="#64748B" text-anchor="middle">Support</text>
+  
+  <!-- Connection lines -->
+  <line x1="250" y1="145" x2="250" y2="148" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="185" y1="183" x2="150" y2="183" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="315" y1="183" x2="352" y2="183" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="200" y1="275" x2="183" y2="308" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="300" y1="275" x2="317" y2="308" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  
+  <!-- Stats bar at bottom -->
+  <rect x="40" y="415" width="420" height="50" rx="14" fill="url(#badge)" opacity="0.9"/>
+  <text x="130" y="437" font-family="Arial" font-size="14" fill="white" font-weight="bold" text-anchor="middle">100+</text>
+  <text x="130" y="453" font-family="Arial" font-size="8" fill="#BAE6FD" text-anchor="middle">Apps Delivered</text>
+  <line x1="210" y1="420" x2="210" y2="460" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <text x="250" y="437" font-family="Arial" font-size="14" fill="white" font-weight="bold" text-anchor="middle">50+</text>
+  <text x="250" y="453" font-family="Arial" font-size="8" fill="#BAE6FD" text-anchor="middle">Happy Clients</text>
+  <line x1="290" y1="420" x2="290" y2="460" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <text x="370" y="437" font-family="Arial" font-size="14" fill="white" font-weight="bold" text-anchor="middle">5 Countries</text>
+  <text x="370" y="453" font-family="Arial" font-size="8" fill="#BAE6FD" text-anchor="middle">Market Presence</text>
+</svg>

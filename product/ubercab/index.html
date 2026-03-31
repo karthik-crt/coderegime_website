@@ -29,7 +29,119 @@
   <meta name="description"
     content="Kickstart your taxi business with our Uber Clone Script. Build a powerful ride-hailing app like Uber, complete with advanced features and rapid deployment.">
   <link rel="stylesheet" href="/css/footer.css">
-  <link rel="stylesheet" type="text/css" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "CabRegime - Uber Clone Script",
+          "operatingSystem": "Android, iOS, Web",
+          "applicationCategory": "BusinessApplication",
+          "description": "Kickstart your taxi business with our AI-powered Uber Clone Script. Build a powerful ride-hailing app like Uber with advanced features and rapid deployment.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1250"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "Uber Clone Script",
+          "image": "https://www.coderegimetechnologies.com/uber-clone/images/head-img.png",
+          "description": "Premium Uber Clone Script for starting your own taxi booking business. AI-featured, customizable, and scalable solution.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Code Regime Technologies"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1250"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Michael Chen"
+              },
+              "reviewBody": "Highly recommend Code Regime for their excellent Uber Clone script and post-launch support."
+            }
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "url": "https://www.coderegimetechnologies.com/uber-clone/",
+            "priceCurrency": "USD",
+            "lowPrice": "999",
+            "highPrice": "4999",
+            "offerCount": "3"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the UberCab clone by Regime Technologies?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The UberCab clone is a customizable taxi booking app developed by Code Regime Technologies, similar to Uber, offering on-demand ride services."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can the UberCab clone be customized for my business needs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the UberCab clone can be fully customized to match your business requirements. You can tailor features, UI design, and functionality based on your brand and service model."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What features does the UberCab clone include?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The UberCab clone includes key features like real-time ride tracking, fare estimation, driver and user management, and secure payments. It also supports push notifications, ratings, and multi-language support for a seamless experience."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can the UberCab clone help my transportation business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The UberCab clone streamlines ride bookings, improves operational efficiency, and enhances customer satisfaction. It provides a scalable digital platform to manage drivers, track rides, and grow your transportation business."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why choose Code Regime Technologies for the UberCab clone?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Code Regime Technologies offers expert customization, robust development, and post-launch support for the UberCab clone. Their proven experience ensures a high-quality, scalable solution tailored to your business goals."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
 
 </head>
 
@@ -146,8 +258,104 @@
       and needs. At Code Regime Technologies, we offer an affordable Uber clone app that incorporates advanced
       technologies, including AI, to streamline business processes and ensure a great user experience.</p>
     <!-- <button class="cta-button">Let's Get Started</button> -->
-    <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
+    <div class="cta-group">
+      <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
+      <!-- <a href="#video-demo" class="cta-button secondary">Watch Demo <i class="fas fa-play"
+          style="margin-left: 8px; font-size: 14px;"></i></a> -->
+    </div>
   </div>
+
+  <!-- <section id="video-demo" class="walkthrough-section">
+    <div class="walkthrough-container">
+      <div class="walkthrough-header" data-aos="fade-up">
+        <p class="walkthrough-subtitle">Interactive Walkthrough</p>
+        <h2 class="walkthrough-title">Experience the AI-Powered Ride Journey</h2>
+        <p class="walkthrough-desc">Watch our comprehensive video walkthrough to see how the rider, driver, and admin
+          panels work together seamlessly to provide a world-class on-demand experience.</p>
+      </div>
+      <div class="video-mockup" data-aos="zoom-in" id="demo-video-container">
+        <video id="demo-video" muted loop playsinline poster="images/video-walkthrough.png" style="width: 100%; border-radius: 30px;">
+          <source src="images/Premium_SaaS_Demo_Video_Generation.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="play-btn-overlay" id="video-overlay">
+          <div class="play-button"><i class="fas fa-play" id="play-icon"></i></div>
+        </div>
+      </div>
+
+      <script>
+        const video = document.getElementById('demo-video');
+        const overlay = document.getElementById('video-overlay');
+        const playIcon = document.getElementById('play-icon');
+        const container = document.getElementById('demo-video-container');
+
+        container.addEventListener('click', () => {
+          if (video.paused) {
+            video.play();
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+          } else {
+            video.pause();
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+            playIcon.className = 'fas fa-play';
+          }
+        });
+
+        // Show overlay when video ends (if not looping)
+        video.addEventListener('ended', () => {
+          overlay.style.opacity = '1';
+          overlay.style.pointerEvents = 'auto';
+          playIcon.className = 'fas fa-play';
+        });
+      </script>
+      <div class="demo-cta-box" data-aos="fade-up">
+        <h3 class="walkthrough-title" style="color: #fff !important;">Ready to see it live?</h3>
+        <p class="walkthrough-desc" style="color: #ccc !important;">Our experts are ready to provide a 1:1 live
+          demonstration tailored to your specifically to business needs.</p>
+        <a href="https://wa.me/918072218602" class="demo-cta-btn">Book 1:1 Live Demo</a>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="counter-section" data-aos="fade-up">
+    <div class="counter-container">
+
+      <div class="counter-item">
+        <span class="counter-number">120+</span>
+        <p class="counter-text">Global Clients</p>
+      </div>
+
+      <div class="counter-item">
+        <span class="counter-number">250+</span>
+        <p class="counter-text">Successful Projects</p>
+      </div>
+
+      <div class="counter-item">
+        <span class="counter-number">50+</span>
+        <p class="counter-text">Professional Team Members</p>
+      </div>
+
+      <div class="counter-item">
+        <span class="counter-number">100%</span>
+        <p class="counter-text">Client Satisfaction</p>
+      </div>
+
+      <div class="counter-item">
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span class="counter-number">4.9/5</span>
+        <p class="counter-text">Client Rating</p>
+      </div>
+
+    </div>
+  </section>
+
 
 
   <script>
@@ -299,12 +507,19 @@
       });
     });
   </script>
-  <section class="benefits-section">
-    <div class="curve-container">
-      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
+  <!-- <section class="trusted-section" data-aos="fade-in">
+    <p class="trusted-title">Trusted by industry-leading startups worldwide</p>
+    <div class="logo-grid">
+      <img src="images/client-logos.png" alt="Trusted Clients Logos">
     </div>
+  </section> -->
+
+  <section class="benefits-section">
+    <!-- <div class="curve-container">
+      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
+    </div> -->
     <h2 class="section-benefits-title">
-      Benefits of Uberclone with <br> Code Regime Technologies
+      Benefits of Uber Clone with <br> Code Regime Technologies
     </h2>
     <p class="section-subwords">
       Choosing an Uber clone app from Code Regime Technologies comes with several key benefits
@@ -348,7 +563,7 @@
     <article class="info-column">
       <headers>
         <p class="section-caption">Why Choose</p>
-        <h2 class="section-heading">Why Choose Code Regime for Your Uberclone?</h2>
+        <h2 class="section-heading">Why Choose Code Regime for Your Uber Clone?</h2>
         <p class="section-description">Code Regime Technologies is the best choice in the world of on-demand app
           development.</p>
       </headers>
@@ -408,7 +623,7 @@
       <!-- Text Section -->
       <div class="text-page">
         <p class="subheading-text">Global Growth</p>
-        <h2 class="main-heading-text">Driving Global Growth with an UberClone Solution</h2>
+        <h2 class="main-heading-text">Driving Global Growth with an Uber Clone Solution</h2>
         <p class="description-page">
           Embracing an Uber Clone solution is not just about entering new markets; it’s about leading the charge in
           the global ride-hailing industry.
@@ -476,10 +691,10 @@
   </section>
 
   <section class="features-section">
-    <div class="curve-container2">
+    <!-- <div class="curve-container2">
       <img src="images/Vector.png" alt="Decorative Curve" class="curve-image2">
-    </div>
-    <h2 class="section-title-features">Smart Features For <br>Uberclone</h2>
+    </div> -->
+    <h2 class="section-title-features">Smart Features For <br>Uber Clone</h2>
     <p class="section-description-features">
       Get ready to feel the smart benefits and features of the Uber Clone App, which make your digital business ahead
       of your direct competitors
@@ -519,10 +734,10 @@
 
   <!-- Extra addon Section -->
   <section class="addons-section">
-    <div class="curve-container3">
+    <!-- <div class="curve-container3">
       <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
-    </div>
-    <h2 class="section-title2">Extra Add-Ons For <br>Uberclone</h2>
+    </div> -->
+    <h2 class="section-title2">Extra Add-Ons For <br>Uber Clone</h2>
     <p class="section-subtitle">Enhance your Uber clone app with additional features such as</p>
 
     <div class="addons-grid">
@@ -554,7 +769,754 @@
     </div>
   </section>
 
-  
+  <!-- Technology Stack Section -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <section class="tech-stack-section">
+    <div class="tech-container">
+      <div class="tech-header" data-aos="fade-up">
+        <p class="tech-subtitle">Technology Stack</p>
+        <h2 class="tech-main-title">Modern & Scalable Tech Stack</h2>
+        <p class="tech-desc">We use the latest and most advanced technologies to ensure high performance, security, and
+          scalability for your Uber clone.</p>
+      </div>
+      <div class="tech-marquee-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <!-- Swipe Left to Right -->
+        <div class="tech-marquee left">
+          <div class="tech-marquee-track">
+            <!-- Group 1 -->
+            <div class="tech-marquee-group">
+              <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+              <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular </div>
+              <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap CSS</div>
+              <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
+              <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
+              <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
+            </div>
+            <!-- Group 2 (Duplicate) -->
+            <div class="tech-marquee-group" aria-hidden="true">
+              <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+              <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular </div>
+              <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap CSS</div>
+              <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
+              <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
+              <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swipe Right to Left -->
+        <div class="tech-marquee right">
+          <div class="tech-marquee-track">
+            <!-- Group 1 -->
+            <div class="tech-marquee-group">
+              <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter</div>
+              <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
+              <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase</div>
+              <div class="tech-marquee-item"><i class="fas fa-map-marked-alt" style="color: #4285F4;"></i> Google Maps
+              </div>
+              <div class="tech-marquee-item"><i class="fa-solid fa-network-wired" style="color: #000;"></i> WebSocket
+              </div>
+              <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+            </div>
+            <!-- Group 2 (Duplicate) -->
+            <div class="tech-marquee-group" aria-hidden="true">
+              <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter</div>
+              <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
+              <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase</div>
+              <div class="tech-marquee-item"><i class="fas fa-map-marked-alt" style="color: #4285F4;"></i> Google Maps
+              </div>
+              <div class="tech-marquee-item"><i class="fa-solid fa-network-wired" style="color: #000;"></i> WebSocket
+              </div>
+              <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SPECIFICATIONS SECTION ===================== -->
+  <!-- <section class="specs-section">
+    <div class="specs-header">
+      <span class="specs-caption">Our Specifications</span>
+      <h2 class="specs-title">Specification In Our Taxi Booking Script</h2>
+      <p class="specs-subtitle">Ensure Hassle-free launch of Taxi Services With Unique Product Specifications</p>
+    </div>
+    <div class="specs-grid">
+
+      <div class="spec-card">
+        <div class="spec-badge">Professional</div>
+        <p class="spec-intro">By choosing a pro plan, you'll get these specifications.</p>
+        <ul class="spec-list">
+          <li><i class="fas fa-check-circle"></i> Native Android Driver App</li>
+          <li><i class="fas fa-check-circle"></i> Native Android Rider App</li>
+          <li><i class="fas fa-check-circle"></i> Driver Web Panel</li>
+          <li><i class="fas fa-check-circle"></i> Rider Web Panel</li>
+          <li><i class="fas fa-check-circle"></i> Fleet Management Web Panel</li>
+          <li><i class="fas fa-check-circle"></i> Manual Taxi Dispatcher Panel</li>
+          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
+          <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
+          <li><i class="fas fa-check-circle"></i> Google Play Store Submission</li>
+        </ul>
+      </div>
+
+      <div class="spec-card popular">
+        <div class="spec-badge">Professional Plus</div>
+        <p class="spec-intro">With the Pro Plus plan, you get these listed specifications.</p>
+        <ul class="spec-list">
+          <li><i class="fas fa-check-circle"></i> Native iOS Driver App</li>
+          <li><i class="fas fa-check-circle"></i> Native iOS Rider App</li>
+          <li><i class="fas fa-check-circle"></i> Driver Web Panel</li>
+          <li><i class="fas fa-check-circle"></i> Rider Web Panel</li>
+          <li><i class="fas fa-check-circle"></i> Fleet Management Web Panel</li>
+          <li><i class="fas fa-check-circle"></i> Manual Taxi Dispatcher Panel</li>
+          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
+          <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
+          <li><i class="fas fa-check-circle"></i> Apple App Store Submission</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-badge">Enterprise Plus</div>
+        <p class="spec-intro">Enterprise Plus plan gives you extensive specifications required to run a corp.</p>
+        <ul class="spec-list">
+          <li><i class="fas fa-check-circle"></i> Native iOS &amp; Android Apps</li>
+          <li><i class="fas fa-check-circle"></i> Driver &amp; Rider Web Panels</li>
+          <li><i class="fas fa-check-circle"></i> Fleet Management Web Panel</li>
+          <li><i class="fas fa-check-circle"></i> Manual Taxi Dispatcher Panel</li>
+          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
+          <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
+          <li><i class="fas fa-check-circle"></i> Store Submissions (Both)</li>
+          <li><i class="fas fa-check-circle"></i> Skype &amp; Team Viewer Support</li>
+          <li><i class="fas fa-check-circle"></i> 1 Year Free Support</li>
+        </ul>
+      </div>
+
+    </div>
+  </section> -->
+
+
+  <!-- ===================== COMPARISON TABLE SECTION ===================== -->
+  <!-- <section class="comparison-section">
+    <div class="table-container">
+      <div class="table-header">
+        <button id="togglePricing" class="pricing-toggle-btn">
+          <span>View Full Pricing Details</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+
+      <div id="pricingTable" class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Features List</th>
+              <th>Lite</th>
+              <th>Professional</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            
+            <tr class="core-header">
+              <td colspan="4">Core Features</td>
+            </tr>
+            <tr>
+              <td>100% Customizable Source Code</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Free One Time Installation</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Technical Support</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Free Support</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Native Android App [Driver &amp; Rider]</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Native iOS App [Driver &amp; Rider]</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Multi Domain License</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Admin Web Panel</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Bug Resolve</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Apps Submission</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>White Label</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>Website FrontEnd Panel</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr>
+              <td>CMS Pages</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+
+           
+            <tr class="accordion-header" data-target="rider">
+              <td colspan="4">
+                <div class="acc-inner"><span>Rider App</span><i class="fas fa-chevron-down acc-chevron"></i>
+                </div>
+              </td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Login / Signup</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Forget Password</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>OTP Verification</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Ride Later</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Source and Destination Selection</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Ride Type with Estimation</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Add Coupon Code</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Choose Payment</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Confirm Booking</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Driver Matching</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Pick Up Navigation</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Drop Navigation</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Cancel Trip</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Driver Feedback</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Complete Trip</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Profile Management</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Trip History</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Static Pages</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Favorite Location</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Wallet Payment</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Destination Change in Riding Trip</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Invite Friends and Referral System</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Social Login</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Language Localization</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Source Destination ETA</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>SOS</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Hail Taxi</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Rider Signup Bonus</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>In-App Chat / Call</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Call Masking</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Tip Option for Driver</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>No of Seats</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Rental</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Outstation Packages</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Add Multiple Stop</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Cancellation Feature</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row rider hidden">
+              <td>Book Ride for Someone Else</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+
+           
+            <tr class="accordion-header" data-target="driver">
+              <td colspan="4">
+                <div class="acc-inner"><span>Driver App</span><i class="fas fa-chevron-down acc-chevron"></i></div>
+              </td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Login / Sign Up</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Document Upload</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Manage Vehicle</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Go Offline / Online</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Accept / Reject Trip</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Pick Up Navigation</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Drop Navigation</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Complete Trip</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Overall Ratings &amp; Reviews</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>User Feedback</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Earning Details</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Trip History</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Payout</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Driver Document Expiry Alerts</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Social Login</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Language Localisation</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Subscription &amp; Packages</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Invite Friends and Referral System</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Navigation – Google Map &amp; Waze</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Live Taxi Meter</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Cancellation Feature</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row driver hidden">
+              <td>Feedback Feature</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+
+            
+            <tr class="accordion-header" data-target="admin">
+              <td colspan="4">
+                <div class="acc-inner"><span>Admin Panel</span><i class="fas fa-chevron-down acc-chevron"></i></div>
+              </td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Admin Login</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Dashboard</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Site Statistics</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Surge Pricing Management</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Manual Taxi Booking</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Ride Later Bookings</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Gods Eye (Live Tracking)</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Driver's Tracking</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Promo Code / Offers</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Custom Push Notifications</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Detailed Reports</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>Service City Management</td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+            <tr class="acc-row admin hidden">
+              <td>City-wise Admin</td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="testimonials-section">
+    <div class="testimonial-header" data-aos="fade-up">
+      <p class="testimonial-subtitle">Reviews</p>
+      <h2 class="testimonial-title">What Our Global Clients Say</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="testimonial-quote">
+          <i class="fas fa-quote-left"></i>
+          "Code Regime's Uber Clone script was a game-changer for our business in Canada. The AI features and the speed of deployment allowed us to capture the market within weeks."
+        </div>
+        <div class="testimonial-user">
+          <div class="user-img-container">
+            <img src="images/user-testimonials.png" alt="Client Avatar" style="object-position: left center;">
+          </div>
+          <div class="user-info">
+            <h4>Michael Chen</h4>
+            <p>CEO, SwiftRide Canada</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="testimonial-quote">
+          <i class="fas fa-quote-left"></i>
+          "The customization options are endless. We needed a specific bidding feature for our local market in Egypt, and the team integrated it perfectly. Highly recommended!"
+        </div>
+        <div class="testimonial-user">
+          <div class="user-img-container">
+            <img src="images/user-testimonials.png" alt="Client Avatar" style="object-position: center center;">
+          </div>
+          <div class="user-info">
+            <h4>Sarah Ahmed</h4>
+            <p>Founder, NileCabs</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="testimonial-quote">
+          <i class="fas fa-quote-left"></i>
+          "Excellent technical support and a robust product. We've scaled to over 50,000 users in just 6 months. The performance is rock solid even during peak hours."
+        </div>
+        <div class="testimonial-user">
+          <div class="user-img-container">
+            <img src="images/user-testimonials.png" alt="Client Avatar" style="object-position: right center;">
+          </div>
+          <div class="user-info">
+            <h4>Robert Wilson</h4>
+            <p>Director, UrbanLink UK</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
   <!-- Faq Section -->
   <section class="faq-section">
@@ -879,6 +1841,16 @@
 
   <script src="/js/footer.js"></script>
   <script src="//code.tidio.co/soskl3532irzhiujw4d3zebtxyg9jwus.js" async></script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600,
+      once: true,
+      offset: 100,
+      easing: 'ease-in-out',
+    });
+  </script>
 </body>
 
 </html>
