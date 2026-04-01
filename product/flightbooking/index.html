@@ -40,38 +40,98 @@
   <!-- ===== HEADER ===== -->
   <header id="head-nav" class="header">
     <nav>
+      <!-- Logo -->
       <a href="/index.html" class="logo">
-        <img src="/images/color-logo.png" alt="Code Regime Logo">
+        <img src="/images/color-logo.png" alt="logo">
       </a>
+
+      <!-- Navigation Menu -->
       <ul class="nav-menu">
-        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="/about-us/index.html" class="nav-link">About Us</a></li>
         <li class="nav-item">
-          <a href="javascript:void(0)" class="nav-link">Services</a>
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about-us/index.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#service-section" class="nav-link">
+            Services
+            <!-- <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span> -->
+          </a>
           <ul class="dropdown">
-            <li class="dropdown-item"><a href="/service/blockchain/index.html" class="dropdown-link">Blockchain</a></li>
-            <li class="dropdown-item"><a href="/service/custom/index.html" class="dropdown-link">Mobile Apps</a></li>
-            <li class="dropdown-item"><a href="/service/ios/index.html" class="dropdown-link">iOS Apps</a></li>
-            <li class="dropdown-item"><a href="/service/flutter/index.html" class="dropdown-link">Flutter App</a></li>
-            <li class="dropdown-item"><a href="/service/android/index.html" class="dropdown-link">Android App</a></li>
-            <li class="dropdown-item"><a href="/service/best/index.html" class="dropdown-link">Web App</a></li>
+            <li class="dropdown-item">
+              <a href="/service/blockchain/index.html" class="dropdown-link">Blockchain Development Services</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/service/custom/index.html" class="dropdown-link">Mobile App Development</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/service/ios/index.html" class="dropdown-link">iOS App Development</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/service/flutter/index.html" class="dropdown-link">Flutter Development</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/service/android/index.html" class="dropdown-link">Android App Development</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/service/best/index.html" class="dropdown-link">Web App Development Services</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/service/enterprise/index.html" class="dropdown-link">Enterprise App Development</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a href="javascript:void(0)" class="nav-link">Products</a>
+          <a href="javascript:void(0)" class="nav-link">
+            Products
+            <!-- <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span> -->
+          </a>
           <ul class="dropdown">
-            <li class="dropdown-item"><a href="/product/ubereats/index.html" class="dropdown-link">FoodRegime</a></li>
-            <li class="dropdown-item"><a href="/product/ubercab/index.html" class="dropdown-link">CabRegime</a></li>
-            <li class="dropdown-item"><a href="/product/handyman/index.html" class="dropdown-link">HandymanRegime</a></li>
-            <li class="dropdown-item"><a href="/product/insurance/index.html" class="dropdown-link">Insurance Platform</a></li>
-            <li class="dropdown-item"><a href="/product/flightbooking/index.html" class="dropdown-link active">Flight Booking App</a></li>
+            <li class="dropdown-item">
+              <a href="/product/ubereats/index.html" class="dropdown-link">FoodRegime - Ubereats clone</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/product/ubercab/index.html" class="dropdown-link">CabRegime - Uber Clone</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/product/handyman/index.html" class="dropdown-link">HandymanRegime - Uber for Handman</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/product/insurance/index.html" class="dropdown-link">Insurance</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/product/flightbooking/index.html" class="dropdown-link">Flight Booking</a>
+            </li>
+            <!-- 
+<li class="dropdown-item">
+              <a href="/product/foodora/index.html" class="dropdown-link">Foodora Clone</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/product/grubhub/index.html" class="dropdown-link">Grubhub Clone</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/product/doordash/index.html" class="dropdown-link">Doordash Clone</a>
+            </li>
+-->
           </ul>
         </li>
-        <li class="nav-item"><a href="/Portfolio/index.html" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="/contact-us/index.html" class="nav-link">Contact Us</a></li>
+        <li class="nav-item">
+          <a href="/Portfolio/index.html" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact-us/index.html" class="nav-link">Contact Us</a>
+        </li>
       </ul>
+
+      <!-- Contact Button -->
+      <!-- <a href="/contact-us/index.html" class="contact-btn">Contact Us</a> -->
+
+      <!-- Mobile Menu Toggle -->
       <div class="mobile-toggle">
-        <span class="hamburger"></span><span class="hamburger"></span><span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
       </div>
     </nav>
   </header>
@@ -82,7 +142,7 @@
     <div class="container">
       <div class="row items-center">
         <div class="col-lg-6 hero-content" data-aos="fade-right">
-          <div class="hero-badge"><span class="pulse"></span> V1.4 Active Version</div>
+          <!-- <div class="hero-badge"><span class="pulse"></span> V1.4 Active Version</div> -->
           <h1>Flight Booking App <br><span>Development Company</span></h1>
           <p class="hero-text">In a fast-moving world, travelers expect instant access to flight options, flawless booking experiences, and secure deals from their mobile devices. At Code Regime Technologies, we build important, scalable, and user-friendly operations customized for startups, travel agencies, and enterprises.</p>
           <div class="hero-actions">
@@ -401,27 +461,27 @@
       </div>
       <div class="features-row">
         <div class="features-list">
-          <div class="feature-tab active" data-aos="fade-right">
+          <div class="feature-tab">
             <h3>AI-Based Recommendations</h3>
             <p>AI analyzes user behavior to suggest suitable flights. This increases conversion rates and personalization.</p>
           </div>
-          <div class="feature-tab" data-aos="fade-right">
+          <div class="feature-tab">
             <h3>Fare prediction and Alerts</h3>
             <p>Predict price changes and notify users of the best booking time. This adds value to your flight-reserving app.</p>
           </div>
-          <div class="feature-tab" data-aos="fade-right">
+          <div class="feature-tab">
             <h3>Voice Search Integration</h3>
             <p>Customers can search flights using voice commands. It improves availability and the user experience.</p>
           </div>
-          <div class="feature-tab" data-aos="fade-right">
+          <div class="feature-tab">
             <h3>Chatbot Support</h3>
             <p>AI-powered chatbots give instant help. This reduces support costs and improves response time.</p>
           </div>
-          <div class="feature-tab" data-aos="fade-right">
+          <div class="feature-tab">
             <h3>Reward System</h3>
             <p>Reward users with points and discounts for repeat bookings. This boosts client retention.</p>
           </div>
-          <div class="feature-tab" data-aos="fade-right">
+          <div class="feature-tab">
             <h3>Integration with Third-Party Services</h3>
             <p>Connect with hotels, car rentals, and travel insurance providers. Expands your trip app development ecosystem.</p>
           </div>
@@ -536,27 +596,27 @@
       <div class="monetize-grid">
         <div class="monetize-card" data-aos="zoom-in">
           <i class="fas fa-hand-holding-usd"></i>
-          <h3>Commission</h3>
+          <h3 class="monetize">Commission</h3>
           <p>Earn a percentage from every booking made through your platform. This is a primary profit source.</p>
         </div>
         <div class="monetize-card" data-aos="zoom-in">
           <i class="fas fa-ad"></i>
-          <h3>Featured Listings</h3>
+          <h3 class="monetize">Featured Listings</h3>
           <p>Airlines can pay for premium placement. This increases visibility and generates new income.</p>
         </div>
         <div class="monetize-card" data-aos="zoom-in">
           <i class="fas fa-crown"></i>
-          <h3>Subscription Plans</h3>
+          <h3 class="monetize">Subscription Plans</h3>
           <p>Offer exclusive features through paid subscriptions. It ensures the recurring revenue.</p>
         </div>
         <div class="monetize-card" data-aos="zoom-in">
           <i class="fas fa-bullseye"></i>
-          <h3>In-App Advertisements</h3>
+          <h3 class="monetize">In-App Advertisements</h3>
           <p>Display targeted advertisements within the app. Adds another income stream to your model.</p>
         </div>
         <div class="monetize-card" data-aos="zoom-in">
           <i class="fas fa-coins"></i>
-          <h3>Service Fees</h3>
+          <h3 class="monetize">Service Fees</h3>
           <p>Charge small fees for bookings and cancellations. Contributes to steady profit growth.</p>
         </div>
       </div>
@@ -841,7 +901,7 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 400, once: true });
 
     // FAQ Toggle
     document.querySelectorAll('.faq-q').forEach(item => {
