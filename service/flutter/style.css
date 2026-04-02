@@ -9,7 +9,8 @@
     margin: 0;
     padding: 0;
     background-color: #FFEEEE;
-    
+    padding-left: 5%;
+    padding-right: 5%;
 }
   html, body {
   width: 100%;

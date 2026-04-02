@@ -14,6 +14,8 @@ body {
 body {
   font-family: 'Poppins', sans-serif;
   /* padding-top: 70px; offset for fixed header on all screen sizes */
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 h1,
@@ -911,7 +913,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 30px;
+  padding: 60px 5%;
   color: #fff;
 }
 
@@ -1027,7 +1029,7 @@ nav {
 .ai-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 5%;
   /* background-color: #FFFAF0; */
 }
 
@@ -1050,7 +1052,7 @@ h1 {
   display: flex;
   gap: 30px;
   align-items: flex-start;
-
+  padding: 3%;
 }
 
 /* === Tabs === */
@@ -1241,11 +1243,11 @@ h1 {
 
 /* benefits section */
 .benefits-section {
-  text-align: center;
-  padding: 0px 20px;
+  text-align: space-evenly;
+  padding: 0px 5%;
   background-color: #ffffff;
   position: relative;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .curve-container {
@@ -1268,17 +1270,19 @@ h1 {
   font-weight: 600;
   color: #333;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .section-subwords {
   font-size: 16px;
   color: #747980;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .benefits-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -1832,7 +1836,7 @@ p {
 .revenue-growth {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 50px 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1969,6 +1973,7 @@ p {
   margin: 50px auto 100px;
   display: flex;
   align-items: left;
+  padding: 0% 5%;
 }
 
 .offer-container {

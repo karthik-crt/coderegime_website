@@ -6,7 +6,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 html,
@@ -712,7 +713,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 60px 5%;
   background-color: #fff;
   /* optional */
   color: #111827;
@@ -822,7 +823,7 @@ nav {
 /*Benefits section*/
 .benefits-section {
   text-align: center;
-  padding: 60px 20px;
+  padding: 20px 20px;
   background-color: #ffffff;
   position: relative;
 }
@@ -960,7 +961,7 @@ p {
 .ai-container1 {
   max-width: 1440px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 20px 5%;
 }
 
 .top-title1 {
@@ -1158,7 +1159,7 @@ h1 {
   max-width: 1440px;
   margin: 50px auto;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 0 5%;
 }
 
 .work-container {
@@ -1918,7 +1919,7 @@ h1 {
 /*Extra-Addons section*/
 .addons-section {
   text-align: center;
-  padding: 40px 15px;
+  padding: 0 5%;
   background-color: #fff;
 }
 
@@ -2224,9 +2225,9 @@ h1 {
 
 
 .faq-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 32px 10px;
+  padding: 32px 5%;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -2885,7 +2886,7 @@ p {
    Social Proof - Counter Section
    ============================================ */
 .counter-section {
-  padding: 80px 20px;
+  padding: 0 20px;
   background: #ffffff;
   position: relative;
   z-index: 10;

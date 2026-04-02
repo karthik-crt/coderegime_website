@@ -10,7 +10,8 @@ body {
   color: white;
   min-height: 100vh;
   line-height: 1.6;
-
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 html,

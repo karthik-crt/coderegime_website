@@ -37,6 +37,8 @@ body {
   background: var(--white);
   overflow-x: hidden;
   line-height: 1.6;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /* --- Typography --- */

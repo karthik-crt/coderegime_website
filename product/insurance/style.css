@@ -18,6 +18,8 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   color: #333;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /* Base Typography Scaled Responsively */

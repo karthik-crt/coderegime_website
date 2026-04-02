@@ -6,7 +6,8 @@
   
   body {
     font-family: 'Poppins', sans-serif; 
-    
+    padding-left: 5%;
+    padding-right: 5%;
   }
   html, body {
     width: 100%;
