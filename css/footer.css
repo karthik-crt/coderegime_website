@@ -150,7 +150,7 @@ html, body {
 .cr-footer__contact-list li:nth-child(1) .cr-footer__contact-icon { color: #25D366; } /* WhatsApp */
 .cr-footer__contact-list li:nth-child(2) .cr-footer__contact-icon { color: #34b7f1; } /* Phone */
 .cr-footer__contact-list li:nth-child(3) .cr-footer__contact-icon { color: #EA4335; } /* Address */
-.cr-footer__contact-list li:nth-child(4) .cr-footer__contact-icon { color: #4285F4; } /* Email */
+.cr-footer__contact-list li:nth-child(4) .cr-footer__contact-icon { color: #0051C8; } /* Email */
 
 .cr-footer__contact-text {
   font-size: 15px;

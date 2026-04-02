@@ -89,7 +89,7 @@ nav {
 }
 
 .logo-text {
-  background: linear-gradient(45deg, #4285f4, #ea4335);
+  background: linear-gradient(45deg, #0051C8, #ea4335);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -131,11 +131,11 @@ nav {
 }
 
 .nav-link:hover {
-  color: #4285f4;
+  color: #0051C8;
 }
 
 .nav-link.active {
-  color: #4285f4;
+  color: #0051C8;
   font-weight: 500;
 }
 
@@ -187,15 +187,15 @@ nav {
 
 .dropdown-link:hover {
   background-color: #f8f9ff;
-  color: #4285f4;
+  color: #0051C8;
   padding-left: 25px;
 }
 
 /* Contact Button */
 .contact-btn {
   background: transparent;
-  border: 2px solid #4285f4;
-  color: #4285f4;
+  border: 2px solid #0051C8;
+  color: #0051C8;
   padding: 10px 25px;
   border-radius: 25px;
   font-size: 14px;
@@ -208,7 +208,7 @@ nav {
 }
 
 .contact-btn:hover {
-  background-color: #4285f4;
+  background-color: #0051C8;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
@@ -465,7 +465,7 @@ nav {
 .dropdown-link:focus,
 .contact-btn:focus,
 .mobile-toggle:focus {
-  outline: 2px solid #4285f4;
+  outline: 2px solid #0051C8;
   outline-offset: 2px;
 }
 
@@ -2042,7 +2042,7 @@ p {
 }
 
 .footer-links a:hover {
-  color: #4285f4;
+  color: #0051C8;
   padding-left: 5px;
 }
 
@@ -2065,7 +2065,7 @@ p {
   margin-right: 15px;
   margin-top: 2px;
   flex-shrink: 0;
-  color: #4285f4;
+  color: #0051C8;
 }
 
 .contact-text {
@@ -2276,11 +2276,11 @@ p {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #4285f4;
+  border-color: #0051C8;
 }
 
 .submit-btn {
-  background-color: #4285f4;
+  background-color: #0051C8;
   color: white;
   border: none;
   padding: 15px 40px;

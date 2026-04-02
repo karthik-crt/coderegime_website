@@ -126,13 +126,13 @@ nav {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #4285f4;
+  background-color: #0051C8;
   transition: width 0.3s ease;
 }
 .nav-link:hover::after {
   width: 100%;
 }
-.nav-link:hover { color: #4285f4; }
+.nav-link:hover { color: #0051C8; }
 
 
 .dropdown {
@@ -163,7 +163,7 @@ nav {
 }
 .dropdown-link:hover {
   background-color: #f8f9ff;
-  color: #4285f4;
+  color: #0051C8;
   padding-left: 25px;
 }
 
@@ -187,7 +187,7 @@ nav {
 
 /* Focus States */
 .nav-link:focus, .dropdown-link:focus, .mobile-toggle:focus {
-  outline: 2px solid #4285f4;
+  outline: 2px solid #0051C8;
   outline-offset: 2px;
 }
 
@@ -1112,7 +1112,7 @@ body { padding-top: 70px; }
   display: flex; align-items: center; justify-content: center;
   /* background: #e8f0fe; */
   border-radius: 8px;
-  color: #4285f4;
+  color: #0051C8;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -1131,7 +1131,7 @@ body { padding-top: 70px; }
   font-size: 13px;
   transition: all 0.2s;
 }
-.cr-footer__list a:hover { color: #4285f4; padding-left: 4px; }
+.cr-footer__list a:hover { color: #0051C8; padding-left: 4px; }
 
 .cr-footer__contact-list { list-style: none; padding: 0; }
 .cr-footer__contact-list li {
@@ -1145,7 +1145,7 @@ body { padding-top: 70px; }
   min-width: 32px;
   border-radius: 8px;
   /* background: #e8f0fe; */
-  color: #4285f4;
+  color: #0051C8;
   display: flex; align-items: center; justify-content: center;
   font-size: 14px;
 }
@@ -1159,7 +1159,7 @@ body { padding-top: 70px; }
 }
 .cr-footer__contact-text a,
 .cr-footer__contact-text { font-size: 12px; color: #666; text-decoration: none; line-height: 1.5; }
-.cr-footer__contact-text a:hover { color: #4285f4; }
+.cr-footer__contact-text a:hover { color: #0051C8; }
 
 .cr-footer__divider { border: none; border-top: 1px solid #e0e7ff; margin: 20px 0; }
 
@@ -1440,7 +1440,7 @@ body { padding-top: 70px; }
 }
 
 .tech-subtitle {
-  color: #4285f4;
+  color: #0051C8;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1536,7 +1536,7 @@ body { padding-top: 70px; }
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(66, 133, 244, 0.15);
   border-color: rgba(66, 133, 244, 0.3);
-  color: #4285f4;
+  color: #0051C8;
 }
 
 @keyframes scrollLeft {

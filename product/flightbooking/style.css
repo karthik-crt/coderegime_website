@@ -1110,7 +1110,7 @@ section {
 }
 
 .tech-subtitle {
-  color: #4285f4;
+  color: #0051C8;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1206,7 +1206,7 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(66, 133, 244, 0.15);
   border-color: rgba(66, 133, 244, 0.3);
-  color: #4285f4;
+  color: #0051C8;
 }
 
 @keyframes scrollLeft {

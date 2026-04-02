@@ -3,11 +3,11 @@
 
 :root {
   --primary-color: #007bff;
-  --secondary-color: #6E6E73;
+  --secondary-color: #555555;
   --background-color: #f4f4f4;
-  --text-color: #6E6E73;
+  --text-color: #333333;
   --heading-color: #1E2460;
-  --link-color: #5064F9;
+  --link-color: #0051C8;
   --link-hover-color: #0056b3;
   --white-color: #ffffff;
   --black-color: #000000;
@@ -27,9 +27,9 @@
   --border: #DEDDDD;
   --radius: 16px;
   --accent: #c8f04b;
-  --accent-2: #5064F9;
+  --accent-2: #0051C8;
   --ink: #1E2460;
-  --muted: #9293A0;
+  --muted: #666666;
   --font-head: "Poppins", sans-serif;
   --font-body: "Open Sans", sans-serif;
 }
@@ -192,7 +192,7 @@ nav {
 }
 
 .logo-text {
-  background: linear-gradient(45deg, #4285f4, #ea4335);
+  background: linear-gradient(45deg, #0051C8, #ea4335);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -238,11 +238,11 @@ nav {
 }
 
 .nav-link:hover {
-  color: #4285f4;
+  color: #0051C8;
 }
 
 .nav-link.active {
-  color: #4285f4;
+  color: #0051C8;
   font-weight: 600;
 }
 
@@ -294,15 +294,15 @@ nav {
 
 .dropdown-link:hover {
   background-color: #f8f9ff;
-  color: #4285f4;
+  color: #0051C8;
   padding-left: 25px;
 }
 
 /* Contact Button */
 .contact-btn {
   background: transparent;
-  border: 2px solid #4285f4;
-  color: #4285f4;
+  border: 2px solid #0051C8;
+  color: #0051C8;
   padding: 10px 25px;
   border-radius: 25px;
   font-size: 14px;
@@ -315,10 +315,10 @@ nav {
 }
 
 .contact-btn:hover {
-  background-color: #4285f4;
+  background-color: #0051C8;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 81, 200, 0.3);
 }
 
 /* Mobile Menu Toggle */
@@ -572,7 +572,7 @@ nav {
 .dropdown-link:focus,
 .contact-btn:focus,
 .mobile-toggle:focus {
-  outline: 2px solid #4285f4;
+  outline: 2px solid #0051C8;
   outline-offset: 2px;
 }
 
@@ -662,7 +662,7 @@ nav {
 .get-btn:hover,
 .watch-btn:hover {
   color: var(--white-color);
-  background: var(--link-color);
+  background: #0051C8;
 }
 
 .watch-btn:hover {
@@ -726,7 +726,7 @@ nav {
   width: 102px;
   height: 9px;
   border-radius: 10px;
-  background-color: var(--link-color);
+  background-color: #0051C8;
   position: absolute;
   content: '';
   top: 15px;
@@ -753,8 +753,8 @@ nav {
 }
 
 .btn-item:hover {
-  background-color: var(--link-color);
-  border-color: var(--link-color);
+  background-color: #0051C8;
+  border-color: #0051C8;
   color: #fff;
 }
 
@@ -785,7 +785,7 @@ nav {
 }
 
 .service-icon {
-  background-color: var(--link-color);
+  background-color: #0051C8;
   width: 50px;
   height: 50px;
   border-radius: 100px;
@@ -811,7 +811,7 @@ nav {
 }
 
 .service-box p {
-  color: #9293A0;
+  color: #666666;
   font-weight: 600;
   font-size: 13px;
 }
@@ -1329,7 +1329,7 @@ nav {
 }
 
 .footer-links a:hover {
-  color: #4285f4;
+  color: #0051C8;
   padding-left: 5px;
 }
 
@@ -1352,7 +1352,7 @@ nav {
   margin-right: 15px;
   margin-top: 2px;
   flex-shrink: 0;
-  color: #4285f4;
+  color: #0051C8;
 }
 
 .contact-text {
@@ -1779,7 +1779,7 @@ nav {
 
 .teck-item p {
   font-size: 13px;
-  color: #6E6E73;
+  color: #333333;
   margin-top: 10px;
   margin-bottom: 0;
   line-height: 1.5;
@@ -1882,7 +1882,7 @@ nav {
 
 
 .benefits-faq .accordion-button {
-  background: #5064F9;
+  background: #0051C8;
   border-radius: 20px 20px 0px 0px !important;
   color: var(--white-color);
 }
@@ -1932,7 +1932,7 @@ nav {
 }
 
 .benefits-faq .accordion-collapse.collapse.show {
-  background: #5064F9;
+  background: #0051C8;
   border-radius: 0px 0px 20px 20px !important;
   box-shadow: 0px 5px 0px 0px #BBC3FF;
 }
@@ -2257,7 +2257,7 @@ nav {
 }
 
 .custom-item.active span {
-  color: #5064F9;
+  color: #0051C8;
 }
 
 .custom-item p {
@@ -2320,7 +2320,7 @@ nav {
 }
 
 .custom-nav-dots .dot.active {
-  background-color: #5064F9;
+  background-color: #0051C8;
   height: 80px;
   width: 8px;
   border-radius: 40px;
@@ -2875,8 +2875,8 @@ nav {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: #fff;
-  color: #ffba44;
+  background: #ffba44;
+  color: #1E2460;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
@@ -2884,7 +2884,8 @@ nav {
 }
 
 .explore-btn:hover {
-  background: #e6e6e6;
+  background: #ffaa00;
+  color: #ffffff;
 }
 
 /* MOBILE FIX (click feel) */
