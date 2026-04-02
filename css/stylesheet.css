@@ -24,7 +24,7 @@
   /* Why Section Variables */
   --paper: #F3F4FF;
   --card-bg: #ffffff;
-  --border: #DEDDDD;
+  --border: #999999;
   --radius: 16px;
   --accent: #c8f04b;
   --accent-2: #0051C8;
@@ -777,7 +777,7 @@ nav {
 }
 
 .service-box {
-  border: 1px solid #DEDDDD;
+  border: 1px solid #999999;
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -1802,7 +1802,7 @@ nav {
 
 .filter-btn {
   background: #fff;
-  border: 1px solid #DEDDDD;
+  border: 1px solid #999999;
   color: #1E2460;
   padding: 10px 25px;
   border-radius: 50px;
@@ -2313,7 +2313,7 @@ nav {
   height: 8px;
   width: 8px;
   margin: 0 5px;
-  background-color: #dddddd;
+  background-color: #999999;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -3032,7 +3032,7 @@ nav {
 }
 
 .why-card:hover .why-card-number {
-  color: rgba(58, 92, 255, 0.25);
+  color: #0051C8;
 }
 
 /* icon wrapper */
