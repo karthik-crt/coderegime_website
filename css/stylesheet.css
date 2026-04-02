@@ -2690,7 +2690,7 @@ nav {
   left: -2%;
   bottom: -10%;
   width: 165px;
-  height: 146px;
+  height: auto;
   pointer-events: none;
   z-index: 0;
 }
