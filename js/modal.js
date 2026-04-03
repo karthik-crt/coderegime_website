@@ -11,7 +11,7 @@
             <div class="contact-modal-sidebar">
                 <div class="sidebar-content">
                     <h2>Let's build <br>something <br><span>amazing</span></h2>
-                    <p style="color: rgba(255,255,255,0.7); margin-top: 20px;">Get a personalized walk-through of our solution and see how we can help your business grow.</p>
+                    <p style="color: white; margin-top: 20px;">Get a personalized walk-through of our solution and see how we can help your business grow.</p>
                 </div>
 
                 <div class="sidebar-info">
@@ -19,14 +19,14 @@
                         <div class="icon"><i class="fab fa-whatsapp"></i></div>
                         <div class="text">
                             <h4>WhatsApp</h4>
-                            <p>+91 80722 18602</p>
+                            <p style="color: white;">+91 80722 18602</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <div class="icon"><i class="fas fa-envelope"></i></div>
                         <div class="text">
                             <h4>Email Us</h4>
-                            <p>sales@coderegimetechnologies.com</p>
+                            <p style="color: white;">sales@coderegimetechnologies.com</p>
                         </div>
                     </div>
                 </div>
@@ -58,10 +58,6 @@
                             <input type="tel" id="modal-phone" placeholder="+1 (555) 000-0000">
                         </div>
                         <div class="modal-form-group">
-                            <label>Company Name</label>
-                            <input type="text" id="modal-company" placeholder="Acme Inc.">
-                        </div>
-                        <div class="modal-form-group">
                             <label>Budget Range</label>
                             <select id="modal-budget">
                                 <option value="" disabled selected>Select budget</option>
@@ -72,7 +68,7 @@
                                 <option>$100,000+</option>
                             </select>
                         </div>
-                        <div class="modal-form-group full-width">
+                        <div class="modal-form-group">
                             <label>Product Required <span>*</span></label>
                             <select id="modal-service">
                                 <option value="" disabled selected>Select a product</option>
@@ -163,7 +159,6 @@
         const lname = document.getElementById('modal-lname').value.trim();
         const email = document.getElementById('modal-email').value.trim();
         const phone = document.getElementById('modal-phone').value.trim();
-        const company = document.getElementById('modal-company').value.trim();
         const budget = document.getElementById('modal-budget').value;
         const service = document.getElementById('modal-service').value;
         const message = document.getElementById('modal-message').value.trim();
@@ -189,7 +184,7 @@
             email,
             user_email: email,
             phone: phone || '—',
-            company: company || '—',
+            company: 'none',        // ← removed field, hardcoded default
             budget: budget || '—',
             service: service,
             message
