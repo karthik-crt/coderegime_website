@@ -771,16 +771,24 @@
 
 
 
-    // Show or hide the button based on scroll position
+    // Show or hide the button based on scroll position - throttled with requestAnimationFrame
+    let scrollTicking = false;
     window.onscroll = function () {
-      scrollFunction();
-      stickyHeader();
+      if (!scrollTicking) {
+        window.requestAnimationFrame(function() {
+          scrollFunction();
+          stickyHeader();
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
     };
 
     function scrollFunction() {
       const backToTopBtn = document.getElementById("backToTopBtn");
       if (!backToTopBtn) return;
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop > 100) {
         backToTopBtn.style.display = "block"; // Show button after scrolling down
       } else {
         backToTopBtn.style.display = "none"; // Hide button at the top
@@ -801,10 +809,15 @@
 
     function stickyHeader() {
       if (!header) return;
-      if (window.pageYOffset > stickyOffset) {
-        header.classList.add("sticky"); // Add sticky class
+      const pageYOffset = window.pageYOffset || document.documentElement.scrollTop;
+      if (pageYOffset > stickyOffset) {
+        if (!header.classList.contains("sticky")) {
+          header.classList.add("sticky"); // Add sticky class
+        }
       } else {
-        header.classList.remove("sticky"); // Remove sticky class
+        if (header.classList.contains("sticky")) {
+          header.classList.remove("sticky"); // Remove sticky class
+        }
       }
     }
 
