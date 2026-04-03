@@ -2844,7 +2844,7 @@ nav {
 
 /* BACK */
 .flip-card-back {
-  background: #ffba44;
+  background: #1e2460;
   color: #fff;
   transform: rotateY(180deg);
   text-align: center;
@@ -2852,6 +2852,17 @@ nav {
   flex-direction: column;
   justify-content: center;
 }
+
+.flip-card-back h3 {
+  color: #fff !important;
+  margin-bottom: 10px;
+}
+
+.flip-card-back p {
+  color: #fff !important;
+  font-size: 14px;
+}
+
 
 /* IMAGE */
 .flip-card-front .development-pic {
@@ -2876,12 +2887,13 @@ nav {
   margin-top: 15px;
   padding: 10px 20px;
   background: #ffba44;
-  color: #1E2460;
+  color: #000;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
 }
+
 
 .explore-btn:hover {
   background: #ffaa00;
