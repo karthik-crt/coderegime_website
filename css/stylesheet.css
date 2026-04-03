@@ -24,12 +24,12 @@
   /* Why Section Variables */
   --paper: #F3F4FF;
   --card-bg: #ffffff;
-  --border: #999999;
+  --border: #767676;
   --radius: 16px;
   --accent: #c8f04b;
   --accent-2: #0051C8;
   --ink: #1E2460;
-  --muted: #666666;
+  --muted: #555555;
   --font-head: "Poppins", sans-serif;
   --font-body: "Open Sans", sans-serif;
 }
@@ -811,7 +811,7 @@ nav {
 }
 
 .service-box p {
-  color: #666666;
+  color: #555555;
   font-weight: 600;
   font-size: 13px;
 }
@@ -2249,7 +2249,7 @@ nav {
 
 .custom-item {
   margin-bottom: 40px;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .custom-item.active {

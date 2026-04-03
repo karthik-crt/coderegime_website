@@ -85,12 +85,12 @@ html, body {
 }
 
 /* ── Column headings ── */
-.cr-footer__col h4 {
-  font-size: 15px;
-  font-weight: 700;
-  color: #FEAA2E;
-  margin-bottom: 18px;
-  letter-spacing: 0.1px;
+.cr-footer__col h3 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #FEAA2E !important;
+  margin-bottom: 18px !important;
+  letter-spacing: 0.1px !important;
 }
 
 /* ── Link lists ── */
@@ -197,7 +197,7 @@ html, body {
   max-width: 520px;
 } */
 
-.cr-footer__disclaimer h5 {
+.cr-footer__disclaimer h4 {
   font-size: 15px;
   font-weight: 700;
   color: white;
