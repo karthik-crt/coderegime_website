@@ -42,6 +42,18 @@
 
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Request Demo Modal CSS -->
+  <link rel="stylesheet" href="/css/modal.css">
+
+  <!-- EmailJS initialization -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+      (function() {
+          emailjs.init('mtyXCsYdD3ElJGNum');
+          console.log('EmailJS initialized for Flight Booking page ✅');
+      })();
+  </script>
 </head>
 
 <body>
@@ -994,7 +1006,10 @@
     // Footer Year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-<!--Start of Tawk.to Script-->
+  <!-- Request Demo Modal JS -->
+  <script src="/js/modal.js"></script>
+
+  <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {

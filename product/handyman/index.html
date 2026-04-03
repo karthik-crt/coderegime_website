@@ -30,6 +30,16 @@
   <title>Handyman App Like Uber | #1 Top Handyman App Development</title>
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" type="text/css" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/modal.css">
+
+  <!-- EmailJS initialization -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+      (function() {
+          emailjs.init('mtyXCsYdD3ElJGNum');
+          console.log('EmailJS initialized for Handyman page ✅');
+      })();
+  </script>
 
 </head>
 
@@ -146,7 +156,10 @@
     <p class="description">The Uber for Handyman app, developed by Code Regime Technologies, is a mastering software
       solution. Our skilled team is connected to customers with a professional handyman for multiple house-issue tasks.
     </p>
-    <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
+    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+        <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
+        <a href="#demo" class="cta-button" style="background: var(--modal-white); color: var(--modal-blue); border: 1px solid var(--modal-blue);">Request Demo <i class="fas fa-play-circle" style="margin-left: 5px;"></i></a>
+    </div>
   </div>
   <section class="counter-section" data-aos="fade-up">
     <div class="counter-container">
@@ -994,6 +1007,9 @@
 
   <script src="/js/footer.js"></script>
   <!-- <script src="//code.tidio.co/soskl3532irzhiujw4d3zebtxyg9jwus.js" async></script> -->
+    <!-- Request Demo Modal JS -->
+  <script src="/js/modal.js"></script>
+
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();

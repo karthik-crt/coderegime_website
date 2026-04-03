@@ -30,6 +30,16 @@
     content="Kickstart your taxi business with our Uber Clone Script. Build a powerful ride-hailing app like Uber, complete with advanced features and rapid deployment.">
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/modal.css">
+
+  <!-- EmailJS initialization -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+      (function() {
+          emailjs.init('mtyXCsYdD3ElJGNum');
+          console.log('EmailJS initialized for UberCab page ✅');
+      })();
+  </script>
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -261,8 +271,9 @@
       and needs. At Code Regime Technologies, we offer an affordable Uber clone app that incorporates advanced
       technologies, including AI, to streamline business processes and ensure a great user experience.</p>
     <!-- <button class="cta-button">Let's Get Started</button> -->
-    <div class="cta-group">
+    <div class="cta-group" style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
       <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
+      <a href="#demo" class="cta-button" style="background: var(--modal-white); color: var(--modal-blue); border: 1px solid var(--modal-blue);">Request Demo <i class="fas fa-play-circle" style="margin-left: 5px;"></i></a>
       <!-- <a href="#video-demo" class="cta-button secondary">Watch Demo <i class="fas fa-play"
           style="margin-left: 8px; font-size: 14px;"></i></a> -->
     </div>
@@ -1845,6 +1856,9 @@
 
   <script src="/js/footer.js"></script>
   <!-- <script src="//code.tidio.co/soskl3532irzhiujw4d3zebtxyg9jwus.js" async></script> -->
+  <!-- Request Demo Modal JS -->
+  <script src="/js/modal.js"></script>
+
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
