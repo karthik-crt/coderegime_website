@@ -88,7 +88,7 @@
                         <div class="modal-form-group full-width" style="flex-direction: row; align-items: flex-start; gap: 10px;">
                             <input type="checkbox" id="modal-agree" style="width: 18px; height: 18px; cursor: pointer; margin-top: 3px;">
                             <label for="modal-agree" style="font-weight: 500; font-size: 0.8rem; line-height: 1.4; cursor: pointer;">
-                                I agree to the <a href="/policy/privacy-policy/index.html" style="color: var(--modal-blue); text-decoration: none; font-weight: 700;">Privacy Policy</a> and <a href="/policy/disclaimer/index.html" style="color: var(--modal-blue); text-decoration: none; font-weight: 700;">Terms of Service</a>.
+                                I agree to the <a href="javascript:void(0)" style="color: var(--modal-blue); text-decoration: none; font-weight: 700;">Privacy Policy</a> and <a href="javascript:void(0)" style="color: var(--modal-blue); text-decoration: none; font-weight: 700;">Terms of Service</a>.
                             </label>
                         </div>
                     </div>
