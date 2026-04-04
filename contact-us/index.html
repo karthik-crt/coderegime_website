@@ -969,6 +969,151 @@
         emailjs.init('mtyXCsYdD3ElJGNum'); // ← உங்கள் public key
         console.log('EmailJS initialized ✅');
     </script>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How long does it take to develop a custom software solution?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Timelines vary based on complexity. A simple web app may take 4–8 weeks, while enterprise-grade solutions can take 4–6 months. We'll provide a detailed timeline after our discovery call."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer post-launch maintenance and support?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we offer flexible maintenance packages including bug fixes, performance monitoring, updates, and 24/7 support depending on your plan."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What technologies does your team specialize in?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Our team is proficient in React, Node.js, Python, Flutter, AWS, and more. We select the best stack based on your project needs and scalability goals."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do we communicate during the project?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We use Slack, Jira, and weekly video calls to keep you informed. You'll have a dedicated project manager as your single point of contact throughout."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I get a free consultation before committing?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely! We offer a free 30-minute discovery call to understand your requirements and provide an initial assessment — no strings attached."
+                    }
+                }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "FoodRegime",
+            "image": "https://www.coderegimetechnologies.com/images/color-logo.png",
+            "operatingSystem": "Android, iOS, Web",
+            "applicationCategory": "BusinessApplication",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "120"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "USD",
+                "description": "Contact for pricing"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "CabRegime",
+            "image": "https://www.coderegimetechnologies.com/images/color-logo.png",
+            "operatingSystem": "Android, iOS, Web",
+            "applicationCategory": "BusinessApplication",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "95"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "USD",
+                "description": "Contact for pricing"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Custom Software Development",
+            "image": "https://www.coderegimetechnologies.com/images/color-logo.png",
+            "description": "Enterprise-grade custom software development services including web and mobile applications.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Code Regime Technologies"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "150"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.coderegimetechnologies.com/contact-us/",
+                "priceCurrency": "USD",
+                "price": "0.00",
+                "availability": "https://schema.org/InStock",
+                "shippingDetails": {
+                   "@type": "OfferShippingDetails",
+                   "shippingRate": {
+                      "@type": "MonetaryAmount",
+                      "value": "0.00",
+                      "currency": "USD"
+                   },
+                   "shippingDestination": {
+                      "@type": "DefinedRegion",
+                      "addressCountry": "US"
+                   },
+                   "deliveryTime": {
+                      "@type": "ShippingDeliveryTime",
+                      "handlingTime": {
+                         "@type": "QuantitativeValue",
+                         "minValue": 0,
+                         "maxValue": 1,
+                         "unitCode": "DAY"
+                      },
+                      "transitTime": {
+                         "@type": "QuantitativeValue",
+                         "minValue": 0,
+                         "maxValue": 1,
+                         "unitCode": "DAY"
+                      }
+                   }
+                },
+                "hasMerchantReturnPolicy": {
+                   "@type": "MerchantReturnPolicy",
+                   "applicableCountry": "US",
+                   "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        }
+    ]
+    </script>
 </head>
 
 <body>
