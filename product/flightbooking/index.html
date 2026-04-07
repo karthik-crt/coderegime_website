@@ -55,169 +55,167 @@
       })();
   </script>
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What's a Flight Booking App?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A flight booking app is a digital platform that allows users to search, compare, and book airline tickets directly from their smartphones or desktops. These apps integrate with airline APIs and GDS systems to give real-time data, pricing, and availability."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How Much Does It Cost to Develop a Flight Booking App?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost can vary depending on your requirements. Crucial cost factors include: App complexity, platform choice (iOS, Android, or both), third-party API integrations, Design and UX, and development team location."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What Features Should Have In a Flight Booking App?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A successful app should include easy registration, advanced search filters, real-time availability, secure payment gateways, booking history/e-tickets, push notifications, and multi-language support. Adding smart features like AI recommendations can give you a competitive edge."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I Customize My Flight Reserving App?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. You can conform the app design and imprinting, user interface/experience, features based on your business model, and admin dashboard controls."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How Do I Ensure Security in My App?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Security is critical. You should apply SSL encryption, secure payment gateways, two-factor authentication (2FA), and data protection compliance (GDPR, etc.)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I Need a Website Along With the App?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, having both increases your reach. Some users prefer reserving via desktop, while others use mobile apps. A multi-platform presence ensures maximum engagement."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I Launch My App Quickly?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, you can launch much faster if you choose a ready-made script or a clone app. This is ideal for startups looking to enter the market quickly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can a Flight Booking App Support Multiple Airlines?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, a flight booking application can integrate with multiple airlines using GDS or third-party APIs. This allows customers to compare prices and services in one place."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I Need a License to Start an Airline Booking App?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In most cases, you may need to comply with travel regulations and partner with authorized airlines or travel providers. Conditions vary by country, so it’s best to check legal guidelines."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Flight Booking App Development",
-    "image": "https://www.coderegimetechnologies.com/images/color-logo.png",
-    "description": "Our top flight booking app is the best choice for travel businesses. It is a fully customizable app development solution built to grow your travel brand today.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Code Regime Technologies"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://www.coderegimetechnologies.com/flight-booking-app/",
-      "priceCurrency": "USD",
-      "price": "0.00",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "Code Regime Technologies"
-      },
-      "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-          "@type": "MonetaryAmount",
-          "value": "0",
-          "currency": "USD"
-        },
-        "deliveryTime": {
-          "@type": "ShippingDeliveryTime",
-          "handlingTime": {
-            "@type": "QuantitativeValue",
-            "minValue": "0",
-            "maxValue": "1",
-            "unitCode": "DAY"
+    {
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Flight Booking App",
+          "image": "https://www.coderegimetechnologies.com/product/flightbooking/images/hero-mockup.png",
+          "description": "Our top flight booking app is the best choice for travel businesses. It is a fully customizable app development solution built to grow your travel brand today.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Code Regime Technologies"
           },
-          "transitTime": {
-            "@type": "QuantitativeValue",
-            "minValue": "0",
-            "maxValue": "0",
-            "unitCode": "DAY"
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.coderegimetechnologies.com/flight-booking-app/",
+            "priceCurrency": "USD",
+            "price": "0",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2027-12-31",
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": "14",
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "USD"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "US"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "d"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "d"
+                }
+              }
+            }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.4",
+            "reviewCount": "120"
           }
         },
-        "shippingDestination": {
-          "@type": "DefinedRegion",
-          "addressCountry": "US"
+        {
+          "@type": "SoftwareApplication",
+          "name": "Flight Booking App",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "description": "Our top flight booking app is the best choice for travel businesses. It is a fully customizable app development solution built to grow your travel brand today.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.4",
+            "reviewCount": "120"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What's a Flight Booking App?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A flight booking app is a digital platform that allows users to search, compare, and book airline tickets directly from their smartphones or desktops. These apps integrate with airline APIs and GDS systems to give real-time data, pricing, and availability."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How Much Does It Cost to Develop a Flight Booking App?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The cost can vary depending on your requirements. Crucial cost factors include: App complexity, platform choice (iOS, Android, or both), third-party API integrations, Design and UX, and development team location."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What Features Should Have In a Flight Booking App?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A successful app should include easy registration, advanced search filters, real-time availability, secure payment gateways, booking history/e-tickets, push notifications, and multi-language support. Adding smart features like AI recommendations can give you a competitive edge."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I Customize My Flight Reserving App?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. You can conform the app design and imprinting, user interface/experience, features based on your business model, and admin dashboard controls."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How Do I Ensure Security in My App?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Security is critical. You should apply SSL encryption, secure payment gateways, two-factor authentication (2FA), and data protection compliance (GDPR, etc.)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I Need a Website Along With the App?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, having both increases your reach. Some users prefer reserving via desktop, while others use mobile apps. A multi-platform presence ensures maximum engagement."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I Launch My App Quickly?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you can launch much faster if you choose a ready-made script or a clone app. This is ideal for startups looking to enter the market quickly."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can a Flight Booking App Support Multiple Airlines?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, a flight booking application can integrate with multiple airlines using GDS or third-party APIs. This allows customers to compare prices and services in one place."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I Need a License to Start an Airline Booking App?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In most cases, you may need to comply with travel regulations and partner with authorized airlines or travel providers. Conditions vary by country, so it’s best to check legal guidelines."
+              }
+            }
+          ]
         }
-      },
-      "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "US",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-      }
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.4",
-      "reviewCount": "120"
+      ]
     }
-  }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Flight Booking App Development",
-    "operatingSystem": "Android, iOS",
-    "applicationCategory": "TravelApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0.00",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.4",
-      "ratingCount": "120"
-    }
-  }
-  </script>
 </head>
 
 <body>
