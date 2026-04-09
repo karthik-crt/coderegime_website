@@ -33,6 +33,17 @@
   --font-body: "Open Sans", sans-serif;
 }
 
+/* GTM noscript iframe — hidden by default (replaces inline style) */
+.gtm-noscript-iframe {
+  display: none;
+  visibility: hidden;
+}
+
+/* FAQ answer paragraphs — hidden by default; JS reads innerText for sidebar display */
+.faq-para {
+  display: none;
+}
+
 /* Applying the variables */
 body {
   font-family: var(--font-family);
