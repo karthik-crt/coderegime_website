@@ -717,15 +717,33 @@
   <script src="/js/footer.js"></script>
   <!-- <script src="//code.tidio.co/soskl3532irzhiujw4d3zebtxyg9jwus.js" async></script> -->
   <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  <script>
     (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/69ce73d36f1c161c3ca0ae40/1jl778te5';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
+      let loaded = false;
+
+      function loadTawk() {
+        if (loaded) return;
+        loaded = true;
+
+        // Safely fall back if requestIdleCallback is not supported (Safari)
+        const requestIdle = window.requestIdleCallback || function (cb) { setTimeout(cb, 1) };
+
+        requestIdle(() => {
+          var s = document.createElement("script");
+          s.src = 'https://embed.tawk.to/69ce73d36f1c161c3ca0ae40/1jl778te5';
+          s.async = true;
+          s.charset = "UTF-8";
+          // REMOVED: s.setAttribute("crossorigin", "*"); 
+          document.body.appendChild(s);
+        });
+      }
+
+      // Minimal interaction trigger
+      window.addEventListener("pointerdown", loadTawk, { once: true, passive: true });
+      window.addEventListener("scroll", loadTawk, { once: true, passive: true }); // Added scroll for mobile coverage
+
+      // Fallback (only if no interaction)
+      setTimeout(loadTawk, 10000);
     })();
   </script>
   <!--End of Tawk.to Script-->
