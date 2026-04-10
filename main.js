@@ -32,3 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.insertAdjacentHTML("beforeend", data);
         });
 });
+
+// Toggle Pricing Table Visibility
+const togglePricingButton = document.getElementById("togglePricing");
+const pricingTable = document.getElementById("pricingTable");
+
+if (togglePricingButton && pricingTable) {
+    togglePricingButton.addEventListener("click", () => {
+        pricingTable.classList.toggle("hidden");
+        const icon = togglePricingButton.querySelector("i");
+        const span = togglePricingButton.querySelector("span");
+
+        if (pricingTable.classList.contains("hidden")) {
+            span.textContent = "View Full Pricing Details";
+            icon.classList.replace("fa-chevron-up", "fa-chevron-down");
+        } else {
+            span.textContent = "Hide Pricing Details";
+            icon.classList.replace("fa-chevron-down", "fa-chevron-up");
+        }
+    });
+}
