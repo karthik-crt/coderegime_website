@@ -2220,13 +2220,13 @@ p {
 }
 
 .icon-check {
-  background: #22c55e;
-  color: #fff;
+  /* background: #22c55e; */
+  color: #22c55e;
 }
 
 .icon-cross {
-  background: #ef4444;
-  color: #fff;
+  /* background: #ef4444; */
+  color: #ef4444;
 }
 
 /* Core Features header – dark style */
