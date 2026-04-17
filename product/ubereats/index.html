@@ -38,7 +38,7 @@
     <!-- EmailJS initialization -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        (function() {
+        (function () {
             emailjs.init('mtyXCsYdD3ElJGNum');
             console.log('EmailJS initialized for UberEats page ✅');
         })();
@@ -212,7 +212,7 @@
                         <li class="dropdown-item">
                             <a href="/product/ubereats/index.html" class="dropdown-link">FoodRegime - Ubereats clone</a>
                         </li>
-                        
+
                         <li class="dropdown-item">
                             <a href="/product/handyman/index.html" class="dropdown-link">HandymanRegime - Uber for
                                 Handman</a>
@@ -221,8 +221,8 @@
                             <a href="/product/insurance/index.html" class="dropdown-link">Insurance</a>
                         </li>
                         <li class="dropdown-item">
-              <a href="/product/flightbooking/index.html" class="dropdown-link">Flight Booking App</a>
-            </li>
+                            <a href="/product/flightbooking/index.html" class="dropdown-link">Flight Booking App</a>
+                        </li>
                         <!-- 
 <li class="dropdown-item">
                             <a href="/product/foodora/index.html" class="dropdown-link">Foodora Clone</a>
@@ -255,926 +255,1459 @@
                 <span class="hamburger"></span>
             </div>
         </nav>
-    </header><main>
+    </header>
+    <main>
 
-    <div class="wave">
-        <img src="images/wave.png" alt="wave">
-    </div>
-
-    <div class="mobile">
-        <img src="images/header-phone.png" alt="UberEats Clone App">
-    </div>
-
-    <div class="container">
-        <h1 class="heading">UberEats Clone App</h1>
-        <p class="description">Get Ready to start an Online food delivery business, Our Ubereats Clone is
-            a great option.
-            It's a well-built solution that lets you take a food delivery app similar to UberEats App. Let's delve
-            into what a Ubereats Clone is, how AI can help you, and why Code Regime Technologies is a
-            valuable choice for all.</p>
-        <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
-            <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
-            <a href="#demo" class="cta-button" style="background: var(--modal-white); color: var(--modal-blue); border: 1px solid var(--modal-blue);">Request Demo <i class="fas fa-play-circle" style="margin-left: 5px;"></i></a>
+        <div class="wave">
+            <img src="images/wave.png" alt="wave">
         </div>
-    </div>
 
-    <section class="counter-section" data-aos="fade-up">
-    <div class="counter-container">
-
-      <div class="counter-item">
-        <span class="counter-number">105+</span>
-        <p class="counter-text">Global Clients</p>
-      </div>
-
-      <div class="counter-item">
-        <span class="counter-number">100+</span>
-        <p class="counter-text">Successful Projects</p>
-      </div>
-
-      <div class="counter-item">
-        <span class="counter-number">27+</span>
-        <p class="counter-text">Professional Team Members</p>
-      </div>
-
-      <div class="counter-item">
-        <span class="counter-number">100%</span>
-        <p class="counter-text">Client Satisfaction</p>
-      </div>
-
-      <div class="counter-item">
-        <div class="rating-box">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
+        <div class="mobile">
+            <img src="images/header-phone.png" alt="UberEats Clone App">
         </div>
-        <span class="counter-number">4.7/5</span>
-        <p class="counter-text">Client Rating</p>
-      </div>
 
-    </div>
-  </section>
-
-    <script>
-        // Mobile menu toggle functionality
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const dropdownItems = document.querySelectorAll('.nav-item');
-
-        mobileToggle.addEventListener('click', () => {
-            mobileToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Mobile dropdown functionality
-        dropdownItems.forEach(item => {
-            const link = item.querySelector('.nav-link');
-            const dropdown = item.querySelector('.dropdown');
-
-            if (dropdown) {
-                link.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        item.classList.toggle('dropdown-open');
-                    }
-                });
-            }
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                mobileToggle.classList.remove('active');
-            }
-        });
-
-        // Close mobile menu on window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                navMenu.classList.remove('active');
-                mobileToggle.classList.remove('active');
-                dropdownItems.forEach(item => {
-                    item.classList.remove('dropdown-open');
-                });
-            }
-        });
-    </script>
-
-    <section class="uber-clone-section">
-        <div class="content-container">
-            <!-- Text Content -->
-            <div class="text-contents">
-                <h2>What are the major Uses of the Ubereats Clone App?</h2>
-                <p>This app will ensure the business makes your dreams come true as soon as possible. Easily
-                    accessible to admin, driver, and restaurant zones. It saves you money and time. we can make it
-                    operationally efficient, reliable, and sustainable.</p>
-
-            </div>
-
-            <!-- Image Content -->
-            <div class="image-content1">
-                <img src="images/second-img.png" alt="Uber Clone App Mockups">
-            </div>
-        </div>
-    </section>
-
-    <div class="ai-container">
-        <div class="top-title1">ARTIFICIAL INTELLIGENCE</div>
-        <h2>How Our AI-Powered System Can Help Your Ubereats Clone Business?</h2>
-
-        <div class="features-section1">
-            <div class="tabs-container1">
-                <div class="tab active" data-tab="ai">
-                    <div class="tab-icon"><img src="images/ease.png" alt="Ease on Ordering"></div>
-                    <div class="tab-content">
-                        <h3 class="tab-title">Ease on Ordering</h3>
-                        <p class="tab-desc">AI can learn what customers like and suggest dishes they
-                            might want to order, which can increase sales </p>
-                    </div>
-                </div>
-
-                <div class="tab" data-tab="analytics">
-                    <div class="tab-icon"><img src="images/smart-nav.png" alt="Smart Navigations"></div>
-                    <div class="tab-content">
-                        <h3 class="tab-title">Smart Navigations</h3>
-                        <p class="tab-desc">AI can find traffic-free roads for food deliveries, it can save time and
-                            fuel.</p>
-                    </div>
-                </div>
-
-                <div class="tab" data-tab="routing">
-                    <div class="tab-icon"><img src="images/customer.png" alt="Customer Support"></div>
-                    <div class="tab-content">
-                        <h3 class="tab-title">Customer Support</h3>
-                        <p class="tab-desc"> AI-powered chatbots can answer customer questions 24/7, Our App AI
-                            ensures your customers are always happy.</p>
-                    </div>
-                </div>
-
-                <div class="tab" data-tab="chatbots">
-                    <div class="tab-icon"><img src="images/chat.png" alt="AI Chats-Bots"></div>
-                    <div class="tab-content">
-                        <h3 class="tab-title">AI Chats-Bots</h3>
-                        <p class="tab-desc">AI-powered chatbots that give immediate customer support, resolving
-                            queries 24/7 without the need for humans.</p>
-                    </div>
-                </div>
-
-                <div class="tab" data-tab="pricing">
-                    <div class="tab-icon"><img src="images/fair.png" alt="Fair in Pricing"></div>
-                    <div class="tab-content">
-                        <h3 class="tab-title">Fair in Pricing</h3>
-                        <p class="tab-desc">Our app's smart features share in real-time based on demand and traffic
-                            conditions. Ensuring fair pricing for both drivers and customers while maximizing revenue.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-container">
-                <div class="triangle"></div>
-                <img src="images/tabpanel.png" alt="AI Illustration showing a person surrounded by digital elements">
+        <div class="container">
+            <h1 class="heading">UberEats Clone App</h1>
+            <p class="description">Get Ready to start an Online food delivery business, Our Ubereats Clone is
+                a great option.
+                It's a well-built solution that lets you take a food delivery app similar to UberEats App. Let's delve
+                into what a Ubereats Clone is, how AI can help you, and why Code Regime Technologies is a
+                valuable choice for all.</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+                <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
+                <a href="#demo" class="cta-button"
+                    style="background: var(--modal-white); color: var(--modal-blue); border: 1px solid var(--modal-blue);">Request
+                    Demo <i class="fas fa-play-circle" style="margin-left: 5px;"></i></a>
             </div>
         </div>
 
-    </div>
+        <section class="counter-section" data-aos="fade-up">
+            <div class="counter-container">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.tab');
-            const contentAreas = document.querySelectorAll('.content-area');
+                <div class="counter-item">
+                    <span class="counter-number">105+</span>
+                    <p class="counter-text">Global Clients</p>
+                </div>
 
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function () {
-                    // Remove active class from all tabs
-                    tabs.forEach(t => t.classList.remove('active'));
+                <div class="counter-item">
+                    <span class="counter-number">100+</span>
+                    <p class="counter-text">Successful Projects</p>
+                </div>
 
-                    // Add active class to clicked tab
-                    this.classList.add('active');
+                <div class="counter-item">
+                    <span class="counter-number">27+</span>
+                    <p class="counter-text">Professional Team Members</p>
+                </div>
 
-                    // Hide all content areas
-                    contentAreas.forEach(area => area.classList.remove('active'));
+                <div class="counter-item">
+                    <span class="counter-number">100%</span>
+                    <p class="counter-text">Client Satisfaction</p>
+                </div>
 
-                    // Show the corresponding content area
-                    const tabName = this.getAttribute('data-tab');
-                    const contentToShow = document.getElementById(tabName + '-content');
-                    if (contentToShow) {
-                        contentToShow.classList.add('active');
-                    }
+                <div class="counter-item">
+                    <div class="rating-box">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="counter-number">4.7/5</span>
+                    <p class="counter-text">Client Rating</p>
+                </div>
+
+            </div>
+        </section>
+
+        <script>
+            // Mobile menu toggle functionality
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdownItems = document.querySelectorAll('.nav-item');
+
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Mobile dropdown functionality
+            dropdownItems.forEach(item => {
+                const link = item.querySelector('.nav-link');
+                const dropdown = item.querySelector('.dropdown');
+
+                if (dropdown) {
+                    link.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            item.classList.toggle('dropdown-open');
+                        }
+                    });
+                }
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    mobileToggle.classList.remove('active');
+                }
+            });
+
+            // Close mobile menu on window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('active');
+                    mobileToggle.classList.remove('active');
+                    dropdownItems.forEach(item => {
+                        item.classList.remove('dropdown-open');
+                    });
+                }
+            });
+        </script>
+
+        <section class="uber-clone-section">
+            <div class="content-container">
+                <!-- Text Content -->
+                <div class="text-contents">
+                    <h2>What are the major Uses of the Ubereats Clone App?</h2>
+                    <p>This app will ensure the business makes your dreams come true as soon as possible. Easily
+                        accessible to admin, driver, and restaurant zones. It saves you money and time. we can make it
+                        operationally efficient, reliable, and sustainable.</p>
+
+                </div>
+
+                <!-- Image Content -->
+                <div class="image-content1">
+                    <img src="images/second-img.png" alt="Uber Clone App Mockups">
+                </div>
+            </div>
+        </section>
+
+        <div class="ai-container">
+            <div class="top-title1">ARTIFICIAL INTELLIGENCE</div>
+            <h2>How Our AI-Powered System Can Help Your Ubereats Clone Business?</h2>
+
+            <div class="features-section1">
+                <div class="tabs-container1">
+                    <div class="tab active" data-tab="ai">
+                        <div class="tab-icon"><img src="images/ease.png" alt="Ease on Ordering"></div>
+                        <div class="tab-content">
+                            <h3 class="tab-title">Ease on Ordering</h3>
+                            <p class="tab-desc">AI can learn what customers like and suggest dishes they
+                                might want to order, which can increase sales </p>
+                        </div>
+                    </div>
+
+                    <div class="tab" data-tab="analytics">
+                        <div class="tab-icon"><img src="images/smart-nav.png" alt="Smart Navigations"></div>
+                        <div class="tab-content">
+                            <h3 class="tab-title">Smart Navigations</h3>
+                            <p class="tab-desc">AI can find traffic-free roads for food deliveries, it can save time and
+                                fuel.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab" data-tab="routing">
+                        <div class="tab-icon"><img src="images/customer.png" alt="Customer Support"></div>
+                        <div class="tab-content">
+                            <h3 class="tab-title">Customer Support</h3>
+                            <p class="tab-desc"> AI-powered chatbots can answer customer questions 24/7, Our App AI
+                                ensures your customers are always happy.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab" data-tab="chatbots">
+                        <div class="tab-icon"><img src="images/chat.png" alt="AI Chats-Bots"></div>
+                        <div class="tab-content">
+                            <h3 class="tab-title">AI Chats-Bots</h3>
+                            <p class="tab-desc">AI-powered chatbots that give immediate customer support, resolving
+                                queries 24/7 without the need for humans.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab" data-tab="pricing">
+                        <div class="tab-icon"><img src="images/fair.png" alt="Fair in Pricing"></div>
+                        <div class="tab-content">
+                            <h3 class="tab-title">Fair in Pricing</h3>
+                            <p class="tab-desc">Our app's smart features share in real-time based on demand and traffic
+                                conditions. Ensuring fair pricing for both drivers and customers while maximizing
+                                revenue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <div class="triangle"></div>
+                    <img src="images/tabpanel.png"
+                        alt="AI Illustration showing a person surrounded by digital elements">
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const tabs = document.querySelectorAll('.tab');
+                const contentAreas = document.querySelectorAll('.content-area');
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function () {
+                        // Remove active class from all tabs
+                        tabs.forEach(t => t.classList.remove('active'));
+
+                        // Add active class to clicked tab
+                        this.classList.add('active');
+
+                        // Hide all content areas
+                        contentAreas.forEach(area => area.classList.remove('active'));
+
+                        // Show the corresponding content area
+                        const tabName = this.getAttribute('data-tab');
+                        const contentToShow = document.getElementById(tabName + '-content');
+                        if (contentToShow) {
+                            contentToShow.classList.add('active');
+                        }
+                    });
                 });
             });
-        });
-    </script>
+        </script>
 
 
 
-    <!--Benefits-section-->
-    <section class="benefits-section">
-        <!-- <div class="curve-container">
+        <!--Benefits-section-->
+        <section class="benefits-section">
+            <!-- <div class="curve-container">
             <img src="images/vectorwave.png" alt="Decorative Curve" class="curve-image">
         </div> -->
-        <h2 class="section-benefits-title">
-            Benefits of Ubereats with Code Regime Technologies
-        </h2>
-        <p class="section-subwords">
-            When you choose Code Regime Technologies for your UberEats Clone, you get
+            <h2 class="section-benefits-title">
+                Benefits of Ubereats with Code Regime Technologies
+            </h2>
+            <p class="section-subwords">
+                When you choose Code Regime Technologies for your UberEats Clone, you get
 
-        </p>
-        <div class="benefits-container">
-            <div class="benefit-card">
-                <div class="icon">
-                    <img src="images/money.png" alt="Money Saves">
-                </div>
-                <h3>Money Saves</h3>
-                <p>
-                    Developing from scratch can be expensive. A Ubereats Clone is a more affordable option.
-                </p>
-            </div>
-            <div class="benefit-card">
-                <div class="icon">
-                    <img src="images/reliability.png" alt="Reliability">
-                </div>
-                <h3>Reliability</h3>
-                <p>
-                    As your business grows, the UberEats Clone can grow with you.
-                </p>
-            </div>
-            <div class="benefit-card">
-                <div class="icon">
-                    <img src="images/bespoke.png" alt="Bespoke">
-                </div>
-                <h3>Bespoke</h3>
-                <p>
-                    We craft the app to match your brand and specific needs.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- why-choose-section -->
-    <section class="why-choose-section">
-        <div class="content-choose-container">
-            <div class="text-content">
-                <h2 class="section-title">Why Choose Us</h2>
-                <p class="main-heading-text">The Perfect Solution for Your Food Delivery Business</p>
-                <p class="description">
-                    Our UberEats clone provides a comprehensive platform that enables you to launch your food
-                    delivery service quickly and efficiently. Built with cutting-edge technology and user-centric
-                    design principles.
-                </p>
-
-                <ul class="features-list">
-                    <div class="features-list1st-box">
-                        <li>
-                            <div class="list-content">
-                                <h3>Expertise</h3>
-                                <p>We have more than six years of experience in creating reliable and high-featured
-                                    applications.</p>
-                            </div>
-                        </li>
-
-
-                        <li>
-                            <div class="list-content">
-                                <h3>Eye On Customer</h3>
-                                <p>We work perfectly with you to ensure the final product result meets your specific
-                                    needs.</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="list-content">
-                                <h3>Long-term Support</h3>
-                                <p>We don't want to just display your app-we provide continuous support to keep it
-                                    running smoothly.</p>
-                            </div>
-                        </li>
+            </p>
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="icon">
+                        <img src="images/money.png" alt="Money Saves">
                     </div>
-                </ul>
+                    <h3>Money Saves</h3>
+                    <p>
+                        Developing from scratch can be expensive. A Ubereats Clone is a more affordable option.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">
+                        <img src="images/reliability.png" alt="Reliability">
+                    </div>
+                    <h3>Reliability</h3>
+                    <p>
+                        As your business grows, the UberEats Clone can grow with you.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">
+                        <img src="images/bespoke.png" alt="Bespoke">
+                    </div>
+                    <h3>Bespoke</h3>
+                    <p>
+                        We craft the app to match your brand and specific needs.
+                    </p>
+                </div>
             </div>
+        </section>
 
-            <div class="image-content">
-                <img src="images/whychooseimg.png" alt="Food Delivery App Interface">
-            </div>
-        </div>
-    </section>
+        <!-- why-choose-section -->
+        <section class="why-choose-section">
+            <div class="content-choose-container">
+                <div class="text-content">
+                    <h2 class="section-title">Why Choose Us</h2>
+                    <p class="main-heading-text">The Perfect Solution for Your Food Delivery Business</p>
+                    <p class="description">
+                        Our UberEats clone provides a comprehensive platform that enables you to launch your food
+                        delivery service quickly and efficiently. Built with cutting-edge technology and user-centric
+                        design principles.
+                    </p>
 
-    <!-- Revenue For Business -->
-    <section class="revenue-growth">
-        <div class="content-wrap">
-            <!-- Image Section -->
-            <div class="image-wrap">
-                <img src="images/revenueimg.png" alt="business revenue">
-            </div>
-            <!-- Text Section -->
-            <div class="text-page">
-                <p class="subheading-text">Revenue For Business</p>
-                <h2 class="main-heading-text">How does the Ubereats App generates Revenue for your Business?</h2>
-                <p class="description-page">
-                    Unlock your food delivery business potential with a Ubereats Clone app. This customizable,
-                    ready-made solution enables you to quickly launch a similar to UberEats App, designed to your
-                    brand’s needs.
-                </p>
-                <p class="description-page">
-                    With features like AI-driven order suggestions, smart delivery routing, and 24/7 customer
-                    support, the UberEats Clone app ensures operational efficiency and customer satisfaction.
+                    <ul class="features-list">
+                        <div class="features-list1st-box">
+                            <li>
+                                <div class="list-content">
+                                    <h3>Expertise</h3>
+                                    <p>We have more than six years of experience in creating reliable and high-featured
+                                        applications.</p>
+                                </div>
+                            </li>
 
-                </p>
-                <p class="description-page">
-                    By choosing this cost-effective option, you can save on development time and
-                    expenses while scaling your business effortlessly.
-                </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Offer Section -->
-    <section class="offer-section">
-        <div class="offer-container">
-            <!-- Left Column: Text Content -->
-            <div class="offer-text">
-                <p class="subheading-offer">We Offer</p>
-                <h2 class="main-heading-offer">What Do We Offer?</h2>
-                <p class="description-offer">
-                    At Code Regime Technologies, we offer a complete Ubereats Clone package that includes:
-                </p>
-                <ul class="offer-list">
-                    <div class="features-list1st-box">
-                        <li>
-                            <span class="list-number">1.</span>
-                            <div class="list-content">
-                                <h3>Customer App.</h3>
-                                <p>Our app is useful for customers to browse, <br>order,
-                                    and track their
-                                    ordered foods</p>
-                            </div>
-                        </li>
+                            <li>
+                                <div class="list-content">
+                                    <h3>Eye On Customer</h3>
+                                    <p>We work perfectly with you to ensure the final product result meets your specific
+                                        needs.</p>
+                                </div>
+                            </li>
 
-                   
-
-                    <li>
-                        <span class="list-number">2.</span>
-                        <div class="list-content">
-                            <h3>Driver App.</h3>
-                            <p>A powerful app for drivers to manage orders.</p>
+                            <li>
+                                <div class="list-content">
+                                    <h3>Long-term Support</h3>
+                                    <p>We don't want to just display your app-we provide continuous support to keep it
+                                        running smoothly.</p>
+                                </div>
+                            </li>
                         </div>
-                    </li>
-                    <li>
-                        <span class="list-number">3.</span>
-                        <div class="list-content">
-                            <h3>Admin Panel.</h3>
-                            <p> A control panel for managing users, orders, <br>and
-                                generating
-                                reports.</p>
+                    </ul>
+                </div>
+
+                <div class="image-content">
+                    <img src="images/whychooseimg.png" alt="Food Delivery App Interface">
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue For Business -->
+        <section class="revenue-growth">
+            <div class="content-wrap">
+                <!-- Image Section -->
+                <div class="image-wrap">
+                    <img src="images/revenueimg.png" alt="business revenue">
+                </div>
+                <!-- Text Section -->
+                <div class="text-page">
+                    <p class="subheading-text">Revenue For Business</p>
+                    <h2 class="main-heading-text">How does the Ubereats App generates Revenue for your Business?</h2>
+                    <p class="description-page">
+                        Unlock your food delivery business potential with a Ubereats Clone app. This customizable,
+                        ready-made solution enables you to quickly launch a similar to UberEats App, designed to your
+                        brand’s needs.
+                    </p>
+                    <p class="description-page">
+                        With features like AI-driven order suggestions, smart delivery routing, and 24/7 customer
+                        support, the UberEats Clone app ensures operational efficiency and customer satisfaction.
+
+                    </p>
+                    <p class="description-page">
+                        By choosing this cost-effective option, you can save on development time and
+                        expenses while scaling your business effortlessly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offer Section -->
+        <section class="offer-section">
+            <div class="offer-container">
+                <!-- Left Column: Text Content -->
+                <div class="offer-text">
+                    <p class="subheading-offer">We Offer</p>
+                    <h2 class="main-heading-offer">What Do We Offer?</h2>
+                    <p class="description-offer">
+                        At Code Regime Technologies, we offer a complete Ubereats Clone package that includes:
+                    </p>
+                    <ul class="offer-list">
+                        <div class="features-list1st-box">
+                            <li>
+                                <span class="list-number">1.</span>
+                                <div class="list-content">
+                                    <h3>Customer App.</h3>
+                                    <p>Our app is useful for customers to browse, <br>order,
+                                        and track their
+                                        ordered foods</p>
+                                </div>
+                            </li>
+
+
+
+                            <li>
+                                <span class="list-number">2.</span>
+                                <div class="list-content">
+                                    <h3>Driver App.</h3>
+                                    <p>A powerful app for drivers to manage orders.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="list-number">3.</span>
+                                <div class="list-content">
+                                    <h3>Admin Panel.</h3>
+                                    <p> A control panel for managing users, orders, <br>and
+                                        generating
+                                        reports.</p>
+                                </div>
+                            </li>
                         </div>
-                    </li>
-                     </div>
-                </ul>
-            </div>
+                    </ul>
+                </div>
 
-            <!-- Right Column: Image -->
-            <div class="offer-image">
-                <img src="images/offerimg.png" alt="Mobile App Features">
+                <!-- Right Column: Image -->
+                <div class="offer-image">
+                    <img src="images/offerimg.png" alt="Mobile App Features">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features section -->
-    <section class="features-section">
-        <!-- <div class="curve-container2">
+        <!-- Features section -->
+        <section class="features-section">
+            <!-- <div class="curve-container2">
             <img src="images/vectorwave.png" alt="Decorative Curve" class="curve-image2">
         </div> -->
-        <h2 class="section-title-features">Extra Addons For Ubereats Clone?</h2>
-        <p class="section-description-features">
-            To make your UberEats Clone even better. We offer some special options and discounts through which you
-            can
-            easily complete the marketing work on online.
-        </p>
-        <div class="features-container">
-            <div class="feature-box">
-                <div class="icon-container">
-                    <img src="images/Payment.png" alt="Payment Options" class="feature-icon">
+            <h2 class="section-title-features">Extra Addons For Ubereats Clone?</h2>
+            <p class="section-description-features">
+                To make your UberEats Clone even better. We offer some special options and discounts through which you
+                can
+                easily complete the marketing work on online.
+            </p>
+            <div class="features-container">
+                <div class="feature-box">
+                    <div class="icon-container">
+                        <img src="images/Payment.png" alt="Payment Options" class="feature-icon">
+                    </div>
+                    <h3 class="feature-title">Multiple Payment Options</h3>
+                    <p class="feature-description">
+                        Both the customers and drivers can ride safely while ensuring SOS alert notifications.
+                    </p>
                 </div>
-                <h3 class="feature-title">Multiple Payment Options</h3>
-                <p class="feature-description">
-                    Both the customers and drivers can ride safely while ensuring SOS alert notifications.
-                </p>
-            </div>
-            <div class="feature-box">
-                <div class="icon-container">
-                    <img src="images/tracking.png" alt="Live tracking" class="feature-icon">
+                <div class="feature-box">
+                    <div class="icon-container">
+                        <img src="images/tracking.png" alt="Live tracking" class="feature-icon">
+                    </div>
+                    <h3 class="feature-title">Real-Time Tracking</h3>
+                    <p class="feature-description">
+                        Customers and drivers can track orders in real time.
+                    </p>
                 </div>
-                <h3 class="feature-title">Real-Time Tracking</h3>
-                <p class="feature-description">
-                    Customers and drivers can track orders in real time.
-                </p>
-            </div>
-            <div class="feature-box">
-                <div class="icon-container">
-                    <img src="images/discountsimg.png" alt="discount offer" class="feature-icon">
+                <div class="feature-box">
+                    <div class="icon-container">
+                        <img src="images/discountsimg.png" alt="discount offer" class="feature-icon">
+                    </div>
+                    <h3 class="feature-title">Promotions and discounts</h3>
+                    <p class="feature-description">
+                        Run special offers directly through the app to boost sales.
+                    </p>
                 </div>
-                <h3 class="feature-title">Promotions and discounts</h3>
-                <p class="feature-description">
-                    Run special offers directly through the app to boost sales.
-                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Extra addon Section -->
+        <!-- Extra addon Section -->
 
-    <section class="addons-section">
-        <!-- <div class="curve-container3">
+        <section class="addons-section">
+            <!-- <div class="curve-container3">
             <img src="images/vectorwave.png" alt="Decorative Curve" class="curve-image3">
         </div> -->
-        <h2 class="section-title2">Advanced Aide For Ubereats Clone</h2>
-        <p class="section-subtitle">For business that want to stay ahead, we offer advanced features like.</p>
+            <h2 class="section-title2">Advanced Aide For Ubereats Clone</h2>
+            <p class="section-subtitle">For business that want to stay ahead, we offer advanced features like.</p>
 
-        <div class="addons-grid">
-            <div class="addon-item">
-                <img src="images/ai.png" alt="AI Recommendations" class="addon-image">
-                <h3 class="addon-title">AI Recommendations</h3>
-                <p class="addon-description">We display all those dishes, menus, and <br>food varieties to you.</p>
-            </div>
-            <div class="addon-item">
-                <img src="images/voiceimg.png" alt="Voice Search" class="addon-image">
-                <h3 class="addon-title">Voice Search</h3>
-                <p class="addon-description">We enhance the facility as much useful <br>to the customers.</p>
-            </div>
-            <div class="addon-item">
-                <img src="images/loyalityimg.png" alt="Loyality program" class="addon-image">
-                <h3 class="addon-title">Loyalty Programs</h3>
-                <p class="addon-description">Recent discounts and rewards can <br>be purchased.</p>
-            </div>
-            <div class="addon-item">
-                <img src="images/tripimg.png" alt="Trip history" class="addon-image">
-                <h3 class="addon-title">Trip history</h3>
-                <p class="addon-description">The App can let you know the details of <br>your riding history.</p>
-            </div>
-            <div class="addon-item">
-                <img src="images/earnings.png" alt="Reports of earnings" class="addon-image">
-                <h3 class="addon-title">Reports of Earnings</h3>
-                <p class="addon-description">This will remind you to know the ride, <br>surge plus earnings.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Stack Section -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <section class="tech-stack-section">
-    <div class="tech-container">
-      <div class="tech-header" data-aos="fade-up">
-        <p class="tech-subtitle">Technology Stack</p>
-        <h2 class="tech-main-title">Technologies Used In Our Ubereats Clone Script</h2>
-        <p class="tech-desc">We use the latest and most advanced technologies to ensure high performance, security, and
-          scalability for your Uber clone.</p>
-      </div>
-      <div class="tech-marquee-wrapper" data-aos="fade-up" data-aos-delay="100">
-        <!-- Swipe Left to Right -->
-        <div class="tech-marquee left">
-          <div class="tech-marquee-track">
-            <!-- Group 1 -->
-            <div class="tech-marquee-group">
-              <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
-              <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular </div>
-              <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap CSS</div>
-              <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
-              <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
-              <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
-            </div>
-            <!-- Group 2 (Duplicate) -->
-            <div class="tech-marquee-group" aria-hidden="true">
-              <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
-              <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular </div>
-              <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap CSS</div>
-              <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
-              <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
-              <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Swipe Right to Left -->
-        <div class="tech-marquee right">
-          <div class="tech-marquee-track">
-            <!-- Group 1 -->
-            <div class="tech-marquee-group">
-              <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter</div>
-              <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
-              <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase</div>
-              <div class="tech-marquee-item"><i class="fas fa-map-marked-alt" style="color: #4285F4;"></i> Google Maps
-              </div>
-              <div class="tech-marquee-item"><i class="fa-solid fa-network-wired" style="color: #000;"></i> WebSocket
-              </div>
-              <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-            </div>
-            <!-- Group 2 (Duplicate) -->
-            <div class="tech-marquee-group" aria-hidden="true">
-              <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter</div>
-              <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
-              <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase</div>
-              <div class="tech-marquee-item"><i class="fas fa-map-marked-alt" style="color: #4285F4;"></i> Google Maps
-              </div>
-              <div class="tech-marquee-item"><i class="fa-solid fa-network-wired" style="color: #000;"></i> WebSocket
-              </div>
-              <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing CSS -->
-  <link rel="stylesheet" href="/css/pricing.css">
-
-  <!-- ===================== SPECIFICATIONS SECTION ===================== -->
-  <section class="specs-section">
-    <div class="specs-header">
-      <span class="specs-caption">Our Specifications</span>
-      <h2 class="specs-title">Specification In Our UberEats Clone Script</h2>
-      <p class="specs-subtitle">Ensure Hassle-free launch of Food Delivery Services With Unique Product Specifications</p>
-    </div>
-    <div class="specs-grid">
-
-      <div class="spec-card">
-        <div class="spec-badge">Professional</div>
-        <p class="spec-intro">By choosing a pro plan, you'll get these specifications.</p>
-        <ul class="spec-list">
-          <li><i class="fas fa-check-circle"></i> Android & IOS Customer App</li>
-          <li><i class="fas fa-check-circle"></i> Android Driver App</li>
-          <li><i class="fas fa-check-circle"></i> Android & IOS Restaurant App</li>
-          <!-- <li><i class="fas fa-check-circle"></i> Customer Web Panel</li> -->
-          <!-- <li><i class="fas fa-check-circle"></i> Delivery Management Panel</li> -->
-          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
-          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
-          <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
-          <li><i class="fas fa-check-circle"></i> Google Play Store Submission</li>
-        </ul>
-      </div>
-
-      <div class="spec-card popular">
-        <div class="spec-badge">Professional Plus</div>
-        <p class="spec-intro">With the Pro Plus plan, you get these listed specifications.</p>
-        <ul class="spec-list">
-          <li><i class="fas fa-check-circle"></i> Android & IOS Customer App</li>
-          <li><i class="fas fa-check-circle"></i> Android Driver App</li>
-          <li><i class="fas fa-check-circle"></i> Android & IOS Restaurant App</li>
-          <li><i class="fas fa-check-circle"></i> Customer Web Panel</li>
-          <!-- <li><i class="fas fa-check-circle"></i> Delivery Management Panel</li> -->
-          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
-          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
-          <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
-          <li><i class="fas fa-check-circle"></i> Apple App Store Submission</li>
-        </ul>
-      </div>
-
-      <div class="spec-card">
-        <div class="spec-badge">Enterprise Plus</div>
-        <p class="spec-intro">Enterprise Plus plan gives you extensive specifications required to run a corp.</p>
-        <ul class="spec-list">
-         <li><i class="fas fa-check-circle"></i> Android & IOS Customer App</li>
-          <li><i class="fas fa-check-circle"></i> Android & IOS Driver App</li>
-          <li><i class="fas fa-check-circle"></i> Android & IOS Restaurant App</li>
-          <li><i class="fas fa-check-circle"></i> Delivery Management Panel</li>
-          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
-          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
-          <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
-          <li><i class="fas fa-check-circle"></i> Store Submissions (Both)</li>
-          <li><i class="fas fa-check-circle"></i> Skype &amp; Team Viewer Support</li>
-          <li><i class="fas fa-check-circle"></i> 1 Year Free Support</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===================== COMPARISON TABLE SECTION ===================== -->
-  <section class="comparison-section">
-    <div class="table-container">
-      <div class="table-header">
-        <button id="togglePricing" class="pricing-toggle-btn">
-          <span>View Full Pricing Details</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-      </div>
-
-      <div id="pricingTable" class="table-responsive">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Features List</th>
-              <th>Lite</th>
-              <th>Professional</th>
-              <th>Enterprise</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <tr class="core-header">
-              <td colspan="4">Core Features</td>
-            </tr>
-            <tr>
-              <td>100% Customizable Source Code</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Free One Time Installation</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Technical Support</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Native Android App [Customer &amp; Driver]</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Native iOS App [Customer &amp; Driver]</td>
-              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Multi Domain License</td>
-              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-              <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
-              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Admin Web Panel</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Restaurant Web Panel</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Bug Resolve</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Apps Submission</td>
-              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>White Label</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-            <tr>
-              <td>Website FrontEnd Panel</td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-            </tr>
-
-            <tr class="accordion-header" data-target="customer">
-              <td colspan="4">
-                <div class="acc-inner"><span>Customer App</span><i class="fas fa-chevron-down acc-chevron"></i></div>
-              </td>
-            </tr>
-            <tr class="acc-row customer hidden"><td>Login / Signup</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>OTP Verification</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Browse Restaurants</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Menu &amp; Item Selection</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Cart Management</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Add Coupon Code</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Choose Payment Method</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Real-Time Order Tracking</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Order History</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Wallet Payment</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Schedule Order</td>
-                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-
-                <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
-                <td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Social Login</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>In-App Chat / Call</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Referral System</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Language Localization</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Tip Option for Driver</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Multiple Delivery Addresses</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-
-            <tr class="accordion-header" data-target="driver">
-              <td colspan="4">
-                <div class="acc-inner"><span>Driver App</span><i class="fas fa-chevron-down acc-chevron"></i></div>
-              </td>
-            </tr>
-            <tr class="acc-row driver hidden"><td>Login / Sign Up</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Document Upload</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Go Offline / Online</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Accept / Reject Order</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Pick Up Navigation</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Drop Navigation</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Delivery Complete</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Earning Details</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Order History</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Payout</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Social Login</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden">
-                <td>Subscription &amp; Packages</td>
-                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-
-                <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
-                <td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row driver hidden"><td>Navigation – Google Map &amp; Waze</td>
-                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-
-                <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
-                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-                <td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-
-            <tr class="accordion-header" data-target="admin">
-              <td colspan="4">
-                <div class="acc-inner"><span>Admin Panel</span><i class="fas fa-chevron-down acc-chevron"></i></div>
-              </td>
-            </tr>
-            <tr class="acc-row admin hidden"><td>Admin Login</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Dashboard</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Restaurant Management</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Menu &amp; Category Management</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Surge Pricing Management</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Promo Code / Offers</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Push Notifications</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Detailed Reports</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Service Area Management</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>City-wise Admin</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    
-    const toggleBtn = document.getElementById('togglePricing');
-    const pricingTable = document.getElementById('pricingTable');
-    if (toggleBtn && pricingTable) {
-      toggleBtn.addEventListener('click', function () {
-        const isShowing = pricingTable.classList.contains('show');
-        this.querySelector('span').textContent = isShowing ? 'View Full Pricing Details' : 'Hide Full Pricing Details';
-        pricingTable.classList.toggle('show');
-        this.classList.toggle('active');
-      });
-    }
-    
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', function () {
-        const target = this.dataset.target;
-        const rows = document.querySelectorAll('.acc-row.' + target);
-        const isOpen = this.classList.contains('open');
-        this.classList.toggle('open');
-        rows.forEach(r => r.classList.toggle('hidden', isOpen));
-      });
-    });
-  </script>
-
-    <!-- Faq Section -->
-    <div class="faq-container">
-        <div class="faq-header">
-            <h2 class="faq-title">Frequently Asked Questions (FAQ)</h2>
-            <p class="faq-subtitle">To make your UberEats Clone even better. We offer some special services through
-                which you can easily complete the marketing work on social media.</p>
-        </div>
-
-        <div class="faq-content">
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>How does Code Regime Technologies ensure seamless integration between restaurants and the
-                        food delivery platform?</span>
-                    <div class="faq-toggle">+</div>
+            <div class="addons-grid">
+                <div class="addon-item">
+                    <img src="images/ai.png" alt="AI Recommendations" class="addon-image">
+                    <h3 class="addon-title">AI Recommendations</h3>
+                    <p class="addon-description">We display all those dishes, menus, and <br>food varieties to you.</p>
                 </div>
-                <div class="faq-answer">
-                    <p>Code Regime Technologies offers unique APIs to connect restaurants with the delivery food
-                        platform, ensuring live-time mixing of menus, pricing, and inventory. This flawless
-                        leveraging permits restaurants to update notifications suddenly, bringing customers the
-                        finest options and availability.</p>
+                <div class="addon-item">
+                    <img src="images/voiceimg.png" alt="Voice Search" class="addon-image">
+                    <h3 class="addon-title">Voice Search</h3>
+                    <p class="addon-description">We enhance the facility as much useful <br>to the customers.</p>
+                </div>
+                <div class="addon-item">
+                    <img src="images/loyalityimg.png" alt="Loyality program" class="addon-image">
+                    <h3 class="addon-title">Loyalty Programs</h3>
+                    <p class="addon-description">Recent discounts and rewards can <br>be purchased.</p>
+                </div>
+                <div class="addon-item">
+                    <img src="images/tripimg.png" alt="Trip history" class="addon-image">
+                    <h3 class="addon-title">Trip history</h3>
+                    <p class="addon-description">The App can let you know the details of <br>your riding history.</p>
+                </div>
+                <div class="addon-item">
+                    <img src="images/earnings.png" alt="Reports of earnings" class="addon-image">
+                    <h3 class="addon-title">Reports of Earnings</h3>
+                    <p class="addon-description">This will remind you to know the ride, <br>surge plus earnings.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>What AI-driven features does Code Regime Technologies provide to enhance the customer
-                        experience on a food delivery platform?</span>
-                    <div class="faq-toggle">+</div>
+        <!-- Technology Stack Section -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <section class="tech-stack-section">
+            <div class="tech-container">
+                <div class="tech-header" data-aos="fade-up">
+                    <p class="tech-subtitle">Technology Stack</p>
+                    <h2 class="tech-main-title">Technologies Used In Our Ubereats Clone Script</h2>
+                    <p class="tech-desc">We use the latest and most advanced technologies to ensure high performance,
+                        security, and
+                        scalability for your Uber clone.</p>
                 </div>
-                <div class="faq-answer">
-                    <p>Code Regime Technologies integrates AI-powered recommendation engines, smart search
-                        functionality, and personalized user experiences. Our AI systems analyze customer
-                        preferences, order history, and browsing patterns to suggest relevant dishes, optimize
-                        delivery routes, and provide accurate delivery time estimates.</p>
+                <div class="tech-marquee-wrapper" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Swipe Left to Right -->
+                    <div class="tech-marquee left">
+                        <div class="tech-marquee-track">
+                            <!-- Group 1 -->
+                            <div class="tech-marquee-group">
+                                <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                                <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular
+                                </div>
+                                <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap
+                                    CSS</div>
+                                <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
+                                <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
+                                <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
+                            </div>
+                            <!-- Group 2 (Duplicate) -->
+                            <div class="tech-marquee-group" aria-hidden="true">
+                                <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                                <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular
+                                </div>
+                                <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap
+                                    CSS</div>
+                                <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
+                                <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
+                                <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swipe Right to Left -->
+                    <div class="tech-marquee right">
+                        <div class="tech-marquee-track">
+                            <!-- Group 1 -->
+                            <div class="tech-marquee-group">
+                                <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter
+                                </div>
+                                <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
+                                <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase
+                                </div>
+                                <div class="tech-marquee-item"><i class="fas fa-map-marked-alt"
+                                        style="color: #4285F4;"></i> Google Maps
+                                </div>
+                                <div class="tech-marquee-item"><i class="fa-solid fa-network-wired"
+                                        style="color: #000;"></i> WebSocket
+                                </div>
+                                <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i>
+                                    JavaScript</div>
+                            </div>
+                            <!-- Group 2 (Duplicate) -->
+                            <div class="tech-marquee-group" aria-hidden="true">
+                                <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter
+                                </div>
+                                <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
+                                <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase
+                                </div>
+                                <div class="tech-marquee-item"><i class="fas fa-map-marked-alt"
+                                        style="color: #4285F4;"></i> Google Maps
+                                </div>
+                                <div class="tech-marquee-item"><i class="fa-solid fa-network-wired"
+                                        style="color: #000;"></i> WebSocket
+                                </div>
+                                <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i>
+                                    JavaScript</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>How does the platform developed by Code Regime Technologies support scalability for a
-                        growing food delivery business?</span>
-                    <div class="faq-toggle">+</div>
-                </div>
-                <div class="faq-answer">
-                    <p>Our platform uses cloud-native architecture with microservices that enable flexible scaling
-                        based on demand. We implement containerization and orchestration technologies to ensure
-                        resources are optimally allocated. The infrastructure automatically scales during peak hours
-                        and can handle thousands of concurrent orders without performance degradation.</p>
-                </div>
+        <!-- Pricing CSS -->
+        <link rel="stylesheet" href="/css/pricing.css">
+
+        <!-- ===================== SPECIFICATIONS SECTION ===================== -->
+        <section class="specs-section">
+            <div class="specs-header">
+                <span class="specs-caption">Our Specifications</span>
+                <h2 class="specs-title">Specification In Our UberEats Clone Script</h2>
+                <p class="specs-subtitle">Ensure Hassle-free launch of Food Delivery Services With Unique Product
+                    Specifications</p>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Can Code Regime Technologies' food delivery platform integrate with loyalty programs and
-                        third-party payment services?</span>
-                    <div class="faq-toggle">+</div>
+
+            <div class="specs-grid">
+
+                <div class="spec-card">
+                    <div class="spec-badge">Professional</div>
+                    <p class="spec-intro">By choosing a pro plan, you'll get these specifications.</p>
+                    <ul class="spec-list">
+                        <li><i class="fas fa-check-circle"></i> Android Driver App</li>
+                        <li><i class="fas fa-check-circle"></i> Android & IOS Rider,Restaurant App</li>
+                        <!-- <li><i class="fas fa-check-circle"></i> Driver Web Panel</li>
+          <li><i class="fas fa-check-circle"></i> Rider Web Panel</li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> Fleet Management Web Panel</li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> Manual Taxi Dispatcher Panel</li> -->
+                        <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+                        <!-- <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> Free Server Installation</li> -->
+                        <li><i class="fas fa-check-circle"></i> Google Play Store Submission</li>
+                        <!-- <li><i class="fas fa-check-circle"></i> Apple App Store Submission</li> -->
+                        <li><i class="fas fa-check-circle"></i> 3 Months Free Support</li>
+
+
+                    </ul>
                 </div>
-                <div class="faq-answer">
-                    <p>Yes, our platform offers seamless integration with various loyalty programs and third-party
-                        payment services. We provide APIs that allow businesses to connect their existing loyalty
-                        systems or create new ones. The platform supports multiple payment gateways including credit
-                        cards, digital wallets, and local payment methods with end-to-end encryption for secure
-                        transactions.</p>
+
+                <div class="spec-card popular">
+                    <div class="spec-badge">Professional Plus</div>
+                    <p class="spec-intro">With the Pro Plus plan, you get these listed specifications.</p>
+                    <ul class="spec-list">
+                        <li><i class="fas fa-check-circle"></i> Android Driver App</li>
+                        <li><i class="fas fa-check-circle"></i> Android & IOS Rider,Restaurant App</li>
+                        <!-- <li><i class="fas fa-check-circle"></i> Driver Web Panel</li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> <strong>Rider Web Panel</strong></li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> Fleet Management Web Panel</li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> Manual Taxi Dispatcher Panel</li> -->
+                        <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+                        <!-- <li><i class="fas fa-check-circle"></i> Free Server Installation</li> -->
+                        <li><i class="fas fa-check-circle"></i> Google Play Store Submission</li>
+                        <li><i class="fas fa-check-circle"></i> Apple App Store Submission</li>
+                        <!-- <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li> -->
+                        <li><i class="fas fa-check-circle"></i> Free logo </li>
+
+                        <li><i class="fas fa-check-circle"></i> 6 Months Free Support</li>
+
+
+                    </ul>
                 </div>
+
+                <div class="spec-card">
+                    <div class="spec-badge">Enterprise Plus</div>
+                    <p class="spec-intro">Enterprise Plus plan gives you extensive specifications required to run a
+                        corp.</p>
+                    <ul class="spec-list">
+                        <li><i class="fas fa-check-circle"></i> iOS &amp; Android Rider,Restaurant Apps</li>
+                        <li><i class="fas fa-check-circle"></i> Android Driver Apps</li>
+                        <!-- <li><i class="fas fa-check-circle"></i> Rider Web Panel</li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> <strong>Rider Web Panel</strong></li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> Manual Taxi Dispatcher Panel</li> -->
+                        <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+                        <li><i class="fas fa-check-circle"></i> 100% Source Code – Customization</li>
+                        <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
+                        <li><i class="fas fa-check-circle"></i> Google Play Store Submission</li>
+                        <li><i class="fas fa-check-circle"></i> Apple App Store Submission</li>
+                        <!-- <li><i class="fas fa-check-circle"></i> Store Submissions (Both)</li> -->
+                        <!-- <li><i class="fas fa-check-circle"></i> Teams &amp; Team Viewer Support</li> -->
+                        <li><i class="fas fa-check-circle"></i> Free logo </li>
+
+                        <li><i class="fas fa-check-circle"></i> 1 Year Free Support</li>
+                    </ul>
+                </div>
+
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>What are the unique features that Code Regime Technologies includes to support delivery
-                        personnel on the platform?</span>
-                    <div class="faq-toggle">+</div>
+        </section>
+
+        <!-- ===================== COMPARISON TABLE SECTION ===================== -->
+        <section class="comparison-section">
+            <div class="table-container">
+                <div class="table-header">
+                    <button id="togglePricing" class="pricing-toggle-btn">
+                        <span>View Full Pricing Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
-                <div class="faq-answer">
-                    <p>Our platform includes features like route optimization, real-time GPS tracking, in-app
-                        communication tools, and earnings calculators for delivery personnel. We also offer
-                        performance analytics, incentive management, and shift scheduling features to improve
-                        delivery efficiency and driver satisfaction.</p>
+
+                <div id="pricingTable" class="table-responsive">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Features List</th>
+                                <th>Lite</th>
+                                <th>Professional</th>
+                                <th>Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class="core-header">
+                                <td colspan="4">Core Features</td>
+                            </tr>
+                            <tr>
+                                <td>100% Customizable Source Code</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Free One Time Installation</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Technical Support</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Free Support</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Android [Rider,Customer & Restaurant] App</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>iOS [Customer & Restaurant] App</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Multi Domain License</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Admin Web Panel</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Default Payment Gateway(Razorpay)</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Customised Payment Gateway</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Bug Resolve</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>Apps Submission</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>White Label</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <!-- <tr>
+                                <td>User-friendly Frontend Panel</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr> -->
+                            <tr>
+                                <td>SEO Friendly URLs</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>General settings</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="accordion-header" data-target="customer">
+                                <td colspan="4">
+                                    <div class="acc-inner"><span>Customer App</span><i
+                                            class="fas fa-chevron-down acc-chevron"></i></div>
+                                </td>
+                            </tr>
+                            <tr class="acc-row customer hidden">
+                                <td>Login / Signup</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row customer hidden">
+                                <td>OTP Verification</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row customer hidden">
+                                <td>Browse Restaurants</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row customer hidden">
+                                <td>Browse via categories</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row customer hidden">
+                                <td>Real-time order tracking</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row customer hidden">
+                                <td>Promo codes</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Home / Work Address</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Multiple Payment Options</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Get Instant Notifications</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Menu &amp; Item Selection</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row customer hidden">
+                                <td>Cart Management</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Choose Payment Method</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Order History</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row customer hidden">
+                                <td>Wallet Payment</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Multiple Delivery Addresses</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Cancel &amp; Repeat Orders</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Rate &amp; Review Orders</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Report Order Issues</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <!-- <tr class="acc-row customer hidden">
+                                <td>Referral System</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr> -->
+
+                            <tr class="acc-row customer hidden">
+                                <td>Subscription Plans</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row customer hidden">
+                                <td>Account Deletion (Compliance)</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="accordion-header" data-target="driver">
+                                <td colspan="4">
+                                    <div class="acc-inner"><span>Driver App</span><i
+                                            class="fas fa-chevron-down acc-chevron"></i></div>
+                                </td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Login / Sign Up</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row driver hidden">
+                                <td>Verify OTP</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row driver hidden">
+                                <td>Document Upload</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Go Offline / Online</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Accept / Reject Order</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Pick Up Navigation</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Drop Navigation</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Call customer</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Delivery Complete</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Get Customer location</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Earning Details</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row driver hidden">
+                                <td>General Push Notification</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row driver hidden">
+                                <td>Reviews and Ratings</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+
+                            <tr class="acc-row driver hidden">
+                                <td>Profile Management</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Set Availability Mode</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row driver hidden">
+                                <td>Weekly auto payout</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Daily/weekly/monthly earnings history</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Order summary</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Order History</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+
+
+                            <tr class="acc-row driver hidden">
+                                <td>Navigation – Google Map &amp; Waze</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+
+                                <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row driver hidden">
+                                <td>Account Deletion (Compliance)</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="accordion-header" data-target="restaurant">
+                                <td colspan="4">
+                                    <div class="acc-inner"><span>Restaurant App</span><i
+                                            class="fas fa-chevron-down acc-chevron"></i></div>
+                                </td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Restaurant Profile &amp; Registration</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Go Online / Offline Status</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Document Upload &amp; Verification</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Restaurant Dashboard</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Menu &amp; Item Management</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Bulk Menu Upload (CSV)</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Accept / Reject Orders</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Set Order Preparation Time</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Mark Order as Ready</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Active Orders &amp; Details</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Order History</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Weekly Settlements &amp; History</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Advanced Analytics Dashboard</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row restaurant hidden">
+                                <td>Account Deletion (Compliance)</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="accordion-header" data-target="admin">
+                                <td colspan="4">
+                                    <div class="acc-inner"><span>Admin Panel</span><i
+                                            class="fas fa-chevron-down acc-chevron"></i></div>
+                                </td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Admin Login</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Advanced Dashboard</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Restaurant Management</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Customers Management</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Delivery partners Management</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Static Page</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>API Configuration</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>App Versions</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Broadcast</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Order Issues</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Order assign or auto assign</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Order History</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Promo Code</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>Menu &amp; Category Management</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+
+                            <tr class="acc-row admin hidden">
+                                <td>Push Notifications</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+                            <tr class="acc-row admin hidden">
+                                <td>General settings</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Force Cancel Orders</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Block / Unblock Users</td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Subscription Management</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Restaurant Analytics Monitoring</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Clusters &amp; Pincodes Management</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Fees Configuration</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr class="acc-row admin hidden">
+                                <td>Daily Reports</td>
+                                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <script>
-        function toggleFaq(element) {
-            // Toggle the active class on the clicked element
-            const answer = element.nextElementSibling;
-            const toggle = element.querySelector('.faq-toggle');
+        <script>
 
-            // Close all other open FAQs
-            const allAnswers = document.querySelectorAll('.faq-answer');
-            const allToggles = document.querySelectorAll('.faq-toggle');
-
-            allAnswers.forEach(item => {
-                if (item !== answer) {
-                    item.classList.remove('active');
-                }
-            });
-
-            allToggles.forEach(item => {
-                if (item !== toggle) {
-                    item.classList.remove('active');
-                    item.textContent = '+';
-                }
-            });
-
-            // Toggle the current FAQ
-            answer.classList.toggle('active');
-            toggle.classList.toggle('active');
-
-            if (toggle.classList.contains('active')) {
-                toggle.textContent = '−';
-            } else {
-                toggle.textContent = '+';
+            const toggleBtn = document.getElementById('togglePricing');
+            const pricingTable = document.getElementById('pricingTable');
+            if (toggleBtn && pricingTable) {
+                toggleBtn.addEventListener('click', function () {
+                    const isShowing = pricingTable.classList.contains('show');
+                    this.querySelector('span').textContent = isShowing ? 'View Full Pricing Details' : 'Hide Full Pricing Details';
+                    pricingTable.classList.toggle('show');
+                    this.classList.toggle('active');
+                });
             }
-        }
-    </script>
 
-    <!-- Footer -->
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', function () {
+                    const target = this.dataset.target;
+                    const rows = document.querySelectorAll('.acc-row.' + target);
+                    const isOpen = this.classList.contains('open');
+                    this.classList.toggle('open');
+                    rows.forEach(r => r.classList.toggle('hidden', isOpen));
+                });
+            });
+        </script>
 
-    </main><footer class="cr-footer">
+        <!-- Faq Section -->
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2 class="faq-title">Frequently Asked Questions (FAQ)</h2>
+                <p class="faq-subtitle">To make your UberEats Clone even better. We offer some special services through
+                    which you can easily complete the marketing work on social media.</p>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does Code Regime Technologies ensure seamless integration between restaurants and the
+                            food delivery platform?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Code Regime Technologies offers unique APIs to connect restaurants with the delivery food
+                            platform, ensuring live-time mixing of menus, pricing, and inventory. This flawless
+                            leveraging permits restaurants to update notifications suddenly, bringing customers the
+                            finest options and availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What AI-driven features does Code Regime Technologies provide to enhance the customer
+                            experience on a food delivery platform?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Code Regime Technologies integrates AI-powered recommendation engines, smart search
+                            functionality, and personalized user experiences. Our AI systems analyze customer
+                            preferences, order history, and browsing patterns to suggest relevant dishes, optimize
+                            delivery routes, and provide accurate delivery time estimates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does the platform developed by Code Regime Technologies support scalability for a
+                            growing food delivery business?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our platform uses cloud-native architecture with microservices that enable flexible scaling
+                            based on demand. We implement containerization and orchestration technologies to ensure
+                            resources are optimally allocated. The infrastructure automatically scales during peak hours
+                            and can handle thousands of concurrent orders without performance degradation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can Code Regime Technologies' food delivery platform integrate with loyalty programs and
+                            third-party payment services?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our platform offers seamless integration with various loyalty programs and third-party
+                            payment services. We provide APIs that allow businesses to connect their existing loyalty
+                            systems or create new ones. The platform supports multiple payment gateways including credit
+                            cards, digital wallets, and local payment methods with end-to-end encryption for secure
+                            transactions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What are the unique features that Code Regime Technologies includes to support delivery
+                            personnel on the platform?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our platform includes features like route optimization, real-time GPS tracking, in-app
+                            communication tools, and earnings calculators for delivery personnel. We also offer
+                            performance analytics, incentive management, and shift scheduling features to improve
+                            delivery efficiency and driver satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleFaq(element) {
+                // Toggle the active class on the clicked element
+                const answer = element.nextElementSibling;
+                const toggle = element.querySelector('.faq-toggle');
+
+                // Close all other open FAQs
+                const allAnswers = document.querySelectorAll('.faq-answer');
+                const allToggles = document.querySelectorAll('.faq-toggle');
+
+                allAnswers.forEach(item => {
+                    if (item !== answer) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                allToggles.forEach(item => {
+                    if (item !== toggle) {
+                        item.classList.remove('active');
+                        item.textContent = '+';
+                    }
+                });
+
+                // Toggle the current FAQ
+                answer.classList.toggle('active');
+                toggle.classList.toggle('active');
+
+                if (toggle.classList.contains('active')) {
+                    toggle.textContent = '−';
+                } else {
+                    toggle.textContent = '+';
+                }
+            }
+        </script>
+
+        <!-- Footer -->
+
+    </main>
+    <footer class="cr-footer">
         <div class="cr-footer__inner">
 
             <!-- TOP GRID -->
@@ -1251,7 +1784,7 @@
                         <li><a href="/product/ubereats/index.html">FoodRegime - Ubereats clone</a></li>
                         <li><a href="/product/handyman/index.html">HandymanRegime - Uber for Handman</a></li>
                         <li><a href="/product/insurance/index.html">Insurance</a></li>
-            <li><a href="/product/flightbooking/index.html">Flight Booking App</a></li>
+                        <li><a href="/product/flightbooking/index.html">Flight Booking App</a></li>
                     </ul>
                 </div>
 
@@ -1313,8 +1846,8 @@
                             </div>
                             <div class="cr-footer__contact-text">
                                 <strong>Business Enquiry</strong>
-                                <a href="mailto:sales@coderegimetechnologies.com"
-                                    target="_blank" rel="noopener">sales@coderegimetechnologies.com</a>
+                                <a href="mailto:sales@coderegimetechnologies.com" target="_blank"
+                                    rel="noopener">sales@coderegimetechnologies.com</a>
                             </div>
                         </li>
                     </ul>
@@ -1353,38 +1886,37 @@
     <!-- Request Demo Modal JS -->
     <script src="/js/modal.js"></script>
 
-  <!--Start of Tawk.to Script-->
-  <script>
-    (function () {
-      let loaded = false;
+    <!--Start of Tawk.to Script-->
+    <script>
+        (function () {
+            let loaded = false;
 
-      function loadTawk() {
-        if (loaded) return;
-        loaded = true;
+            function loadTawk() {
+                if (loaded) return;
+                loaded = true;
 
-        // Safely fall back if requestIdleCallback is not supported (Safari)
-        const requestIdle = window.requestIdleCallback || function (cb) { setTimeout(cb, 1) };
+                // Safely fall back if requestIdleCallback is not supported (Safari)
+                const requestIdle = window.requestIdleCallback || function (cb) { setTimeout(cb, 1) };
 
-        requestIdle(() => {
-          var s = document.createElement("script");
-          s.src = 'https://embed.tawk.to/69ce73d36f1c161c3ca0ae40/1jl778te5';
-          s.async = true;
-          s.charset = "UTF-8";
-          // REMOVED: s.setAttribute("crossorigin", "*"); 
-          document.body.appendChild(s);
-        });
-      }
+                requestIdle(() => {
+                    var s = document.createElement("script");
+                    s.src = 'https://embed.tawk.to/69ce73d36f1c161c3ca0ae40/1jl778te5';
+                    s.async = true;
+                    s.charset = "UTF-8";
+                    // REMOVED: s.setAttribute("crossorigin", "*"); 
+                    document.body.appendChild(s);
+                });
+            }
 
-      // Minimal interaction trigger
-      window.addEventListener("pointerdown", loadTawk, { once: true, passive: true });
-      window.addEventListener("scroll", loadTawk, { once: true, passive: true }); // Added scroll for mobile coverage
+            // Minimal interaction trigger
+            window.addEventListener("pointerdown", loadTawk, { once: true, passive: true });
+            window.addEventListener("scroll", loadTawk, { once: true, passive: true }); // Added scroll for mobile coverage
 
-      // Fallback (only if no interaction)
-      setTimeout(loadTawk, 10000);
-    })();
-  </script>
-  <!--End of Tawk.to Script-->
+            // Fallback (only if no interaction)
+            setTimeout(loadTawk, 10000);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>
-
