@@ -532,7 +532,7 @@ nav {
 .mobile img {
   max-width: 100%;
   height: auto;
-  max-height: 500px;
+  max-height: 425px;
 }
 
 .container {
@@ -4944,6 +4944,230 @@ p {
   font-weight: 500 !important;
 }
 
+@media screen and (max-width: 1600px) and (max-height: 732px) {
+
+  .key-features-section {
+    padding: 100px 20px;
+    background-color: #f4f6fb;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  }
+
+  .features-inner-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .features-header-text {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .features-header-text h2 {
+    font-size: 42px;
+    color: #111827;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .header-line {
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #0051C8, #FFB72B);
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  .key-features-grid {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 700px;
+    border-radius: 4px;
+  }
+
+  .k-feature-card {
+    height: 100%;
+    flex: 1;
+    overflow: visible;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all .5s;
+    background: #212121;
+    border: 1px solid #ff5a91;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+  }
+
+  .k-feature-card:hover {
+    flex: 4;
+  }
+
+  .kf-title {
+    min-width: 16em;
+    padding: .5em;
+    text-align: center;
+    /* transform: rotate(-90deg); */
+    transition: transform .5s, margin .5s;
+    text-transform: uppercase;
+    color: #ff0000;
+    letter-spacing: .1em;
+    font-weight: 600;
+    font-size: 18px;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* margin-bottom: 15px; */
+    padding-bottom: 10%;
+    overflow: visible;
+  }
+
+  .k-feature-card:hover .kf-title {
+    transform: rotate(0) translateY(-50px);
+  }
+
+  .kf-desc {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: black;
+    text-align: center;
+    width: 80%;
+    max-width: 350px;
+    font-size: 15px;
+    line-height: 1.6;
+    pointer-events: none;
+    font-weight: 500 !important;
+    /* margin-top: 40px; */
+  }
+
+  .k-feature-card:hover .kf-desc {
+    opacity: 1;
+    transition-delay: 0.2s;
+    pointer-events: auto;
+    margin: 10px;
+    margin-top: 30px;
+  }
+
+  .key-features-section {
+    padding: 100px 20px;
+    background: #ffffff;
+  }
+
+  .features-inner-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .features-header-text {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .features-header-text h2 {
+    font-size: 40px;
+    color: #111827;
+  }
+
+  .header-line {
+    width: 60px;
+    height: 4px;
+    background: #0051C8;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+  }
+
+  .key-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .k-feature-card {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+  }
+
+  .k-feature-card:hover {
+    /* background: #fff; */
+    background: #fcdb9a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #0051C8;
+  }
+
+  .kf-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .theme-gradient-1 {
+    background: linear-gradient(135deg, #0051C8, #3b82f6);
+  }
+
+  .theme-gradient-2 {
+    background: linear-gradient(135deg, #FFB72B, #f59e0b);
+  }
+
+  .theme-gradient-3 {
+    background: linear-gradient(135deg, #10b981, #059669);
+  }
+
+  .k-feature-card.highlight-card {
+    background: #111827;
+    color: #fff;
+    border-left: none;
+  }
+
+  .k-feature-card.highlight-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(17, 24, 39, 0.3);
+  }
+
+  .k-feature-card.highlight-card h3 {
+    color: #fff;
+  }
+
+  .k-feature-card.highlight-card p {
+    color: #9ca3af;
+    font-weight: 500 !important;
+  }
+
+  .kf-content h3 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 15px;
+  }
+
+  .kf-content p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-weight: 500 !important;
+  }
+}
+
+
 /* 5. Premium Plugins Section */
 .premium-plugins-section {
   padding: 100px 20px;
@@ -5365,5 +5589,203 @@ p {
 @media (max-width: 768px) {
   .faq-container {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 585px) {
+
+  /* Styles for this view */
+  .mobile {
+    position: absolute;
+    right: 20px;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .mobile img {
+    max-height: 350px;
+  }
+}
+
+/* New Feature Card Styling */
+.k-feature-card {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  background: #243137;
+  position: relative;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  margin: auto;
+}
+
+.k-feature-card .border {
+  position: absolute;
+  inset: 0px;
+  /* border: 2px solid #bd9f67; */
+  opacity: 0;
+  transform: rotate(10deg);
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.k-feature-card .bottom-text {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 90%;
+  transform: translateX(-50%) translateY(10px);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  line-height: 1.4;
+  pointer-events: none;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 28px !important;
+  color: #000;
+}
+
+.k-feature-card .content {
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.k-feature-card .content .logo {
+  height: 35px;
+  position: relative;
+  width: max-content;
+  max-width: 33px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25%;
+}
+
+.k-feature-card .content .logo .logo1 {
+  height: 33px;
+  min-width: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.k-feature-card .content .logo .logo1 i {
+  font-size: 22px;
+  color: #bd9f67;
+}
+
+.k-feature-card .content .logo .logo2 {
+  height: 33px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  /* color: #bd9f67; */
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.k-feature-card .content .logo .trail {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.k-feature-card .content .logo-bottom-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+  color: #bd9f67;
+  font-size: 11px;
+  opacity: 0;
+  letter-spacing: 0px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.k-feature-card:hover {
+  border-radius: 0;
+  transform: scale(1.05);
+}
+
+.k-feature-card:hover .logo {
+  max-width: 280px;
+  animation: opacity-blink 1s ease-in-out;
+}
+
+.k-feature-card:hover .border {
+  inset: 15px;
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.k-feature-card:hover .bottom-text {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.k-feature-card:hover .content {
+  transform: translateY(-25px);
+}
+
+.k-feature-card:hover .content .logo-bottom-text {
+  opacity: 1;
+  letter-spacing: 4px;
+}
+
+.k-feature-card:hover .trail {
+  animation: trail 1s ease-in-out;
+}
+
+@keyframes opacity-blink {
+  0% {
+    border-right: 1px solid transparent;
+  }
+
+  10% {
+    border-right: 1px solid #bd9f67;
+  }
+
+  80% {
+    border-right: 1px solid #bd9f67;
+  }
+
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
+
+@keyframes trail {
+  0% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
+    opacity: 0;
+  }
+
+  30% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
+    opacity: 1;
+  }
+
+  70% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
+    opacity: 1;
+  }
+
+  95% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
+    opacity: 0;
   }
 }
