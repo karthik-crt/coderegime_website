@@ -35,10 +35,10 @@
   <!-- EmailJS initialization -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-      (function() {
-          emailjs.init('mtyXCsYdD3ElJGNum');
-          console.log('EmailJS initialized for Handyman page ✅');
-      })();
+    (function () {
+      emailjs.init('mtyXCsYdD3ElJGNum');
+      console.log('EmailJS initialized for Handyman page ✅');
+    })();
   </script>
 
   <!-- Google Structured Data (Schema Markup) -->
@@ -153,6 +153,17 @@
         }
   ]
   </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-17LK163FGY');
+  </script>
+
 </head>
 <!-- Google Tag Manager -->
 <script>(function (w, d, s, l, i) {
@@ -164,6 +175,7 @@
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
   })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
 <!-- End Google Tag Manager -->
+
 <body>
   <header id="head-nav">
     <nav>
@@ -221,7 +233,7 @@
             <li class="dropdown-item">
               <a href="/ubereats-clone/" class="dropdown-link">FoodRegime - Ubereats clone</a>
             </li>
-            
+
             <li class="dropdown-item">
               <a href="/uber-for-handyman-app/" class="dropdown-link">HandymanRegime - Uber for Handman</a>
             </li>
@@ -263,820 +275,1016 @@
         <span class="hamburger"></span>
       </div>
     </nav>
-  </header><main>
+  </header>
+  <main>
 
-  <div class="wave">
-    <img src="images/wave.png" alt="wave">
-  </div>
+    <div class="wave">
+      <img src="images/wave.png" alt="wave">
+    </div>
 
-  <div class="mobile">
-    <img src="images/header-img.png" alt="mobile app mockup">
-  </div>
+    <div class="mobile">
+      <img src="images/header-img.png" alt="mobile app mockup">
+    </div>
 
-  <div class="container">
-    <h1 class="heading">Best Handyman <br> App Like Uber</h1>
-    <p class="description">The Uber for Handyman app, developed by Code Regime Technologies, is a mastering software
-      solution. Our skilled team is connected to customers with a professional handyman for multiple house-issue tasks.
-    </p>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+    <div class="container">
+      <h1 class="heading">Best Handyman <br> App Like Uber</h1>
+      <p class="description">The Uber for Handyman app, developed by Code Regime Technologies, is a mastering software
+        solution. Our skilled team is connected to customers with a professional handyman for multiple house-issue
+        tasks.
+      </p>
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
         <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
-        <a href="#demo" class="cta-button" style="background: var(--modal-white); color: var(--modal-blue); border: 1px solid var(--modal-blue);">Request Demo <i class="fas fa-play-circle" style="margin-left: 5px;"></i></a>
-    </div>
-  </div>
-  <section class="counter-section" data-aos="fade-up">
-    <div class="counter-container">
-
-      <div class="counter-item">
-        <span class="counter-number">90+</span>
-        <p class="counter-text">Global Clients</p>
-      </div>
-
-      <div class="counter-item">
-        <span class="counter-number">85+</span>
-        <p class="counter-text">Successful Projects</p>
-      </div>
-
-      <div class="counter-item">
-        <span class="counter-number">25+</span>
-        <p class="counter-text">Dedicated Team Members</p>
-      </div>
-
-      <div class="counter-item">
-        <span class="counter-number">100%</span>
-        <p class="counter-text">Client Satisfaction</p>
-      </div>
-
-      <div class="counter-item">
-        <div class="rating-box">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <span class="counter-number">4.3/5</span>
-        <p class="counter-text">Client Rating</p>
-      </div>
-
-    </div>
-  </section>
-
-  <script>
-    // Mobile menu toggle functionality
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const dropdownItems = document.querySelectorAll('.nav-item');
-
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Mobile dropdown functionality
-    dropdownItems.forEach(item => {
-      const link = item.querySelector('.nav-link');
-      const dropdown = item.querySelector('.dropdown');
-
-      if (dropdown) {
-        link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            item.classList.toggle('dropdown-open');
-          }
-        });
-      }
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-      }
-    });
-
-    // Close mobile menu on window resize
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        dropdownItems.forEach(item => {
-          item.classList.remove('dropdown-open');
-        });
-      }
-    });
-  </script>
-  <!-- second section -->
-  <section class="uber-clone-section">
-    <div class="content-container">
-      <!-- Text Content -->
-      <div class="text-contents">
-        <h2>What is Uber for Handyman?</h2>
-        <p>In this Digital Era, Services have been changed to the latest technology methods and also the on-delivery and
-          on-demand digital software solutions. The Uber for Handyman app, developed by Code Regime Technologies, is a
-          mastering software solution. </p>
-        <p>Our skilled team is connected to customers with a professional handyman for multiple house-issue tasks. It
-          may be like plumbing, electrical work, or general maintenance, Our app customer users to register online
-          services very easily through their mobile phones, ensuring trustability and scalability.</p>
-      </div>
-      <!-- Image uberclone -->
-      <img src="images/second-img.jpg" alt="Uber Clone App Phone" class="phone-image">
-    </div>
-  </section>
-
-  <!--Benefits-section-->
-  <section class="benefits-section">
-    <!-- <div class="curve-container">
-      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
-    </div> -->
-    <h2 class="section-benefits-title">
-      Why choose Code Regime Technologies for your Handyman App?
-    </h2>
-    <p class="section-subwords">
-      Code Regime Technologies stands out as a premier provider of Uber for Handyman solutions, offering:
-    </p>
-    <div class="benefits-container">
-      <div class="benefit-card">
-        <div class="icon">
-          <img src="images/customization.png" alt="Customization">
-        </div>
-        <h3>Customization</h3>
-        <p>
-          We can deliver it to your specific needs and specialize in customization.
-        </p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">
-          <img src="images/high-level.png" alt="High-level Security">
-        </div>
-        <h3>High-level Security</h3>
-        <p>
-          Code Regime Technology is a promising platform for managing <br> and accessing your data and source coding
-          files.
-        </p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">
-          <img src="images/long-term.png" alt="Long-Term Support">
-        </div>
-        <h3>Long-Term Support</h3>
-        <p>
-          Our Skilled team will provide you a seamless 24/7 support from scratch to launch the app, we will assure you
-          to the part of endless support.
-        </p>
+        <a href="#demo" class="cta-button"
+          style="background: var(--modal-white); color: var(--modal-blue); border: 1px solid var(--modal-blue);">Request
+          Demo <i class="fas fa-play-circle" style="margin-left: 5px;"></i></a>
       </div>
     </div>
-  </section>
+    <section class="counter-section" data-aos="fade-up">
+      <div class="counter-container">
 
-  <!-- Third section -->
-  <div class="ai-container1">
-    <div class="top-title1">ARTIFICIAL INTELLIGENCE</div>
-    <h2>The Handyman App Like Uber Process:</h2>
-    <p>The process flow of a handyman app like Uber is designed for efficiency and user satisfaction:</p>
-
-    <div class="features-section1">
-      <div class="tabs-container1">
-        <div class="tab active" data-tab="ai">
-          <div class="tab-icon"><img src="images/user-onboarding.png" alt="User Onboarding"></div>
-          <div class="tab-content">
-            <h3 class="tab-title">User Onboarding</h3>
-            <p class="tab-desc">Customers register with the app using a simple, secure
-              process that collects essential details and service preferences.</p>
-          </div>
+        <div class="counter-item">
+          <span class="counter-number">90+</span>
+          <p class="counter-text">Global Clients</p>
         </div>
 
-        <div class="tab" data-tab="analytics">
-          <div class="tab-icon"><img src="images/service-selection.png" alt="Service Selection"></div>
-          <div class="tab-content">
-            <h3 class="tab-title">Service Selection</h3>
-            <p class="tab-desc">Users browse through a categorized list of handyman services, selecting the one that
-              matches their immediate needs.</p>
-          </div>
+        <div class="counter-item">
+          <span class="counter-number">85+</span>
+          <p class="counter-text">Successful Projects</p>
         </div>
 
-        <div class="tab" data-tab="routing">
-          <div class="tab-icon"><img src="images/faster-registering.png" alt="Faster Registering"></div>
-          <div class="tab-content">
-            <h3 class="tab-title">Faster Registering</h3>
-            <p class="tab-desc">Our app aide convenience to the customers, They can book a service quickly or Reschedule
-              it for the upcoming days.</p>
-          </div>
+        <div class="counter-item">
+          <span class="counter-number">25+</span>
+          <p class="counter-text">Dedicated Team Members</p>
         </div>
 
-        <div class="tab" data-tab="chatbots">
-          <div class="tab-icon"><img src="images/click.png" alt="Click to Easy Pay"></div>
-          <div class="tab-content">
-            <h3 class="tab-title">Click to Easy Pay</h3>
-            <p class="tab-desc">A well-secured, easy click to pay provides multiple options for Mind-free transfers.</p>
-          </div>
+        <div class="counter-item">
+          <span class="counter-number">100%</span>
+          <p class="counter-text">Client Satisfaction</p>
         </div>
 
-        <div class="tab" data-tab="pricing">
-          <div class="tab-icon"><img src="images/feedback.png" alt="Service Execution & Feedback"></div>
-          <div class="tab-content">
-            <h3 class="tab-title">Service Execution & Feedback</h3>
-            <p class="tab-desc">Post-service, customers can provide ratings and reviews, contributing to the platform's
-              continuous improvement.</p>
+        <div class="counter-item">
+          <div class="rating-box">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
           </div>
+          <span class="counter-number">4.3/5</span>
+          <p class="counter-text">Client Rating</p>
         </div>
+
       </div>
+    </section>
 
-      <div class="image-container">
-        <div class="triangle"></div>
-        <img src="images/ai-panel.png" alt="AI Illustration showing a person surrounded by digital elements">
-      </div>
-    </div>
+    <script>
+      // Mobile menu toggle functionality
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const dropdownItems = document.querySelectorAll('.nav-item');
 
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabs = document.querySelectorAll('.tab');
-      const contentAreas = document.querySelectorAll('.content-area');
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function () {
-          // Remove active class from all tabs
-          tabs.forEach(t => t.classList.remove('active'));
-
-          // Add active class to clicked tab
-          this.classList.add('active');
-
-          // Hide all content areas
-          contentAreas.forEach(area => area.classList.remove('active'));
-
-          // Show the corresponding content area
-          const tabName = this.getAttribute('data-tab');
-          const contentToShow = document.getElementById(tabName + '-content');
-          if (contentToShow) {
-            contentToShow.classList.add('active');
-          }
-        });
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
       });
-    });
-  </script>
 
-  <!-- How-it-works -->
-  <section class="work-section">
-    <div class="work-container">
-      <!-- Left Column: Text Content -->
-      <div class="work-text">
-        <p class="subheading-work">Uses of a Handyman</p>
-        <h2 class="main-heading-work">Do you want to know the uses of a handyman app like uber?</h2>
-        <p class="description-work">
-          Implementing a handyman app like Uber delivers significant advantages for both
-          businesses and customers:
-        </p>
-        <ul class="work-list">
-          <div class="work-list1st-box">
-            <li>
+      // Mobile dropdown functionality
+      dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const dropdown = item.querySelector('.dropdown');
 
-              <div class="list-content">
-                <h3>1. Enhanced Accessibility:</h3>
-                <p>Customers can easily access skilled handymen
-                  without the need for extensive searches or referrals.</p>
-              </div>
-            </li>
-
-          </div>
-
-          <li>
-
-            <div class="list-content">
-              <h3>2. Optimized Time Management:</h3>
-              <p>The app streamlines service requests, reducing
-                the time customers spend securing reliable help.</p>
-            </div>
-          </li>
-          <li>
-
-            <div class="list-content">
-              <h3>3. Transparent Operations:</h3>
-              <p> With clear pricing structures and customer reviews,
-                users can make informed decisions quickly.</p>
-            </div>
-          </li>
-          <li>
-
-            <div class="list-content">
-              <h3>4. 24/7 Availability:</h3>
-              <p> The app ensures that service providers are available at any
-                time, increasing customer satisfaction and engagement </p>
-            </div>
-          </li>
-          <li>
-
-            <div class="list-content">
-              <h3>5. Security and Trust:</h3>
-              <p>The platform's secure architecture, developed by Code
-                Regime Technologies, ensures data protection and trustworthy transactions.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Right Column: Image -->
-      <div class="work-image">
-        <img src="images/uses-of-handyman.png" alt="Mobile App Features">
-      </div>
-    </div>
-  </section>
-
-  <!-- Increases Earnings section -->
-  <section class="earning-section">
-    <div class="earning-container">
-      <!-- Left Column: Text Content -->
-      <div class="work-text">
-        <p class="subheading-earning">Increases Earnings</p>
-        <h2 class="main-heading-earning">How a Handyman App Like Uber Increases Earnings</h2>
-        <p class="description-earning">
-          For service providers, a handyman app like Uber represents a significant business opportunity:
-        </p>
-        <ul class="earning-list">
-          <div class="earning-list1st-box">
-            <li>
-
-              <div class="list-content">
-                <h3>1. Enlarge the Customers:</h3>
-                <p> This app can aide you to reach the client near and far
-                  away from you.</p>
-              </div>
-            </li>
-
-          </div>
-
-          <li>
-
-            <div class="list-content">
-              <h3>2. Tune Daily Jobs:</h3>
-              <p> With the app, clients who can register their services are likely
-                to tune the handyman jobs regularly.</p>
-            </div>
-          </li>
-          <li>
-
-            <div class="list-content">
-              <h3>3. Reschedule the Jobs:</h3>
-              <p> The service provider can manage and access their work
-                or jobs during peak time.</p>
-            </div>
-          </li>
-          <li>
-
-            <div class="list-content">
-              <h3>4. Revenue Growth:</h3>
-              <p> The payment and works will automatically be entered through
-                the app.</p>
-            </div>
-          </li>
-          <li>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Right Column: Image -->
-      <div class="earning-image">
-        <img src="images/increse-earning.png" alt="increse earning">
-      </div>
-    </div>
-  </section>
-
-  <section class="benefits-section">
-    <!-- <div class="curve-container">
-      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
-    </div> -->
-    <h2 class="section-benefits-title">
-      Standard Features of an Uber <br> For Handyman App
-    </h2>
-    <p class="section-subwords">
-      The standard features offered by an Uber for Handyman app are essential for a seamless user experience
-    </p>
-  </section>
-  <section class="box-section">
-    <div class="box">
-      <div class="icon">
-        <img src="images/upgraded-ui.png" alt="Upgraded UI">
-      </div>
-      <h3>Upgraded UI</h3>
-      <p>Moreover everyone will like to use this app because our skilled
-        teams have set up a world-class user app.</p>
-    </div>
-    <div class="box">
-      <div class="icon">
-        <img src="images/gps-tracker.png" alt="GPS Tracker">
-      </div>
-      <h3>GPS Tracker</h3>
-      <p>After booking, customers can view the handyman's arrival using this smart feature.</p>
-    </div>
-    <div class="box">
-      <div class="icon">
-        <img src="images/blockchain-tech.png" alt="Blockchain Tech">
-      </div>
-      <h3>Blockchain Tech</h3>
-      <p>Code Regime provides you with the latest innovative
-        blockchain technology for easy and well-secured transactions.</p>
-    </div>
-    <div class="box">
-      <div class="icon">
-        <img src="images/service-review.png" alt="Service Reviewing System">
-      </div>
-      <h3>Service Reviewing System</h3>
-      <p>Customer can give their feedback to the
-        handyman. It helps to make the reputation around the business and the handyman.</p>
-    </div>
-    <div class="box">
-      <div class="icon">
-        <img src="images/notification.png" alt="Automated Notifications">
-      </div>
-      <h3>Automated Notifications</h3>
-      <p>Push notifications keep users informed about service
-        bookings, updates, and promotions.</p>
-    </div>
-  </section>
-
-  <!-- Extra addon Section -->
-  <section class="addons-section">
-    <!-- <div class="curve-container3">
-      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
-    </div> -->
-    <h2 class="section-title2">Advanced Addons for <br> Handyman Clone</h2>
-    <p class="section-subtitle">For business that want to stay ahead, we offer advanced features like.</p>
-
-    <div class="addons-grid">
-      <div class="addon-item">
-        <img src="images/global.jpg" alt="multi Language & Currency" class="addon-image">
-        <h3 class="addon-title">Global Language & Currency Integration</h3>
-        <p class="addon-description">All around the globe, we may give you these additional benefits to the clients.
-        </p>
-      </div>
-
-      <div class="addon-item">
-        <img src="images/inapp.jpg" alt="In-app chat" class="addon-image">
-        <h3 class="addon-title">In-App Communication</h3>
-        <p class="addon-description">Facilitate direct communication between customers and handymen for better service
-          coordination and issue resolution.
-        </p>
-      </div>
-
-      <div class="addon-item">
-        <img src="images/service-subscription.jpg" alt="customer subscription" class="addon-image">
-        <h3 class="addon-title">Service Subscription</h3>
-        <p class="addon-description">Offer customers subscription-based packages for regular maintenance service at
-          discounted rates.</p>
-      </div>
-
-      <div class="addon-item">
-        <img src="images/service-support.png" alt="service support" class="addon-image">
-        <h3 class="addon-title">AI Service Support</h3>
-        <p class="addon-description">This AI will show you the professional and conventional handyman in front of
-          you quickly.</p>
-      </div>
-
-      <div class="addon-item">
-        <img src="images/useful-dashboard.png" alt="feedback dashboard" class="addon-image">
-        <h3 class="addon-title">Useful Dashboard</h3>
-        <p class="addon-description">Our app has a professional insight tool for the dashboard to know the service
-          ratings, feedback, market analysis.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Technologies section -->
-  <section class="technologies-section">
-    <!-- <div class="curve-container3">
-      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
-    </div> -->
-    <h2 class="section-title2">Technologies Behind Uber For Handyman Apps</h2>
-
-    <div class="tech-section1">
-      <div class="tech-content">
-        <h3>AI & ML</h3>
-        <p>We integrate all those tasks, service bookings, and service recommendations with the help of AI and
-          Machine learning.</p>
-      </div>
-      <div class="tech-image">
-        <img src="images/ai-ml.png" alt="AI & ML">
-      </div>
-    </div>
-
-    <div class="tech-section2">
-      <div class="tech-image">
-        <img src="images/robust.png" alt="Robust API">
-      </div>
-
-      <div class="tech-content">
-        <h3>Robust APIs</h3>
-        <p>Our team can integrate any other <br> services externally and also
-          their <br> operational functionalities.</p>
-      </div>
-    </div>
-
-    <div class="tech-section3">
-      <div class="tech-content">
-        <h3>Uber For Handyman</h3>
-        <p>The Uber for Handyman app is an unimaginary <br> tool that meets the enlarging demand for<br>
-          on-demand services.</p>
-        <!-- <a href="javascript:void(0)" class="btn">Learn more ></a> -->
-      </div>
-      <div class="tech-image">
-        <img src="images/uber-handyman.png" alt="Uber For Handyman">
-      </div>
-    </div>
-  </section>
-
-  <!-- Technology Stack Section -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <section class="tech-stack-section">
-    <div class="tech-container">
-      <div class="tech-header" data-aos="fade-up">
-        <p class="tech-subtitle">Technology Stack</p>
-        <h2 class="tech-main-title">Modern & Scalable Tech Stack Our Handyman App Like Uber</h2>
-        <p class="tech-desc">We use the latest and most advanced technologies to ensure high performance, security, and
-          scalability for your Uber clone.</p>
-      </div>
-      <div class="tech-marquee-wrapper" data-aos="fade-up" data-aos-delay="100">
-        <!-- Swipe Right to Left -->
-        <div class="tech-marquee right">
-          <div class="tech-marquee-track">
-            <!-- Group 1 -->
-            <div class="tech-marquee-group">
-              <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
-              <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular </div>
-              <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap CSS</div>
-              <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
-              <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
-              <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
-              <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter</div>
-              <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
-              <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase</div>
-              <div class="tech-marquee-item"><i class="fas fa-map-marked-alt" style="color: #4285F4;"></i> Google Maps</div>
-              <div class="tech-marquee-item"><i class="fa-solid fa-network-wired" style="color: #000;"></i> WebSocket</div>
-              <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-            </div>
-            <!-- Group 2 (Duplicate) -->
-            <div class="tech-marquee-group" aria-hidden="true">
-              <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
-              <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular </div>
-              <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap CSS</div>
-              <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
-              <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
-              <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
-              <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter</div>
-              <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
-              <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase</div>
-              <div class="tech-marquee-item"><i class="fas fa-map-marked-alt" style="color: #4285F4;"></i> Google Maps</div>
-              <div class="tech-marquee-item"><i class="fa-solid fa-network-wired" style="color: #000;"></i> WebSocket</div>
-              <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <link rel="stylesheet" href="/css/pricing.css">
-  <section class="specs-section">
-    <div class="specs-header">
-      <span class="specs-caption">Our Specifications</span>
-      <h2 class="specs-title">Specification In Our Handyman Clone App</h2>
-      <p class="specs-subtitle">Ensure Hassle-free launch of On-Demand Handyman Services With Unique Product Specifications</p>
-    </div>
-    <div class="specs-grid">
-      <div class="spec-card">
-        <div class="spec-badge">Basic</div>
-        <p class="spec-intro">By choosing a basic plan, you'll get these specifications.</p>
-        <ul class="spec-list">
-          <li><i class="fas fa-check-circle"></i> Android & IOS Customer App</li>
-          <li><i class="fas fa-check-circle"></i> Android Provider App</li>
-          <!-- <li><i class="fas fa-check-circle"></i> Customer Web Panel</li> -->
-          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
-          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
-          <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
-          <li><i class="fas fa-check-circle"></i> Google Play Store Submission</li>
-        </ul>
-      </div>
-      <div class="spec-card popular">
-        <div class="spec-badge">Professional</div>
-        <p class="spec-intro">With the Professional plan, you get these listed specifications.</p>
-        <ul class="spec-list">
-          <li><i class="fas fa-check-circle"></i> iOS &amp; Android Customer App</li>
-          <li><i class="fas fa-check-circle"></i> Android Provider App</li>
-          <li><i class="fas fa-check-circle"></i> Customer Web Panel</li>
-          <!-- <li><i class="fas fa-check-circle"></i> Provider Management Panel</li> -->
-          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
-          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
-          <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
-          <li><i class="fas fa-check-circle"></i> App Store Submissions (Both)</li>
-          <li><i class="fas fa-check-circle"></i> Push Notifications</li>
-        </ul>
-      </div>
-      <div class="spec-card">
-        <div class="spec-badge">Enterprise</div>
-        <p class="spec-intro">Enterprise plan gives you extensive specifications required to run a corp.</p>
-        <ul class="spec-list">
-          <li><i class="fas fa-check-circle"></i> Full iOS &amp; Android Platform</li>
-          <li><i class="fas fa-check-circle"></i> Customer &amp; Provider Web Panels</li>
-          <li><i class="fas fa-check-circle"></i> Advanced Booking System</li>
-          <li><i class="fas fa-check-circle"></i> Multi-Service Categories</li>
-          <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
-          <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
-          <li><i class="fas fa-check-circle"></i> Store Submissions (Both)</li>
-          <li><i class="fas fa-check-circle"></i> Skype &amp; Team Viewer Support</li>
-          <li><i class="fas fa-check-circle"></i> 1 Year Free Support</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="comparison-section">
-    <div class="table-container">
-      <div class="table-header">
-        <button id="togglePricing" class="pricing-toggle-btn"><span>View Full Pricing Details</span><i class="fas fa-chevron-down"></i></button>
-      </div>
-      <div id="pricingTable" class="table-responsive">
-        <table class="comparison-table">
-          <thead><tr><th>Features List</th><th>Basic</th><th>Professional</th><th>Enterprise</th></tr></thead>
-          <tbody>
-            <tr class="core-header"><td colspan="4">Core Features</td></tr>
-            <tr><td>100% Customizable Source Code</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr><td>Free One Time Installation</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr><td>Technical Support</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr><td>Native Android App [Customer &amp; Provider]</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr><td>Native iOS App [Customer &amp; Provider]</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr><td>Admin Web Panel</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr><td>White Label</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr><td>Multi Domain License</td>
-              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-
-              <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="accordion-header" data-target="customer"><td colspan="4"><div class="acc-inner"><span>Customer App</span><i class="fas fa-chevron-down acc-chevron"></i></div></td></tr>
-            <tr class="acc-row customer hidden"><td>Login / Signup</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Browse Service Categories</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Service Booking</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>GPS Tracking</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Secure Payment</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Rating &amp; Reviews</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Schedule Booking</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>In-App Chat / Call</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row customer hidden"><td>Subscription Plans</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="accordion-header" data-target="provider"><td colspan="4"><div class="acc-inner"><span>Provider App</span><i class="fas fa-chevron-down acc-chevron"></i></div></td></tr>
-            <tr class="acc-row provider hidden"><td>Login / Sign Up</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row provider hidden"><td>Document Upload</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row provider hidden"><td>Accept / Reject Booking</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row provider hidden"><td>Navigation to Customer</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row provider hidden"><td>Earning Details</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row provider hidden"><td>Job History</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row provider hidden"><td>Availability Toggle</td>
-              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-              <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
-
-              <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
-              <td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row provider hidden"><td>Multi-Service Selection</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="accordion-header" data-target="admin"><td colspan="4"><div class="acc-inner"><span>Admin Panel</span><i class="fas fa-chevron-down acc-chevron"></i></div></td></tr>
-            <tr class="acc-row admin hidden"><td>Admin Login</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Dashboard</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Service Category Management</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Provider Management</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Commission Management</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Promo Codes / Offers</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Push Notifications</td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-            <tr class="acc-row admin hidden"><td>Zone-wise Management</td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-cross"><i class="fas fa-times"></i></span></td><td><span class="icon-check"><i class="fas fa-check"></i></span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-  <script>
-    (function(){const b=document.getElementById('togglePricing'),t=document.getElementById('pricingTable');if(b&&t){b.addEventListener('click',function(){const s=t.classList.contains('show');this.querySelector('span').textContent=s?'View Full Pricing Details':'Hide Full Pricing Details';t.classList.toggle('show');this.classList.toggle('active');})}document.querySelectorAll('.accordion-header').forEach(h=>{h.addEventListener('click',function(){const tgt=this.dataset.target,rows=document.querySelectorAll('.acc-row.'+tgt),o=this.classList.contains('open');this.classList.toggle('open');rows.forEach(r=>r.classList.toggle('hidden',o));});});})();
-  </script>
-
-  <!-- Faq Section -->
-  <div class="faq-container">
-    <div class="faq-container">
-      <div class="faq-title">
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <p>To make your Clone even better. We offer some special services through which you can easily complete
-          the marketing work on social media.</p>
-      </div>
-
-      <div class="faq-content">
-        <div class="faq-item">
-          <div class="faq-question">
-            What services can I find on the Uber Handyman app?
-            <div class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
-                <path
-                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-              </svg>
-            </div>
-          </div>
-          <div class="faq-answer">
-            <p>You can access a variety of services like plumbing, electrical work, carpentry, and home repairs,
-              all through the Uber Handyman app developed by Code Regime Technologies.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            How does the Uber Handyman app ensure reliable professionals?
-            <div class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
-                <path
-                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-              </svg>
-            </div>
-          </div>
-          <div class="faq-answer">
-            <p>Uber Handyman app ensures reliable professionals through a thorough vetting process, background
-              checks, skill verification, and a rating system that allows customers to review past performance.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            Is the Uber Handyman app customizable for my business needs?
-            <div class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
-                <path
-                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-              </svg>
-            </div>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, the Uber Handyman app offers business customization options including branded interfaces,
-              service catalog customization, and integration capabilities with your existing business systems.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            Can I track the handyman's arrival in real time?
-            <div class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
-                <path
-                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-              </svg>
-            </div>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, the app features real-time GPS tracking that allows you to monitor your handyman's location
-              and estimated time of arrival, similar to how you can track drivers in the regular Uber app.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            How do I handle payments on the Uber Handyman app?
-            <div class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
-                <path
-                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-              </svg>
-            </div>
-          </div>
-          <div class="faq-answer">
-            <p>Payments are handled securely through the app with multiple options including credit/debit cards,
-              digital wallets, and in some regions, cash payments. All transactions are receipted and recorded for
-              your convenience.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const faqItems = document.querySelectorAll('.faq-item');
-
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-
-        question.addEventListener('click', () => {
-          // Close all other items
-          faqItems.forEach(otherItem => {
-            if (otherItem !== item && otherItem.classList.contains('active')) {
-              otherItem.classList.remove('active');
+        if (dropdown) {
+          link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              item.classList.toggle('dropdown-open');
             }
           });
-
-          // Toggle current item
-          item.classList.toggle('active');
-        });
+        }
       });
 
-      // Open the first FAQ item by default
-      faqItems[0].classList.add('active');
-    });
-  </script>
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+        }
+      });
 
-  <!-- Footer -->
+      // Close mobile menu on window resize
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+          dropdownItems.forEach(item => {
+            item.classList.remove('dropdown-open');
+          });
+        }
+      });
+    </script>
+    <!-- second section -->
+    <section class="uber-clone-section">
+      <div class="content-container">
+        <!-- Text Content -->
+        <div class="text-contents">
+          <h2>What is Uber for Handyman?</h2>
+          <p>In this Digital Era, Services have been changed to the latest technology methods and also the on-delivery
+            and
+            on-demand digital software solutions. The Uber for Handyman app, developed by Code Regime Technologies, is a
+            mastering software solution. </p>
+          <p>Our skilled team is connected to customers with a professional handyman for multiple house-issue tasks. It
+            may be like plumbing, electrical work, or general maintenance, Our app customer users to register online
+            services very easily through their mobile phones, ensuring trustability and scalability.</p>
+        </div>
+        <!-- Image uberclone -->
+        <img src="images/second-img.jpg" alt="Uber Clone App Phone" class="phone-image">
+      </div>
+    </section>
 
-  </main><footer class="cr-footer">
+    <!--Benefits-section-->
+    <section class="benefits-section">
+      <!-- <div class="curve-container">
+      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
+    </div> -->
+      <h2 class="section-benefits-title">
+        Why choose Code Regime Technologies for your Handyman App?
+      </h2>
+      <p class="section-subwords">
+        Code Regime Technologies stands out as a premier provider of Uber for Handyman solutions, offering:
+      </p>
+      <div class="benefits-container">
+        <div class="benefit-card">
+          <div class="icon">
+            <img src="images/customization.png" alt="Customization">
+          </div>
+          <h3>Customization</h3>
+          <p>
+            We can deliver it to your specific needs and specialize in customization.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">
+            <img src="images/high-level.png" alt="High-level Security">
+          </div>
+          <h3>High-level Security</h3>
+          <p>
+            Code Regime Technology is a promising platform for managing <br> and accessing your data and source coding
+            files.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">
+            <img src="images/long-term.png" alt="Long-Term Support">
+          </div>
+          <h3>Long-Term Support</h3>
+          <p>
+            Our Skilled team will provide you a seamless 24/7 support from scratch to launch the app, we will assure you
+            to the part of endless support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Third section -->
+    <div class="ai-container1">
+      <div class="top-title1">ARTIFICIAL INTELLIGENCE</div>
+      <h2>The Handyman App Like Uber Process:</h2>
+      <p>The process flow of a handyman app like Uber is designed for efficiency and user satisfaction:</p>
+
+      <div class="features-section1">
+        <div class="tabs-container1">
+          <div class="tab active" data-tab="ai">
+            <div class="tab-icon"><img src="images/user-onboarding.png" alt="User Onboarding"></div>
+            <div class="tab-content">
+              <h3 class="tab-title">User Onboarding</h3>
+              <p class="tab-desc">Customers register with the app using a simple, secure
+                process that collects essential details and service preferences.</p>
+            </div>
+          </div>
+
+          <div class="tab" data-tab="analytics">
+            <div class="tab-icon"><img src="images/service-selection.png" alt="Service Selection"></div>
+            <div class="tab-content">
+              <h3 class="tab-title">Service Selection</h3>
+              <p class="tab-desc">Users browse through a categorized list of handyman services, selecting the one that
+                matches their immediate needs.</p>
+            </div>
+          </div>
+
+          <div class="tab" data-tab="routing">
+            <div class="tab-icon"><img src="images/faster-registering.png" alt="Faster Registering"></div>
+            <div class="tab-content">
+              <h3 class="tab-title">Faster Registering</h3>
+              <p class="tab-desc">Our app aide convenience to the customers, They can book a service quickly or
+                Reschedule
+                it for the upcoming days.</p>
+            </div>
+          </div>
+
+          <div class="tab" data-tab="chatbots">
+            <div class="tab-icon"><img src="images/click.png" alt="Click to Easy Pay"></div>
+            <div class="tab-content">
+              <h3 class="tab-title">Click to Easy Pay</h3>
+              <p class="tab-desc">A well-secured, easy click to pay provides multiple options for Mind-free transfers.
+              </p>
+            </div>
+          </div>
+
+          <div class="tab" data-tab="pricing">
+            <div class="tab-icon"><img src="images/feedback.png" alt="Service Execution & Feedback"></div>
+            <div class="tab-content">
+              <h3 class="tab-title">Service Execution & Feedback</h3>
+              <p class="tab-desc">Post-service, customers can provide ratings and reviews, contributing to the
+                platform's
+                continuous improvement.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <div class="triangle"></div>
+          <img src="images/ai-panel.png" alt="AI Illustration showing a person surrounded by digital elements">
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const contentAreas = document.querySelectorAll('.content-area');
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', function () {
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+
+            // Add active class to clicked tab
+            this.classList.add('active');
+
+            // Hide all content areas
+            contentAreas.forEach(area => area.classList.remove('active'));
+
+            // Show the corresponding content area
+            const tabName = this.getAttribute('data-tab');
+            const contentToShow = document.getElementById(tabName + '-content');
+            if (contentToShow) {
+              contentToShow.classList.add('active');
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- How-it-works -->
+    <section class="work-section">
+      <div class="work-container">
+        <!-- Left Column: Text Content -->
+        <div class="work-text">
+          <p class="subheading-work">Uses of a Handyman</p>
+          <h2 class="main-heading-work">Do you want to know the uses of a handyman app like uber?</h2>
+          <p class="description-work">
+            Implementing a handyman app like Uber delivers significant advantages for both
+            businesses and customers:
+          </p>
+          <ul class="work-list">
+            <div class="work-list1st-box">
+              <li>
+
+                <div class="list-content">
+                  <h3>1. Enhanced Accessibility:</h3>
+                  <p>Customers can easily access skilled handymen
+                    without the need for extensive searches or referrals.</p>
+                </div>
+              </li>
+
+            </div>
+
+            <li>
+
+              <div class="list-content">
+                <h3>2. Optimized Time Management:</h3>
+                <p>The app streamlines service requests, reducing
+                  the time customers spend securing reliable help.</p>
+              </div>
+            </li>
+            <li>
+
+              <div class="list-content">
+                <h3>3. Transparent Operations:</h3>
+                <p> With clear pricing structures and customer reviews,
+                  users can make informed decisions quickly.</p>
+              </div>
+            </li>
+            <li>
+
+              <div class="list-content">
+                <h3>4. 24/7 Availability:</h3>
+                <p> The app ensures that service providers are available at any
+                  time, increasing customer satisfaction and engagement </p>
+              </div>
+            </li>
+            <li>
+
+              <div class="list-content">
+                <h3>5. Security and Trust:</h3>
+                <p>The platform's secure architecture, developed by Code
+                  Regime Technologies, ensures data protection and trustworthy transactions.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div class="work-image">
+          <img src="images/uses-of-handyman.png" alt="Mobile App Features">
+        </div>
+      </div>
+    </section>
+
+    <!-- Increases Earnings section -->
+    <section class="earning-section">
+      <div class="earning-container">
+        <!-- Left Column: Text Content -->
+        <div class="work-text">
+          <p class="subheading-earning">Increases Earnings</p>
+          <h2 class="main-heading-earning">How a Handyman App Like Uber Increases Earnings</h2>
+          <p class="description-earning">
+            For service providers, a handyman app like Uber represents a significant business opportunity:
+          </p>
+          <ul class="earning-list">
+            <div class="earning-list1st-box">
+              <li>
+
+                <div class="list-content">
+                  <h3>1. Enlarge the Customers:</h3>
+                  <p> This app can aide you to reach the client near and far
+                    away from you.</p>
+                </div>
+              </li>
+
+            </div>
+
+            <li>
+
+              <div class="list-content">
+                <h3>2. Tune Daily Jobs:</h3>
+                <p> With the app, clients who can register their services are likely
+                  to tune the handyman jobs regularly.</p>
+              </div>
+            </li>
+            <li>
+
+              <div class="list-content">
+                <h3>3. Reschedule the Jobs:</h3>
+                <p> The service provider can manage and access their work
+                  or jobs during peak time.</p>
+              </div>
+            </li>
+            <li>
+
+              <div class="list-content">
+                <h3>4. Revenue Growth:</h3>
+                <p> The payment and works will automatically be entered through
+                  the app.</p>
+              </div>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div class="earning-image">
+          <img src="images/increse-earning.png" alt="increse earning">
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section">
+      <!-- <div class="curve-container">
+      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
+    </div> -->
+      <h2 class="section-benefits-title">
+        Standard Features of an Uber <br> For Handyman App
+      </h2>
+      <p class="section-subwords">
+        The standard features offered by an Uber for Handyman app are essential for a seamless user experience
+      </p>
+    </section>
+    <section class="box-section">
+      <div class="box">
+        <div class="icon">
+          <img src="images/upgraded-ui.png" alt="Upgraded UI">
+        </div>
+        <h3>Upgraded UI</h3>
+        <p>Moreover everyone will like to use this app because our skilled
+          teams have set up a world-class user app.</p>
+      </div>
+      <div class="box">
+        <div class="icon">
+          <img src="images/gps-tracker.png" alt="GPS Tracker">
+        </div>
+        <h3>GPS Tracker</h3>
+        <p>After booking, customers can view the handyman's arrival using this smart feature.</p>
+      </div>
+      <div class="box">
+        <div class="icon">
+          <img src="images/blockchain-tech.png" alt="Blockchain Tech">
+        </div>
+        <h3>Blockchain Tech</h3>
+        <p>Code Regime provides you with the latest innovative
+          blockchain technology for easy and well-secured transactions.</p>
+      </div>
+      <div class="box">
+        <div class="icon">
+          <img src="images/service-review.png" alt="Service Reviewing System">
+        </div>
+        <h3>Service Reviewing System</h3>
+        <p>Customer can give their feedback to the
+          handyman. It helps to make the reputation around the business and the handyman.</p>
+      </div>
+      <div class="box">
+        <div class="icon">
+          <img src="images/notification.png" alt="Automated Notifications">
+        </div>
+        <h3>Automated Notifications</h3>
+        <p>Push notifications keep users informed about service
+          bookings, updates, and promotions.</p>
+      </div>
+    </section>
+
+    <!-- Extra addon Section -->
+    <section class="addons-section">
+      <!-- <div class="curve-container3">
+      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
+    </div> -->
+      <h2 class="section-title2">Advanced Addons for <br> Handyman Clone</h2>
+      <p class="section-subtitle">For business that want to stay ahead, we offer advanced features like.</p>
+
+      <div class="addons-grid">
+        <div class="addon-item">
+          <img src="images/global.jpg" alt="multi Language & Currency" class="addon-image">
+          <h3 class="addon-title">Global Language & Currency Integration</h3>
+          <p class="addon-description">All around the globe, we may give you these additional benefits to the clients.
+          </p>
+        </div>
+
+        <div class="addon-item">
+          <img src="images/inapp.jpg" alt="In-app chat" class="addon-image">
+          <h3 class="addon-title">In-App Communication</h3>
+          <p class="addon-description">Facilitate direct communication between customers and handymen for better service
+            coordination and issue resolution.
+          </p>
+        </div>
+
+        <div class="addon-item">
+          <img src="images/service-subscription.jpg" alt="customer subscription" class="addon-image">
+          <h3 class="addon-title">Service Subscription</h3>
+          <p class="addon-description">Offer customers subscription-based packages for regular maintenance service at
+            discounted rates.</p>
+        </div>
+
+        <div class="addon-item">
+          <img src="images/service-support.png" alt="service support" class="addon-image">
+          <h3 class="addon-title">AI Service Support</h3>
+          <p class="addon-description">This AI will show you the professional and conventional handyman in front of
+            you quickly.</p>
+        </div>
+
+        <div class="addon-item">
+          <img src="images/useful-dashboard.png" alt="feedback dashboard" class="addon-image">
+          <h3 class="addon-title">Useful Dashboard</h3>
+          <p class="addon-description">Our app has a professional insight tool for the dashboard to know the service
+            ratings, feedback, market analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies section -->
+    <section class="technologies-section">
+      <!-- <div class="curve-container3">
+      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
+    </div> -->
+      <h2 class="section-title2">Technologies Behind Uber For Handyman Apps</h2>
+
+      <div class="tech-section1">
+        <div class="tech-content">
+          <h3>AI & ML</h3>
+          <p>We integrate all those tasks, service bookings, and service recommendations with the help of AI and
+            Machine learning.</p>
+        </div>
+        <div class="tech-image">
+          <img src="images/ai-ml.png" alt="AI & ML">
+        </div>
+      </div>
+
+      <div class="tech-section2">
+        <div class="tech-image">
+          <img src="images/robust.png" alt="Robust API">
+        </div>
+
+        <div class="tech-content">
+          <h3>Robust APIs</h3>
+          <p>Our team can integrate any other <br> services externally and also
+            their <br> operational functionalities.</p>
+        </div>
+      </div>
+
+      <div class="tech-section3">
+        <div class="tech-content">
+          <h3>Uber For Handyman</h3>
+          <p>The Uber for Handyman app is an unimaginary <br> tool that meets the enlarging demand for<br>
+            on-demand services.</p>
+          <!-- <a href="javascript:void(0)" class="btn">Learn more ></a> -->
+        </div>
+        <div class="tech-image">
+          <img src="images/uber-handyman.png" alt="Uber For Handyman">
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <section class="tech-stack-section">
+      <div class="tech-container">
+        <div class="tech-header" data-aos="fade-up">
+          <p class="tech-subtitle">Technology Stack</p>
+          <h2 class="tech-main-title">Modern & Scalable Tech Stack Our Handyman App Like Uber</h2>
+          <p class="tech-desc">We use the latest and most advanced technologies to ensure high performance, security,
+            and
+            scalability for your Uber clone.</p>
+        </div>
+        <div class="tech-marquee-wrapper" data-aos="fade-up" data-aos-delay="100">
+          <!-- Swipe Right to Left -->
+          <div class="tech-marquee right">
+            <div class="tech-marquee-track">
+              <!-- Group 1 -->
+              <div class="tech-marquee-group">
+                <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular </div>
+                <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap CSS</div>
+                <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
+                <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
+                <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
+                <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter</div>
+                <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
+                <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase</div>
+                <div class="tech-marquee-item"><i class="fas fa-map-marked-alt" style="color: #4285F4;"></i> Google Maps
+                </div>
+                <div class="tech-marquee-item"><i class="fa-solid fa-network-wired" style="color: #000;"></i> WebSocket
+                </div>
+                <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+              </div>
+              <!-- Group 2 (Duplicate) -->
+              <div class="tech-marquee-group" aria-hidden="true">
+                <div class="tech-marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                <div class="tech-marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular </div>
+                <div class="tech-marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap CSS</div>
+                <div class="tech-marquee-item"><i class="devicon-python-plain colored"></i> Python</div>
+                <div class="tech-marquee-item"><i class="devicon-django-plain colored"></i> Django</div>
+                <div class="tech-marquee-item"><i class="devicon-redis-plain colored"></i> Redis</div>
+                <div class="tech-marquee-item"><i class="devicon-flutter-plain colored"></i> Flutter</div>
+                <div class="tech-marquee-item"><i class="devicon-dart-plain colored"></i> Dart</div>
+                <div class="tech-marquee-item"><i class="devicon-firebase-plain colored"></i> Firebase</div>
+                <div class="tech-marquee-item"><i class="fas fa-map-marked-alt" style="color: #4285F4;"></i> Google Maps
+                </div>
+                <div class="tech-marquee-item"><i class="fa-solid fa-network-wired" style="color: #000;"></i> WebSocket
+                </div>
+                <div class="tech-marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <link rel="stylesheet" href="/css/pricing.css">
+    <section class="specs-section">
+      <div class="specs-header">
+        <span class="specs-caption">Our Specifications</span>
+        <h2 class="specs-title">Specification In Our Handyman Clone App</h2>
+        <p class="specs-subtitle">Ensure Hassle-free launch of On-Demand Handyman Services With Unique Product
+          Specifications</p>
+      </div>
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-badge">Basic</div>
+          <p class="spec-intro">By choosing a basic plan, you'll get these specifications.</p>
+          <ul class="spec-list">
+            <li><i class="fas fa-check-circle"></i> Android & IOS Customer App</li>
+            <li><i class="fas fa-check-circle"></i> Android Provider App</li>
+            <!-- <li><i class="fas fa-check-circle"></i> Customer Web Panel</li> -->
+            <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+            <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
+            <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
+            <li><i class="fas fa-check-circle"></i> Google Play Store Submission</li>
+          </ul>
+        </div>
+        <div class="spec-card popular">
+          <div class="spec-badge">Professional</div>
+          <p class="spec-intro">With the Professional plan, you get these listed specifications.</p>
+          <ul class="spec-list">
+            <li><i class="fas fa-check-circle"></i> iOS &amp; Android Customer App</li>
+            <li><i class="fas fa-check-circle"></i> Android Provider App</li>
+            <li><i class="fas fa-check-circle"></i> Customer Web Panel</li>
+            <!-- <li><i class="fas fa-check-circle"></i> Provider Management Panel</li> -->
+            <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+            <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
+            <li><i class="fas fa-check-circle"></i> Free Server Installation</li>
+            <li><i class="fas fa-check-circle"></i> App Store Submissions (Both)</li>
+            <li><i class="fas fa-check-circle"></i> Push Notifications</li>
+          </ul>
+        </div>
+        <div class="spec-card">
+          <div class="spec-badge">Enterprise</div>
+          <p class="spec-intro">Enterprise plan gives you extensive specifications required to run a corp.</p>
+          <ul class="spec-list">
+            <li><i class="fas fa-check-circle"></i> Full iOS &amp; Android Platform</li>
+            <li><i class="fas fa-check-circle"></i> Customer &amp; Provider Web Panels</li>
+            <li><i class="fas fa-check-circle"></i> Advanced Booking System</li>
+            <li><i class="fas fa-check-circle"></i> Multi-Service Categories</li>
+            <li><i class="fas fa-check-circle"></i> Administrator Panel</li>
+            <li><i class="fas fa-check-circle"></i> 100% Source Code – Customisable</li>
+            <li><i class="fas fa-check-circle"></i> Store Submissions (Both)</li>
+            <li><i class="fas fa-check-circle"></i> Skype &amp; Team Viewer Support</li>
+            <li><i class="fas fa-check-circle"></i> 1 Year Free Support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section">
+      <div class="table-container">
+        <div class="table-header">
+          <button id="togglePricing" class="pricing-toggle-btn"><span>View Full Pricing Details</span><i
+              class="fas fa-chevron-down"></i></button>
+        </div>
+        <div id="pricingTable" class="table-responsive">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Features List</th>
+                <th>Basic</th>
+                <th>Professional</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="core-header">
+                <td colspan="4">Core Features</td>
+              </tr>
+              <tr>
+                <td>100% Customizable Source Code</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr>
+                <td>Free One Time Installation</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr>
+                <td>Technical Support</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr>
+                <td>Native Android App [Customer &amp; Provider]</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr>
+                <td>Native iOS App [Customer &amp; Provider]</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr>
+                <td>Admin Web Panel</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr>
+                <td>White Label</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr>
+                <td>Multi Domain License</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+
+                <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="accordion-header" data-target="customer">
+                <td colspan="4">
+                  <div class="acc-inner"><span>Customer App</span><i class="fas fa-chevron-down acc-chevron"></i></div>
+                </td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>Login / Signup</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>Browse Service Categories</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>Service Booking</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>GPS Tracking</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>Secure Payment</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>Rating &amp; Reviews</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>Schedule Booking</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>In-App Chat / Call</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row customer hidden">
+                <td>Subscription Plans</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="accordion-header" data-target="provider">
+                <td colspan="4">
+                  <div class="acc-inner"><span>Provider App</span><i class="fas fa-chevron-down acc-chevron"></i></div>
+                </td>
+              </tr>
+              <tr class="acc-row provider hidden">
+                <td>Login / Sign Up</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row provider hidden">
+                <td>Document Upload</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row provider hidden">
+                <td>Accept / Reject Booking</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row provider hidden">
+                <td>Navigation to Customer</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row provider hidden">
+                <td>Earning Details</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row provider hidden">
+                <td>Job History</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row provider hidden">
+                <td>Availability Toggle</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+
+                <!-- <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              <td><span class="icon-check"><i class="fas fa-check"></i></span></td> -->
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row provider hidden">
+                <td>Multi-Service Selection</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="accordion-header" data-target="admin">
+                <td colspan="4">
+                  <div class="acc-inner"><span>Admin Panel</span><i class="fas fa-chevron-down acc-chevron"></i></div>
+                </td>
+              </tr>
+              <tr class="acc-row admin hidden">
+                <td>Admin Login</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row admin hidden">
+                <td>Dashboard</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row admin hidden">
+                <td>Service Category Management</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row admin hidden">
+                <td>Provider Management</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row admin hidden">
+                <td>Commission Management</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row admin hidden">
+                <td>Promo Codes / Offers</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row admin hidden">
+                <td>Push Notifications</td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+              <tr class="acc-row admin hidden">
+                <td>Zone-wise Management</td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <script>
+      (function () { const b = document.getElementById('togglePricing'), t = document.getElementById('pricingTable'); if (b && t) { b.addEventListener('click', function () { const s = t.classList.contains('show'); this.querySelector('span').textContent = s ? 'View Full Pricing Details' : 'Hide Full Pricing Details'; t.classList.toggle('show'); this.classList.toggle('active'); }) } document.querySelectorAll('.accordion-header').forEach(h => { h.addEventListener('click', function () { const tgt = this.dataset.target, rows = document.querySelectorAll('.acc-row.' + tgt), o = this.classList.contains('open'); this.classList.toggle('open'); rows.forEach(r => r.classList.toggle('hidden', o)); }); }); })();
+    </script>
+
+    <!-- Faq Section -->
+    <div class="faq-container">
+      <div class="faq-container">
+        <div class="faq-title">
+          <h2>Frequently Asked Questions (FAQ)</h2>
+          <p>To make your Clone even better. We offer some special services through which you can easily complete
+            the marketing work on social media.</p>
+        </div>
+
+        <div class="faq-content">
+          <div class="faq-item">
+            <div class="faq-question">
+              What services can I find on the Uber Handyman app?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>You can access a variety of services like plumbing, electrical work, carpentry, and home repairs,
+                all through the Uber Handyman app developed by Code Regime Technologies.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How does the Uber Handyman app ensure reliable professionals?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>Uber Handyman app ensures reliable professionals through a thorough vetting process, background
+                checks, skill verification, and a rating system that allows customers to review past performance.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Is the Uber Handyman app customizable for my business needs?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, the Uber Handyman app offers business customization options including branded interfaces,
+                service catalog customization, and integration capabilities with your existing business systems.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can I track the handyman's arrival in real time?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, the app features real-time GPS tracking that allows you to monitor your handyman's location
+                and estimated time of arrival, similar to how you can track drivers in the regular Uber app.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I handle payments on the Uber Handyman app?
+              <div class="faq-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6b7280" viewBox="0 0 16 16">
+                  <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>Payments are handled securely through the app with multiple options including credit/debit cards,
+                digital wallets, and in some regions, cash payments. All transactions are receipted and recorded for
+                your convenience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question');
+
+          question.addEventListener('click', () => {
+            // Close all other items
+            faqItems.forEach(otherItem => {
+              if (otherItem !== item && otherItem.classList.contains('active')) {
+                otherItem.classList.remove('active');
+              }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+          });
+        });
+
+        // Open the first FAQ item by default
+        faqItems[0].classList.add('active');
+      });
+    </script>
+
+    <!-- Footer -->
+
+  </main>
+  <footer class="cr-footer">
     <div class="cr-footer__inner">
 
       <!-- TOP GRID -->
@@ -1249,7 +1457,7 @@
 
   <script src="/js/footer.js"></script>
   <!-- <script src="//code.tidio.co/soskl3532irzhiujw4d3zebtxyg9jwus.js" async></script> -->
-    <!-- Request Demo Modal JS -->
+  <!-- Request Demo Modal JS -->
   <script src="/js/modal.js"></script>
 
   <!--Start of Tawk.to Script-->
@@ -1286,4 +1494,3 @@
 </body>
 
 </html>
-
