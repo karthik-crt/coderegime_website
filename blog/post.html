@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Beautiful Blog from Scratch | Code Regime Technologies</title>
+    <meta name="description"
+        content="A comprehensive guide to starting a new blog post from scratch with modern aesthetics.">
+
+    <!-- Favicon -->
+    <link href="/images/fav-icon.webp" rel="icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="preload" as="style" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- FontAwesome Icons -->
+    <link rel="preload" as="style" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+
+    <!-- Header CSS -->
+    <link rel="preload" as="style" href="/css/header.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+    <!-- Footer CSS -->
+    <link rel="preload" as="style" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Blog CSS -->
+    <link rel="preload" as="style" href="/blog/blog-common.css">
+    <link rel="stylesheet" href="/blog/blog-common.css">
+    <link rel="preload" as="style" href="/blog/blog-post.css">
+    <link rel="stylesheet" href="/blog/blog-post.css">
+
+    <!-- Google Fonts for Blog Post Aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="blog-page-body">
+    <!-- Reading Progress Indicator -->
+    <div class="reading-progress"></div>
+
+    <!-- Header Navigation -->
+    <header id="head-nav">
+        <nav>
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="/images/color-logo.png" alt="logo">
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about-us/" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/uber-clone/" class="nav-link">
+                        Services
+                    </a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="/blockchain-development-services/" class="dropdown-link">Blockchain Development
+                                Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/mobile-app-development/" class="dropdown-link">Mobile App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/ios-app-development/" class="dropdown-link">iOS App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/flutter-app-development/" class="dropdown-link">Flutter Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/android-app-development/" class="dropdown-link">Android App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/web-app-development/" class="dropdown-link">Web App Development Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/enterprise-app-development/" class="dropdown-link">Enterprise App Development</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/uber-clone/" class="nav-link">
+                        Products
+                    </a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="/uber-clone/" class="dropdown-link">CabRegime - Uber Clone</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/ubereats-clone/" class="dropdown-link">FoodRegime - Ubereats clone</a>
+                        </li>
+
+                        <li class="dropdown-item">
+                            <a href="/uber-for-handyman-app/" class="dropdown-link">HandymanRegime - Uber for
+                                Handman</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/insurance-software/" class="dropdown-link">Insurance</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/flight-booking-app/" class="dropdown-link">Flight Booking App</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/Portfolio/" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact-us/" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-details-main">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <!-- <nav aria-label="Breadcrumb" class="blog-breadcrumb">
+                <a href="/">Home</a>
+                <span class="material-symbols-outlined">chevron_right</span>
+                <a href="/blog/">Blog</a>
+                <span class="material-symbols-outlined">chevron_right</span>
+                <span id="breadcrumb-title-display" class="truncate">Loading...</span>
+            </nav> -->
+
+            <div class="blog-layout-grid">
+                <!-- Left Content (70%) -->
+                <article class="blog-main-content">
+                    <div class="post-header-section">
+                        <span class="post-category" id="post-category-display">Loading...</span>
+                        <h1 class="post-title" id="post-title-display">Loading Title...</h1>
+
+                        <div class="post-meta-row">
+                            <div class="meta-item author-meta">
+                                <img src="/images/placeholder-avatar.png" alt="Author" id="post-author-avatar-display"
+                                    class="meta-avatar">
+                                <span class="author-name" id="post-author-name-display">Code Regime</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="material-symbols-outlined">calendar_today</span>
+                                <span class="post-date" id="post-date-display">...</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span class="post-read-time" id="post-read-time-display">...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-featured-image-container">
+                        <img src="" alt="Featured Image" id="post-featured-image-display">
+                    </div>
+
+                    <div class="post-content" id="post-content-display">
+                        <!-- Dynamic content injected here -->
+                    </div>
+
+                    <!-- Tags and Share -->
+                    <div class="post-footer-actions">
+                        <div class="post-tags" id="post-tags-display">
+                            <!-- Dynamic tags -->
+                        </div>
+                        <div class="post-share-actions">
+                            <span class="share-label">Share this article:</span>
+                            <button class="share-btn" title="LinkedIn"><span
+                                    class="material-symbols-outlined">share</span></button>
+                            <button class="share-btn" title="Twitter"><span
+                                    class="material-symbols-outlined">alternate_email</span></button>
+                            <button class="share-btn" title="Copy Link"
+                                onclick="navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copied!'))"><span
+                                    class="material-symbols-outlined">content_copy</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Right Sidebar (30%) -->
+                <aside class="blog-sidebar">
+                    <div class="sidebar-sticky-wrapper">
+                        <!-- Author Card -->
+                        <div class="sidebar-card author-card">
+                            <h4 class="sidebar-card-title">About the Author</h4>
+                            <div class="author-card-content">
+                                <img src="/images/placeholder-avatar.png" alt="Author" id="sidebar-author-avatar">
+                                <h5 class="author-name" id="sidebar-author-name">Code Regime</h5>
+                                <p class="author-role" id="sidebar-author-role">Technical Team</p>
+                                <p class="author-bio" id="sidebar-author-bio">Experts in enterprise software
+                                    development, AI integration, and scalable architectures.</p>
+                                <a href="#" class="author-profile-link">View Profile <span
+                                        class="material-symbols-outlined">arrow_forward</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <!-- <div class="sidebar-card toc-card">
+                            <h4 class="sidebar-card-title">Table of Contents</h4>
+                            <div id="toc-container">
+                                <p class="text-muted">Loading...</p>
+                            </div>
+                        </div> -->
+
+                        <!-- Related Posts -->
+                        <div class="sidebar-card related-card">
+                            <h4 class="sidebar-card-title">Related Articles</h4>
+                            <div class="related-posts-list" id="sidebar-popular-list">
+                                <!-- Populated dynamically -->
+                                <p class="text-muted">Loading...</p>
+                            </div>
+                        </div>
+
+                        <!-- CTA Card -->
+                        <div class="sidebar-card cta-card">
+                            <div class="cta-bg-shape"></div>
+                            <h4 class="cta-title">Need a similar software?</h4>
+                            <p class="cta-desc">Let our team of expert engineers turn your vision into a
+                                high-performance reality.</p>
+                            <a href="/contact-us/" class="cta-button">Contact Code Regime</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cr-footer">
+        <div class="cr-footer__inner">
+
+            <!-- TOP GRID -->
+            <div class="cr-footer__grid">
+
+                <!-- Column 1: Brand -->
+                <div class="cr-footer__col">
+                    <h3>Code Regime</h3>
+                    <p class="cr-footer__desc">
+                        Code Regime Technologies is a leading software development company delivering innovative web,
+                        mobile, and
+                        enterprise solutions, as well as a ready-made clone script product. We help businesses grow with
+                        scalable
+                        technology, custom applications, and reliable digital transformation services.
+                    </p>
+                    <div class="cr-footer__social-icons">
+                        <a href="https://www.linkedin.com/company/coderegime/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn">
+                            <img src="/images/linkedin.png" alt="LinkedIn Icon" width="24" height="24">
+                        </a>
+                        <a href="https://x.com/RegimeCode" target="_blank" rel="noopener" aria-label="Twitter / X">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/coderegimetechnologies/" target="_blank" rel="noopener"
+                            aria-label="Instagram">
+                            <img src="/images/instagram.png" alt="Instagram Icon" width="24" height="24">
+                        </a>
+                        <a href="https://www.facebook.com/Coderegimetech/" target="_blank" rel="noopener"
+                            aria-label="Facebook">
+                            <img src="/images/facebook.png" alt="Facebook Icon" width="24" height="24">
+                        </a>
+                        <a href="https://www.threads.net/@coderegimetechnologies" target="_blank" rel="noopener"
+                            aria-label="Threads">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.785-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.81 11.618 4.81c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Useful Links -->
+                <div class="cr-footer__col">
+                    <h3>Useful Links</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/about-us/">About Us</a></li>
+                        <li><a href="/Portfolio/">Portfolio</a></li>
+                        <li><a href="/contact-us/">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="cr-footer__col">
+                    <h3>Services</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/blockchain-development-services/">Blockchain Development</a></li>
+                        <li><a href="/mobile-app-development/">Mobile App Development</a></li>
+                        <li><a href="/ios-app-development/">iOS App Development</a></li>
+                        <li><a href="/flutter-app-development/">Flutter Development</a></li>
+                        <li><a href="/android-app-development/">Android App Development</a></li>
+                        <li><a href="/web-app-development/">Web App Development</a></li>
+                        <li><a href="/enterprise-app-development/">Enterprise App Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Products -->
+                <div class="cr-footer__col">
+                    <h3>Products</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/uber-clone/">CabRegime - Uber Clone</a></li>
+                        <li><a href="/ubereats-clone/">FoodRegime - Ubereats clone</a></li>
+                        <li><a href="/uber-for-handyman-app/">HandymanRegime - Uber for Handman</a></li>
+                        <li><a href="/insurance-software/">Insurance</a></li>
+                        <li><a href="/flight-booking-app/">Flight Booking App</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Legal -->
+                <div class="cr-footer__col">
+                    <h3>Legal</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/refund-policy/">Refund Policy</a></li>
+                        <li><a href="/security-policy/">Support</a></li>
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Contact Us -->
+                <div class="cr-footer__col">
+                    <h3>Get in touch</h3>
+                    <ul class="cr-footer__contact-list">
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/918072218602">+91 80722 18602</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Phone</strong>
+                                <a href="tel:+918072218602">+91 80722 18602</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Address</strong>
+                                74, 75 HDFC Bank Building, 2nd floor, Kamarajar Salai,<br>
+                                Madurai, Tamil Nadu – 625009
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Business Enquiry</strong>
+                                <a href="mailto:sales@coderegimetechnologies.com" target="_blank"
+                                    rel="noopener">sales@coderegimetechnologies.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div><!-- /grid -->
+
+            <hr class="cr-footer__divider">
+
+            <!-- BOTTOM ROW -->
+            <div class="cr-footer__bottom">
+                <div class="cr-footer__disclaimer">
+                    <h4>Disclaimer</h4>
+                    <p>The terms Uber, UberEats, Grubhub, DoorDash, and Foodora are used strictly for marketing and
+                        illustrative
+                        purposes. Code Regime Technologies is in no way affiliated with, endorsed by, or connected to
+                        any of the
+                        listed companies. We entirely own the custom source code and design of our products, and we
+                        do not use any
+                        of their proprietary intellectual property.</p>
+                </div>
+                <div class="cr-footer__right">
+                </div>
+            </div><!-- /bottom -->
+            <hr class="cr-footer__divider">
+            <p class="cr-footer__copyright">
+                © Copyright <span id="year"></span>, All Rights Reserved by Code Regime Technologies.
+            </p>
+        </div><!-- /inner -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js" defer></script>
+    <script src="/js/bootstrap.bundle.min.js" defer></script>
+    <!-- <script src="/main.js" defer></script> -->
+    <script src="/blog/blog.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Reading progress bar logic
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                if (height <= 0) return;
+                const scrolled = (winScroll / height) * 100;
+                const progressBar = document.querySelector(".reading-progress");
+                if (progressBar) {
+                    progressBar.style.width = scrolled + "%";
+                }
+            });
+
+            // Mobile menu toggle functionality
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdownItems = document.querySelectorAll('.nav-item');
+
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    mobileToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+
+            // Mobile dropdown functionality
+            if (dropdownItems.length) {
+                dropdownItems.forEach(item => {
+                    const link = item.querySelector('.nav-link');
+                    const dropdown = item.querySelector('.dropdown');
+
+                    if (dropdown && link) {
+                        link.addEventListener('click', (e) => {
+                            if (window.innerWidth <= 768) {
+                                e.preventDefault();
+                                item.classList.toggle('dropdown-open');
+                            }
+                        });
+                    }
+                });
+            }
+
+            // ==========================================
+            // WordPress API Dynamic Data Fetching
+            // ==========================================
+            async function loadPostData() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const slug = urlParams.get('slug');
+
+                if (!slug) {
+                    // Only show error if we aren't previewing the static template
+                    if (window.location.search.includes('?')) {
+                        document.getElementById('post-content-display').innerHTML = '<p>Error: No blog post slug provided.</p>';
+                    }
+                    return;
+                }
+
+                // fetchSinglePost is from blog.js
+                if (typeof fetchSinglePost === 'undefined') {
+                    console.error("blog.js functions are not loaded");
+                    return;
+                }
+
+                // Show loading state
+                document.getElementById('post-content-display').innerHTML = '<p>Loading post...</p>';
+
+                const post = await fetchSinglePost(slug);
+
+                if (!post) {
+                    document.getElementById('post-content-display').innerHTML = '<p>Error: Post not found.</p>';
+                    return;
+                }
+
+                // Update DOM elements with post data
+                const titleText = post.title?.rendered || post.title || '';
+                document.getElementById('post-title-display').innerHTML = titleText;
+                const breadcrumbTitle = document.getElementById('breadcrumb-title-display');
+                if (breadcrumbTitle) breadcrumbTitle.textContent = titleText;
+
+                // Update Meta Tags (SEO)
+                document.title = `${titleText} | Code Regime Technologies`;
+
+                // Content
+                const contentText = post.content?.rendered || post.content || '';
+                const enhancedContent = contentText.replace(/<p/, '<p class="first-letter-drop"');
+                const contentDisplay = document.getElementById('post-content-display');
+                contentDisplay.innerHTML = enhancedContent;
+
+                // Table of Contents Extraction
+                const headings = Array.from(contentDisplay.querySelectorAll('h2, h3'));
+                const tocContainer = document.getElementById('toc-container');
+                if (headings.length > 0 && tocContainer) {
+                    let tocHtml = '<ul class="toc-list">';
+                    headings.forEach((heading, index) => {
+                        const id = `heading-${index}`;
+                        heading.id = id;
+                        const indentClass = heading.tagName.toLowerCase() === 'h3' ? 'toc-sub-item' : '';
+                        tocHtml += `<li class="${indentClass}"><a href="#${id}">${heading.textContent}</a></li>`;
+                    });
+                    tocHtml += '</ul>';
+                    tocContainer.innerHTML = tocHtml;
+                } else if (tocContainer) {
+                    tocContainer.innerHTML = '<p class="text-muted">No sections found.</p>';
+                }
+
+                // Image
+                const featuredImage = getFeaturedImageUrl(post);
+                const imgEl = document.getElementById('post-featured-image-display');
+                if (imgEl) {
+                    imgEl.src = featuredImage;
+                    imgEl.alt = titleText;
+                }
+
+                // Date and Read Time
+                const dateEl = document.getElementById('post-date-display');
+                if (dateEl) dateEl.textContent = formatDate(post.date);
+
+                const textForReadTime = contentText.replace(/<[^>]*>/g, '');
+                const wordCount = textForReadTime.split(/\s+/).filter(w => w).length;
+                const readTime = Math.max(1, Math.ceil(wordCount / 200));
+                const readTimeEl = document.getElementById('post-read-time-display');
+                if (readTimeEl) readTimeEl.textContent = `${readTime} min read`;
+
+                // Author
+                const authorName = getPostAuthor(post);
+                const authorEl = document.getElementById('post-author-name-display');
+                if (authorEl) authorEl.textContent = authorName;
+
+                const sidebarAuthorName = document.getElementById('sidebar-author-name');
+                if (sidebarAuthorName) sidebarAuthorName.textContent = authorName;
+
+                // Author Avatar
+                let avatarUrl = '/images/placeholder-avatar.png';
+                if (post.author && post.author.avatar_URL) avatarUrl = post.author.avatar_URL;
+                const topAvatar = document.getElementById('post-author-avatar-display');
+                const sideAvatar = document.getElementById('sidebar-author-avatar');
+                if (topAvatar) topAvatar.src = avatarUrl;
+                if (sideAvatar) sideAvatar.src = avatarUrl;
+
+                // Author Link and Role
+                const authorProfileLink = document.querySelector('.author-profile-link');
+                if (authorProfileLink && post.author) {
+                    const profileUrl = post.author.profile_URL || post.author.URL || '#';
+                    authorProfileLink.href = profileUrl;
+                }
+                const authorRole = document.getElementById('sidebar-author-role');
+                if (authorRole) {
+                    // WordPress API doesn't expose role natively in this endpoint, so we default to Author or use nice_name
+                    authorRole.textContent = post.author?.nice_name ? `@${post.author.nice_name}` : 'Author';
+                }
+
+                // Categories
+                const categoryEl = document.getElementById('post-category-display');
+                let categoryName = 'Uncategorized';
+
+                if (post.categories) {
+                    const keys = Object.keys(post.categories);
+                    if (keys.length > 0) categoryName = post.categories[keys[0]].name;
+                } else if (post._embedded && post._embedded['wp:term']) {
+                    const terms = post._embedded['wp:term'][0];
+                    if (terms && terms.length > 0) categoryName = terms[0].name;
+                }
+                if (categoryEl) categoryEl.textContent = categoryName;
+
+                // Tags
+                const tagsDisplay = document.getElementById('post-tags-display');
+                let tagsHtml = '';
+                if (post.tags && Object.keys(post.tags).length > 0) {
+                    const keys = Object.keys(post.tags);
+                    tagsHtml = keys.map(key => `<a href="#" class="tag">${post.tags[key].name}</a>`).join('');
+                } else if (post.categories) {
+                    // Fallback to categories if no tags exist
+                    const keys = Object.keys(post.categories);
+                    tagsHtml = keys.map(key => `<a href="#" class="tag">${post.categories[key].name}</a>`).join('');
+                }
+                if (tagsDisplay) tagsDisplay.innerHTML = tagsHtml || '<a href="#" class="tag">Blog</a>';
+
+                // Fetch and populate Related Articles (using recent posts)
+                const relatedList = document.getElementById('sidebar-popular-list');
+                if (relatedList && typeof fetchBlogPosts !== 'undefined') {
+                    relatedList.innerHTML = '<p class="text-muted">Loading...</p>';
+                    // Fetch 3 recent posts
+                    fetchBlogPosts(1, 3).then(data => {
+                        if (data && data.posts && data.posts.length > 0) {
+                            let relatedHtml = '<div class="space-y-6">';
+                            data.posts.forEach(relPost => {
+                                // Skip current post
+                                if (relPost.ID === post.ID) return;
+
+                                const relTitle = relPost.title?.rendered || relPost.title || '';
+                                let relCat = 'Blog';
+                                if (relPost.categories) {
+                                    const cKeys = Object.keys(relPost.categories);
+                                    if (cKeys.length > 0) relCat = relPost.categories[cKeys[0]].name;
+                                }
+
+                                relatedHtml += `
+                                    <a class="group block" href="/blog/post.html?slug=${relPost.slug}" style="text-decoration:none; display:block; margin-bottom: 1rem;">
+                                        <span class="text-label-sm block mb-1" style="color:var(--primary); font-size: 0.8rem; text-transform: uppercase;">${relCat}</span>
+                                        <p class="text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2" style="color:var(--text-primary); transition: color 0.2s;">${relTitle}</p>
+                                    </a>
+                                `;
+                            });
+                            relatedHtml += '</div>';
+                            relatedList.innerHTML = relatedHtml;
+                        } else {
+                            relatedList.innerHTML = '<p class="text-muted">No related posts found.</p>';
+                        }
+                    }).catch(err => {
+                        console.error("Error fetching related posts", err);
+                        relatedList.innerHTML = '<p class="text-muted">Unable to load related posts.</p>';
+                    });
+                }
+            }
+
+            // Initialize WordPress fetching
+            loadPostData();
+        });
+    </script>
+</body>
+
+</html>

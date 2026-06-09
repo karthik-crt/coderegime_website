@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Expert perspectives on software engineering excellence, digital transformation strategies, and the technologies shaping the future of global enterprise.">
+    <meta name="keywords"
+        content="blog, software development, technology, articles, blockchain, mobile apps, custom development">
+    <meta name="author" content="Code Regime Technologies">
+    <meta property="og:title" content="Blog | Code Regime Technologies">
+    <meta property="og:description"
+        content="Expert perspectives on software engineering excellence, digital transformation strategies, and the technologies shaping the future of global enterprise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coderegime.com/blog/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Code Regime Insights - Blog">
+    <meta name="twitter:description"
+        content="Expert perspectives on software engineering excellence, digital transformation strategies, and the technologies shaping the future of global enterprise.">
+    <link rel="canonical" href="https://coderegime.com/blog/">
+
+    <title>Blog | Code Regime Technologies</title>
+
+    <!-- Favicon -->
+    <link href="/images/fav-icon.webp" rel="icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="preload" as="style" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- FontAwesome Icons -->
+    <link rel="preload" as="style" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+
+    <!-- Header CSS -->
+    <link rel="preload" as="style" href="/css/header.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+    <!-- Footer CSS -->
+    <link rel="preload" as="style" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Blog CSS -->
+    <link rel="preload" as="style" href="/blog/blog-common.css">
+    <link rel="stylesheet" href="/blog/blog-common.css">
+    <link rel="preload" as="style" href="/blog/blog-index.css">
+    <link rel="stylesheet" href="/blog/blog-index.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Code Regime Insights",
+        "description": "Expert perspectives on software engineering excellence, digital transformation strategies, and the technologies shaping the future of global enterprise.",
+        "url": "https://coderegime.com/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Code Regime Technologies",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://coderegime.com/images/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-17LK163FGY');
+    </script>
+</head>
+
+<body class="blog-page-body">
+    <!-- Header Navigation -->
+    <!-- <header id="header-container"></header> -->
+
+    <header id="head-nav">
+        <nav>
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="/images/color-logo.png" alt="logo">
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about-us/" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/uber-clone/" class="nav-link">
+                        Services
+                        <!-- <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span> -->
+                    </a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="/blockchain-development-services/" class="dropdown-link">Blockchain Development
+                                Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/mobile-app-development/" class="dropdown-link">Mobile App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/ios-app-development/" class="dropdown-link">iOS App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/flutter-app-development/" class="dropdown-link">Flutter Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/android-app-development/" class="dropdown-link">Android App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/web-app-development/" class="dropdown-link">Web App Development Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/enterprise-app-development/" class="dropdown-link">Enterprise App Development</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/uber-clone/" class="nav-link">
+                        Products
+                        <!-- <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span> -->
+                    </a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="/uber-clone/" class="dropdown-link">CabRegime - Uber Clone</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/ubereats-clone/" class="dropdown-link">FoodRegime - Ubereats clone</a>
+                        </li>
+
+                        <li class="dropdown-item">
+                            <a href="/uber-for-handyman-app/" class="dropdown-link">HandymanRegime - Uber for
+                                Handman</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/insurance-software/" class="dropdown-link">Insurance</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/flight-booking-app/" class="dropdown-link">Flight Booking App</a>
+                        </li>
+                        <!-- 
+<li class="dropdown-item">
+                        <a href="/foodora-clone/" class="dropdown-link">Foodora Clone</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/grubhub-clone/" class="dropdown-link">Grubhub Clone</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a href="/doordash-clone/" class="dropdown-link">Doordash Clone</a>
+                  </li>
+-->
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/Portfolio/" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact-us/" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+
+            <!-- Contact Button -->
+            <!-- <a href="/contact-us/" class="contact-btn" data-bs-toggle="modal" data-bs-target="#contactPopup">Contact
+        Us</a> -->
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <!-- <nav class="blog-breadcrumb reveal-down" aria-label="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Blog</span>
+    </nav> -->
+
+    <!-- Main Content -->
+    <main class="blog-container">
+        <!-- Hero Section -->
+        <section class="blog-hero reveal-up">
+            <div class="blog-hero-inner">
+                <h1>Insights &amp; Updates</h1>
+                <p class="reveal-up" style="transition-delay: 0.15s;">Latest articles on software development, clone
+                    apps, SaaS products, and technology trends.</p>
+                <div class="blog-search-wrapper reveal-scale" style="transition-delay: 0.3s;">
+                    <span class="material-symbols-outlined blog-search-icon">search</span>
+                    <input class="blog-search-input" type="text"
+                        placeholder="Search for insights, trends, or technologies...">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Post Section -->
+        <section id="featured-post-container" class="featured-post reveal-up">
+            <!-- Dynamically populated by JS, or shown as static fallback -->
+        </section>
+
+        <!-- Category Filter & Main Content Area -->
+        <div class="blog-content-grid">
+            <!-- Left Column: Filter & Post Grid -->
+            <div>
+                <!-- Category Filter -->
+                <!-- <div id="category-filter" class="category-filter">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="custom-development">Custom Development</button>
+                    <button class="category-btn" data-category="mobile-apps">Mobile Apps</button>
+                    <button class="category-btn" data-category="blockchain">Blockchain</button>
+                    <button class="category-btn" data-category="product-clones">Product Clones</button>
+                </div> -->
+
+                <!-- Posts Grid -->
+                <div id="posts-container" class="posts-grid">
+                    <!-- Loading skeleton will be shown here -->
+                </div>
+
+                <!-- Pagination -->
+                <div id="pagination-container"></div>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="blog-sidebar">
+                <!-- Categories Widget -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-card-title sidebar-card-title-icon">
+                        <span class="material-symbols-outlined">category</span>
+                        Categories
+                    </h3>
+                    <ul class="categories-list">
+                        <li class="category-item">
+                            <a class="category-link" href="#">
+                                <span class="category-name">Web Dev</span>
+                                <span class="category-count">12</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a class="category-link" href="#">
+                                <span class="category-name">Mobile Apps</span>
+                                <span class="category-count">8</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a class="category-link" href="#">
+                                <span class="category-name">SaaS</span>
+                                <span class="category-count">15</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a class="category-link" href="#">
+                                <span class="category-name">AI Tools</span>
+                                <span class="category-count">5</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a class="category-link" href="#">
+                                <span class="category-name">Clone Scripts</span>
+                                <span class="category-count">22</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Popular Posts -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-card-title">Popular Posts</h3>
+                    <div id="popular-posts" class="popular-posts-list">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Trending Categories -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-card-title">Trending Categories</h3>
+                    <div class="trending-tags">
+                        <span class="trending-tag">Web3</span>
+                        <span class="trending-tag">DevOps</span>
+                        <span class="trending-tag">SaaS Architecture</span>
+                        <span class="trending-tag">Flutter</span>
+                        <span class="trending-tag">AI/ML</span>
+                        <span class="trending-tag">FinTech</span>
+                    </div>
+                </div>
+
+                <!-- Newsletter CTA -->
+                <!-- <div class="newsletter-card">
+                    <div class="newsletter-circle-deco"></div>
+                    <h3>Stay Ahead of the Tech Curve</h3>
+                    <p>Get the latest engineering insights and case studies delivered directly to your inbox every
+                        Tuesday.</p>
+                    <form class="newsletter-form" onsubmit="return handleNewsletterSubmit(event)">
+                        <div>
+                            <label class="newsletter-label" for="newsletter-email">Work Email</label>
+                            <input class="newsletter-input" id="newsletter-email" type="email"
+                                placeholder="name@company.com" required>
+                        </div>
+                        <button class="newsletter-submit" type="submit">Subscribe Now</button>
+                    </form>
+                </div> -->
+
+
+
+                <!-- Recent Posts Widget -->
+                <!-- <div class="sidebar-card">
+                    <h3 class="sidebar-card-title sidebar-card-title-icon">
+                        <span class="material-symbols-outlined">schedule</span>
+                        Recent Posts
+                    </h3>
+                    <div class="recent-posts-list">
+                        <a class="recent-post-item" href="#">
+                            <div class="recent-post-thumb">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkcuZ_PCCJixnLNdn-3TLEFPtCxpy0rCEjhrL1Dfjqb_zNJh3dqMC9ciLG_7e2LaMVMvYBAfEwUVc5KweZ9bAdzaq4wOeEGgCTUNJcykTkKry2_rPvXZ6YmNltjtBAQjXo2k9MUai_fW48acn-Puug4nTqR3X4DyNTT_3ZjzQQMUwTgUZa9gEwjHFg-HeTVszVuO1FWEB5bMpIvFK9gASvWlUsJ_s65DpQhuTt9gJfKNO_2evh5xwBRIw6ra5I7Gn4D-R91xL7QOy5"
+                                    alt="Modern UI Design Trends for 2025" loading="lazy">
+                            </div>
+                            <div class="recent-post-info">
+                                <h4 class="recent-post-title">Modern UI Design Trends for 2025</h4>
+                                <p class="recent-post-date">2 days ago</p>
+                            </div>
+                        </a>
+                        <a class="recent-post-item" href="#">
+                            <div class="recent-post-thumb">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClyl2vP3zwNyRUZibAB_z97jKllvKRiBQcB7DNSd1NSQyi1xuG_pyQT20qXQHgMRCDQWU2DLKJjY0lhHin8JyYhI0tudmBO2KMeu8fC3oLE1HQ_9RsJ9r63oIQxtPcofkkjP2KARvQ7gwtisPqkrdiM9ehn2SX4dF0AwrkCF11tbEfXhCQKANIA00rLtT2jrfn06T2B7fxBAfqw_iy99vltcN8C4eoV5_PL7LG6cngRpQnmsWo31mZeA6bB3VhW00znTdCvCpwLAyr"
+                                    alt="Securing Your App with Zero-Trust" loading="lazy">
+                            </div>
+                            <div class="recent-post-info">
+                                <h4 class="recent-post-title">Securing Your App with Zero-Trust</h4>
+                                <p class="recent-post-date">5 days ago</p>
+                            </div>
+                        </a>
+                    </div>
+                </div> -->
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cr-footer">
+        <div class="cr-footer__inner">
+
+            <!-- TOP GRID -->
+            <div class="cr-footer__grid">
+
+                <!-- Column 1: Brand -->
+                <div class="cr-footer__col">
+                    <h3>Code Regime</h3>
+                    <p class="cr-footer__desc">
+                        Code Regime Technologies is a leading software development company delivering innovative web,
+                        mobile, and
+                        enterprise solutions, as well as a ready-made clone script product. We help businesses grow with
+                        scalable
+                        technology, custom applications, and reliable digital transformation services.
+                    </p>
+                    <div class="cr-footer__social-icons">
+                        <a href="https://www.linkedin.com/company/coderegime/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn">
+                            <img src="/images/linkedin.png" alt="LinkedIn Icon" width="24" height="24">
+                        </a>
+                        <a href="https://x.com/RegimeCode" target="_blank" rel="noopener" aria-label="Twitter / X">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/coderegimetechnologies/" target="_blank" rel="noopener"
+                            aria-label="Instagram">
+                            <img src="/images/instagram.png" alt="Instagram Icon" width="24" height="24">
+                        </a>
+                        <a href="https://www.facebook.com/Coderegimetech/" target="_blank" rel="noopener"
+                            aria-label="Facebook">
+                            <img src="/images/facebook.png" alt="Facebook Icon" width="24" height="24">
+                        </a>
+                        <a href="https://www.threads.net/@coderegimetechnologies" target="_blank" rel="noopener"
+                            aria-label="Threads">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.785-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.81 11.618 4.81c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Useful Links -->
+                <div class="cr-footer__col">
+                    <h3>Useful Links</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/about-us/">About Us</a></li>
+                        <li><a href="/Portfolio/">Portfolio</a></li>
+                        <li><a href="/contact-us/">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="cr-footer__col">
+                    <h3>Services</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/blockchain-development-services/">Blockchain Development</a></li>
+                        <li><a href="/mobile-app-development/">Mobile App Development</a></li>
+                        <li><a href="/ios-app-development/">iOS App Development</a></li>
+                        <li><a href="/flutter-app-development/">Flutter Development</a></li>
+                        <li><a href="/android-app-development/">Android App Development</a></li>
+                        <li><a href="/web-app-development/">Web App Development</a></li>
+                        <li><a href="/enterprise-app-development/">Enterprise App Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Products -->
+                <div class="cr-footer__col">
+                    <h3>Products</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/uber-clone/">CabRegime - Uber Clone</a></li>
+                        <li><a href="/ubereats-clone/">FoodRegime - Ubereats clone</a></li>
+                        <li><a href="/uber-for-handyman-app/">HandymanRegime - Uber for Handman</a></li>
+                        <li><a href="/insurance-software/">Insurance</a></li>
+                        <li><a href="/flight-booking-app/">Flight Booking App</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Legal -->
+                <div class="cr-footer__col">
+                    <h3>Legal</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/refund-policy/">Refund Policy</a></li>
+                        <li><a href="/security-policy/">Support</a></li>
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Contact Us -->
+                <div class="cr-footer__col">
+                    <h3>Get in touch</h3>
+                    <ul class="cr-footer__contact-list">
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/918072218602">+91 80722 18602</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Phone</strong>
+                                <a href="tel:+918072218602">+91 80722 18602</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Address</strong>
+                                74, 75 HDFC Bank Building, 2nd floor, Kamarajar Salai,<br>
+                                Madurai, Tamil Nadu – 625009
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Business Enquiry</strong>
+                                <a href="mailto:sales@coderegimetechnologies.com" target="_blank"
+                                    rel="noopener">sales@coderegimetechnologies.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div><!-- /grid -->
+
+            <hr class="cr-footer__divider">
+
+            <!-- BOTTOM ROW -->
+            <div class="cr-footer__bottom">
+                <div class="cr-footer__disclaimer">
+                    <h4>Disclaimer</h4>
+                    <p>The terms Uber, UberEats, Grubhub, DoorDash, and Foodora are used strictly for marketing and
+                        illustrative
+                        purposes. Code Regime Technologies is in no way affiliated with, endorsed by, or connected to
+                        any of the
+                        listed companies. We entirely own the custom source code and design of our products, and we
+                        do not use any
+                        of their proprietary intellectual property.</p>
+                </div>
+                <div class="cr-footer__right">
+                </div>
+            </div><!-- /bottom -->
+            <hr class="cr-footer__divider">
+            <p class="cr-footer__copyright">
+                © Copyright <span id="year"></span>, All Rights Reserved by Code Regime Technologies.
+            </p>
+        </div><!-- /inner -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js" defer></script>
+    <script src="/js/bootstrap.bundle.min.js" defer></script>
+    <!-- <script src="/main.js" defer></script> -->
+    <script src="/blog/blog.js" defer></script>
+
+    <!-- Blog Listing Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const postsContainer = document.getElementById('posts-container');
+            const paginationContainer = document.getElementById('pagination-container');
+            const featuredContainer = document.getElementById('featured-post-container');
+            const popularPostsContainer = document.getElementById('popular-posts');
+
+            // ================================================================
+            // SCROLL REVEAL — IntersectionObserver for all sections
+            // ================================================================
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        // Once revealed, stop observing (animate only once)
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            /**
+             * Observe all elements that need scroll-reveal
+             */
+            function observeAllRevealElements() {
+                const revealSelectors = [
+                    '.reveal-up', '.reveal-down', '.reveal-left',
+                    '.reveal-right', '.reveal-scale',
+                    '.blog-hero', '.featured-post',
+                    '.category-filter', '.posts-grid',
+                    '.sidebar-card', '.newsletter-card'
+                ];
+                document.querySelectorAll(revealSelectors.join(',')).forEach(el => {
+                    // Don't re-observe already revealed elements
+                    if (!el.classList.contains('revealed')) {
+                        revealObserver.observe(el);
+                    }
+                });
+            }
+
+            // Initial observation pass
+            observeAllRevealElements();
+
+            // ================================================================
+            // TILT MICRO-INTERACTION on post cards
+            // ================================================================
+            function addTiltEffect(container) {
+                container.querySelectorAll('.post-card').forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        const rotateX = ((y - centerY) / centerY) * -3;
+                        const rotateY = ((x - centerX) / centerX) * 3;
+                        card.style.transform = `translateY(-4px) perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = '';
+                    });
+                });
+            }
+
+            // ================================================================
+            // PARALLAX on hero section
+            // ================================================================
+            const heroSection = document.querySelector('.blog-hero');
+            if (heroSection) {
+                window.addEventListener('scroll', () => {
+                    const scrollY = window.scrollY;
+                    const heroHeight = heroSection.offsetHeight;
+                    if (scrollY < heroHeight * 1.5) {
+                        const parallaxFactor = scrollY * 0.3;
+                        heroSection.style.setProperty('--parallax-y', `${parallaxFactor}px`);
+                        const heroInner = heroSection.querySelector('.blog-hero-inner');
+                        if (heroInner) {
+                            heroInner.style.transform = `translateY(${parallaxFactor * 0.15}px)`;
+                            heroInner.style.opacity = Math.max(0, 1 - scrollY / (heroHeight * 1.2));
+                        }
+                    }
+                }, { passive: true });
+            }
+
+            // ================================================================
+            // ANIMATED COUNTERS for category counts
+            // ================================================================
+            function animateCounters() {
+                document.querySelectorAll('.category-count').forEach(counter => {
+                    const target = parseInt(counter.textContent, 10);
+                    if (isNaN(target) || counter.dataset.animated) return;
+                    counter.dataset.animated = 'true';
+                    let current = 0;
+                    const duration = 800;
+                    const stepTime = Math.max(16, Math.floor(duration / target));
+                    const timer = setInterval(() => {
+                        current++;
+                        counter.textContent = current;
+                        if (current >= target) {
+                            clearInterval(timer);
+                            counter.textContent = target;
+                        }
+                    }, stepTime);
+                });
+            }
+
+            // Observe categories sidebar card for counter animation
+            const categoriesCard = document.querySelector('.categories-list');
+            if (categoriesCard) {
+                const counterObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounters();
+                            counterObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 });
+                counterObserver.observe(categoriesCard);
+            }
+
+            // ================================================================
+            // SEARCH BAR INTERACTION — pulse effect on focus
+            // ================================================================
+            const searchInput = document.querySelector('.blog-search-input');
+            if (searchInput) {
+                searchInput.addEventListener('focus', () => {
+                    searchInput.closest('.blog-search-wrapper').style.transform = 'scale(1.02)';
+                });
+                searchInput.addEventListener('blur', () => {
+                    searchInput.closest('.blog-search-wrapper').style.transform = 'scale(1)';
+                });
+            }
+
+            // ================================================================
+            // BLOG LOGIC
+            // ================================================================
+
+            // Check if blog.js is loaded
+            if (typeof fetchBlogPosts === 'undefined') {
+                console.error('Blog functions not loaded');
+                postsContainer.innerHTML = renderError('Blog module failed to load. Please refresh the page.');
+                return;
+            }
+
+            let currentPage = 1;
+
+            // Load posts from URL parameter if available
+            const urlParams = new URLSearchParams(window.location.search);
+            const pageParam = urlParams.get('page');
+            if (pageParam && !isNaN(pageParam)) {
+                currentPage = parseInt(pageParam);
+            }
+
+            /**
+             * Render featured post card
+             */
+            function renderFeaturedPost(post) {
+                const featuredImage = getFeaturedImageUrl(post);
+                const author = getPostAuthor(post);
+                const titleText = post.title?.rendered || post.title || '';
+                const excerptRaw = post.excerpt?.rendered || post.excerpt || '';
+                const excerpt = excerptRaw
+                    .replace(/<p>/g, '')
+                    .replace(/<\/p>/g, '')
+                    .replace(/&nbsp;/g, ' ')
+                    .replace(/<[^>]*>/g, '')
+                    .trim()
+                    .substring(0, 250);
+
+                // Get first category name
+                let categoryName = 'Featured Article';
+                if (post.categories && typeof post.categories === 'object' && !Array.isArray(post.categories)) {
+                    const keys = Object.keys(post.categories);
+                    if (keys.length > 0) categoryName = post.categories[keys[0]].name || categoryName;
+                }
+
+                return `
+                    <div class="featured-post-card">
+                        <div class="featured-post-grid">
+                            <div class="featured-post-image">
+                                <img src="${featuredImage}" alt="${titleText}" loading="lazy">
+                            </div>
+                            <div class="featured-post-content">
+                                <div class="featured-label">
+                                    <span class="material-symbols-outlined">star</span>
+                                    Featured Article
+                                </div>
+                                <h2>${titleText}</h2>
+                                <p>${excerpt}</p>
+                                <div class="featured-author">
+                                    <div>
+                                        <p class="featured-author-name">${author}</p>
+                                        <p class="featured-author-meta">${categoryName} • ${formatReadTime(post)} min read</p>
+                                    </div>
+                                </div>
+                                <div class="featured-cta">
+                                    <a href="/blog/post.html?slug=${post.slug}" class="btn-primary-filled">Read Full Article</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            /**
+             * Estimate read time from post content
+             */
+            function formatReadTime(post) {
+                const content = post.content?.rendered || post.content || post.excerpt?.rendered || post.excerpt || '';
+                const text = content.replace(/<[^>]*>/g, '');
+                const wordCount = text.split(/\s+/).filter(w => w).length;
+                return Math.max(1, Math.ceil(wordCount / 200));
+            }
+
+            /**
+             * Render popular posts sidebar
+             */
+            function renderPopularPosts(posts) {
+                if (!posts || posts.length === 0) {
+                    popularPostsContainer.innerHTML = '<p style="color: var(--outline); font-size: 14px;">No posts available.</p>';
+                    return;
+                }
+
+                // Take up to 3 posts for sidebar
+                const topPosts = posts.slice(0, 3);
+                let html = '';
+                topPosts.forEach((post, i) => {
+                    const titleText = post.title?.rendered || post.title || '';
+                    const readTime = formatReadTime(post);
+                    html += `
+                        <a class="popular-post-item" href="/blog/post.html?slug=${post.slug}">
+                            <h4>${titleText}</h4>
+                            <p>${readTime} min read</p>
+                        </a>
+                    `;
+                    if (i < topPosts.length - 1) {
+                        html += '<hr class="popular-post-divider">';
+                    }
+                });
+                popularPostsContainer.innerHTML = html;
+            }
+
+            /**
+             * Render post card in the new design
+             */
+            function renderNewPostCard(post) {
+                const featuredImage = getFeaturedImageUrl(post);
+                const titleText = post.title?.rendered || post.title || '';
+                const excerptRaw = post.excerpt?.rendered || post.excerpt || '';
+                const excerpt = excerptRaw
+                    .replace(/<p>/g, '')
+                    .replace(/<\/p>/g, '')
+                    .replace(/&nbsp;/g, ' ')
+                    .replace(/<[^>]*>/g, '')
+                    .trim()
+                    .substring(0, 150) + '...';
+                const date = formatDate(post.date);
+
+                // Get first category
+                let categoryName = '';
+                if (post.categories && typeof post.categories === 'object' && !Array.isArray(post.categories)) {
+                    const keys = Object.keys(post.categories);
+                    if (keys.length > 0) categoryName = post.categories[keys[0]].name || '';
+                }
+
+                return `
+                    <article class="post-card">
+                        <a href="/blog/post.html?slug=${post.slug}" class="post-card-link">
+                            <div class="post-card-image">
+                                <img src="${featuredImage}" alt="${titleText}" loading="lazy">
+                                ${categoryName ? `<span class="post-card-category">${categoryName}</span>` : ''}
+                            </div>
+                            <div class="post-card-content">
+                                <h3 class="post-card-title">${titleText}</h3>
+                                <p class="post-card-excerpt">${excerpt}</p>
+                                <div class="post-card-meta">
+                                    <span class="post-card-date">${date}</span>
+                                    <span class="post-card-read-more">
+                                        Read More <span class="material-symbols-outlined">arrow_forward</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                `;
+            }
+
+            /**
+             * Load and display posts for a specific page
+             */
+            async function loadPosts(page = 1) {
+                // Show skeleton loaders
+                postsContainer.innerHTML = renderSkeletonPosts(BLOG_CONFIG.POSTS_PER_PAGE);
+                paginationContainer.innerHTML = '';
+
+                // Fetch posts
+                const data = await fetchBlogPosts(page, BLOG_CONFIG.POSTS_PER_PAGE);
+
+                // Check for errors
+                if (data.error || data.posts.length === 0) {
+                    if (page === 1) {
+                        postsContainer.innerHTML = renderError(
+                            data.error || 'No blog posts available at the moment.'
+                        );
+                        featuredContainer.innerHTML = '';
+                    } else {
+                        // Page out of range - show first page
+                        loadPosts(1);
+                    }
+                    return;
+                }
+
+                let displayPosts = data.posts;
+
+                // On first page, separate featured post
+                if (page === 1 && data.posts.length > 0) {
+                    const featured = data.posts[0];
+                    featuredContainer.innerHTML = renderFeaturedPost(featured);
+                    displayPosts = data.posts.slice(1);
+
+                    // Render popular posts in sidebar
+                    renderPopularPosts(data.posts);
+                } else {
+                    featuredContainer.innerHTML = '';
+                }
+
+                // Render posts in new card design
+                const postsHTML = displayPosts
+                    .map(post => renderNewPostCard(post))
+                    .join('');
+                postsContainer.innerHTML = postsHTML;
+
+                // Re-trigger reveal for dynamically injected content
+                postsContainer.classList.remove('revealed');
+                requestAnimationFrame(() => {
+                    observeAllRevealElements();
+                    addTiltEffect(postsContainer);
+                });
+
+                // Render pagination if more than 1 page
+                if (data.pagination.totalPages > 1) {
+                    paginationContainer.innerHTML = renderPagination(
+                        data.pagination,
+                        loadPosts
+                    );
+                }
+
+                // Update URL without page reload
+                if (page > 1) {
+                    window.history.replaceState({ page: page }, '', `?page=${page}`);
+                } else {
+                    window.history.replaceState({ page: 1 }, '', '/blog/');
+                }
+
+                // Track page view
+                gtag('event', 'page_view', {
+                    'page_path': window.location.pathname,
+                    'page_title': document.title
+                });
+            }
+
+            // Category filter switching (visual only) with ripple effect
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            categoryButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    categoryButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Ripple effect
+                    const ripple = document.createElement('span');
+                    ripple.style.cssText = `
+                        position: absolute; border-radius: 50%;
+                        background: rgba(255,255,255,0.4);
+                        width: 100px; height: 100px;
+                        left: ${e.offsetX - 50}px; top: ${e.offsetY - 50}px;
+                        transform: scale(0); opacity: 1;
+                        animation: rippleOut 0.5s ease-out forwards;
+                        pointer-events: none;
+                    `;
+                    btn.style.position = 'relative';
+                    btn.style.overflow = 'hidden';
+                    btn.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 500);
+
+                    // Future: filter by category
+                });
+            });
+
+            // Load initial page
+            loadPosts(currentPage);
+        });
+
+        /**
+         * Newsletter form handler
+         */
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            if (email) {
+                // Track newsletter signup
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'newsletter_signup', {
+                        'event_category': 'engagement',
+                        'event_label': email
+                    });
+                }
+                alert('Thank you for subscribing! You\'ll receive our next edition.');
+                document.getElementById('newsletter-email').value = '';
+            }
+            return false;
+        }
+    </script>
+
+    <script>
+        // Mobile menu toggle functionality
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const dropdownItems = document.querySelectorAll('.nav-item');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Mobile dropdown functionality
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const dropdown = item.querySelector('.dropdown');
+
+            if (dropdown) {
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('dropdown-open');
+                    }
+                });
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                dropdownItems.forEach(item => {
+                    item.classList.remove('dropdown-open');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
