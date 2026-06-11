@@ -68,6 +68,15 @@
 
  
 
+## Blog
+
+ 
+
+- [Code Regime Blog – Tech Insights & Dev Updates](https://www.coderegimetechnologies.com/blog/): Explore expert articles on mobile app development, web apps, SaaS, AI tools, and clone scripts. Stay updated with Code Regime Technologies' blog page.
+- [Code Regime Blog Post](https://www.coderegimetechnologies.com/blog/post.html): A comprehensive guide to starting a new blog post from scratch with modern aesthetics.
+
+ 
+
 ## Portfolio
 
  
