@@ -24,8 +24,8 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon-96x96.png">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="preload" as="style" href="/css/bootstrap.min.css">
@@ -69,32 +69,32 @@
     </script>
 
     <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
-  <!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-17LK163FGY');
-  </script>
-  <!-- End Google tag (gtag.js) -->
+        gtag('config', 'G-17LK163FGY');
+    </script>
+    <!-- End Google tag (gtag.js) -->
 </head>
 
 <body class="blog-page-body">
     <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W396DGWQ" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W396DGWQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header Navigation -->
     <!-- <header id="header-container"></header> -->
 
@@ -182,9 +182,9 @@
                 <li class="nav-item">
                     <a href="/Portfolio/" class="nav-link">Portfolio</a>
                 </li>
-        <li class="nav-item">
-          <a href="/blog/" class="nav-link active">Blog</a>
-        </li>
+                <li class="nav-item">
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                </li>
                 <li class="nav-item">
                     <a href="/contact-us/" class="nav-link">Contact Us</a>
                 </li>
@@ -236,13 +236,9 @@
             <!-- Left Column: Filter & Post Grid -->
             <div>
                 <!-- Category Filter -->
-                <!-- <div id="category-filter" class="category-filter">
-                    <button class="category-btn active" data-category="all">All</button>
-                    <button class="category-btn" data-category="custom-development">Custom Development</button>
-                    <button class="category-btn" data-category="mobile-apps">Mobile Apps</button>
-                    <button class="category-btn" data-category="blockchain">Blockchain</button>
-                    <button class="category-btn" data-category="product-clones">Product Clones</button>
-                </div> -->
+                <div id="category-filter" class="category-filter">
+                    <!-- Populated by JS -->
+                </div>
 
                 <!-- Posts Grid -->
                 <div id="posts-container" class="posts-grid">
@@ -262,36 +258,7 @@
                         Categories
                     </h3>
                     <ul class="categories-list">
-                        <li class="category-item">
-                            <a class="category-link" href="#">
-                                <span class="category-name">Web Dev</span>
-                                <span class="category-count">12</span>
-                            </a>
-                        </li>
-                        <li class="category-item">
-                            <a class="category-link" href="#">
-                                <span class="category-name">Mobile Apps</span>
-                                <span class="category-count">8</span>
-                            </a>
-                        </li>
-                        <li class="category-item">
-                            <a class="category-link" href="#">
-                                <span class="category-name">SaaS</span>
-                                <span class="category-count">15</span>
-                            </a>
-                        </li>
-                        <li class="category-item">
-                            <a class="category-link" href="#">
-                                <span class="category-name">AI Tools</span>
-                                <span class="category-count">5</span>
-                            </a>
-                        </li>
-                        <li class="category-item">
-                            <a class="category-link" href="#">
-                                <span class="category-name">Clone Scripts</span>
-                                <span class="category-count">22</span>
-                            </a>
-                        </li>
+                        <!-- Populated by JS -->
                     </ul>
                 </div>
                 <!-- Popular Posts -->
@@ -693,12 +660,23 @@
             }
 
             let currentPage = 1;
+            let currentCategory = '';
+            let currentSearch = '';
 
             // Load posts from URL parameter if available
             const urlParams = new URLSearchParams(window.location.search);
             const pageParam = urlParams.get('page');
             if (pageParam && !isNaN(pageParam)) {
                 currentPage = parseInt(pageParam);
+            }
+            const categoryParam = urlParams.get('category');
+            if (categoryParam) {
+                currentCategory = categoryParam;
+            }
+            const searchParam = urlParams.get('search');
+            if (searchParam) {
+                currentSearch = searchParam;
+                if (searchInput) searchInput.value = currentSearch;
             }
 
             /**
@@ -844,14 +822,18 @@
                 paginationContainer.innerHTML = '';
 
                 // Fetch posts
-                const data = await fetchBlogPosts(page, BLOG_CONFIG.POSTS_PER_PAGE);
+                const data = await fetchBlogPosts(page, BLOG_CONFIG.POSTS_PER_PAGE, currentCategory, currentSearch);
 
                 // Check for errors
                 if (data.error || data.posts.length === 0) {
                     if (page === 1) {
-                        postsContainer.innerHTML = renderError(
-                            data.error || 'No blog posts available at the moment.'
-                        );
+                        let errorMsg = 'No blog posts available at the moment.';
+                        if (currentSearch) {
+                            errorMsg = `No posts found matching "${currentSearch}".`;
+                        } else if (currentCategory) {
+                            errorMsg = 'No blog posts available for this category.';
+                        }
+                        postsContainer.innerHTML = renderError(errorMsg);
                         featuredContainer.innerHTML = '';
                     } else {
                         // Page out of range - show first page
@@ -896,11 +878,23 @@
                 }
 
                 // Update URL without page reload
+                const newUrl = new URL(window.location);
                 if (page > 1) {
-                    window.history.replaceState({ page: page }, '', `?page=${page}`);
+                    newUrl.searchParams.set('page', page);
                 } else {
-                    window.history.replaceState({ page: 1 }, '', '/blog/');
+                    newUrl.searchParams.delete('page');
                 }
+                if (currentCategory) {
+                    newUrl.searchParams.set('category', currentCategory);
+                } else {
+                    newUrl.searchParams.delete('category');
+                }
+                if (currentSearch) {
+                    newUrl.searchParams.set('search', currentSearch);
+                } else {
+                    newUrl.searchParams.delete('search');
+                }
+                window.history.replaceState({ page: page, category: currentCategory, search: currentSearch }, '', newUrl.toString());
 
                 // Track page view
                 gtag('event', 'page_view', {
@@ -909,34 +903,145 @@
                 });
             }
 
-            // Category filter switching (visual only) with ripple effect
-            const categoryButtons = document.querySelectorAll('.category-btn');
-            categoryButtons.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    categoryButtons.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+            async function loadCategories() {
+                if (typeof fetchCategories !== 'undefined') {
+                    const categories = await fetchCategories();
 
-                    // Ripple effect
-                    const ripple = document.createElement('span');
-                    ripple.style.cssText = `
-                        position: absolute; border-radius: 50%;
-                        background: rgba(255,255,255,0.4);
-                        width: 100px; height: 100px;
-                        left: ${e.offsetX - 50}px; top: ${e.offsetY - 50}px;
-                        transform: scale(0); opacity: 1;
-                        animation: rippleOut 0.5s ease-out forwards;
-                        pointer-events: none;
-                    `;
-                    btn.style.position = 'relative';
-                    btn.style.overflow = 'hidden';
-                    btn.appendChild(ripple);
-                    setTimeout(() => ripple.remove(), 500);
+                    const activeCategories = categories.filter(c => c.post_count > 0 && c.slug !== 'uncategorized');
 
-                    // Future: filter by category
+                    // Render Top Filter
+                    const categoryFilterContainer = document.getElementById('category-filter');
+                    if (categoryFilterContainer) {
+                        let filterHtml = `<button class="category-btn ${currentCategory === '' ? 'active' : ''}" data-category="">All</button>`;
+                        activeCategories.forEach(cat => {
+                            filterHtml += `<button class="category-btn ${currentCategory === cat.slug ? 'active' : ''}" data-category="${cat.slug}">${cat.name}</button>`;
+                        });
+                        categoryFilterContainer.innerHTML = filterHtml;
+
+                        // Add listeners
+                        const categoryButtons = categoryFilterContainer.querySelectorAll('.category-btn');
+                        categoryButtons.forEach(btn => {
+                            btn.addEventListener('click', (e) => {
+                                categoryButtons.forEach(b => b.classList.remove('active'));
+                                btn.classList.add('active');
+
+                                // Ripple effect
+                                const ripple = document.createElement('span');
+                                ripple.style.cssText = `
+                                    position: absolute; border-radius: 50%;
+                                    background: rgba(255,255,255,0.4);
+                                    width: 100px; height: 100px;
+                                    left: ${e.offsetX - 50}px; top: ${e.offsetY - 50}px;
+                                    transform: scale(0); opacity: 1;
+                                    animation: rippleOut 0.5s ease-out forwards;
+                                    pointer-events: none;
+                                `;
+                                btn.style.position = 'relative';
+                                btn.style.overflow = 'hidden';
+                                btn.appendChild(ripple);
+                                setTimeout(() => ripple.remove(), 500);
+
+                                currentCategory = btn.dataset.category;
+                                currentPage = 1;
+                                loadPosts(currentPage);
+
+                                // Sync sidebar
+                                const sidebarCategoriesContainer = document.querySelector('.categories-list');
+                                if (sidebarCategoriesContainer) {
+                                    sidebarCategoriesContainer.querySelectorAll('.category-link').forEach(link => {
+                                        link.classList.remove('active');
+                                        if (link.dataset.category === currentCategory || (currentCategory === '' && link.dataset.category === 'all')) {
+                                            link.classList.add('active');
+                                        }
+                                    });
+                                }
+                            });
+                        });
+                    }
+
+                    // Render Sidebar List
+                    const sidebarCategoriesContainer = document.querySelector('.categories-list');
+                    if (sidebarCategoriesContainer) {
+                        let sidebarHtml = `
+                            <li class="category-item">
+                                <a class="category-link ${currentCategory === '' ? 'active' : ''}" href="#" data-category="">
+                                    <span class="category-name">All Posts</span>
+                                </a>
+                            </li>
+                        `;
+                        activeCategories.forEach(cat => {
+                            sidebarHtml += `
+                                <li class="category-item">
+                                    <a class="category-link ${currentCategory === cat.slug ? 'active' : ''}" href="#" data-category="${cat.slug}">
+                                        <span class="category-name">${cat.name}</span>
+                                        <span class="category-count">${cat.post_count}</span>
+                                    </a>
+                                </li>
+                            `;
+                        });
+                        sidebarCategoriesContainer.innerHTML = sidebarHtml;
+
+                        // Sidebar listeners
+                        sidebarCategoriesContainer.querySelectorAll('.category-link').forEach(link => {
+                            link.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                sidebarCategoriesContainer.querySelectorAll('.category-link').forEach(l => l.classList.remove('active'));
+                                link.classList.add('active');
+
+                                currentCategory = link.dataset.category;
+                                currentPage = 1;
+
+                                // update top filter UI
+                                if (categoryFilterContainer) {
+                                    categoryFilterContainer.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                                    const topBtn = categoryFilterContainer.querySelector(`[data-category="${currentCategory}"]`);
+                                    if (topBtn) {
+                                        topBtn.classList.add('active');
+                                    } else if (currentCategory === '') {
+                                        const allBtn = categoryFilterContainer.querySelector(`[data-category=""]`);
+                                        if (allBtn) allBtn.classList.add('active');
+                                    }
+                                }
+
+                                loadPosts(currentPage);
+                                window.scrollTo({ top: document.querySelector('.blog-content-grid').offsetTop - 100, behavior: 'smooth' });
+                            });
+                        });
+                    }
+                }
+            }
+
+            // Search Filter Logic
+            const searchInputEl = document.querySelector('.blog-search-input');
+            const searchIconEl = document.querySelector('.blog-search-icon');
+
+            function executeSearch() {
+                if (searchInputEl) {
+                    const query = searchInputEl.value.trim();
+                    currentSearch = query;
+                    currentPage = 1;
+                    loadPosts(currentPage);
+                    window.scrollTo({ top: document.querySelector('.blog-content-grid').offsetTop - 100, behavior: 'smooth' });
+                }
+            }
+
+            if (searchInputEl) {
+                searchInputEl.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        executeSearch();
+                    }
                 });
-            });
+            }
+            if (searchIconEl) {
+                searchIconEl.style.cursor = 'pointer';
+                searchIconEl.addEventListener('click', () => {
+                    executeSearch();
+                });
+            }
 
-            // Load initial page
+            // Load initial data
+            loadCategories();
             loadPosts(currentPage);
         });
 

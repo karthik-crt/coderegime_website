@@ -11,6 +11,7 @@ const BLOG_CONFIG = {
 // Cache storage
 let postsCache = {
     data: null,
+    key: null,
     timestamp: null
 };
 
@@ -20,17 +21,24 @@ let postsCache = {
  * @param {number} limit - Number of posts per page (default: POSTS_PER_PAGE)
  * @returns {Promise<Object>} - Posts data and metadata
  */
-async function fetchBlogPosts(page = 1, limit = BLOG_CONFIG.POSTS_PER_PAGE) {
+async function fetchBlogPosts(page = 1, limit = BLOG_CONFIG.POSTS_PER_PAGE, category = '', searchQuery = '') {
     try {
         // Check cache first
+        const cacheKey = `${page}-${limit}-${category}-${searchQuery}`;
         const now = Date.now();
-        if (postsCache.data && postsCache.timestamp && (now - postsCache.timestamp) < BLOG_CONFIG.CACHE_DURATION) {
+        if (postsCache.data && postsCache.key === cacheKey && postsCache.timestamp && (now - postsCache.timestamp) < BLOG_CONFIG.CACHE_DURATION) {
             console.log('Using cached posts');
             return postsCache.data;
         }
 
         const offset = (page - 1) * limit;
-        const url = `${BLOG_CONFIG.WORDPRESS_API_URL}/posts?number=${limit}&page=${page}`;
+        let url = `${BLOG_CONFIG.WORDPRESS_API_URL}/posts?number=${limit}&page=${page}`;
+        if (category) {
+            url += `&category=${encodeURIComponent(category)}`;
+        }
+        if (searchQuery) {
+            url += `&search=${encodeURIComponent(searchQuery)}`;
+        }
 
         console.log('Fetching posts from:', url);
         const response = await fetch(url);
@@ -61,6 +69,7 @@ async function fetchBlogPosts(page = 1, limit = BLOG_CONFIG.POSTS_PER_PAGE) {
         // Cache the results
         postsCache = {
             data: data,
+            key: cacheKey,
             timestamp: now
         };
 
@@ -105,12 +114,31 @@ async function fetchSinglePost(slug) {
             console.warn('Post not found:', slug);
             return null;
         }
-
+        console.log('Fetched post:', post.title?.rendered || post.title || 'Untitled');
         return post;
 
     } catch (error) {
         console.error('Error fetching single post:', error);
         return null;
+    }
+}
+
+/**
+ * Fetch blog categories from WordPress REST API
+ * @returns {Promise<Array>} - Categories array
+ */
+async function fetchCategories() {
+    try {
+        const url = `${BLOG_CONFIG.WORDPRESS_API_URL}/categories`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`API error: ${response.status} ${response.statusText}`);
+        }
+        const data = await response.json();
+        return data.categories || [];
+    } catch (error) {
+        console.error('Error fetching categories:', error);
+        return [];
     }
 }
 
@@ -175,7 +203,7 @@ function renderPostCard(post) {
         .replace(/&nbsp;/g, ' ')
         .trim()
         .substring(0, 150) + '...';
-
+    console.log('Rendering post card for:', titleText);
     return `
         <div class="post-card">
             <a href="/blog/post.html?slug=${post.slug}" class="post-card-link">
@@ -398,6 +426,7 @@ function updatePostMetaTags(post) {
     metaDescription.content = cleanExcerpt;
 
     // Update OG tags for social sharing
+    console.log('Updating OG meta tags for:', titleText);
     updateOrCreateMetaTag('og:title', titleText);
     updateOrCreateMetaTag('og:description', cleanExcerpt);
     updateOrCreateMetaTag('og:image', getFeaturedImageUrl(post));

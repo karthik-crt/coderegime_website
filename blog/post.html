@@ -10,8 +10,8 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon-96x96.png">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="preload" as="style" href="/css/bootstrap.min.css">
@@ -208,10 +208,13 @@
                         <div class="post-tags" id="post-tags-display">
                             <!-- Dynamic tags -->
                         </div>
-                        <div class="post-interaction-actions" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; width: 100%; margin-top: 1.5rem;">
+                        <div class="post-interaction-actions"
+                            style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; width: 100%; margin-top: 1.5rem;">
                             <div class="post-rating" style="display: flex; align-items: center; gap: 0.5rem;">
-                                <span class="rating-label" style="font-weight: 500; color: var(--text-secondary);">Rate this article:</span>
-                                <div class="stars" style="color: #ffc107; cursor: pointer; display: flex; gap: 0.25rem; font-size: 1.25rem;">
+                                <span class="rating-label" style="font-weight: 500; color: var(--text-secondary);">Rate
+                                    this article:</span>
+                                <div class="stars"
+                                    style="color: #ffc107; cursor: pointer; display: flex; gap: 0.25rem; font-size: 1.25rem;">
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
@@ -220,27 +223,63 @@
                                 </div>
                             </div>
                             <div class="post-share-actions" style="display: flex; align-items: center; gap: 1rem;">
-                                <span class="share-label" style="font-weight: 500; color: var(--text-secondary);">Share:</span>
-                                <button class="share-btn" title="LinkedIn" style="border: none; background: #f0f4f8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #0077b5; transition: all 0.3s;" onmouseover="this.style.background='#0077b5'; this.style.color='#fff';" onmouseout="this.style.background='#f0f4f8'; this.style.color='#0077b5';" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank')"><i class="fab fa-linkedin-in"></i></button>
-                                <button class="share-btn" title="Twitter" style="border: none; background: #f0f4f8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #1da1f2; transition: all 0.3s;" onmouseover="this.style.background='#1da1f2'; this.style.color='#fff';" onmouseout="this.style.background='#f0f4f8'; this.style.color='#1da1f2';" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank')"><i class="fab fa-twitter"></i></button>
-                                <button class="share-btn" title="Facebook" style="border: none; background: #f0f4f8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #1877f2; transition: all 0.3s;" onmouseover="this.style.background='#1877f2'; this.style.color='#fff';" onmouseout="this.style.background='#f0f4f8'; this.style.color='#1877f2';" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')"><i class="fab fa-facebook-f"></i></button>
-                                <button class="share-btn" title="Copy Link" style="border: none; background: #f0f4f8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #333; transition: all 0.3s;" onmouseover="this.style.background='#333'; this.style.color='#fff';" onmouseout="this.style.background='#f0f4f8'; this.style.color='#333';" onclick="navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copied!'))"><i class="fas fa-link"></i></button>
+                                <span class="share-label"
+                                    style="font-weight: 500; color: var(--text-secondary);">Share:</span>
+                                <button class="share-btn" title="LinkedIn"
+                                    style="border: none; background: #f0f4f8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #0077b5; transition: all 0.3s;"
+                                    onmouseover="this.style.background='#0077b5'; this.style.color='#fff';"
+                                    onmouseout="this.style.background='#f0f4f8'; this.style.color='#0077b5';"
+                                    onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank')"><i
+                                        class="fab fa-linkedin-in"></i></button>
+                                <button class="share-btn" title="Twitter"
+                                    style="border: none; background: #f0f4f8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #1da1f2; transition: all 0.3s;"
+                                    onmouseover="this.style.background='#1da1f2'; this.style.color='#fff';"
+                                    onmouseout="this.style.background='#f0f4f8'; this.style.color='#1da1f2';"
+                                    onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank')"><i
+                                        class="fab fa-twitter"></i></button>
+                                <button class="share-btn" title="Facebook"
+                                    style="border: none; background: #f0f4f8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #1877f2; transition: all 0.3s;"
+                                    onmouseover="this.style.background='#1877f2'; this.style.color='#fff';"
+                                    onmouseout="this.style.background='#f0f4f8'; this.style.color='#1877f2';"
+                                    onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')"><i
+                                        class="fab fa-facebook-f"></i></button>
+                                <button class="share-btn" title="Copy Link"
+                                    style="border: none; background: #f0f4f8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #333; transition: all 0.3s;"
+                                    onmouseover="this.style.background='#333'; this.style.color='#fff';"
+                                    onmouseout="this.style.background='#f0f4f8'; this.style.color='#333';"
+                                    onclick="navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copied!'))"><i
+                                        class="fas fa-link"></i></button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Previous and Next Post Navigation -->
-                    <div class="post-navigation" style="display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; font-family: 'Inter', sans-serif;">
-                        <a href="#" id="prev-post-link" class="nav-link prev" style="display: none; text-decoration: none; color: inherit; max-width: 48%; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(-5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <div class="post-navigation"
+                        style="display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; font-family: 'Inter', sans-serif;">
+                        <a href="#" id="prev-post-link" class="nav-link prev"
+                            style="display: none; text-decoration: none; color: inherit; max-width: 48%; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='translateX(-5px)'"
+                            onmouseout="this.style.transform='translateX(0)'">
                             <div style="display: flex; flex-direction: column;">
-                                <span style="font-size: 0.85rem; color: #64748b; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-arrow-left"></i> Previous Post</span>
-                                <h4 id="prev-post-title" style="margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.4; color: #1e293b; font-weight: 600; margin-bottom: 0;"></h4>
+                                <span
+                                    style="font-size: 0.85rem; color: #64748b; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.5rem;"><i
+                                        class="fas fa-arrow-left"></i> Previous Post</span>
+                                <h4 id="prev-post-title"
+                                    style="margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.4; color: #1e293b; font-weight: 600; margin-bottom: 0;">
+                                </h4>
                             </div>
                         </a>
-                        <a href="#" id="next-post-link" class="nav-link next" style="display: none; text-decoration: none; color: inherit; text-align: right; max-width: 48%; margin-left: auto; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                        <a href="#" id="next-post-link" class="nav-link next"
+                            style="display: none; text-decoration: none; color: inherit; text-align: right; max-width: 48%; margin-left: auto; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='translateX(5px)'"
+                            onmouseout="this.style.transform='translateX(0)'">
                             <div style="display: flex; flex-direction: column; align-items: flex-end;">
-                                <span style="font-size: 0.85rem; color: #64748b; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.5rem;">Next Post <i class="fas fa-arrow-right"></i></span>
-                                <h4 id="next-post-title" style="margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.4; color: #1e293b; font-weight: 600; margin-bottom: 0;"></h4>
+                                <span
+                                    style="font-size: 0.85rem; color: #64748b; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.5rem;">Next
+                                    Post <i class="fas fa-arrow-right"></i></span>
+                                <h4 id="next-post-title"
+                                    style="margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.4; color: #1e293b; font-weight: 600; margin-bottom: 0;">
+                                </h4>
                             </div>
                         </a>
                     </div>
@@ -471,7 +510,9 @@
     <!-- <script src="/main.js" defer></script> -->
     <script src="/blog/blog.js" defer></script>
     <script>
+        console.log("blog.js loaded");
         document.addEventListener('DOMContentLoaded', function () {
+            console.log("DOM fully loaded and parsed");
             // Reading progress bar logic
             window.addEventListener('scroll', () => {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -519,7 +560,7 @@
             async function loadPostData() {
                 const urlParams = new URLSearchParams(window.location.search);
                 const slug = urlParams.get('slug');
-
+                console.log("Extracted slug:", slug);
                 if (!slug) {
                     // Only show error if we aren't previewing the static template
                     if (window.location.search.includes('?')) {
@@ -538,6 +579,7 @@
                 document.getElementById('post-content-display').innerHTML = '<p>Loading post...</p>';
 
                 const post = await fetchSinglePost(slug);
+                console.log("Fetched post data:", post);
 
                 if (!post) {
                     document.getElementById('post-content-display').innerHTML = '<p>Error: Post not found.</p>';
@@ -550,14 +592,58 @@
                 const breadcrumbTitle = document.getElementById('breadcrumb-title-display');
                 if (breadcrumbTitle) breadcrumbTitle.textContent = titleText;
 
-                // Update Meta Tags (SEO)
-                document.title = `${titleText} | Code Regime Technologies`;
-
                 // Content
                 const contentText = post.content?.rendered || post.content || '';
                 const enhancedContent = contentText.replace(/<p/, '<p class="first-letter-drop"');
                 const contentDisplay = document.getElementById('post-content-display');
                 contentDisplay.innerHTML = enhancedContent;
+
+                // ── Meta Tags ──────────────────────────────────────────────────────────────
+                // Always set title directly — don't rely on blog.js having updatePostMetaTags
+                document.title = `${titleText} | Code Regime Technologies`;
+
+                // Build description: prefer excerpt, fall back to first paragraph of content
+                let metaDesc = (post.excerpt?.rendered || post.excerpt || '')
+                    .replace(/<[^>]*>/g, '').trim();
+
+                if (!metaDesc && contentText) {
+                    const tmpDiv = document.createElement('div');
+                    tmpDiv.innerHTML = contentText;
+                    const firstP = tmpDiv.querySelector('p');
+                    metaDesc = (firstP ? firstP.textContent : tmpDiv.textContent).trim();
+                }
+
+                if (metaDesc.length > 155) metaDesc = metaDesc.slice(0, 152) + '…';
+
+                // Helper: find existing meta or create it
+                function setMeta(selector, attrKey, attrVal, contentVal) {
+                    let el = document.querySelector(selector);
+                    if (!el) {
+                        el = document.createElement('meta');
+                        el.setAttribute(attrKey, attrVal);
+                        document.head.appendChild(el);
+                    }
+                    el.setAttribute('content', contentVal);
+                }
+
+                const pageUrl       = window.location.href;
+                const featuredImgUrl = getFeaturedImageUrl(post); // already called below for <img>
+
+                // Standard SEO
+                setMeta('meta[name="description"]',        'name',     'description',       metaDesc);
+
+                // Open Graph (Facebook / LinkedIn previews)
+                setMeta('meta[property="og:title"]',       'property', 'og:title',          titleText);
+                setMeta('meta[property="og:description"]', 'property', 'og:description',    metaDesc);
+                setMeta('meta[property="og:url"]',         'property', 'og:url',            pageUrl);
+                setMeta('meta[property="og:image"]',       'property', 'og:image',          featuredImgUrl);
+                setMeta('meta[property="og:type"]',        'property', 'og:type',           'article');
+
+                // Twitter Card
+                setMeta('meta[name="twitter:card"]',        'name', 'twitter:card',        'summary_large_image');
+                setMeta('meta[name="twitter:title"]',       'name', 'twitter:title',        titleText);
+                setMeta('meta[name="twitter:description"]', 'name', 'twitter:description',  metaDesc);
+                setMeta('meta[name="twitter:image"]',       'name', 'twitter:image',        featuredImgUrl);
 
                 // Table of Contents Extraction
                 const headings = Array.from(contentDisplay.querySelectorAll('h2, h3'));
@@ -668,7 +754,7 @@
                                 }
 
                                 relatedHtml += `
-                                    <a class="group block" href="/blog/post.html?slug=${relPost.slug}" style="text-decoration:none; display:block; margin-bottom: 1rem;">
+                                    <a class="group block" href="/blog/post.php?slug=${relPost.slug}" style="text-decoration:none; display:block; margin-bottom: 1rem;">
                                         <span class="text-label-sm block mb-1" style="color:var(--primary); font-size: 0.8rem; text-transform: uppercase;">${relCat}</span>
                                         <p class="text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2" style="color:var(--text-primary); transition: color 0.2s;">${relTitle}</p>
                                     </a>
@@ -694,7 +780,7 @@
                             const prevLink = document.getElementById('prev-post-link');
                             const prevTitle = document.getElementById('prev-post-title');
                             if (prevLink && prevTitle) {
-                                prevLink.href = `/blog/post.html?slug=${prevPost.slug}`;
+                                prevLink.href = `/blog/post.php?slug=${prevPost.slug}`;
                                 prevTitle.innerHTML = prevPost.title || prevPost.title?.rendered || '';
                                 prevLink.style.display = 'block';
                             }
@@ -710,7 +796,7 @@
                             const nextLink = document.getElementById('next-post-link');
                             const nextTitle = document.getElementById('next-post-title');
                             if (nextLink && nextTitle) {
-                                nextLink.href = `/blog/post.html?slug=${nextPost.slug}`;
+                                nextLink.href = `/blog/post.php?slug=${nextPost.slug}`;
                                 nextTitle.innerHTML = nextPost.title || nextPost.title?.rendered || '';
                                 nextLink.style.display = 'block';
                             }
