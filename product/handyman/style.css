@@ -995,28 +995,87 @@ h1 {
   max-width: 400px;
 }
 
+/* --- Glassmorphism Aurora Tab Cards --- */
 .tab {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 20px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  background-color: white;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: default;
+  transition: all 0.4s ease;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #222;
+  box-shadow:
+    15px 20px 40px rgba(0, 0, 0, 0.15),
+    -10px -10px 30px rgba(255, 255, 255, 0.6);
 }
 
-.tab.active {
-  background-color: #ffa500;
-  color: white;
+/* Inner Glow Panel */
+.tab .sazzad-bg {
+  position: absolute;
+  inset: 4px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(245, 245, 245, 0.55)
+  );
+  border-radius: 13px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  z-index: 1;
 }
 
-.tab:hover:not(.active) {
-  transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Animated Aurora Blob */
+.tab .sazzad-aurora {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  filter: blur(22px);
+  z-index: 0;
+  opacity: 0.85;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 165, 0, 0.8),
+    rgba(255, 120, 0, 0.4),
+    transparent
+  );
+
+  animation: sazzad-aurora-move 6.5s infinite ease-in-out;
 }
 
+/* Aurora Animation */
+@keyframes sazzad-aurora-move {
+  0% {
+    transform: translate(-60%, -60%) scale(1);
+  }
+  30% {
+    transform: translate(10%, -40%) scale(1.15);
+  }
+  60% {
+    transform: translate(20%, 20%) scale(1.05);
+  }
+  80% {
+    transform: translate(-40%, 10%) scale(1.2);
+  }
+  100% {
+    transform: translate(-60%, -60%) scale(1);
+  }
+}
+
+/* Tab inner elements z-index above aurora */
 .tab-icon {
   min-width: 40px;
   min-height: 40px;
@@ -1026,36 +1085,32 @@ h1 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgba(255, 165, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(255, 165, 0, 0.25);
   margin-right: 15px;
   flex-shrink: 0;
-}
-
-.tab.active .tab-icon {
-  background-color: white;
-  width: 40px;
-  height: 40px;
+  position: relative;
+  z-index: 3;
 }
 
 .tab-content {
   margin-left: 15px;
   text-align: left;
+  position: relative;
+  z-index: 3;
 }
 
 .tab-title {
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 5px;
+  color: #222;
 }
 
 .tab-desc {
   font-size: 14px;
   line-height: 1.6;
-  display: none;
-}
-
-.tab.active .tab-desc {
-  display: block;
+  color: #5E6570;
 }
 
 .image-container {

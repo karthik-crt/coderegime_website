@@ -922,21 +922,6 @@
 
         </div>
       </div>
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const cards = document.querySelectorAll('.cbr-benefit-card');
-          if (cards.length > 0) {
-            let currentIndex = 0;
-            const animateCards = () => {
-              cards.forEach(card => card.classList.remove('auto-active'));
-              cards[currentIndex].classList.add('auto-active');
-              currentIndex = (currentIndex + 1) % cards.length;
-            };
-            animateCards();
-            setInterval(animateCards, 2500);
-          }
-        });
-      </script>
     </section>
 
     <section class="key-features-section">

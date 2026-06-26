@@ -349,23 +349,30 @@ section {
 }
 
 .features-list {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   z-index: 10;
   width: 100%;
-  margin-bottom: 25px; /* compact margin */
+  margin-bottom: 25px;
 }
 
 .feature-tab {
-  background: transparent;
-  border: none;
-  padding: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg, 15px);
+  padding: 25px;
   margin: 0;
-  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-tab:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .feature-tab h3 {
@@ -377,50 +384,25 @@ section {
   border: 1px solid #e2e8f0;
   border-radius: 50px;
   color: #1e3a8a;
-  font-size: clamp(0.7rem, 0.9vw, 0.95rem);
+  font-size: clamp(0.8rem, 1vw, 1rem);
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 0;
+  margin: 0 0 15px 0;
   text-align: center;
   white-space: normal;
   line-height: 1.3;
 }
 
-.feature-tab:hover h3 {
-  background: #545ced;
-  color: #ffffff;
-  border-color: #545ced;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(84, 92, 237, 0.35);
-}
-
 .feature-tab p {
-  position: absolute;
-  left: 50%;
-  top: 70px; /* Reduced vertical gap */
-  width: 90%;
-  max-width: 800px;
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(-50%) translateY(-15px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
+  margin: 0;
   text-align: center;
-}
-
-.feature-tab:hover p {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
 }
 
 .features-visual {
   width: 100%;
-  margin-top: 110px; /* Increased to ensure clearance for multi-line text */
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -439,19 +421,6 @@ section {
     min-height: auto;
     display: flex;
     flex-direction: column;
-  }
-  .feature-tab p {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: none !important;
-    text-align: center;
-    margin-top: 15px;
-    display: none;
-  }
-  .feature-tab:hover p {
-    display: block;
   }
   .features-visual {
     position: relative;

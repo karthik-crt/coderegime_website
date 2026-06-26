@@ -465,7 +465,9 @@
 
       <div class="features-section1">
         <div class="tabs-container1">
-          <div class="tab active" data-tab="ai">
+          <div class="tab" data-tab="ai">
+            <div class="sazzad-bg"></div>
+            <div class="sazzad-aurora"></div>
             <div class="tab-icon"><img src="images/user-onboarding.png" alt="User Onboarding"></div>
             <div class="tab-content">
               <h3 class="tab-title">User Onboarding</h3>
@@ -475,6 +477,8 @@
           </div>
 
           <div class="tab" data-tab="analytics">
+            <div class="sazzad-bg"></div>
+            <div class="sazzad-aurora"></div>
             <div class="tab-icon"><img src="images/service-selection.png" alt="Service Selection"></div>
             <div class="tab-content">
               <h3 class="tab-title">Service Selection</h3>
@@ -484,6 +488,8 @@
           </div>
 
           <div class="tab" data-tab="routing">
+            <div class="sazzad-bg"></div>
+            <div class="sazzad-aurora"></div>
             <div class="tab-icon"><img src="images/faster-registering.png" alt="Faster Registering"></div>
             <div class="tab-content">
               <h3 class="tab-title">Faster Registering</h3>
@@ -494,6 +500,8 @@
           </div>
 
           <div class="tab" data-tab="chatbots">
+            <div class="sazzad-bg"></div>
+            <div class="sazzad-aurora"></div>
             <div class="tab-icon"><img src="images/click.png" alt="Click to Easy Pay"></div>
             <div class="tab-content">
               <h3 class="tab-title">Click to Easy Pay</h3>
@@ -503,6 +511,8 @@
           </div>
 
           <div class="tab" data-tab="pricing">
+            <div class="sazzad-bg"></div>
+            <div class="sazzad-aurora"></div>
             <div class="tab-icon"><img src="images/feedback.png" alt="Service Execution & Feedback"></div>
             <div class="tab-content">
               <h3 class="tab-title">Service Execution & Feedback</h3>
@@ -521,32 +531,7 @@
 
     </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const tabs = document.querySelectorAll('.tab');
-        const contentAreas = document.querySelectorAll('.content-area');
 
-        tabs.forEach(tab => {
-          tab.addEventListener('click', function () {
-            // Remove active class from all tabs
-            tabs.forEach(t => t.classList.remove('active'));
-
-            // Add active class to clicked tab
-            this.classList.add('active');
-
-            // Hide all content areas
-            contentAreas.forEach(area => area.classList.remove('active'));
-
-            // Show the corresponding content area
-            const tabName = this.getAttribute('data-tab');
-            const contentToShow = document.getElementById(tabName + '-content');
-            if (contentToShow) {
-              contentToShow.classList.add('active');
-            }
-          });
-        });
-      });
-    </script>
 
     <!-- How-it-works -->
     <section class="work-section">
