@@ -154,7 +154,7 @@ function getFeaturedImageUrl(post) {
     if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
         return post._embedded['wp:featuredmedia'][0].source_url;
     }
-    return '/images/placeholder.png'; // Fallback placeholder
+    return 'https://coderegime.com/images/logo.png'; // Fallback placeholder
 }
 
 /**
