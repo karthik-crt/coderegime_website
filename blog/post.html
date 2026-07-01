@@ -9,6 +9,13 @@
     <meta name="description"
         content="A comprehensive guide to starting a new blog post from scratch with modern aesthetics.">
 
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content="Code Regime Blog Post">
+    <meta property="og:description" content="A comprehensive guide to starting a new blog post from scratch with modern aesthetics.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.coderegimetechnologies.com/blog/">
+    <meta property="og:image" content="https://coderegime.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon-96x96.png">
     <link rel="icon" href="/favicon.ico">
@@ -593,8 +600,18 @@
             // WordPress API Dynamic Data Fetching
             // ==========================================
             async function loadPostData() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const slug = urlParams.get('slug');
+                let slug = '';
+                const pathParts = window.location.pathname.split('/');
+                if (pathParts.includes('post') && pathParts[pathParts.indexOf('post') + 1]) {
+                    slug = pathParts[pathParts.indexOf('post') + 1];
+                    slug = slug.replace(/\.(html|php)$/i, '');
+                }
+                
+                // Fallback for old query param links
+                if (!slug || slug.trim() === '') {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    slug = urlParams.get('slug');
+                }
                 console.log("Extracted slug:", slug);
                 if (!slug) {
                     // Only show error if we aren't previewing the static template
@@ -789,7 +806,7 @@
                                 }
 
                                 relatedHtml += `
-                                    <a class="group block" href="/blog/post.php?slug=${relPost.slug}" style="text-decoration:none; display:block; margin-bottom: 1rem;">
+                                    <a class="group block" href="/blog/post/${relPost.slug}" style="text-decoration:none; display:block; margin-bottom: 1rem;">
                                         <span class="text-label-sm block mb-1" style="color:var(--primary); font-size: 0.8rem; text-transform: uppercase;">${relCat}</span>
                                         <p class="text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2" style="color:var(--text-primary); transition: color 0.2s;">${relTitle}</p>
                                     </a>
@@ -815,7 +832,7 @@
                             const prevLink = document.getElementById('prev-post-link');
                             const prevTitle = document.getElementById('prev-post-title');
                             if (prevLink && prevTitle) {
-                                prevLink.href = `/blog/post.php?slug=${prevPost.slug}`;
+                                prevLink.href = `/blog/post/${prevPost.slug}`;
                                 prevTitle.innerHTML = prevPost.title || prevPost.title?.rendered || '';
                                 prevLink.style.display = 'block';
                             }
@@ -831,7 +848,7 @@
                             const nextLink = document.getElementById('next-post-link');
                             const nextTitle = document.getElementById('next-post-title');
                             if (nextLink && nextTitle) {
-                                nextLink.href = `/blog/post.php?slug=${nextPost.slug}`;
+                                nextLink.href = `/blog/post/${nextPost.slug}`;
                                 nextTitle.innerHTML = nextPost.title || nextPost.title?.rendered || '';
                                 nextLink.style.display = 'block';
                             }

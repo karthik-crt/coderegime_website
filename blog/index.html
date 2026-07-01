@@ -15,6 +15,7 @@
         content="Explore expert articles on mobile app development, web apps, SaaS, AI tools, and clone scripts. Stay updated with Code Regime Technologies' blog page.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.coderegimetechnologies.com/blog/">
+    <meta property="og:image" content="https://coderegime.com/images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Code Regime Insights - Blog">
     <meta name="twitter:description"
@@ -287,7 +288,7 @@
                             Featured Article
                         </div>
                         <h2>
-                            <a href="/blog/post.html?slug=why-do-businesses-prefer-modern-flight-booking-solutions"
+                            <a href="/blog/post/why-do-businesses-prefer-modern-flight-booking-solutions"
                                 style="color: inherit; text-decoration: none;">
                                 Why Do Businesses Prefer Modern Flight Booking Solutions?
                             </a>
@@ -301,7 +302,7 @@
                             </div>
                         </div>
                         <div class="featured-cta">
-                            <a href="/blog/post.html?slug=why-do-businesses-prefer-modern-flight-booking-solutions"
+                            <a href="/blog/post/why-do-businesses-prefer-modern-flight-booking-solutions"
                                 class="btn-primary-filled">Read Full Article</a>
                         </div>
                     </div>
@@ -809,7 +810,7 @@
                                     </div>
                                 </div>
                                 <div class="featured-cta">
-                                    <a href="/blog/post.html?slug=${post.slug}" class="btn-primary-filled">Read Full Article</a>
+                                    <a href="/blog/post/${post.slug}" class="btn-primary-filled">Read Full Article</a>
                                 </div>
                             </div>
                         </div>
@@ -843,7 +844,7 @@
                     const titleText = post.title?.rendered || post.title || '';
                     const readTime = formatReadTime(post);
                     html += `
-                        <a class="popular-post-item" href="/blog/post.html?slug=${post.slug}">
+                        <a class="popular-post-item" href="/blog/post/${post.slug}">
                             <h4>${titleText}</h4>
                             <p>${readTime} min read</p>
                         </a>
@@ -880,7 +881,7 @@
 
                 return `
                     <article class="post-card">
-                        <a href="/blog/post.html?slug=${post.slug}" class="post-card-link">
+                        <a href="/blog/post/${post.slug}" class="post-card-link">
                             <div class="post-card-image">
                                 <img src="${featuredImage}" alt="${titleText}" loading="lazy">
                                 ${categoryName ? `<span class="post-card-category">${categoryName}</span>` : ''}

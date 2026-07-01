@@ -206,7 +206,7 @@ function renderPostCard(post) {
     console.log('Rendering post card for:', titleText);
     return `
         <div class="post-card">
-            <a href="/blog/post.html?slug=${post.slug}" class="post-card-link">
+            <a href="/blog/post/${post.slug}" class="post-card-link">
                 <div class="post-card-image">
                     <img src="${featuredImage}" alt="${titleText}" loading="lazy">
                 </div>
