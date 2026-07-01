@@ -80,7 +80,10 @@ def serve_blog_post(slug):
     html = html.replace('{{POST_IMAGE}}', image)
     html = html.replace('{{POST_CONTENT}}', content)
 
-    # 5. Return the modified HTML
+    # 5. Return the modified HTML with a 404 status code if the post was not found
+    if not posts or len(posts) == 0:
+        return html, 404
+        
     return html
 
 if __name__ == '__main__':
