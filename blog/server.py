@@ -29,7 +29,10 @@ def get_featured_image(post):
 def serve_blog_post(slug):
     # 1. Fetch the post from WordPress
     try:
-        response = requests.get(f"{WP_API_URL}?slug={slug}&_embed", timeout=5)
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+        }
+        response = requests.get(f"{WP_API_URL}?slug={slug}&_embed", headers=headers, timeout=5)
         response.raise_for_status()
         posts = response.json()
     except Exception as e:
