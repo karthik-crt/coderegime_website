@@ -53,11 +53,13 @@ def serve_blog_post(slug):
             description = description[:157] + "..."
             
         image = get_featured_image(post)
+        content = post.get('content', {}).get('rendered', '')
     else:
         # Fallback values if post not found
         title = "Code Regime Blog - Tech Insights & Dev Updates"
         description = "Explore expert articles on mobile app development, web apps, SaaS, AI tools, and clone scripts. Stay updated with Code Regime Technologies' blog page."
         image = "https://coderegime.com/images/logo.png"
+        content = "<p>Loading content...</p>"
 
     # 3. Read the post.html template
     template_path = os.path.join(os.path.dirname(__file__), 'post.html')
@@ -74,6 +76,9 @@ def serve_blog_post(slug):
     html = html.replace('{{SEO_DESC}}', description)
     html = html.replace('{{SEO_IMAGE}}', image)
     html = html.replace('{{SEO_URL}}', current_url)
+    html = html.replace('{{POST_TITLE}}', title)
+    html = html.replace('{{POST_IMAGE}}', image)
+    html = html.replace('{{POST_CONTENT}}', content)
 
     # 5. Return the modified HTML
     return html
