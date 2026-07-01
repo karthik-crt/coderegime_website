@@ -5,8 +5,8 @@ import os
 
 app = Flask(__name__)
 
-# The URL of your WordPress API
-WP_API_URL = "https://coderegime.com/wp-json/wp/v2/posts"
+# The URL of your WordPress API (WordPress.com v1 API)
+WP_API_URL = "https://public-api.wordpress.com/rest/v1.1/sites/coderegimeblog.wordpress.com/posts/slug:"
 
 def strip_html_tags(text):
     """Remove html tags from a string"""
@@ -14,46 +14,40 @@ def strip_html_tags(text):
     return re.sub(clean, '', text).strip()
 
 def get_featured_image(post):
-    """Extract featured image from WordPress post data"""
+    """Extract featured image from WordPress v1 post data"""
     if post.get('featured_image'):
         return post['featured_image']
-    
-    embedded = post.get('_embedded', {})
-    featured_media = embedded.get('wp:featuredmedia', [])
-    if featured_media and isinstance(featured_media, list):
-        return featured_media[0].get('source_url', 'https://coderegime.com/images/logo.png')
-    
     return 'https://coderegime.com/images/logo.png'
 
 @app.route('/blog/post/<slug>')
 def serve_blog_post(slug):
+    post = None
     # 1. Fetch the post from WordPress
     try:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
         }
-        response = requests.get(f"{WP_API_URL}?slug={slug}&_embed", headers=headers, timeout=5)
+        response = requests.get(f"{WP_API_URL}{slug}", headers=headers, timeout=5)
         response.raise_for_status()
-        posts = response.json()
+        data = response.json()
+        if 'error' not in data:
+            post = data
     except Exception as e:
         print(f"Error fetching post {slug}: {e}")
-        # If API fails, fallback to default SEO
-        posts = []
 
     # 2. Extract SEO data
-    if posts and len(posts) > 0:
-        post = posts[0]
-        title = post.get('title', {}).get('rendered', 'Code Regime Blog Post')
+    if post:
+        title = post.get('title', 'Code Regime Blog Post')
         # Decode HTML entities if any (simple unescape)
         title = title.replace('&#8211;', '-').replace('&#8217;', "'").replace('&amp;', '&')
         
-        excerpt = post.get('excerpt', {}).get('rendered', 'Insights on software development and technology.')
+        excerpt = post.get('excerpt', 'Insights on software development and technology.')
         description = strip_html_tags(excerpt)
         if len(description) > 160:
             description = description[:157] + "..."
             
         image = get_featured_image(post)
-        content = post.get('content', {}).get('rendered', '')
+        content = post.get('content', '')
     else:
         # Fallback values if post not found
         title = "Code Regime Blog - Tech Insights & Dev Updates"
@@ -81,7 +75,7 @@ def serve_blog_post(slug):
     html = html.replace('{{POST_CONTENT}}', content)
 
     # 5. Return the modified HTML with a 404 status code if the post was not found
-    if not posts or len(posts) == 0:
+    if not post:
         return html, 404
         
     return html
