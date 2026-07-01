@@ -626,14 +626,23 @@
                     return;
                 }
 
-                // Show loading state
-                document.getElementById('post-content-display').innerHTML = '<p>Loading post...</p>';
+                const contentDisplay = document.getElementById('post-content-display');
+                // Only show loading if the server hasn't already injected the content
+                const hasSSRContent = contentDisplay.innerHTML.trim().length > 100 && !contentDisplay.innerHTML.includes('Loading content');
+                
+                if (!hasSSRContent) {
+                    contentDisplay.innerHTML = '<p>Loading post...</p>';
+                }
 
                 const post = await fetchSinglePost(slug);
                 console.log("Fetched post data:", post);
 
                 if (!post) {
-                    document.getElementById('post-content-display').innerHTML = '<p>Error: Post not found.</p>';
+                    if (!hasSSRContent) {
+                        contentDisplay.innerHTML = '<p>Error: Post not found.</p>';
+                    } else {
+                        console.log("Failed to fetch fresh data, keeping SSR content");
+                    }
                     return;
                 }
 
@@ -646,7 +655,6 @@
                 // Content
                 const contentText = post.content?.rendered || post.content || '';
                 const enhancedContent = contentText.replace(/<p/, '<p class="first-letter-drop"');
-                const contentDisplay = document.getElementById('post-content-display');
                 contentDisplay.innerHTML = enhancedContent;
 
                 // ── Meta Tags ──────────────────────────────────────────────────────────────
