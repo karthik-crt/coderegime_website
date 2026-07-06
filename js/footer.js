@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             z-index: 9999;
         }
 
@@ -27,11 +27,27 @@ document.addEventListener("DOMContentLoaded", function () {
             border-radius: 27px 0 0 27px;
             color: #fff;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 26px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            transform: translateX(27px); /* Hide half of the container off-screen */
-            padding-left: 12px; /* Position the icon so it's partially cut off when hidden */
-            box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.2);
+            padding-left: 14px; /* Centers the icon in the 54px width */
+            box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .cr-floating-social a i {
+            min-width: 26px; /* Ensure icon doesn't shrink */
+            text-align: center;
+        }
+
+        .cr-floating-social a .social-text {
+            font-family: 'Outfit', 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 12px;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
         }
 
         /* WhatsApp */
@@ -44,8 +60,18 @@ document.addEventListener("DOMContentLoaded", function () {
             background: linear-gradient(135deg, #0088cc, #00aaff);
         }
 
+        /* Hover Expansion */
         .cr-floating-social a:hover {
-            transform: translateX(0); /* Slide out to show the full icon */
+            width: 155px; /* Expands to show text */
+        }
+        
+        .cr-floating-social a.telegram:hover {
+            width: 150px;
+        }
+
+        .cr-floating-social a:hover .social-text {
+            opacity: 1;
+            transform: translateX(0);
         }
         
         .cr-floating-social a.whatsapp:hover {
@@ -55,54 +81,32 @@ document.addEventListener("DOMContentLoaded", function () {
             box-shadow: -4px 8px 25px rgba(0, 136, 204, 0.4);
         }
 
-        /* Tooltips */
-        .cr-floating-social a::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            right: 65px;
-            background: rgba(0, 0, 0, 0.85);
-            color: #fff;
-            font-size: 13px;
-            font-family: 'Outfit', 'Segoe UI', sans-serif;
-            padding: 6px 12px;
-            border-radius: 6px;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateX(10px);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            pointer-events: none;
-        }
-
-        .cr-floating-social a:hover::after {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(0);
-        }
-        
         @media (max-width: 768px) {
             .cr-floating-social a {
-                width: 44px;
-                height: 44px;
-                font-size: 20px;
-                transform: translateX(22px);
-                padding-left: 10px;
+                width: 46px;
+                height: 46px;
+                font-size: 22px;
+                padding-left: 12px;
+            }
+            .cr-floating-social a i {
+                min-width: 22px;
             }
             .cr-floating-social a:hover {
-                transform: translateX(0);
+                width: 140px;
             }
-            .cr-floating-social a::after {
-                display: none;
+            .cr-floating-social a.telegram:hover {
+                width: 135px;
             }
         }
         </style>
         <div class="cr-floating-social">
-            <a href="https://wa.me/918072218602" target="_blank" rel="noopener" class="whatsapp" data-tooltip="WhatsApp Us">
+            <a href="https://wa.me/918072218602" target="_blank" rel="noopener" class="whatsapp">
                 <i class="fab fa-whatsapp"></i>
+                <span class="social-text">WhatsApp</span>
             </a>
-            <!-- <a href="https://t.me/+919944314416" target="_blank" rel="noopener" class="telegram" data-tooltip="Join Telegram">
+            <!-- <a href="https://t.me/+919944314416" target="_blank" rel="noopener" class="telegram">
                 <i class="fab fa-telegram-plane"></i>
+                <span class="social-text">Telegram</span>
             </a> -->
         </div>
     `;
