@@ -821,7 +821,7 @@
                                 }
 
                                 relatedHtml += `
-                                    <a class="group block" href="/blog/post/${relPost.slug}" style="text-decoration:none; display:block; margin-bottom: 1rem;">
+                                    <a class="group block" href="/blog/${relPost.slug}" style="text-decoration:none; display:block; margin-bottom: 1rem;">
                                         <span class="text-label-sm block mb-1" style="color:var(--primary); font-size: 0.8rem; text-transform: uppercase;">${relCat}</span>
                                         <p class="text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2" style="color:var(--text-primary); transition: color 0.2s;">${relTitle}</p>
                                     </a>
@@ -847,7 +847,7 @@
                             const prevLink = document.getElementById('prev-post-link');
                             const prevTitle = document.getElementById('prev-post-title');
                             if (prevLink && prevTitle) {
-                                prevLink.href = `/blog/post/${prevPost.slug}`;
+                                prevLink.href = `/blog/${prevPost.slug}`;
                                 prevTitle.innerHTML = prevPost.title || prevPost.title?.rendered || '';
                                 prevLink.style.display = 'block';
                             }
@@ -863,7 +863,7 @@
                             const nextLink = document.getElementById('next-post-link');
                             const nextTitle = document.getElementById('next-post-title');
                             if (nextLink && nextTitle) {
-                                nextLink.href = `/blog/post/${nextPost.slug}`;
+                                nextLink.href = `/blog/${nextPost.slug}`;
                                 nextTitle.innerHTML = nextPost.title || nextPost.title?.rendered || '';
                                 nextLink.style.display = 'block';
                             }

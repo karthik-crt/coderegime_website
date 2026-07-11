@@ -19,7 +19,7 @@ def get_featured_image(post):
         return post['featured_image']
     return 'https://coderegime.com/images/logo.png'
 
-@app.route('/blog/post/<slug>')
+@app.route('/blog/<slug>')
 def serve_blog_post(slug):
     post = None
     # 1. Fetch the post from WordPress
@@ -64,7 +64,7 @@ def serve_blog_post(slug):
         return "Template not found", 500
 
     # 4. Inject SEO tags
-    current_url = f"https://www.coderegimetechnologies.com/blog/post/{slug}"
+    current_url = f"https://www.coderegimetechnologies.com/blog/{slug}"
     
     html = html.replace('{{SEO_TITLE}}', title)
     html = html.replace('{{SEO_DESC}}', description)
