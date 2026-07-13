@@ -3138,6 +3138,7 @@ p {
 }
 
 .ai-badge {
+  white-space: nowrap;
   display: inline;
   margin-left: 12px;
   padding: 6px 12px;
@@ -5232,4 +5233,4 @@ p {
 }
 .k-feature-card:nth-child(7) .content .logo .logo1 i {
   color: #4f46e5;
-}
+}
