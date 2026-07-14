@@ -8,6 +8,7 @@
     <!-- 2. Primary SEO Tags -->
     <title>{{SEO_TITLE}}</title>
     <meta name="description" content="{{SEO_DESC}}">
+    <meta name="keywords" content="{{SEO_KEYWORDS}}">
     <meta name="author" content="Code Regime">
 
     <!-- 3. Crawling & Indexing Directives -->
@@ -731,8 +732,19 @@
                 // Author Name
                 const authorName = getPostAuthor(post);
 
+                // Keywords
+                let metaKeywords = "Code Regime, blog, software development";
+                if (post.tags && Object.keys(post.tags).length > 0) {
+                    const keys = Object.keys(post.tags);
+                    metaKeywords = keys.map(key => post.tags[key].name).join(', ');
+                } else if (post.categories) {
+                    const keys = Object.keys(post.categories);
+                    metaKeywords = keys.map(key => post.categories[key].name).join(', ');
+                }
+
                 // Standard SEO
                 setMeta('meta[name="description"]',        'name',     'description',       metaDesc);
+                setMeta('meta[name="keywords"]',           'name',     'keywords',          metaKeywords);
                 setMeta('meta[name="author"]',             'name',     'author',            authorName);
 
                 // Crawling Directives

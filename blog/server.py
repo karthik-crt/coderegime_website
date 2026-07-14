@@ -48,10 +48,18 @@ def serve_blog_post(slug):
             
         image = get_featured_image(post)
         content = post.get('content', '')
+        
+        keywords = "Code Regime, blog, software development"
+        if 'tags' in post and post['tags']:
+            tags_dict = post['tags']
+            tags_list = [tags_dict[k].get('name', '') for k in tags_dict.keys() if tags_dict[k].get('name')]
+            if tags_list:
+                keywords = ", ".join(tags_list)
     else:
         # Fallback values if post not found
         title = "Code Regime Blog - Tech Insights & Dev Updates"
         description = "Explore expert articles on mobile app development, web apps, SaaS, AI tools, and clone scripts. Stay updated with Code Regime Technologies' blog page."
+        keywords = "Code Regime, blog, software development"
         image = "https://coderegime.com/images/logo.png"
         content = "<p>Loading content...</p>"
 
@@ -68,6 +76,7 @@ def serve_blog_post(slug):
     
     html = html.replace('{{SEO_TITLE}}', title)
     html = html.replace('{{SEO_DESC}}', description)
+    html = html.replace('{{SEO_KEYWORDS}}', keywords)
     html = html.replace('{{SEO_IMAGE}}', image)
     html = html.replace('{{SEO_URL}}', current_url)
     html = html.replace('{{POST_TITLE}}', title)
