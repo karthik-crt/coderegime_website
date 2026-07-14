@@ -1819,8 +1819,8 @@ a > .teck-item::after {
 }
 
 a > .teck-item:hover {
-  background-color: var(--link-color);
-  border-color: var(--link-color);
+  background-color: cornflowerblue;
+  border-color: cornflowerblue;
 }
 
 a > .teck-item:hover h3,
