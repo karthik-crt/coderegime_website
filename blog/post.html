@@ -701,9 +701,8 @@
                     tmpDiv.innerHTML = contentText;
                     const firstP = tmpDiv.querySelector('p');
                     metaDesc = (firstP ? firstP.textContent : tmpDiv.textContent).trim();
+                    if (metaDesc.length > 160) metaDesc = metaDesc.slice(0, 157) + '...';
                 }
-
-                if (metaDesc.length > 155) metaDesc = metaDesc.slice(0, 152) + '…';
 
                 // Helper: find existing meta or create it
                 function setMeta(selector, attrKey, attrVal, contentVal) {

@@ -43,8 +43,6 @@ def serve_blog_post(slug):
         
         excerpt = post.get('excerpt', 'Insights on software development and technology.')
         description = strip_html_tags(excerpt)
-        if len(description) > 160:
-            description = description[:157] + "..."
             
         image = get_featured_image(post)
         content = post.get('content', '')
