@@ -693,8 +693,18 @@
                     el.setAttribute('content', contentVal);
                 }
 
+                const canonicalUrl  = `https://www.coderegimetechnologies.com/blog/${slug}/`;
                 const pageUrl       = window.location.href;
                 const featuredImgUrl = getFeaturedImageUrl(post); // already called below for <img>
+
+                // Canonical URL
+                let canonical = document.querySelector('link[rel="canonical"]');
+                if (!canonical) {
+                    canonical = document.createElement('link');
+                    canonical.setAttribute('rel', 'canonical');
+                    document.head.appendChild(canonical);
+                }
+                canonical.setAttribute('href', canonicalUrl);
 
                 // Standard SEO
                 setMeta('meta[name="description"]',        'name',     'description',       metaDesc);
@@ -702,7 +712,7 @@
                 // Open Graph (Facebook / LinkedIn previews)
                 setMeta('meta[property="og:title"]',       'property', 'og:title',          titleText);
                 setMeta('meta[property="og:description"]', 'property', 'og:description',    metaDesc);
-                setMeta('meta[property="og:url"]',         'property', 'og:url',            pageUrl);
+                setMeta('meta[property="og:url"]',         'property', 'og:url',            canonicalUrl);
                 setMeta('meta[property="og:image"]',       'property', 'og:image',          featuredImgUrl);
                 setMeta('meta[property="og:type"]',        'property', 'og:type',           'article');
 
