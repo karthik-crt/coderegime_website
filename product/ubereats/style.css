@@ -189,6 +189,16 @@ main {
     margin-bottom: 16px;
 }
 
+.partner-title {
+    max-width: 700px;
+    margin: 0 auto 16px;
+}
+
+.partner-title .heading-break {
+    display: block;
+    margin-top: 4px;
+}
+
 .section-header p {
     color: var(--fr-text-soft);
     font-size: 17px;
