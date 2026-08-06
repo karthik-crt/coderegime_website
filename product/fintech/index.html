@@ -1,0 +1,3690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech App Development | Code Regime Technologies</title>
+    <meta name="description"
+        content="Build the future of digital finance with our custom fintech app development services. Code Regime Technologies delivers secure, scalable, and innovative financial software solutions.">
+    <link rel="canonical" href="https://coderegime.com/fintech-app-development" />
+
+    <!-- SEO JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Custom Fintech Application Development",
+          "operatingSystem": "iOS, Android, Web",
+          "applicationCategory": "FinanceApplication",
+          "provider": {
+            "@type": "Organization",
+            "name": "Code Regime Technologies"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does it cost to build a fintech app?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The cost depends on features, platform, and complexity, typically starting from $20,000 to over $100,000 for enterprise solutions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to develop a fintech application?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Development time ranges from 3 to 9 months depending on the specific requirements, regulatory compliance, and features."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            /* Primary Colors */
+            --primary: #6D7FE9;
+            --modal-white: #ffffff;
+            --modal-blue: #0051C8;
+            --secondary: #0051C8;
+            --cta-hover: #4169E1;
+
+            /* Text Colors */
+            --text-main: #333333;
+            --text-muted: #5E6570;
+            --text-dark: #111827;
+            --text-section: #222222;
+            --text-card: #1a1a2e;
+            --text-white: #ffffff;
+
+            /* Background Colors */
+            --bg-main: #ffffff;
+            --bg-header: #f9f9ff;
+            --bg-neumorphic: #e0e0e0;
+            --bg-footer: #111827;
+
+            /* Pastel Purples */
+            --pastel-1: #f6f0ff;
+            --pastel-2: #f3eeff;
+            --pastel-3: #e8eeff;
+            --pastel-4: #e5d5ff;
+            --pastel-5: #f0e8ff;
+
+            /* Illustration Accents */
+            --accent-green: #4caf50;
+            --accent-blue: #528BF4;
+            --accent-stroke: #c4a8f0;
+
+            /* Typography */
+            --font-primary: 'Poppins', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            --font-paragraph: 'Open Sans', sans-serif;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--text-main);
+            background: var(--bg-main);
+            overflow-x: hidden;
+        }
+
+        /* Typography Styling */
+        p {
+            font-family: var(--font-paragraph);
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 53px);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: clamp(26px, 4vw, 40px);
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-section);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: clamp(20px, 3vw, 25px);
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--text-card);
+        }
+
+        h4 {
+            font-size: 21px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .container {
+            max-width: 1440px;
+            width: 96%;
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Effects & Animations */
+        .gradient-text {
+            background: linear-gradient(135deg, #528BF4, mediumpurple, #9b6dff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--text-white);
+            box-shadow: 0 4px 15px rgba(147, 112, 219, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--cta-hover);
+            box-shadow: 0 6px 20px rgba(65, 105, 225, 0.5);
+            transform: translateY(-2px);
+            color: var(--text-white);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--text-white);
+        }
+
+        .pulse-glow {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(147, 112, 219, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(147, 112, 219, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(147, 112, 219, 0);
+            }
+        }
+
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* 2. Hero Section */
+        .hero {
+            padding-top: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 90vh;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+            position: relative;
+        }
+
+        .hero-image svg {
+            width: 100%;
+            max-width: 550px;
+        }
+
+        .stats-bar {
+            background: var(--primary);
+            color: var(--text-white);
+            padding: 50px 0;
+        }
+
+        .stats-bar-inner {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .stat-item h3 {
+            color: var(--text-white);
+            font-size: clamp(32px, 4vw, 42px);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: #f0e8ff;
+            font-family: var(--font-primary);
+            font-size: 16px;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* 4. What is Fintech */
+        .what-is {
+            background: var(--pastel-1);
+        }
+
+        .what-is-inner {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .what-is-text {
+            flex: 1;
+        }
+
+        .what-is-img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .what-is-img svg {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .note-box {
+            background: var(--pastel-1);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 12px 12px 0;
+            padding: 22px 24px;
+            margin-top: 24px;
+        }
+
+        .note-box h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .note-box p {
+            font-size: 15px;
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        .what-is-checklist {
+            background: var(--bg-main);
+            border: 1px solid var(--pastel-4);
+            border-radius: 20px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .what-is-checklist h3 {
+            color: var(--text-dark);
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px;
+            background: var(--bg-header);
+            border-radius: 10px;
+            border: 1px solid var(--pastel-3);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .checklist-item:hover {
+            transform: translateX(6px);
+            background: var(--pastel-1);
+        }
+
+        .checklist-item .check-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--pastel-4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .checklist-item p {
+            font-size: 15px;
+            line-height: 1.55;
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
+
+        .checklist-item strong {
+            color: var(--text-dark);
+        }
+
+        .services {
+            background: var(--bg-neumorphic);
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 60px;
+        }
+
+        .neumorphic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .neumorphic-card {
+            background: var(--bg-neumorphic);
+            border-radius: 24px;
+            padding: 35px 30px;
+            box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .neumorphic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .neumorphic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 15px 15px 25px #b0b0b0, -15px -15px 25px #ffffff;
+        }
+
+        .neumorphic-card:hover::before {
+            opacity: 1;
+        }
+
+        .icon-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--bg-neumorphic);
+            box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 28px;
+        }
+
+        .neumorphic-card h3,
+        .neumorphic-card h4 {
+            color: var(--text-card);
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .neumorphic-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* 6. Solutions We Build Section */
+        .eyebrow {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--primary);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background: var(--modal-white);
+            border: 1px solid var(--pastel-4);
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .08), 0 1px 2px rgba(0, 0, 0, .06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 28px rgba(147, 112, 219, 0.15);
+            transform: translateY(-6px);
+            border-color: var(--pastel-3);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--pastel-1);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* 7. Advanced Features */
+        .features {
+            background: var(--bg-header);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-areas:
+                "icon title"
+                "text text";
+            column-gap: 20px;
+            row-gap: 12px;
+            align-items: center;
+            padding: 24px;
+            background: var(--bg-main);
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--pastel-3);
+        }
+
+        .feature-item:hover {
+            background: var(--modal-white);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(147, 112, 219, 0.15);
+            border-color: var(--pastel-3);
+        }
+
+        .feature-item:hover .feature-icon {
+            background: var(--primary);
+            color: var(--text-white);
+            transform: rotate(10deg) scale(1.05);
+        }
+
+        .feature-icon {
+            grid-area: icon;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--pastel-4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-text {
+            display: contents;
+        }
+
+        .feature-text h4 {
+            grid-area: title;
+            margin: 0;
+            font-size: 18px;
+            color: var(--text-dark);
+        }
+
+        .feature-text p {
+            grid-area: text;
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            align-self: start;
+        }
+
+        /* 8. Process Timeline */
+        .timeline-section {
+            background: var(--bg-main);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1440px;
+            width: 96%;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--pastel-4);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        .timeline-item {
+            padding: 20px 0;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item.left {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-content {
+            padding: 25px 30px;
+            background: var(--pastel-1);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(147, 112, 219, 0.1);
+            position: relative;
+        }
+
+        .step-num {
+            position: absolute;
+            top: 10px;
+            background: var(--primary);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            box-shadow: 0 0 0 5px var(--bg-main);
+        }
+
+        .timeline-item.left .step-num {
+            right: -40px;
+            transform: translateX(50%);
+        }
+
+        .timeline-item.right .step-num {
+            left: -40px;
+            transform: translateX(-50%);
+        }
+
+        /* 9. Core Innovations */
+        .innovations {
+            background: #111827;
+            color: var(--text-white);
+        }
+
+        .innovations h2 {
+            color: var(--text-white);
+        }
+
+        .innovations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .innovation-card {
+            background: #1f2937;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: left;
+            border-bottom: 4px solid var(--primary);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .innovation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(147, 112, 219, 0.1), transparent);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .innovation-card:hover::before {
+            opacity: 1;
+        }
+
+        .innovation-card:hover {
+            transform: translateY(-8px);
+            background: #283344;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .innovation-card i {
+            font-size: 44px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .innovation-card h3 {
+            color: var(--text-white);
+            font-size: 20px;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .innovation-card p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 15px;
+            line-height: 1.65;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 10. Industries */
+        .industries {
+            background: var(--pastel-1);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .industry-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: var(--bg-main);
+            padding: 40px 30px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s ease;
+            z-index: 0;
+        }
+
+        .industry-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .industry-card>* {
+            position: relative;
+            z-index: 1;
+            transition: 0.4s;
+        }
+
+        .industry-card:hover h3,
+        .industry-card:hover i,
+        .industry-card:hover p {
+            color: var(--text-white);
+        }
+
+        .industry-card i {
+            font-size: 44px;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .industry-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .industry-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* 11. Advantages */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .adv-card {
+            text-align: left;
+            padding: 40px 30px;
+            background: var(--bg-header);
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid var(--pastel-3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .adv-card::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .adv-card:hover::before {
+            transform: translate(-50%, -50%) scale(25);
+            opacity: 1;
+        }
+
+        .adv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(147, 112, 219, 0.25);
+            border-color: transparent;
+        }
+
+        .adv-card i {
+            font-size: 45px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+        }
+
+        .adv-card h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            transition: color 0.4s ease;
+            position: relative;
+            z-index: 1;
+            color: var(--text-dark);
+        }
+
+        .adv-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            transition: color 0.4s ease;
+            color: var(--text-muted);
+            position: relative;
+            z-index: 1;
+        }
+
+        .adv-card:hover i {
+            color: var(--text-white);
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        .adv-card:hover h4 {
+            color: var(--text-white);
+        }
+
+        .adv-card:hover p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* 12. Security Solutions */
+        .security {
+            background: var(--bg-main);
+        }
+
+        .security-flex {
+            display: block;
+        }
+
+        .sec-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .sec-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            gap: 15px;
+            background: var(--bg-header);
+            padding: 40px 35px;
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid var(--pastel-3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .sec-item::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+            z-index: -1;
+        }
+
+        .sec-item:hover::before {
+            transform: scale(15);
+            opacity: 1;
+        }
+
+        .sec-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(147, 112, 219, 0.25);
+            border-color: transparent;
+        }
+
+        .sec-item i {
+            font-size: 45px;
+            color: var(--primary);
+            margin-bottom: 5px;
+            transition: all 0.4s ease;
+        }
+
+        .sec-item h4 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            transition: color 0.4s ease;
+            color: var(--text-dark);
+        }
+
+        .sec-item p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+            transition: color 0.4s ease;
+            color: var(--text-muted);
+        }
+
+        .sec-item:hover i {
+            color: var(--text-white);
+            transform: scale(1.2) translateY(-5px);
+        }
+
+        .sec-item:hover h4 {
+            color: var(--text-white);
+        }
+
+        .sec-item:hover p {
+            color: #f0e8ff;
+        }
+
+        /* 13. Benefits */
+        .benefits {
+            background: var(--bg-header);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            background: var(--bg-main);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid transparent;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(147, 112, 219, 0.15);
+            border-color: var(--pastel-3);
+        }
+
+        .benefit-icon {
+            background: var(--pastel-4);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            color: var(--primary);
+            font-size: 24px;
+            transition: all 0.4s ease;
+        }
+
+        .benefit-item:hover .benefit-icon {
+            background: var(--primary);
+            color: #fff;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .benefit-item h4 {
+            margin: 0 0 8px 0;
+            font-size: 19px;
+            color: var(--text-dark);
+        }
+
+        .benefit-item p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        /* 14. Trusted Partner */
+        .trusted {
+            text-align: center;
+            background: var(--pastel-5);
+        }
+
+        .trusted-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .t-point {
+            background: var(--bg-main);
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .t-point:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(147, 112, 219, 0.15);
+        }
+
+        .t-point i {
+            font-size: 30px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .t-point h4 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin: 0 0 12px 0;
+            font-weight: 700;
+        }
+
+        .t-point p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: var(--bg-main);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            font-size: 15px;
+        }
+
+        .comp-table th,
+        .comp-table td {
+            padding: 18px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--pastel-1);
+        }
+
+        .comp-table th {
+            background: var(--primary);
+            color: var(--text-white);
+            font-weight: 700;
+        }
+
+        .comp-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comp-table .check-y {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .comp-table .check-n {
+            color: var(--text-muted);
+        }
+
+        .comp-table td:first-child {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* 15. TECHNOLOGY STACK */
+        .tech-section {
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .marquee-wrapper {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            animation: scroll-left 25s linear infinite;
+            padding-right: 60px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 50px;
+            color: #555;
+        }
+
+        .tech-item span {
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Poppins';
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* 16. Pricing */
+        .pricing {
+            background: var(--bg-header);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: var(--bg-main);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(147, 112, 219, 0.2);
+        }
+
+        .price-card.popular {
+            border: 3px solid var(--primary);
+            background: #faf8ff;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+            color: #fff;
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .price-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 45px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 20px 0 30px;
+        }
+
+        .price span {
+            font-size: 18px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .price-features {
+            margin: 30px 0 40px;
+            text-align: left;
+        }
+
+        .price-features li {
+            margin-bottom: 18px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .price-features i {
+            color: var(--accent-green);
+            margin-top: 3px;
+        }
+
+        /* 17. FAQ */
+        .faq {
+            background: var(--bg-main);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-header);
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--pastel-3);
+        }
+
+        .faq-question {
+            padding: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer p {
+            margin-bottom: 25px;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 25px;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        /* 18. Contact Form */
+        .contact {
+            background: var(--pastel-1);
+        }
+
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-main);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid var(--pastel-3);
+            border-radius: 10px;
+            font-family: var(--font-paragraph);
+            outline: none;
+            transition: all 0.3s;
+            font-size: 16px;
+            background: var(--bg-header);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            background: var(--bg-main);
+            box-shadow: 0 0 0 4px rgba(147, 112, 219, 0.1);
+        }
+
+        textarea.form-control {
+            height: 160px;
+            resize: vertical;
+        }
+
+        /* 19. Footer */
+        footer {
+            background: var(--bg-footer);
+            color: #fff;
+            padding: 80px 0 20px;
+            font-family: var(--font-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            margin-bottom: 25px;
+            font-size: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            display: inline-block;
+            font-family: var(--font-primary);
+        }
+
+        .footer-logo span {
+            color: var(--primary);
+        }
+
+        .footer-col p {
+            color: #9ca3af;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            transition: color 0.3s;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #fff;
+            transition: 0.3s;
+            font-size: 18px;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-contact li {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: #9ca3af;
+            align-items: flex-start;
+        }
+
+        .footer-contact i {
+            color: var(--primary);
+            font-size: 20px;
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #6b7280;
+            font-size: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .neumorphic-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .innovations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline::before {
+                left: 40px;
+                transform: translateX(-50%);
+                z-index: 0;
+            }
+
+            .timeline-item,
+            .timeline-item.left,
+            .timeline-item.right {
+                width: 100%;
+                padding-left: 90px;
+                padding-right: 0;
+                left: 0;
+            }
+
+            .timeline-item .step-num {
+                left: -50px !important;
+                right: auto !important;
+                transform: translateX(-50%) !important;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-main);
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: clip-path 0.3s ease;
+            }
+
+            .nav-links.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+            }
+
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 50px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .what-is-inner {
+                flex-direction: column;
+            }
+
+            .neumorphic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* =================== CTA BAND =================== */
+        .cta-band {
+            background: linear-gradient(135deg, var(--primary) 0%, #1A2A6E 100%);
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .cta-band h2 {
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .cta-band p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 32px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-white {
+            background: #fff;
+            color: var(--primary);
+            padding: 14px 34px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: inline-block;
+            transition: transform 0.15s, box-shadow 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            color: var(--primary);
+        }
+    </style>
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/modal.css">
+</head>
+
+<body>
+
+    <!-- 1. Header -->
+    <header id="head-nav">
+        <nav>
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="/images/color-logo.png" alt="logo">
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about-us/" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        Services
+                        <!-- <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span> -->
+                    </a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="/blockchain-development-services/" class="dropdown-link">Blockchain Development
+                                Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/mobile-app-development/" class="dropdown-link">Mobile App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/ios-app-development/" class="dropdown-link">iOS App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/flutter-app-development/" class="dropdown-link">Flutter Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/android-app-development/" class="dropdown-link">Android App Development</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/web-app-development/" class="dropdown-link">Web App Development Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/enterprise-app-development/" class="dropdown-link">Enterprise App Development</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/uber-clone/" class="nav-link">
+                        Products
+                        <!-- <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span> -->
+                    </a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="/uber-clone/" class="dropdown-link">CabRegime - Uber Clone</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/ubereats-clone/" class="dropdown-link">FoodRegime - Ubereats clone</a>
+                        </li>
+
+                        <li class="dropdown-item">
+                            <a href="/uber-for-handyman-app/" class="dropdown-link">HandymanRegime - Uber for
+                                Handman</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/product/fintech/index.html" class="dropdown-link">Fintech App</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/flight-booking-app/" class="dropdown-link">Flight Booking App</a>
+                        </li>
+                        <!-- 
+<li class="dropdown-item">
+                        <a href="/foodora-clone/" class="dropdown-link">Foodora Clone</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/grubhub-clone/" class="dropdown-link">Grubhub Clone</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a href="/doordash-clone/" class="dropdown-link">Doordash Clone</a>
+                  </li>
+-->
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/Portfolio/" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blog/" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact-us/" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+
+            <!-- Contact Button -->
+            <!-- <a href="/contact-us/" class="contact-btn" data-bs-toggle="modal" data-bs-target="#contactPopup">Contact
+        Us</a> -->
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <!-- <h1><span class="gradient-text">Fintech App Development</span> <br>Build the Future of Digital Finance</h1> -->
+            <h1 style="color: var(--primary);">Fintech App Development That Powers the Future of Financial Services</h1>
+            <p>Code Regime Technologies builds fintech applications for banks,
+                wallets, and financial platforms that need to move money safely
+                and fast. We've built mobile banking apps, digital wallets,
+                AI-driven fraud detection systems, and crypto exchange
+                platforms for clients who needed something secure, compliant,
+                and ready to scale. Not a prototype that looks good in a demo
+                and falls apart under real traffic.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary pulse-glow">Request Demo</a>
+                <a href="#" class="btn btn-outline">Live Chat</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/fintech-hero.webp" alt="Fintech App Dashboard" class="floating"
+                style="width: 100%; max-width: 600px; height: auto;">
+        </div>
+    </section>
+
+    <!-- 3. Stats Counter Bar -->
+    <div class="stats-bar">
+        <div class="container stats-bar-inner">
+            <div class="stat-item">
+                <h3>75+</h3>
+                <p>Global Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>56+</h3>
+                <p>Successful Projects</p>
+            </div>
+            <div class="stat-item">
+                <h3>20+</h3>
+                <p>Team Members</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+            <div class="stat-item">
+                <h3>4.3/5</h3>
+                <p>Overall Rating</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. What is Fintech -->
+    <section class="what-is">
+        <div class="container what-is-inner">
+            <div class="what-is-text">
+                <h2>What Is Fintech App Development?</h2>
+                <p>Fintech app development means designing, building, and
+                    launching applications that handle real financial services:
+                    payments, banking, lending, investing, insurance, and
+                    compliance, delivered through mobile or web.
+                </p>
+                <p>It isn't ordinary software work, and treating it that way is usually
+                    where projects go wrong. You need people who actually
+                    understand financial regulation, things like PCI DSS, GDPR, RBI,
+                    and SEC, along with security architecture, real-time transaction
+                    processing, and how to integrate with banking infrastructure
+                    without breaking something downstream. Few teams have both
+                    the financial knowledge and the engineering depth this requires,
+                    and that gap is part of why so many fintech builds run into
+                    trouble.
+                </p>
+                <p>The market reflects how much is at stake here. Fintech apps
+                    generated $371.6 billion globally in 2024, and that number is
+                    expected to pass $1 trillion by 2032 at a 16.1% CAGR, pushed
+                    along by smartphone adoption, open banking rules, AI, and the
+                    broader move away from cash. If you've been thinking about
+                    building or upgrading a fintech product, the timing works in
+                    your favor.
+                </p>
+                <div class="note-box">
+                    <h4>Why it matters for your business:</h4>
+                    <p>Institutions that switch to modern fintech platforms tend to see operational costs fall by up to
+                        40%. Onboarding speeds up roughly threefold. Retention holds up far better than it does on
+                        legacy systems, and that difference compounds over time.</p>
+                </div>
+                <!-- <a href="#" class="btn btn-outline" style="margin-top: 20px;">Learn More</a> -->
+            </div>
+            <div class="what-is-img">
+                <div class="what-is-checklist">
+                    <h3>What separates great fintech development from average:</h3>
+                    <div class="checklist-item">
+                        <div class="check-icon">✓</div>
+                        <p><strong>Regulatory compliance built in</strong> — not bolted on. PCI DSS, ISO 27001, GDPR,
+                            AML.</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="check-icon">✓</div>
+                        <p><strong>Bank-grade security</strong> at every layer: encryption, tokenization, biometric
+                            auth.</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="check-icon">✓</div>
+                        <p><strong>Scalable architecture</strong> that handles millions of real-time transactions
+                            without downtime.</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="check-icon">✓</div>
+                        <p><strong>AI-powered intelligence</strong> for fraud detection, credit scoring, and
+                            personalization.</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="check-icon">✓</div>
+                        <p><strong>Open banking API integrations</strong> with core banking systems, payment rails, and
+                            third-party data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Services Cards Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Custom Fintech App Development Services for Modern Financial Businesses</h2>
+                <p>We build the full spectrum of fintech applications — from consumer-facing mobile
+                    wallets to enterprise-grade compliance systems — engineered for performance, security, and scale. As
+                    a
+                    leading fintech app development company, we deliver solutions tailored to your business needs.</p>
+            </div>
+            <div class="neumorphic-grid">
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-university"></i></div>
+                    <h4>Mobile Banking App Development</h4>
+                    <p>We design and build feature-rich mobile banking apps for iOS and Android that handle account
+                        management, fund transfers, bill payments, loan applications, and personalized financial
+                        dashboards. Everything runs on PCI DSS-compliant architecture and connects to your core banking
+                        systems, so your institution can offer a genuinely modern digital experience without leaning as
+                        hard on branch visits.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-wallet"></i></div>
+                    <h4>Digital Wallet Development</h4>
+                    <p>Our wallet solutions give businesses a fast, secure way to handle multi-currency payments across
+                        mobile and web. We build in NFC tap-to-pay, QR code payments, stored card tokenization, and
+                        peer-to-peer transfers, keeping the interface clean while staying fully compliant with local
+                        payment regulations. The wallets we build interoperate with Visa, Mastercard, UPI, and SWIFT out
+                        of the box.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-credit-card"></i></div>
+                    <h4>Payment Gateway Development</h4>
+                    <p>We build custom payment gateways that process transactions in real time with sub-second latency
+                        and enterprise-grade fraud protection built in. They support credit and debit cards, net
+                        banking, UPI, BNPL, and crypto, all under PCI DSS Level 1 compliance. From tokenization engines
+                        to merchant dashboards, we build the infrastructure to maximize authorization rates while
+                        keeping failures low.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-people-arrows"></i></div>
+                    <h4>Peer-to-Peer (P2P) Lending Solutions</h4>
+                    <p>We develop P2P lending platforms that connect borrowers and lenders through transparent,
+                        algorithm-driven marketplaces. That includes automated credit scoring, borrower risk profiling,
+                        loan origination workflows, repayment tracking, and investor dashboards, all built with RBI,
+                        FCA, and SEC compliance baked into the core rather than added afterward.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-chart-pie"></i></div>
+                    <h4>Personal Finance Management Apps</h4>
+                    <p>Our PFM apps help users track spending, set budgets, and watch their savings goals grow, with
+                        real-time visibility into their overall financial health. We pull in open banking APIs for
+                        multi-account data aggregation, apply AI-driven categorization, and generate spending insights
+                        that people actually find useful. That's usually what drives daily engagement and keeps users
+                        coming back.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-chart-line"></i></div>
+                    <h4>Investment &amp; Wealth Management Apps</h4>
+                    <p>We build investment and robo-advisory platforms that handle portfolio tracking, goal-based
+                        investing, automated rebalancing, risk assessment, and tax-loss harvesting through clean,
+                        data-rich interfaces. Whether you're building a brokerage, a robo-advisor, or a platform for
+                        family offices, we handle the complex financial instruments and the regulatory reporting that
+                        comes along with them.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fab fa-bitcoin"></i></div>
+                    <h4>Cryptocurrency Exchange Development</h4>
+                    <p>We've built centralized exchanges, decentralized ones, and hybrids that borrow from both. The
+                        matching engine is usually where everything lives or dies, so we build it for throughput first
+                        and add the rest around it: multi-chain wallets, liquidity management, staking, and trading
+                        dashboards that traders actually want to look at. Security isn't something we compromise on
+                        here. Cold and hot wallet segregation, multi-signature authorization, and real-time threat
+                        monitoring go in from day one, not after launch.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-link"></i></div>
+                    <h4>Blockchain Finance Solutions</h4>
+                    <p>We build transparent, decentralized financial systems, including smart contract-based escrow,
+                        DeFi protocols, tokenized asset platforms, and cross-border settlement networks. These solutions
+                        can cut settlement time from days down to seconds while removing intermediaries entirely. We
+                        work across Ethereum, Polygon, Solana, Hyperledger Fabric, and Binance Smart Chain depending on
+                        what the project needs.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-balance-scale"></i></div>
+                    <h4>RegTech Software Development</h4>
+                    <p>Compliance failures cost financial institutions billions every year, and a lot of that is
+                        avoidable with the right systems in place. We build RegTech solutions that automate KYC and KYB
+                        verification, AML transaction monitoring, suspicious activity reporting, and audit trail
+                        management. Connected to global sanctions lists and identity verification APIs, these systems
+                        can cut manual compliance costs by up to 70%.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-shield-alt"></i></div>
+                    <h4>InsurTech Software Development</h4>
+                    <p>We help insurance companies modernize policy management, claims processing, underwriting, and
+                        customer engagement. Our InsurTech work brings in telematics data, AI-driven risk assessment,
+                        automated claims adjudication, digital policy issuance, and multi-channel customer portals,
+                        which tends to lower loss ratios while improving how satisfied customers actually feel.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-shopping-bag"></i></div>
+                    <h4>Buy Now Pay Later (BNPL) Solutions</h4>
+                    <p>The BNPL market in Asia-Pacific alone is projected to reach $31.6 billion by 2034. We build
+                        platforms that can scale with that kind of growth, with real-time credit decisioning, dynamic
+                        repayment scheduling, merchant integration APIs, and consumer-facing installment dashboards, all
+                        compliant with consumer credit regulations wherever you're operating.</p>
+                </div>
+                <div class="neumorphic-card">
+                    <div class="icon-container"><i class="fas fa-chart-bar"></i></div>
+                    <h4>Financial Analytics Software</h4>
+                    <p>We develop financial analytics platforms that turn raw transaction data, market feeds, and
+                        customer behavior signals into intelligence you can actually act on. That means real-time
+                        dashboards, predictive revenue modeling, credit risk analytics, customer lifetime value scoring,
+                        and regulatory capital calculations, built to answer the questions your team is actually asking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Solutions We Build -->
+    <section class="container" id="solutions" aria-labelledby="solutions-heading">
+        <div class="section-header">
+            <p class="eyebrow">Application Types</p>
+            <h2 id="solutions-heading">Fintech Application Development Solutions We Build</h2>
+            <p>Every financial product type demands a different architecture, compliance posture, and user experience
+                approach. Here's the breadth of fintech applications we've engineered for clients across the globe.</p>
+        </div>
+        <div class="grid-3">
+
+            <div class="card">
+                <div class="card-icon">🏛️</div>
+                <h3>Banking Applications</h3>
+                <p>Full-stack digital banking platforms — from neobank cores to mobile layers for traditional banks —
+                    with account management, transaction processing, loan origination, and regulatory reporting. We
+                    build on API-first, microservices architectures that integrate with existing core banking systems
+                    without requiring a rip-and-replace migration, dramatically reducing risk and time-to-market for
+                    established financial institutions.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💸</div>
+                <h3>Digital Payment Platforms</h3>
+                <p>End-to-end payment processing platforms supporting card payments, instant bank transfers, UPI, SWIFT,
+                    SEPA, and emerging payment methods. Our platforms handle multi-currency processing, dynamic currency
+                    conversion, split payments, and recurring billing — complete with merchant dashboards, dispute
+                    management workflows, and real-time settlement reconciliation modules that reduce finance team
+                    workload significantly.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Stock Trading Apps</h3>
+                <p>High-performance retail and institutional trading applications with real-time market data feeds,
+                    advanced charting, order management systems, algorithmic trading support, and integrated research
+                    tools. We build for sub-millisecond execution requirements and design interfaces that serve both
+                    first-time retail investors and professional traders — ensuring your platform captures the full
+                    market segment rather than just one end of the spectrum.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Mutual Fund Applications</h3>
+                <p>Mutual fund distribution and management platforms that enable seamless SIP setup, portfolio tracking,
+                    NAV-based transaction processing, SEBI-compliant documentation, and tax statement generation. Our
+                    mutual fund apps integrate with CAMS, KFintech, and BSEStar for direct plan access and support both
+                    direct and regular fund distribution models — giving asset management companies and distributors a
+                    competitive digital channel.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Crypto Trading Platforms</h3>
+                <p>Professional-grade cryptocurrency trading platforms with spot, margin, futures, and options trading
+                    capabilities, integrated with on-chain data feeds, multi-chain wallet management, and advanced risk
+                    management tools. We engineer platforms that handle extreme volatility conditions — maintaining
+                    performance and accuracy during peak market events — while providing the charting, portfolio
+                    analytics, and tax reporting tools that modern crypto traders demand.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📝</div>
+                <h3>Loan Management Systems</h3>
+                <p>Comprehensive digital lending platforms covering the entire loan lifecycle — origination,
+                    underwriting, disbursement, repayment tracking, collections, and NPA management. Our loan management
+                    systems integrate AI-powered credit scoring, bank statement analysis, income verification APIs, and
+                    automated decision workflows that reduce loan processing time from weeks to hours while maintaining
+                    credit quality standards that satisfy both regulators and investors.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧾</div>
+                <h3>Invoice &amp; Billing Software</h3>
+                <p>Automated invoicing and billing platforms for financial services companies, accountants, and B2B
+                    enterprises — with support for GST-compliant invoicing, multi-currency billing, subscription
+                    management, payment link generation, and ERP integration. Our billing solutions reduce revenue
+                    leakage through automated payment reminders, late fee calculations, and reconciliation engines that
+                    flag discrepancies before they become write-offs.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>Expense Tracking Apps</h3>
+                <p>Smart expense management applications for individuals and enterprise finance teams — with automated
+                    receipt scanning, OCR-powered expense categorization, multi-card management, spend analytics, and
+                    budget alerting. We build both B2C personal finance tools and B2B employee expense management
+                    platforms with approval workflows, reimbursement processing, and accounting system integrations that
+                    dramatically reduce finance team administrative burden.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏪</div>
+                <h3>Merchant Payment Solutions</h3>
+                <p>Merchant-facing payment solutions including POS integrations, payment link generators, QR code
+                    payment systems, subscription billing engines, and multi-channel settlement dashboards. Our merchant
+                    payment platforms give small businesses enterprise-level payment capabilities — with real-time
+                    analytics, fraud protection, and multi-payment-method acceptance built in — helping your acquiring
+                    business attract and retain the highest-value merchant accounts.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Financial Planning Applications</h3>
+                <p>Goal-based financial planning tools that help users set, track, and achieve major life goals —
+                    retirement, home purchase, education — through personalized savings and investment pathways. Our
+                    financial planning apps combine behavioral finance principles with data-driven recommendations,
+                    scenario modeling, and progress visualization to create products that users genuinely return to
+                    daily — driving the engagement metrics that matter for platform monetization and retention.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== MID CTA ========== -->
+    <div class="cta-band">
+        <div class="container">
+            <h2>Building a Fintech Product? Let's Talk Architecture First.</h2>
+            <p>Our fintech architects will review your product concept, identify compliance requirements, and propose
+                the optimal technical approach — completely free, with no obligation.</p>
+            <a href="#contact" class="btn-white">Book Your Free Demo</a>
+        </div>
+    </div>
+
+    <!-- 7. Advanced Features -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Features We Integrate into Every Fintech App</h2>
+                <p class="section-subtitle">These aren't optional extras we upsell later. They're part of what we
+                    deliver in every application, by default.</p>
+            </div>
+            <div class="features-grid">
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-fingerprint"></i></div>
+                    <div class="feature-text">
+                        <h4>Multi-Factor Authentication</h4>
+                        <p>Layered authentication is the baseline here, built on OTP, TOTP, hardware security keys, and
+                            push notifications. What makes it work well is the adaptive friction: it only kicks in when
+                            risk signals suggest something's actually wrong, so legitimate users aren't slowed down for
+                            no reason.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-id-card"></i></div>
+                    <div class="feature-text">
+                        <h4>KYC &amp; AML Verification</h4>
+                        <p>Onfido, Jumio, and Sumsub power the automated KYC and AML workflows underneath. Document
+                            verification, liveness detection, and sanctions screening all run through them. The goal is
+                            staying compliant globally without scaring users off halfway through signup, which is where
+                            a lot of platforms lose people.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <div class="feature-text">
+                        <h4>AI-Based Fraud Detection</h4>
+                        <p>Our ML-powered fraud systems read hundreds of behavioral, transactional, and device signals
+                            in real time. Once trained on your own transaction data, these custom models typically cut
+                            false-positive rates by 60 to 80% compared to whatever off-the-shelf tool you were using
+                            before.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <div class="feature-text">
+                        <h4>Secure Payment Processing</h4>
+                        <p>End-to-end encryption, card data tokenization through PCI-DSS-compliant vaults, 3D Secure 2.0
+                            authentication, this is what keeps transaction integrity intact even when the network drops
+                            mid-payment. Every event gets a complete audit trail behind it, so nothing disappears
+                            without a record.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="feature-text">
+                        <h4>Real-Time Transaction Tracking</h4>
+                        <p>We lean on event-driven architecture and WebSocket connections to give users and back-office
+                            teams instant visibility into every payment, transfer, and settlement. Once people can check
+                            the status themselves, support ticket volume tends to fall off noticeably.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <div class="feature-text">
+                        <h4>Push Notifications &amp; Alerts</h4>
+                        <p>Push, SMS, email, in-app, alerts go out across whichever channel fits. Smart preference
+                            management and quiet-hours logic keep people informed without wearing them down with
+                            constant pings.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-wallet"></i></div>
+                    <div class="feature-text">
+                        <h4>Digital Wallet Integration</h4>
+                        <p>Apple Pay, Google Pay, Samsung Pay, and proprietary wallet APIs all connect across web and
+                            mobile. Card provisioning, token management, and NFC communication protocols work across
+                            every major device ecosystem, not just the popular ones.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <div class="feature-text">
+                        <h4>Multi-Currency Support</h4>
+                        <p>Real-time exchange rate feeds cover 130+ currencies, with automatic conversion and fees
+                            disclosed upfront rather than buried. Platforms that manage currency exposure on behalf of
+                            users also get FX hedging logic and rate-locking mechanisms built in.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <div class="feature-text">
+                        <h4>Advanced Analytics Dashboard</h4>
+                        <p>Natural language querying is what makes these dashboards different, since it lets complex
+                            financial data make sense to someone without a technical background. End-users get value
+                            from it, and so do the internal operators trying to see the bigger picture.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-plug"></i></div>
+                    <div class="feature-text">
+                        <h4>Third-Party API Integration</h4>
+                        <p>Plaid, Stripe, Razorpay, MX, Finicity, Yodlee, Bloomberg, Refinitiv, we've built
+                            well-architected integration layers for all of them. Rate limiting, authentication, error
+                            recovery, and data normalization get handled properly here, not treated as an afterthought
+                            once something breaks.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                    <div class="feature-text">
+                        <h4>Biometric Login</h4>
+                        <p>Fingerprint, Face ID, and iris recognition run through device-native frameworks like Touch ID
+                            and Android BiometricPrompt, with the cryptographic keys staying inside the secure enclave
+                            the whole time. Authentication ends up roughly 80% faster than a password-based flow.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+                    <div class="feature-text">
+                        <h4>Cloud Data Security</h4>
+                        <p>We deploy across AWS, Azure, and Google Cloud with VPC isolation and encryption at rest and
+                            in transit as the baseline. Secrets management runs through KMS or Key Vault, automated
+                            threat detection watches continuously, and the whole setup is built to meet SOC 2 Type II
+                            and ISO 27001 from day one.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-virus"></i></div>
+                    <div class="feature-text">
+                        <h4>Fraud Detection &amp; Risk Scoring</h4>
+                        <p>Dynamic risk scoring engines assign real-time scores to transactions, users, and
+                            counterparties using ensemble ML models. When something crosses into high-risk territory,
+                            enhanced verification kicks in automatically and feeds straight into your risk team's
+                            dashboards.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+                    <div class="feature-text">
+                        <h4>Loan &amp; Fee Calculators</h4>
+                        <p>EMI calculators, affordability checkers, fee estimators, investment return projectors, these
+                            small tools do more work than people expect. Conversion on loan and investment products
+                            typically climbs 25 to 40% once they're in place, and support inquiries tend to drop at the
+                            same time.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-history"></i></div>
+                    <div class="feature-text">
+                        <h4>Audit Trails &amp; Activity Logs</h4>
+                        <p>Every action gets logged immutably: who did what, when, and from which device and IP address.
+                            These logs export in regulator-ready formats, stay tamper-proof, and get retained for as
+                            long as the law requires, no exceptions.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Process Timeline -->
+    <section class="timeline-section">
+        <div class="container section-header">
+            <h2>Our Financial App Development Process</h2>
+            <p class="section-subtitle">We follow a structured, transparency-first approach that keeps you informed at
+                every stage and avoids the surprises that tend to derail enterprise software projects.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span class="step-num">01</span>
+                    <h3>Business Discovery</h3>
+                    <p>We spend real time understanding your business model, your target market, and your competitive
+                        landscape before touching any technical decisions. Domain experts, business analysts, and
+                        solution architects work together here, because every technical choice should serve your actual
+                        commercial goals, not just check off a feature list.</p>
+                </div>
+            </div>
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                    <span class="step-num">02</span>
+                    <h3>Requirement Analysis</h3>
+                    <p>Business goals become detailed requirements at this stage, functional and non-functional both:
+                        features, integrations, compliance obligations, performance benchmarks, security standards. We
+                        document all of it together with you, so there's no ambiguity left by the time anyone writes a
+                        line of code.</p>
+                </div>
+            </div>
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span class="step-num">03</span>
+                    <h3>UI/UX Design</h3>
+                    <p>Regulatory disclosure requirements and genuinely usable design don't have to fight each other,
+                        though a lot of fintech apps make it feel that way. Our UX team runs user research, competitive
+                        benchmarking, and accessibility audits to build interfaces that actually work for the people
+                        using them.</p>
+                </div>
+            </div>
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                    <span class="step-num">04</span>
+                    <h3>Wireframing & Prototyping</h3>
+                    <p>Interactive prototypes let stakeholders experience the application flow before development even
+                        starts. Usability issues surface early this way, and so do compliance gaps. Post-launch change
+                        requests tend to drop by up to 50% as a result.</p>
+                </div>
+            </div>
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span class="step-num">05</span>
+                    <h3>Application Development</h3>
+                    <p>Two-week agile sprints keep things moving, with continuous integration testing,
+                        security-scanning, and deploying every code change to staging automatically. For mobile, React
+                        Native or Flutter usually does the job. High-throughput APIs run on Node.js or Go, and we lean
+                        on PostgreSQL with event sourcing to keep transaction data reliable under load.</p>
+                </div>
+            </div>
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                    <span class="step-num">06</span>
+                    <h3>API Integration</h3>
+                    <p>Core banking systems, payment processors, identity verification services, market data providers,
+                        accounting platforms, your application connects to all of it through resilient architecture.
+                        Circuit breakers, retry logic, and proper error handling get built in from the start rather than
+                        bolted on once something fails in production.</p>
+                </div>
+            </div>
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span class="step-num">07</span>
+                    <h3>Testing & Quality Assurance</h3>
+                    <p>Automated unit, integration, and end-to-end testing cover the basics, but manual exploratory
+                        testing from QA specialists who understand financial workflows is where the real edge cases get
+                        caught: transaction rounding, multi-currency calculations, concurrent access conflicts,
+                        settlement reconciliation, the kind of things that only show up under real conditions.</p>
+                </div>
+            </div>
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                    <span class="step-num">08</span>
+                    <h3>Security Implementation</h3>
+                    <p>Penetration testing, OWASP Top 10 vulnerability assessments, dependency security scans,
+                        infrastructure security reviews, this is standard for every build. For critical applications, we
+                        go a step further and bring in independent security auditors before anyone gets production
+                        access.</p>
+                </div>
+            </div>
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span class="step-num">09</span>
+                    <h3>Deployment</h3>
+                    <p>Zero-downtime releases come from automated CI/CD pipelines running blue-green deployment
+                        strategies. Once that's set up, we hand over runbooks, rollback procedures, and monitoring
+                        dashboards to your operations team, walking them through a structured transition rather than
+                        dropping everything on them at once.</p>
+                </div>
+            </div>
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                    <span class="step-num">10</span>
+                    <h3>Ongoing Support & Maintenance</h3>
+                    <p>Launch isn't the finish line. SLA-backed incident response, proactive performance optimization,
+                        regular security patch management, and reserved development capacity keep your fintech product
+                        competitive and compliant well after those first few months are over.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 60px; max-width: 900px;">
+            <div class="what-is-checklist">
+                <h3>Why our process delivers results:</h3>
+
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>3–5 month MVP delivery</strong><br>
+                        Structured sprints eliminate the scope creep that extends 90% of fintech projects.</p>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>Zero-surprise billing</strong><br>
+                        Fixed-scope phases with milestone-based payments and transparent change request processes</p>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>Regulatory-ready from Sprint 1</strong><br>
+                        Compliance architecture decisions made at the start, not retrofitted before launch.</p>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>Full IP ownership transferred.</strong><br>
+                        You own 100% of the codebase, documentation, and infrastructure configurations we deliver</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Core Innovations -->
+    <section class="innovations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Innovations Behind Our Fintech Application Development</h2>
+                <p class="section-subtitle" style="color: #94A3B8;">As a trusted fintech application development
+                    company, we apply cutting-edge innovations purposefully.</p>
+            </div>
+            <div class="innovations-grid">
+
+                <div class="innovation-card" data-aos="fade-up">
+                    <i class="fas fa-robot"></i>
+                    <h3>Artificial Intelligence</h3>
+                    <p>AI in fintech is expected to generate $45.53 billion in value in 2026 alone, growing at roughly
+                        23% a year. We apply it across fraud detection, credit risk assessment, customer support
+                        automation, product recommendations, and predictive analytics. Every AI-driven decision stays
+                        explainable, so your risk and compliance teams can actually justify it when someone asks.</p>
+                </div>
+
+                <div class="innovation-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-link"></i>
+                    <h3>Blockchain Technology</h3>
+                    <p>We use blockchain where it genuinely beats a traditional database, which includes cross-border
+                        settlements, tokenized asset management, smart contract-based escrow, and immutable compliance
+                        records. We work across Ethereum, Hyperledger Fabric, Polygon, and Solana, choosing the network
+                        based on your throughput needs, regulatory environment, and how decentralized things actually
+                        need to be.</p>
+                </div>
+
+                <div class="innovation-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Machine Learning</h3>
+                    <p>We build custom ML pipelines trained on financial data, covering credit scoring with alternative
+                        data sources, behavioral biometrics for continuous authentication, sentiment analysis for
+                        trading platforms, and churn prediction for neobanks. Our MLOps infrastructure watches for model
+                        drift and retrains automatically, so accuracy doesn't quietly slip over time.</p>
+                </div>
+
+                <div class="innovation-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Computing</h3>
+                    <p>We build cloud-native architecture on AWS, Azure, or GCP using infrastructure-as-code through
+                        Terraform, containers via Kubernetes, and serverless functions that scale elastically during
+                        peak transaction periods. Multi-region deployment gets you the 99.99% uptime that
+                        payment-critical applications genuinely need.</p>
+                </div>
+
+                <div class="innovation-card" data-aos="fade-up">
+                    <i class="fas fa-university"></i>
+                    <h3>Open Banking APIs</h3>
+                    <p>We build Open Banking API integrations and platforms for PSD2 in Europe, CDR in Australia, and
+                        the emerging frameworks in India and the US. This work supports aggregators, embedded finance
+                        products, and data-enrichment tools, and we handle both the regulatory maze and the technical
+                        complexity that comes with it.</p>
+                </div>
+
+                <div class="innovation-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-database"></i>
+                    <h3>Big Data Analytics</h3>
+                    <p>We build big data pipelines using Apache Kafka for real-time streaming, Spark for batch
+                        processing, and Snowflake or BigQuery as the analytical warehouse. This enables financial
+                        analytics, regulatory reporting, and customer intelligence queries across billions of records
+                        without touching transactional performance.</p>
+                </div>
+
+                <div class="innovation-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-server"></i>
+                    <h3>DevOps</h3>
+                    <p>We embed DevSecOps pipelines with automated security scanning, compliance checks, and performance
+                        testing into every build cycle. Infrastructure-as-code keeps your production environment
+                        reproducible, auditable, and recoverable within your defined RTO/RPO targets.</p>
+                </div>
+
+                <div class="innovation-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cybersecurity</h3>
+                    <p>Cybercrime targeting financial services costs the industry over $18 billion a year, and that
+                        figure isn't trending downward. Our approach covers the full security lifecycle, from threat
+                        modeling during architecture through secure coding during development, penetration testing
+                        before launch, and continuous SIEM-based monitoring after. Zero-trust network architecture and
+                        just-in-time access provisioning help catch threats before they turn into actual damage.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Industries -->
+    <section class="industries">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industries We Serve with Financial App Development</h2>
+                <p class="section-subtitle">The companies that succeed at financial app development globally tend to
+                    bring sector-specific domain knowledge, not just technical skill, to every client engagement. We
+                    tailor our approach to the compliance and operational reality of whichever vertical we're working
+                    in.</p>
+            </div>
+            <div class="industries-grid">
+
+                <div class="industry-card">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Banking & Financial Institutions</h3>
+                    <p>We help traditional banks and NBFCs digitize retail and corporate banking through mobile banking
+                        apps, digital loan origination systems, and open banking API layers that let them compete
+                        directly with neobank challengers, without a risky core banking replacement.</p>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Insurance Companies</h3>
+                    <p>We modernize insurance distribution, underwriting, and claims management in ways that bring
+                        policy issuance time down from days to minutes, automate claims adjudication, and give customers
+                        portals that improve NPS scores while reducing call center volume.</p>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Investment Firms</h3>
+                    <p>We build trading platforms, portfolio management systems, and investor reporting tools for asset
+                        managers, hedge funds, and brokerage firms, with real-time data processing, compliance
+                        reporting, and institutional-grade security running throughout.</p>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Wealth Management</h3>
+                    <p>We build robo-advisory platforms, client relationship management tools, and multi-asset portfolio
+                        management systems for family offices, private banks, and independent financial advisors.</p>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Lending Businesses</h3>
+                    <p>We build digital lending platforms for NBFCs, alternative lenders, and credit unions, covering
+                        loan origination, automated underwriting with alternative data, disbursement, repayment
+                        management, and collection optimization.</p>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Digital Payments</h3>
+                    <p>We build payment infrastructure for payment service providers, merchant acquirers, and payment
+                        facilitators, covering acquiring, issuing, processing, and settlement, built to hold up under
+                        peak volume rather than degrade.</p>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Fintech Startups</h3>
+                    <p>We work as your primary development team, providing product engineering, compliance architecture,
+                        and technical leadership, so founding teams can spend their energy on the market and on
+                        fundraising instead of on the codebase.</p>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Credit Unions</h3>
+                    <p>We help credit unions compete with retail banks through digital transformation, building
+                        member-facing mobile apps, automated loan platforms.</p>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Digital Payment Providers</h3>
+                    <p>Digital payment capabilities that fit within the budget and regulatory constraints that come with
+                        credit union procurement.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Advantages -->
+    <section class="advantages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Code Regime as Your Fintech App Development Company?</h2>
+            </div>
+            <div class="advantages-grid">
+
+                <div class="adv-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Experienced Team</h4>
+                    <p>Our development team averages 8+ years of financial software engineering experience. Many of them
+                        have worked directly inside banking and payments organizations, which means they walk in already
+                        understanding the compliance, security, and operational constraints that developers outside the
+                        industry usually have to learn the hard way.</p>
+                </div>
+
+                <div class="adv-card">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Customize Solutions</h4>
+                    <p>We don't reskin templates or stitch together low-code platforms and call it custom work. Every
+                        application gets purpose-engineered around your specific business model, regulatory environment,
+                        and scalability requirements, so your product can differentiate on real capability, not just
+                        branding.</p>
+                </div>
+
+                <div class="adv-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h4>Agile Development</h4>
+                    <p>We run two-week sprint cycles that keep stakeholders aligned and the product moving forward.
+                        Sprint planning, daily standups, bi-weekly demos of working software, and retrospectives that
+                        actually improve delivery speed over time. You see working software every two weeks, not just a
+                        status report telling you things are on track.</p>
+                </div>
+
+                <div class="adv-card">
+                    <i class="fas fa-search"></i>
+                    <h4>Development Process</h4>
+                    <p>You get real-time visibility through Jira, Linear, Confluence, and Notion, along with direct
+                        access to staging environments throughout the engagement. There are no black boxes here, and you
+                        never have to file a formal request just to get an update.</p>
+                </div>
+
+                <div class="adv-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h4>Scalable Architecture</h4>
+                    <p>We architect for the scale you're aiming to reach, not just where you happen to be starting.
+                        Microservices architecture, event-driven design, and cloud-native deployment patterns let you
+                        grow 10x, 100x, even 1000x in transaction volume without needing an architectural rewrite.</p>
+                </div>
+
+                <div class="adv-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Security-First</h4>
+                    <p>Security gets embedded in our SDLC from the very first user story, not added on near the end.
+                        OWASP secure coding practices, security-specific code review checklists, and automated
+                        vulnerability scans run on every build, and the applications that come out the other end tend to
+                        have far fewer vulnerabilities than the industry average.</p>
+                </div>
+
+                <div class="adv-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h4>Dedicated Team</h4>
+                    <p>We assign one dedicated development team to each client engagement. That team knows your product,
+                        your domain, and your codebase deeply, which means no context-switching, no shared-resource
+                        staffing, and no ramp-up overhead every time something new comes up.</p>
+                </div>
+
+                <div class="adv-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>Long-Term Support</h4>
+                    <p>Our relationship doesn't end the day you launch. Structured support and maintenance engagements
+                        give you SLA-backed incident response, proactive monitoring, security patch management, and
+                        reserved development capacity for whatever feature work comes next.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Security Solutions -->
+    <section class="security">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Our Financial App Development Company Delivers Secure Solutions</h2>
+                <p class="section-subtitle">Security never gets treated as an afterthought here. We architect it in from
+                    day one, as one of the leading fintech app development companies working this way.</p>
+            </div>
+            <div class="security-flex">
+                <div class="sec-list">
+                    <div class="sec-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Compliance Standards</h4>
+                            <p>We build to PCI DSS Level 1, ISO 27001, SOC 2 Type II, GDPR, RBI, FCA, and SEC compliance
+                                requirements, with verification built into our delivery process rather than treated as a
+                                last-minute audit scramble before launch.</p>
+                        </div>
+                    </div>
+                    <div class="sec-item">
+                        <i class="fas fa-key"></i>
+                        <div>
+                            <h4>Data Encryption</h4>
+                            <p>All sensitive data gets encrypted using AES-256 at rest and TLS 1.3 in transit. We apply
+                                field-level encryption to particularly sensitive data points, things like account
+                                numbers, SSNs, and payment card data, so raw sensitive data stays locked away without
+                                explicit key management approval.</p>
+                        </div>
+                    </div>
+                    <div class="sec-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <div>
+                            <h4>Secure APIs</h4>
+                            <p>Every API we build implements OAuth 2.0 or OpenID Connect authentication, rate limiting,
+                                input validation, and output encoding. API gateways log all requests and flag unusual
+                                access patterns automatically through anomaly detection.</p>
+                        </div>
+                    </div>
+                    <div class="sec-item">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div>
+                            <h4>Cloud Infrastructure</h4>
+                            <p>We harden cloud configurations with VPC network isolation, private subnets for database
+                                tiers, web application firewalls, DDoS protection, and automated vulnerability scanning.
+                                Every environment configuration stays version-controlled, auditable, and reproducible
+                                from one deployment to the next.</p>
+                        </div>
+                    </div>
+                    <div class="sec-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4>Risk Management</h4>
+                            <p>We build real-time risk scoring, automated exposure limits, counterparty risk monitoring,
+                                and operational risk alerting, all configurable by your risk team directly, without
+                                needing a developer involved every time something changes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefits of Choosing Our Fintech Application Development Company</h2>
+            </div>
+            <div class="benefits-grid">
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+                    <div>
+                        <h4>Faster Transactions</h4>
+                        <p>We deliver sub-300ms transaction authorization for 99th percentile requests, which cuts cart
+                            abandonment and gives modern consumers the instant payment experience they've come to
+                            expect.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-smile"></i></div>
+                    <div>
+                        <h4>Customer Experience</h4>
+                        <p>We apply the same conversion principles that power high-performing fintech landing pages
+                            across the whole product, from onboarding through daily use, which tends to drive organic
+                            referrals and lower acquisition costs over time.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-lock"></i></div>
+                    <div>
+                        <h4>Financial Security</h4>
+                        <p>Clients typically report 70 to 90% reductions in security incident volume after moving to
+                            platforms built under our development standards, which translates directly into fewer fraud
+                            losses, fewer compliance penalties, and less reputational risk.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-arrow-down"></i></div>
+                    <div>
+                        <h4>Reduced Operational Costs</h4>
+                        <p>Automated KYC, digital loan origination, and AI-powered customer support consistently deliver
+                            35 to 60% operational cost reductions for clients moving away from legacy financial
+                            operating models.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-magnet"></i></div>
+                    <div>
+                        <h4>Customer Retention</h4>
+                        <p>Clients using our personalization and engagement features report 40 to 65% improvements in
+                            90-day customer retention, a number that matters a lot for lifetime value calculations and
+                            for fundraising conversations down the line.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <div>
+                        <h4>Revenue Opportunities</h4>
+                        <p>We design modern architecture from the start to support embedded product cross-selling, API
+                            monetization, data licensing, premium feature tiers, and embedded finance partnerships, so
+                            these become options later instead of major rebuilds.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <div>
+                        <h4>Business Scalability</h4>
+                        <p>Elastic cloud architecture and modular microservices design let you grow 10x, 100x, or 1000x
+                            without the kind of architectural rewrite that has derailed plenty of fast-growing fintech
+                            companies built on monolithic foundations.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div>
+                        <h4>Real-Time Financial Insights</h4>
+                        <p>We build real-time dashboards for both end-users and internal business teams, which enables
+                            faster commercial decisions, more responsive risk management, and more personalized customer
+                            communication.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Trusted Partner -->
+    <section class="trusted">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Makes Us One of the Trusted Fintech App Development Companies</h2>
+                <p style="max-width: 800px; margin: 0 auto;">We don't just write code; we build digital financial
+                    ecosystems. Our commitment to quality, security, and innovation has made us the go-to partner for
+                    financial institutions worldwide.</p>
+            </div>
+            <div class="trusted-points">
+
+                <div class="t-point">
+                    <i class="fas fa-star"></i>
+                    <h4>Industry Expertise</h4>
+                    <p>Our development team includes former bankers, compliance officers, and payment network engineers,
+                        not developers who picked up fintech vocabulary from documentation. That inside-out
+                        understanding shapes every architectural and UX decision we make, because they've actually sat
+                        on the other side of these systems before writing a line of code.</p>
+                </div>
+
+                <div class="t-point">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h4>Custom Solutions</h4>
+                    <p>No templates, no reskins, no white-label rebranding dressed up as custom development. Every
+                        application reflects your specific product requirements, your compliance context, and your
+                        competitive positioning. If it doesn't come from your business, it doesn't go into the build.
+                    </p>
+                </div>
+
+                <div class="t-point">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Latest Technologies</h4>
+                    <p>We base technology choices on evidence of production value, not on whatever stack our developers
+                        happened to learn five years ago or on relationships with particular vendors. If something earns
+                        its place through real performance, we use it. If it doesn't, we leave it out.</p>
+                </div>
+
+                <div class="t-point">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>Dedicated Support</h4>
+                    <p>You get a named account manager and a named technical lead, along with SLA-backed response times,
+                        instead of getting routed into a generic support queue. No explaining your issue from scratch to
+                        a different person every time.</p>
+                </div>
+
+                <div class="t-point">
+                    <i class="fas fa-user-check"></i>
+                    <h4>Client-Focused Development</h4>
+                    <p>We measure success the way you do, through user adoption rates, transaction volumes, and
+                        regulatory approval timelines, not just whether code got delivered on schedule. Shipped code
+                        that doesn't move your business forward isn't really a win.</p>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 60px;">
+                <h2 style="margin-bottom: 20px; text-align: center; font-size: 24px; color: black;">Code Regime vs.
+                    Common Alternatives</h2>
+                <div style="overflow-x: auto; padding-bottom: 15px;">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th>Capability</th>
+                                <th>Code Regime</th>
+                                <th>Generic Agency</th>
+                                <th>Freelancers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fintech compliance expertise</td>
+                                <td class="check-y">✓ Deep</td>
+                                <td class="check-n">Partial</td>
+                                <td class="check-n">Rare</td>
+                            </tr>
+                            <tr>
+                                <td>Custom architecture design</td>
+                                <td class="check-y">✓ Always</td>
+                                <td class="check-n">Template-based</td>
+                                <td class="check-n">Variable</td>
+                            </tr>
+                            <tr>
+                                <td>PCI DSS / KYC / AML</td>
+                                <td class="check-y">✓ Built-in</td>
+                                <td class="check-n">Added later</td>
+                                <td class="check-n">Often missed</td>
+                            </tr>
+                            <tr>
+                                <td>Dedicated development team</td>
+                                <td class="check-y">✓ Dedicated</td>
+                                <td class="check-n">Shared</td>
+                                <td class="check-y">✓ Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Scalable cloud architecture</td>
+                                <td class="check-y">✓ Standard</td>
+                                <td class="check-n">Optional</td>
+                                <td class="check-n">Variable</td>
+                            </tr>
+                            <tr>
+                                <td>Post-launch support SLA</td>
+                                <td class="check-y">✓ Formal SLA</td>
+                                <td class="check-n">Best effort</td>
+                                <td class="check-n">No SLA</td>
+                            </tr>
+                            <tr>
+                                <td>AI/ML integration</td>
+                                <td class="check-y">✓ Custom models</td>
+                                <td class="check-n">Off-the-shelf only</td>
+                                <td class="check-n">Limited</td>
+                            </tr>
+                            <tr>
+                                <td>Third-party pentest</td>
+                                <td class="check-y">✓ Mandatory</td>
+                                <td class="check-n">Optional</td>
+                                <td class="check-n">Rarely done</td>
+                            </tr>
+                            <tr>
+                                <td>Open banking / API-first</td>
+                                <td class="check-y">✓ Native</td>
+                                <td class="check-n">Add-on</td>
+                                <td class="check-n">Variable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 15. TECHNOLOGY STACK SECTION -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="margin-bottom: 30px;">
+                <h2>Our Robust Technology Stack</h2>
+            </div>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                <div class="tech-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                <div class="tech-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span>
+                </div>
+                <a href="/service/flutter/" class="tech-item" style="text-decoration:none; color:inherit;"><i
+                        class="devicon-flutter-plain colored"></i><span>Flutter</span></a>
+                <div class="tech-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+
+                <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                <div class="tech-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                <div class="tech-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span>
+                </div>
+                <a href="/service/flutter/" class="tech-item" style="text-decoration:none; color:inherit;"><i
+                        class="devicon-flutter-plain colored"></i><span>Flutter</span></a>
+                <div class="tech-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Engagement Models</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Professional</h3>
+                    <div class="price">Fixed Price</div>
+                    <p>Ideal for projects with well-defined requirements and strict deadlines.</p>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Fixed Budget & Timeline</li>
+                        <li><i class="fas fa-check"></i> Defined Scope of Work</li>
+                        <li><i class="fas fa-check"></i> Dedicated Project Manager</li>
+                        <li><i class="fas fa-check"></i> Weekly Progress Reports</li>
+                        <li><i class="fas fa-check"></i> Quality Assurance</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">Choose Plan</a>
+                </div>
+                <div class="price-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional Plus</h3>
+                    <div class="price">Dedicated Team</div>
+                    <p>Perfect for long-term projects requiring continuous development.</p>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Flexible Scope & Budget</li>
+                        <li><i class="fas fa-check"></i> Hand-picked Developers</li>
+                        <li><i class="fas fa-check"></i> Direct Team Communication</li>
+                        <li><i class="fas fa-check"></i> Scalable Resources</li>
+                        <li><i class="fas fa-check"></i> Full Control over Process</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Choose Plan</a>
+                </div>
+                <div class="price-card">
+                    <h3>Enterprise Plus</h3>
+                    <div class="price">Time & Material</div>
+                    <p>Best for projects with evolving requirements and dynamic scopes.</p>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Pay As You Go</li>
+                        <li><i class="fas fa-check"></i> Maximum Flexibility</li>
+                        <li><i class="fas fa-check"></i> Immediate Start</li>
+                        <li><i class="fas fa-check"></i> Agile Methodology</li>
+                        <li><i class="fas fa-check"></i> Transparent Hourly Billing</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">Choose Plan</a>
+                </div>
+            </div>
+
+            <div id="pricingTable" class="table-responsive" style="margin-top: 50px;">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Features List</th>
+                            <th>Lite</th>
+                            <th>Professional</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="core-header">
+                            <td colspan="4">Core Features</td>
+                        </tr>
+                        <tr>
+                            <td>100% Customizable Source Code</td>
+                            <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                            <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Free One Time Installation</td>
+                            <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Technical Support</td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Free Support</td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Android App [Driver &amp; Rider]</td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>iOS App Rider</td>
+                            <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Multi Domain License</td>
+                            <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                            <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Admin Web Panel</td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Bug Resolve</td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Apps Submission</td>
+                            <td><span class="icon-cross"><i class="fas fa-times"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>White Label</td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="icon-check"><i class="fas fa-check"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 17. FAQ -->
+    <section class="faq">
+        <div class="container faq-container">
+            <h2>Frequently Asked Questions About Fintech App Development</h2>
+
+            <div class="faq-item active">
+                <div class="faq-question">What is fintech app development and what does it actually involve? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>It's the full process of designing, building, testing, and launching apps that deliver actual
+                        financial services, things like payments, banking, lending, investing, insurance, and compliance
+                        work. This isn't standard software development. Whoever's building it needs to actually
+                        understand financial regulation, know how real-time transactions behave under load, and build
+                        security that holds up to banking-grade scrutiny, not just pass a basic checklist.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How long does it take to develop a fintech app? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>Depends heavily on what you're building. A digital wallet MVP is usually done in 3 to 5 months.
+                        Lending or investment platforms take longer, closer to 5 to 8 months. Full banking platforms and
+                        crypto exchanges stretch further still, sometimes 8 to 18 months. And if regulatory approvals or
+                        core banking integrations are part of the picture, add extra time on top, since those rarely
+                        move on your timeline.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How much does it cost to develop a fintech app? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>A focused MVP usually runs $30,000 to $80,000. Once you're adding AI, compliance workflows, and
+                        support across multiple platforms, that number climbs into the $150,000 to $350,000 range.
+                        Enterprise-grade systems go well past that, sometimes over $1 million. Honestly though, you
+                        won't get an accurate number until after a discovery session, since so much of it depends on
+                        what your product actually needs.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What compliance standards does a fintech app need to meet? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>It varies by what you're building and where. Card payments generally mean PCI DSS. User
+                        verification and transaction monitoring bring AML and KYC into the picture. Data privacy laws
+                        like GDPR usually apply too, regardless of vertical. On top of that baseline, sector rules kick
+                        in depending on what you're offering, SEC if you're touching investments, RBI if you're
+                        operating in India, FCA in the UK, FINRA in the US. We map all of this out early rather than
+                        letting your team discover gaps after launch.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you integrate our existing core banking system with a new fintech app? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>Yes, we do this regularly. We build the API layers and microservices that connect your existing
+                        core platform to a new digital application on top of it. We've worked with Temenos, Finacle,
+                        Mambu, and Thought Machine, among others. The point is adding new capability without touching or
+                        disrupting what's already running underneath.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do you approach security in fintech application development? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>It's part of the process from the first architecture decision, not something we bolt on near the
+                        end. Before anyone writes code, we run formal threat modeling. Through development, OWASP secure
+                        coding practices stay in place. Every build pipeline runs automated vulnerability scans. Before
+                        anything goes to production, independent penetration testing happens. And once it's live,
+                        SIEM-based monitoring keeps watching. Security isn't a phase here, it runs the whole way
+                        through.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What technology stack do you use for fintech app development? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>This really comes down to what the project needs rather than a fixed stack we default to. On
+                        mobile, React Native or Flutter usually cover cross-platform work well, though we'll go native
+                        with Swift or Kotlin if the integration demands go deep enough. The backend tends to run on
+                        Node.js, Go, Java, or Python. On the data side, we lean on PostgreSQL for anything
+                        transactional. When it's more about streaming events or crunching analytics at scale, Kafka,
+                        Snowflake, and BigQuery tend to be the better fit. Cloud provider usually just comes down to
+                        whatever you're already running on, whether that's AWS, Azure, or GCP.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you build fintech apps for startups or only for large enterprises? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>Both, and the approach shifts depending on where you are. Early-stage companies get a leaner MVP
+                        program built around milestone-based delivery, since speed and budget usually matter more than
+                        process at that stage. Enterprises get a fuller program with formal governance and a dedicated
+                        account manager attached. What doesn't change is security and code quality. That stays
+                        consistent no matter the size of the client.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are KYC and AML, and how do you implement them? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>KYC is about confirming someone actually is who they say they are, through document checks,
+                        liveness verification, and address validation. AML works differently, it watches transactions
+                        over time for suspicious patterns, using sanctions screening, behavioral analysis, and formal
+                        Suspicious Activity Reporting when something crosses a threshold. On the implementation side, we
+                        typically build KYC through Onfido, Jumio, or Sumsub, and pair AML with real-time screening APIs
+                        alongside case management tools your compliance team can actually use.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does AI improve a fintech application? <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>It shows up in a few different places, and each one solves a slightly different problem. Fraud
+                        detection is probably where it matters most, since models reading real-time behavioral signals
+                        catch more fraud with fewer false positives than static rule-based systems ever could. On the
+                        lending side, credit scoring that pulls in alternative data leads to faster and more accurate
+                        decisions. AI chatbots take routine support questions off your team's plate around the clock.
+                        And predictive analytics help risk teams spot credit deterioration early, before it turns into
+                        an actual loss.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you provide fintech app development for mobile (iOS and Android)? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>Yes. Cross-platform builds usually go through React Native or Flutter, and we switch to native
+                        Swift or Kotlin development when the integration work genuinely calls for it. When it makes
+                        sense for the project, we also build out a companion web app that shares the same backend logic
+                        and API layer as the mobile version, so you're not maintaining two separate systems that happen
+                        to look alike.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is open banking and how can it benefit my fintech product? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>Open banking is a regulation that forces banks to open up standardized API access to customer
+                        financial data and payments, but only once the customer's given consent. For a fintech company,
+                        that unlocks a lot: account aggregation, initiating payments bank-to-bank, verifying income for
+                        lending decisions, cash flow tools that actually pull live data instead of asking users to
+                        upload statements. It's already required across the EU, UK, and Australia, and it's making its
+                        way into India, Singapore, and the US now too.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do you ensure a fintech app can scale as my user base grows? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>We design for growth from the start rather than retrofitting it later. Microservices let each
+                        part of the system scale on its own instead of the whole app scaling together. That's running on
+                        Kubernetes, with auto-scaling that adjusts based on how your actual traffic behaves rather than
+                        fixed thresholds. Read replicas, caching layers, and message queues keep database bottlenecks
+                        from ever becoming a problem in the first place. Before launch, we load test against your
+                        projected peak volumes and build in real headroom above that, instead of sizing infrastructure
+                        right up to the edge and hoping it holds.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What post-launch support do you offer? <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Launch isn't where our involvement ends. We stay on for SLA-backed incident response if something
+                        breaks, proactive monitoring of both security and performance, regular patch management,
+                        dependency updates so nothing goes stale, and reserved development capacity for whatever feature
+                        work or regulatory changes come up down the line.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is the role of blockchain in fintech app development? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>It matters most where trust, transparency, and settlement speed are the actual bottleneck, not
+                        everywhere. Cross-border payments benefit because it cuts out correspondent banking
+                        intermediaries. Trade finance benefits because it creates document records nobody can quietly
+                        alter. Securities and asset tokenization benefit because settlement happens almost instantly and
+                        fractional ownership becomes possible. We only bring blockchain into a project when it genuinely
+                        does the job better than a regular database would, not because it sounds impressive in a pitch.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do you manage data privacy compliance in fintech apps? <i
+                        class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>It starts with the architecture, not a policy document added afterward. We only collect data a
+                        feature actually needs, and every personal data field gets mapped to its purpose, its legal
+                        basis, how long it's retained, and when it gets deleted, all decided upfront. Consent management
+                        frameworks track exactly what permissions a user's granted, and any change pushes automatically
+                        through every system downstream. Rights like access, correction, deletion, and portability get
+                        built directly into the application itself, so nobody's manually processing these requests by
+                        hand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 18. Request Demo Form -->
+    <!-- <section class="contact container">
+        <div class="contact-form">
+            <h2>Let's Discuss Your Fintech Idea</h2>
+            <p class="text-center" style="margin-bottom: 30px;">Fill out the form below and our fintech experts will get
+                back to you within 24 hours.</p>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="john@company.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="+1 (234) 567-8900" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" class="form-control" placeholder="Your Company">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Project Details</label>
+                    <textarea class="form-control" placeholder="Tell us about your project requirements..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 18px;">Request a Free
+                    Consultation</button>
+            </form>
+        </div>
+    </section> -->
+
+    <!-- ========== FINAL CTA ========== -->
+    <!-- <div class="cta-band">
+        <div class="container">
+            <h2>Start Your Fintech Development Project Today</h2>
+            <p>The fintech market is growing at 18.2% annually. The best time to build was two years ago. The second-best time is now. Let's begin with a conversation.</p>
+            <a href="mailto:hello@coderegimetechnologies.com" class="btn-white">Schedule Free Discovery Call</a>
+            <p style="font-size: .82rem; color: rgba(255,255,255,.65); margin-top: 16px; margin-bottom: 0;">Typical response within 4 business hours. All enquiries are handled by senior team members, not sales representatives.</p>
+        </div>
+    </div> -->
+
+    <!-- 19. Footer -->
+    <footer class="cr-footer">
+        <div class="cr-footer__inner">
+
+            <!-- TOP GRID -->
+            <div class="cr-footer__grid">
+
+                <!-- Column 1: Brand -->
+                <div class="cr-footer__col">
+                    <h3>Code Regime</h3>
+                    <p class="cr-footer__desc">
+                        Code Regime Technologies is a leading software development company delivering innovative web,
+                        mobile, and
+                        enterprise solutions, as well as a ready-made clone script product. We help businesses grow with
+                        scalable
+                        technology, custom applications, and reliable digital transformation services.
+                    </p>
+                    <div class="cr-footer__social-icons">
+                        <a href="https://www.linkedin.com/company/coderegime/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn">
+                            <img src="/images/linkedin.png" alt="LinkedIn Icon" width="24" height="24">
+                        </a>
+                        <a href="https://x.com/RegimeCode" target="_blank" rel="noopener" aria-label="Twitter / X">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/coderegimetechnologies/" target="_blank" rel="noopener"
+                            aria-label="Instagram">
+                            <img src="/images/instagram.png" alt="Instagram Icon" width="24" height="24">
+                        </a>
+                        <a href="https://www.facebook.com/Coderegimetech/" target="_blank" rel="noopener"
+                            aria-label="Facebook">
+                            <img src="/images/facebook.png" alt="Facebook Icon" width="24" height="24">
+                        </a>
+                        <a href="https://www.threads.net/@coderegimetechnologies" target="_blank" rel="noopener"
+                            aria-label="Threads">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.785-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.81 11.618 4.81c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Useful Links -->
+                <div class="cr-footer__col">
+                    <h3>Useful Links</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/about-us/">About Us</a></li>
+                        <li><a href="/Portfolio/">Portfolio</a></li>
+                        <li><a href="/contact-us/">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="cr-footer__col">
+                    <h3>Services</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/blockchain-development-services/">Blockchain Development</a></li>
+                        <li><a href="/mobile-app-development/">Mobile App Development</a></li>
+                        <li><a href="/ios-app-development/">iOS App Development</a></li>
+                        <li><a href="/flutter-app-development/">Flutter Development</a></li>
+                        <li><a href="/android-app-development/">Android App Development</a></li>
+                        <li><a href="/web-app-development/">Web App Development</a></li>
+                        <li><a href="/enterprise-app-development/">Enterprise App Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Products -->
+                <div class="cr-footer__col">
+                    <h3>Products</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/uber-clone/">CabRegime - Uber Clone</a></li>
+                        <li><a href="/ubereats-clone/">FoodRegime - Ubereats clone</a></li>
+                        <li><a href="/uber-for-handyman-app/">HandymanRegime - Uber for Handman</a></li>
+                        <li><a href="/product/fintech/index.html">Fintech App</a></li>
+                        <li><a href="/flight-booking-app/">Flight Booking App</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Legal -->
+                <div class="cr-footer__col">
+                    <h3>Legal</h3>
+                    <ul class="cr-footer__list">
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/refund-policy/">Refund Policy</a></li>
+                        <li><a href="/security-policy/">Support</a></li>
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Contact Us -->
+                <div class="cr-footer__col">
+                    <h3>Get in touch</h3>
+                    <ul class="cr-footer__contact-list">
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/918072218602">+91 80722 18602</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Phone</strong>
+                                <a href="tel:+918072218602">+91 80722 18602</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Address</strong>
+                                74, 75 HDFC Bank Building, 2nd floor, Kamarajar Salai,<br>
+                                Madurai, Tamil Nadu – 625009
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cr-footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <div class="cr-footer__contact-text">
+                                <strong>Business Enquiry</strong>
+                                <a href="mailto:sales@coderegimetechnologies.com" target="_blank"
+                                    rel="noopener">sales@coderegimetechnologies.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div><!-- /grid -->
+
+            <hr class="cr-footer__divider">
+
+            <!-- BOTTOM ROW -->
+            <div class="cr-footer__bottom">
+                <div class="cr-footer__disclaimer">
+                    <h4>Disclaimer</h4>
+                    <p>The terms Uber, UberEats, Grubhub, DoorDash, and Foodora are used strictly for marketing and
+                        illustrative
+                        purposes. Code Regime Technologies is in no way affiliated with, endorsed by, or connected to
+                        any of the
+                        listed companies. We entirely own the custom source code and design of our products, and we
+                        do not use any
+                        of their proprietary intellectual property.</p>
+                </div>
+                <div class="cr-footer__right">
+                </div>
+            </div><!-- /bottom -->
+            <hr class="cr-footer__divider">
+            <p class="cr-footer__copyright">
+                © Copyright <span id="year"></span>, All Rights Reserved by Code Regime Technologies.
+            </p>
+        </div><!-- /inner -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                faqItems.forEach(i => i.classList.remove('active'));
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile Menu Toggle (Basic implementation)
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/modal.js"></script>
+</body>
+
+</html>

@@ -32,7 +32,7 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+  <link rel="stylesheet" type="text/css" href="/css/header.css" />
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -186,13 +186,13 @@
   </script>
   <!-- End Google tag (gtag.js) -->
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xgjlgfjkhc");
-    </script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xgjlgfjkhc");
+  </script>
 </head>
 
 <body>
@@ -256,12 +256,12 @@
             <li class="dropdown-item">
               <a href="/product/ubereats/index.html" class="dropdown-link">FoodRegime - Ubereats clone</a>
             </li>
-            
+
             <li class="dropdown-item">
               <a href="/product/handyman/index.html" class="dropdown-link">HandymanRegime - Uber for Handman</a>
             </li>
             <li class="dropdown-item">
-              <a href="/product/insurance/index.html" class="dropdown-link">Insurance</a>
+              <a href="/product/fintech/index.html" class="dropdown-link">Fintech App</a>
             </li>
             <li class="dropdown-item">
               <a href="/product/flightbooking/index.html" class="dropdown-link">Flight Booking App</a>
@@ -301,419 +301,427 @@
         <span class="hamburger"></span>
       </div>
     </nav>
-  </header><main>
+  </header>
+  <main>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>
-          Best Web App Development Services Company
-        </h1>
-        <p>
-          Once you plan to do business, the Web app plays a crucial role in today's world digital market.
-          If you are ready to do a small-scale or a large-scale business, custom web app development services
-          can boost your online promotions and purposeful functional efficiency. At Code Regime Technologies,
-          we proudly say Web App Development Company that brings you well-crafted solutions to satisfy the
-          specific needs of our valuable clients.
-        </p>
-        <div class="cta-button">
-          <a href="https://wa.me/918072218602" class="get-started">Reach Out</a>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>
+            Best Web App Development Services Company
+          </h1>
+          <p>
+            Once you plan to do business, the Web app plays a crucial role in today's world digital market.
+            If you are ready to do a small-scale or a large-scale business, custom web app development services
+            can boost your online promotions and purposeful functional efficiency. At Code Regime Technologies,
+            we proudly say Web App Development Company that brings you well-crafted solutions to satisfy the
+            specific needs of our valuable clients.
+          </p>
+          <div class="cta-button">
+            <a href="https://wa.me/918072218602" class="get-started">Reach Out</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="image/header-tablet.png" alt="web app development">
+      </div>
+    </section>
+
+    <script>
+      // Mobile menu toggle functionality
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const dropdownItems = document.querySelectorAll('.nav-item');
+
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Mobile dropdown functionality
+      dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const dropdown = item.querySelector('.dropdown');
+
+        if (dropdown) {
+          link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              item.classList.toggle('dropdown-open');
+            }
+          });
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+        }
+      });
+
+      // Close mobile menu on window resize
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+          dropdownItems.forEach(item => {
+            item.classList.remove('dropdown-open');
+          });
+        }
+      });
+    </script>
+
+    <div class="why-container">
+      <!-- Header Section -->
+      <div class="header">
+        <h2>Why Choose Code Regime <br> Technologies?</h2>
+        <p>We will make you as a Brand. Get ready to collaborate with us.</p>
+      </div>
+
+      <!-- Top Row Features -->
+      <div class="features-grid">
+        <!-- Core Expertise -->
+        <div class="feature-card">
+          <div class="icon-container">
+            <img src="image/core.png" alt="Core Expertise">
+          </div>
+          <h3 class="feature-title">Core Expertise</h3>
+          <p class="feature-description">Our team has talented developers with over years of experience in designing web
+            applications.</p>
+        </div>
+
+        <!-- Custom Solutions -->
+        <div class="feature-card">
+          <div class="icon-container">
+            <img src="image/custom-solution.png" alt="Custom Solutions">
+          </div>
+          <h3 class="feature-title">Custom Solutions</h3>
+          <p class="feature-description">We team has talented developers with over years of experience in designing web
+            applications.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Row Features -->
+      <div class="features-grid">
+        <!-- Trustworthiness -->
+        <div class="feature-card">
+          <div class="icon-container">
+            <img src="image/trustworthiness.png" alt="Trustworthiness">
+          </div>
+          <h3 class="feature-title">Trustworthiness</h3>
+          <p class="feature-description">As a leading Web App Development Company, we bring you transparency and
+            accuracy.
+            The final result will be your happiness and satisfaction without any hidden costs.</p>
+        </div>
+
+        <!-- Reliability -->
+        <div class="feature-card">
+          <div class="icon-container">
+            <img src="image/reliability.png" alt="Reliability">
+          </div>
+          <h3 class="feature-title">Reliability</h3>
+          <p class="feature-description">Our designs of web application development for your business grow relevant to
+            your success.</p>
+        </div>
+
+        <!-- Clearance Handling -->
+        <div class="feature-card">
+          <div class="icon-container">
+            <img src="image/clearance-handling.png" alt="Clearance Handling">
+          </div>
+          <h3 class="feature-title">Clearance Handling</h3>
+          <p class="feature-description">Our team aims to launch your web app timely and prioritize on-time support
+            availability.</p>
         </div>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="image/header-tablet.png" alt="web app development">
-    </div>
-  </section>
 
-  <script>
-    // Mobile menu toggle functionality
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const dropdownItems = document.querySelectorAll('.nav-item');
 
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
+    <div class="code-container">
+      <!-- Header Section -->
+      <div class="header">
+        <h2>Code Regime's Web App <br> Development Integrations</h2>
+        <p>Our web-app development process is designed to ensure that every project <br> we undertake meets the
+          consistency of quality and higher reliability.</p>
+      </div>
 
-    // Mobile dropdown functionality
-    dropdownItems.forEach(item => {
-      const link = item.querySelector('.nav-link');
-      const dropdown = item.querySelector('.dropdown');
-
-      if (dropdown) {
-        link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            item.classList.toggle('dropdown-open');
-          }
-        });
-      }
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-      }
-    });
-
-    // Close mobile menu on window resize
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        dropdownItems.forEach(item => {
-          item.classList.remove('dropdown-open');
-        });
-      }
-    });
-  </script>
-
-  <div class="why-container">
-    <!-- Header Section -->
-    <div class="header">
-      <h2>Why Choose Code Regime <br> Technologies?</h2>
-      <p>We will make you as a Brand. Get ready to collaborate with us.</p>
-    </div>
-
-    <!-- Top Row Features -->
-    <div class="features-grid">
-      <!-- Core Expertise -->
-      <div class="feature-card">
-        <div class="icon-container">
-          <img src="image/core.png" alt="Core Expertise">
+      <!-- Services Grid -->
+      <div class="services-grid">
+        <!-- Service 1: Collecting Overall Ideas -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="image/collecting.png" alt="Collecting Overall Ideas">
+          </div>
+          <h3 class="service-title">Collecting Overall Ideas</h3>
+          <p class="service-description">Firstly, we gather all that information as per the plans and requirements
+            needed
+            for your business.</p>
         </div>
-        <h3 class="feature-title">Core Expertise</h3>
-        <p class="feature-description">Our team has talented developers with over years of experience in designing web
-          applications.</p>
-      </div>
 
-      <!-- Custom Solutions -->
-      <div class="feature-card">
-        <div class="icon-container">
-          <img src="image/custom-solution.png" alt="Custom Solutions">
+        <!-- Service 2: Crafted Design -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="image/crafted.png" alt="Crafted Design">
+          </div>
+          <h3 class="service-title">Crafted Design</h3>
+          <p class="service-description">Our Team gives you the best vision and usage of the web app. It will be your
+            brand so we work perfectly with each nook of the corner.</p>
         </div>
-        <h3 class="feature-title">Custom Solutions</h3>
-        <p class="feature-description">We team has talented developers with over years of experience in designing web
-          applications.</p>
-      </div>
-    </div>
 
-    <!-- Bottom Row Features -->
-    <div class="features-grid">
-      <!-- Trustworthiness -->
-      <div class="feature-card">
-        <div class="icon-container">
-          <img src="image/trustworthiness.png" alt="Trustworthiness">
+        <!-- Service 3: Development Process -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="image/development.png" alt="Development Process">
+          </div>
+          <h3 class="service-title">Development Process</h3>
+          <p class="service-description">Our Developer's brings out the best design web apps with secure, robust, and
+            high-performance</p>
         </div>
-        <h3 class="feature-title">Trustworthiness</h3>
-        <p class="feature-description">As a leading Web App Development Company, we bring you transparency and accuracy.
-          The final result will be your happiness and satisfaction without any hidden costs.</p>
-      </div>
 
-      <!-- Reliability -->
-      <div class="feature-card">
-        <div class="icon-container">
-          <img src="image/reliability.png" alt="Reliability">
+        <!-- Service 4: Test Nets -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="image/test.png" alt="Test Nets">
+          </div>
+          <h3 class="service-title">Test Nets</h3>
+          <p class="service-description">We will make assure of web app quality testing, fixing errors, bugs, and any
+            kind
+            of issues. The Launch will be error-free delivery.</p>
         </div>
-        <h3 class="feature-title">Reliability</h3>
-        <p class="feature-description">Our designs of web application development for your business grow relevant to
-          your success.</p>
-      </div>
 
-      <!-- Clearance Handling -->
-      <div class="feature-card">
-        <div class="icon-container">
-          <img src="image/clearance-handling.png" alt="Clearance Handling">
+        <!-- Service 5: Final Launch -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="image/final.png" alt="Final Launch">
+          </div>
+          <h3 class="service-title">Final Launch</h3>
+          <p class="service-description">We check the overall operational functions and set your niche industry target
+            audience.</p>
         </div>
-        <h3 class="feature-title">Clearance Handling</h3>
-        <p class="feature-description">Our team aims to launch your web app timely and prioritize on-time support
-          availability.</p>
-      </div>
-    </div>
-  </div>
 
-
-  <div class="code-container">
-    <!-- Header Section -->
-    <div class="header">
-      <h2>Code Regime's Web App <br> Development Integrations</h2>
-      <p>Our web-app development process is designed to ensure that every project <br> we undertake meets the
-        consistency of quality and higher reliability.</p>
-    </div>
-
-    <!-- Services Grid -->
-    <div class="services-grid">
-      <!-- Service 1: Collecting Overall Ideas -->
-      <div class="service-card">
-        <div class="service-image">
-          <img src="image/collecting.png" alt="Collecting Overall Ideas">
-        </div>
-        <h3 class="service-title">Collecting Overall Ideas</h3>
-        <p class="service-description">Firstly, we gather all that information as per the plans and requirements needed
-          for your business.</p>
-      </div>
-
-      <!-- Service 2: Crafted Design -->
-      <div class="service-card">
-        <div class="service-image">
-          <img src="image/crafted.png" alt="Crafted Design">
-        </div>
-        <h3 class="service-title">Crafted Design</h3>
-        <p class="service-description">Our Team gives you the best vision and usage of the web app. It will be your
-          brand so we work perfectly with each nook of the corner.</p>
-      </div>
-
-      <!-- Service 3: Development Process -->
-      <div class="service-card">
-        <div class="service-image">
-          <img src="image/development.png" alt="Development Process">
-        </div>
-        <h3 class="service-title">Development Process</h3>
-        <p class="service-description">Our Developer's brings out the best design web apps with secure, robust, and
-          high-performance</p>
-      </div>
-
-      <!-- Service 4: Test Nets -->
-      <div class="service-card">
-        <div class="service-image">
-          <img src="image/test.png" alt="Test Nets">
-        </div>
-        <h3 class="service-title">Test Nets</h3>
-        <p class="service-description">We will make assure of web app quality testing, fixing errors, bugs, and any kind
-          of issues. The Launch will be error-free delivery.</p>
-      </div>
-
-      <!-- Service 5: Final Launch -->
-      <div class="service-card">
-        <div class="service-image">
-          <img src="image/final.png" alt="Final Launch">
-        </div>
-        <h3 class="service-title">Final Launch</h3>
-        <p class="service-description">We check the overall operational functions and set your niche industry target
-          audience.</p>
-      </div>
-
-      <!-- Service 6: Tech Support -->
-      <div class="service-card">
-        <div class="service-image">
-          <img src="image/tech.png" alt="Tech support">
-        </div>
-        <h3 class="service-title">Tech Support</h3>
-        <p class="service-description">we ensure post-launch security protocols of your web app and provide you with
-          on-time technical support.</p>
-      </div>
-    </div>
-  </div>
-
-  <section class="custom-web-apps">
-    <h2>What are the Custom <br> Web Apps We Develop?</h2>
-    <p>Code Regime Technologies specializes in making various custom web <br> applications that are needed by our
-      valuable clients.</p>
-    <div class="grid-container">
-      <div class="card">
-        <img src="image/ecommerce.png" alt="E-Commerce Platforms">
-        <h3>E-Commerce Platforms</h3>
-        <p>We create dynamic e-commerce web applications that provide scalable shopping models, multiple secure payment
-          methods, and user-friendly interfaces.</p>
-      </div>
-      <div class="card">
-        <img src="image/erp.png" alt="ERP Software Solutions">
-        <h3>(ERP) Software Solutions</h3>
-        <p>Our ERP systems are useful for running overall operations and managing day-to-day tasks.</p>
-      </div>
-      <div class="card">
-        <img src="image/crm.png" alt="CRM Software Solutions">
-        <h3>(CRM) Software Solutions</h3>
-        <p>Our team develops CRM systems that will exceed customer interactions and data system precision efficiently.
-        </p>
-      </div>
-      <div class="card">
-        <img src="image/content.png" alt="Content Management Solutions">
-        <h3>Content Management Solutions (CMS)</h3>
-        <p>Our CMS software enhances overall operations to manage and modify digital content with tools that support
-          multiple users in an integrated environment.</p>
-      </div>
-      <div class="card">
-        <img src="image/web.png" alt="Web Portals Software">
-        <h3>Web Portals Software</h3>
-        <p>Our team develops web portals that make the web more effective and information-rich.</p>
-      </div>
-    </div>
-  </section>
-  <div class="industry-container">
-    <!-- Left Column - Introduction -->
-    <div class="intro-column">
-      <h2 class="intro-title">Industries We Serve</h2>
-      <p class="intro-text">Code Regime's Experts excel in working in various industries in Web App development
-        services.</p>
-    </div>
-
-    <!-- Right Column - Industries List -->
-    <div class="industries-column">
-      <!-- Healthcare Sector -->
-      <div class="industry-card">
-        <div class="industry-number">I</div>
-        <div class="industry-content">
-          <h3 class="industry-title">Healthcare Sector</h3>
-          <p class="industry-description">Developing secure and efficient web apps for patient management, telemedicine,
-            and healthcare administration.</p>
-        </div>
-      </div>
-
-      <!-- Insurance -->
-      <div class="industry-card insurance">
-        <div class="industry-number">II</div>
-        <div class="industry-content">
-          <h3 class="industry-title">Insurance</h3>
-          <p class="industry-description">Crafting long-term insurance software solutions for insurance services.</p>
-        </div>
-      </div>
-
-      <!-- Retail -->
-      <div class="industry-card">
-        <div class="industry-number">III</div>
-        <div class="industry-content">
-          <h3 class="industry-title">Retail</h3>
-          <p class="industry-description">Creating exciting and transactional e-commerce zones that convert money and
-            customers higher in usage.</p>
-        </div>
-      </div>
-
-      <!-- Asset Management Software -->
-      <div class="industry-card">
-        <div class="industry-number">IV</div>
-        <div class="industry-content">
-          <h3 class="industry-title">Asset Management Software</h3>
-          <p class="industry-description">Our Talented team creates an overall user experience in one app and is
-            considering the best promotions for large-scale enterprising companies.</p>
-        </div>
-      </div>
-
-      <!-- Logistics Software -->
-      <div class="industry-card">
-        <div class="industry-number">V</div>
-        <div class="industry-content">
-          <h3 class="industry-title">Logistics Software</h3>
-          <p class="industry-description">As a leading Web App Development company, Our team has designed a web app used
-            for supply chain goods, automated invoice generators, and billing systems.</p>
+        <!-- Service 6: Tech Support -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="image/tech.png" alt="Tech support">
+          </div>
+          <h3 class="service-title">Tech Support</h3>
+          <p class="service-description">we ensure post-launch security protocols of your web app and provide you with
+            on-time technical support.</p>
         </div>
       </div>
     </div>
-  </div>
 
-
-  <section class="services-section">
-    <div class="services-grid">
-      <!-- Top left content -->
-      <div class="services-content">
-        <h2>How a Web App Would be Profitable to Your Business?</h2>
-        <p>
-          In the presence of the latest tech world, a business move in a web app development
-          company can rapidly strengthen your business's profit. Our custom web app planned
-          operations reduce manual work, and provide real-time metrics, allowing for AI-driven
-          smart moves that increase efficiency and profit. So, web apps improve customer
-          engagement by bringing endless user experiences, transforming into increased
-          customer engagement and loyalty.
-        </p>
-        <p>
-          Our team provides you scalability of web apps ensuring that your business can grow
-          without the need for costly infrastructure. Finally, partnering with Code Region's web
-          app development company is a key move to preserving long-term profitability and
-          maintaining a competitive role in the market.
-        </p>
+    <section class="custom-web-apps">
+      <h2>What are the Custom <br> Web Apps We Develop?</h2>
+      <p>Code Regime Technologies specializes in making various custom web <br> applications that are needed by our
+        valuable clients.</p>
+      <div class="grid-container">
+        <div class="card">
+          <img src="image/ecommerce.png" alt="E-Commerce Platforms">
+          <h3>E-Commerce Platforms</h3>
+          <p>We create dynamic e-commerce web applications that provide scalable shopping models, multiple secure
+            payment
+            methods, and user-friendly interfaces.</p>
+        </div>
+        <div class="card">
+          <img src="image/erp.png" alt="ERP Software Solutions">
+          <h3>(ERP) Software Solutions</h3>
+          <p>Our ERP systems are useful for running overall operations and managing day-to-day tasks.</p>
+        </div>
+        <div class="card">
+          <img src="image/crm.png" alt="CRM Software Solutions">
+          <h3>(CRM) Software Solutions</h3>
+          <p>Our team develops CRM systems that will exceed customer interactions and data system precision efficiently.
+          </p>
+        </div>
+        <div class="card">
+          <img src="image/content.png" alt="Content Management Solutions">
+          <h3>Content Management Solutions (CMS)</h3>
+          <p>Our CMS software enhances overall operations to manage and modify digital content with tools that support
+            multiple users in an integrated environment.</p>
+        </div>
+        <div class="card">
+          <img src="image/web.png" alt="Web Portals Software">
+          <h3>Web Portals Software</h3>
+          <p>Our team develops web portals that make the web more effective and information-rich.</p>
+        </div>
+      </div>
+    </section>
+    <div class="industry-container">
+      <!-- Left Column - Introduction -->
+      <div class="intro-column">
+        <h2 class="intro-title">Industries We Serve</h2>
+        <p class="intro-text">Code Regime's Experts excel in working in various industries in Web App development
+          services.</p>
       </div>
 
-      <!-- Top right image -->
-      <div class="services-image-top">
-        <img src="image/profitable.png" alt="Dashboard on tablet showing business metrics and analytics">
-      </div>
+      <!-- Right Column - Industries List -->
+      <div class="industries-column">
+        <!-- Healthcare Sector -->
+        <div class="industry-card">
+          <div class="industry-number">I</div>
+          <div class="industry-content">
+            <h3 class="industry-title">Healthcare Sector</h3>
+            <p class="industry-description">Developing secure and efficient web apps for patient management,
+              telemedicine,
+              and healthcare administration.</p>
+          </div>
+        </div>
 
-      <!-- Bottom left image -->
-      <div class="services-image-bottom">
-        <img src="image/joining.png" alt="Two business professionals discussing web app development">
-      </div>
+        <!-- Insurance -->
+        <div class="industry-card insurance">
+          <div class="industry-number">II</div>
+          <div class="industry-content">
+            <h3 class="industry-title">Fintech</h3>
+            <p class="industry-description">Crafting long-term insurance software solutions for insurance services.</p>
+          </div>
+        </div>
 
-      <!-- Bottom right content -->
-      <div class="benefits-contentbelow">
-        <h2>Benefits of Joining With Us:</h2>
-        <p>
-          In any kind of business, having a custom web application designed for your business
-          is important for evolving more competitively. Code Region Technologies is the
-          best Web App Development Company, we can deliver you multiple web app
-          development services that are highly secured, robust, and crafted to help your business
-          be successful.
-        </p>
+        <!-- Retail -->
+        <div class="industry-card">
+          <div class="industry-number">III</div>
+          <div class="industry-content">
+            <h3 class="industry-title">Retail</h3>
+            <p class="industry-description">Creating exciting and transactional e-commerce zones that convert money and
+              customers higher in usage.</p>
+          </div>
+        </div>
+
+        <!-- Asset Management Software -->
+        <div class="industry-card">
+          <div class="industry-number">IV</div>
+          <div class="industry-content">
+            <h3 class="industry-title">Asset Management Software</h3>
+            <p class="industry-description">Our Talented team creates an overall user experience in one app and is
+              considering the best promotions for large-scale enterprising companies.</p>
+          </div>
+        </div>
+
+        <!-- Logistics Software -->
+        <div class="industry-card">
+          <div class="industry-number">V</div>
+          <div class="industry-content">
+            <h3 class="industry-title">Logistics Software</h3>
+            <p class="industry-description">As a leading Web App Development company, Our team has designed a web app
+              used
+              for supply chain goods, automated invoice generators, and billing systems.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section class="faq-section">
-    <h2 class="faq-title">FAQ</h2>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        What is the overall cost of creating a web application?
-        <div class="faq-toggle active"></div>
-      </div>
-      <div class="faq-answer active">
-        <p>We focus on delivering the utmost quality rather than cost so it is negotiable.</p>
-      </div>
-    </div>
+    <section class="services-section">
+      <div class="services-grid">
+        <!-- Top left content -->
+        <div class="services-content">
+          <h2>How a Web App Would be Profitable to Your Business?</h2>
+          <p>
+            In the presence of the latest tech world, a business move in a web app development
+            company can rapidly strengthen your business's profit. Our custom web app planned
+            operations reduce manual work, and provide real-time metrics, allowing for AI-driven
+            smart moves that increase efficiency and profit. So, web apps improve customer
+            engagement by bringing endless user experiences, transforming into increased
+            customer engagement and loyalty.
+          </p>
+          <p>
+            Our team provides you scalability of web apps ensuring that your business can grow
+            without the need for costly infrastructure. Finally, partnering with Code Region's web
+            app development company is a key move to preserving long-term profitability and
+            maintaining a competitive role in the market.
+          </p>
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        How many days to develop a web application?
-        <div class="faq-toggle"></div>
-      </div>
-      <div class="faq-answer">
-        <p>The timeline can vary from just a few weeks to a few months.</p>
-      </div>
-    </div>
+        <!-- Top right image -->
+        <div class="services-image-top">
+          <img src="image/profitable.png" alt="Dashboard on tablet showing business metrics and analytics">
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        How long Can Code Regime support?
-        <div class="faq-toggle"></div>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Our team will assure you the technical support whenever you need it.</p>
-      </div>
-    </div>
+        <!-- Bottom left image -->
+        <div class="services-image-bottom">
+          <img src="image/joining.png" alt="Two business professionals discussing web app development">
+        </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        Do you make web app development services for Beginners?
-        <div class="faq-toggle"></div>
+        <!-- Bottom right content -->
+        <div class="benefits-contentbelow">
+          <h2>Benefits of Joining With Us:</h2>
+          <p>
+            In any kind of business, having a custom web application designed for your business
+            is important for evolving more competitively. Code Region Technologies is the
+            best Web App Development Company, we can deliver you multiple web app
+            development services that are highly secured, robust, and crafted to help your business
+            be successful.
+          </p>
+        </div>
       </div>
-      <div class="faq-answer">
-        <p>Our Team is proficient in developing web app services for startups</p>
+    </section>
+
+    <section class="faq-section">
+      <h2 class="faq-title">FAQ</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What is the overall cost of creating a web application?
+          <div class="faq-toggle active"></div>
+        </div>
+        <div class="faq-answer active">
+          <p>We focus on delivering the utmost quality rather than cost so it is negotiable.</p>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <script>
-    // JavaScript for toggle functionality
-    document.addEventListener('DOMContentLoaded', function () {
-      const questions = document.querySelectorAll('.faq-question');
+      <div class="faq-item">
+        <div class="faq-question">
+          How many days to develop a web application?
+          <div class="faq-toggle"></div>
+        </div>
+        <div class="faq-answer">
+          <p>The timeline can vary from just a few weeks to a few months.</p>
+        </div>
+      </div>
 
-      questions.forEach(question => {
-        question.addEventListener('click', function () {
-          const toggle = this.querySelector('.faq-toggle');
-          const answer = this.nextElementSibling;
+      <div class="faq-item">
+        <div class="faq-question">
+          How long Can Code Regime support?
+          <div class="faq-toggle"></div>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, Our team will assure you the technical support whenever you need it.</p>
+        </div>
+      </div>
 
-          toggle.classList.toggle('active');
-          answer.classList.toggle('active');
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you make web app development services for Beginners?
+          <div class="faq-toggle"></div>
+        </div>
+        <div class="faq-answer">
+          <p>Our Team is proficient in developing web app services for startups</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // JavaScript for toggle functionality
+      document.addEventListener('DOMContentLoaded', function () {
+        const questions = document.querySelectorAll('.faq-question');
+
+        questions.forEach(question => {
+          question.addEventListener('click', function () {
+            const toggle = this.querySelector('.faq-toggle');
+            const answer = this.nextElementSibling;
+
+            toggle.classList.toggle('active');
+            answer.classList.toggle('active');
+          });
         });
       });
-    });
-  </script>
+    </script>
 
-  </main><footer class="cr-footer">
+  </main>
+  <footer class="cr-footer">
     <div class="cr-footer__inner">
 
       <!-- TOP GRID -->
@@ -787,7 +795,7 @@
             <li><a href="/product/ubercab/index.html">CabRegime - Uber Clone</a></li>
             <li><a href="/product/ubereats/index.html">FoodRegime - Ubereats clone</a></li>
             <li><a href="/product/handyman/index.html">HandymanRegime - Uber for Handman</a></li>
-            <li><a href="/product/insurance/index.html">Insurance</a></li>
+            <li><a href="/product/fintech/index.html">Fintech App</a></li>
             <li><a href="/product/flightbooking/index.html">Flight Booking App</a></li>
           </ul>
         </div>
@@ -919,4 +927,3 @@
 </body>
 
 </html>
-

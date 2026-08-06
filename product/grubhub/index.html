@@ -16,26 +16,26 @@
     rel="stylesheet">
   <title>Grubhub Clone App – Ready-Made Food Delivery App Script</title>
   <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+  <link rel="stylesheet" type="text/css" href="/css/header.css" />
 
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xgjlgfjkhc");
-    </script>
-    <!-- Google Tag Manager -->
-<script>(function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-      'gtm.start':
-        new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-  })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
-<!-- End Google Tag Manager -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xgjlgfjkhc");
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
@@ -109,12 +109,12 @@
             <li class="dropdown-item">
               <a href="/product/ubereats/index.html" class="dropdown-link">FoodRegime - Ubereats clone</a>
             </li>
-            
+
             <li class="dropdown-item">
               <a href="/product/handyman/index.html" class="dropdown-link">HandymanRegime - Uber for Handman</a>
             </li>
             <li class="dropdown-item">
-              <a href="/product/insurance/index.html" class="dropdown-link">Insurance</a>
+              <a href="/product/fintech/index.html" class="dropdown-link">Fintech App</a>
             </li>
             <li class="dropdown-item">
               <a href="/product/flightbooking/index.html" class="dropdown-link">Flight Booking App</a>
@@ -154,510 +154,517 @@
         <span class="hamburger"></span>
       </div>
     </nav>
-  </header><main>
+  </header>
+  <main>
 
-  <!-- <div class="wave">
+    <!-- <div class="wave">
         <img src="images/wave.png" alt="wave background">
     </div> -->
 
-  <div class="main-content">
-    <div class="content-text">
-      <h1 class="heading">GrubHub<br>Clone</h1>
-      <p class="description">
-        A Powerful delivery software will reach you Globally. A Well-crafted App is what you All Need. Get Ready to
-        start an Online food delivery business, Our Grubhub Clone is a great option. It's a well-built solution that
-        lets you take a food delivery app similar to Ubereats App.
+    <div class="main-content">
+      <div class="content-text">
+        <h1 class="heading">GrubHub<br>Clone</h1>
+        <p class="description">
+          A Powerful delivery software will reach you Globally. A Well-crafted App is what you All Need. Get Ready to
+          start an Online food delivery business, Our Grubhub Clone is a great option. It's a well-built solution that
+          lets you take a food delivery app similar to Ubereats App.
+        </p>
+        <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/header-img.png" alt="Mobile App Preview" class="mobile-img">
+      </div>
+    </div>
+    </div>
+
+    <script>
+      // Mobile menu toggle functionality
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const dropdownItems = document.querySelectorAll('.nav-item');
+
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Mobile dropdown functionality
+      dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const dropdown = item.querySelector('.dropdown');
+
+        if (dropdown) {
+          link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              item.classList.toggle('dropdown-open');
+            }
+          });
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+        }
+      });
+
+      // Close mobile menu on window resize
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+          dropdownItems.forEach(item => {
+            item.classList.remove('dropdown-open');
+          });
+        }
+      });
+    </script>
+
+    <section class="uber-clone-section">
+      <div class="content-container">
+        <!-- Text Content -->
+        <div class="text-contents">
+          <h1>Grubhub Clone App Script and what are the major uses of the Grubhub Clone App?</h1>
+          <p>A Grubhub clone is a very resourceful, ready-made solution designed to reflect the success
+            of Grubhub, but with enhanced uses crafted to today’s business needs. In
+            response to the Unhandle pandemic, the clone includes COVID-19 safety features such as
+            contactless delivery and health status tracking for delivery personnel. </p>
+          <p> This app will aide the business makes your dreams come true as soon as possible. Easily
+            accessible to admin, driver, and restaurant zones. It saves you money and time. we can make it
+            operationally efficient, reliable, and sustainable.</p>
+        </div>
+        <!-- Image uberclone -->
+        <div class="gradient-box">
+          <img src="images/second-img.png" alt="Uber Clone App Phone" class="phone-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Third section -->
+    <div class="ai-section-wrapper">
+      <div class="ai-section-tag">ARTIFICIAL INTELLIGENCE</div>
+      <h1 class="ai-section-heading">How Our AI-Powered System Can Help Your Ubereats Clone Business?</h1>
+
+      <div class="ai-content-grid">
+        <div class="ai-benefits-column">
+          <div class="ai-benefit-box ai-active" id="ai-ordering" onclick="toggleAiBenefit('ai-ordering')">
+            <div class="ai-benefit-row">
+              <div class="ai-benefit-icon-wrapper">
+                <img src="images/ease-on-ordering.png" alt="Ease on Ordering">
+              </div>
+              <div class="ai-benefit-name">Ease on Ordering</div>
+            </div>
+            <p class="ai-benefit-description">AI can learn what customers like and suggest dishes they might want to
+              order, which can increase sales</p>
+            <div class="ai-accent-diamond"></div>
+          </div>
+
+          <div class="ai-benefit-box" id="ai-navigation" onclick="toggleAiBenefit('ai-navigation')">
+            <div class="ai-benefit-row">
+              <div class="ai-benefit-icon-wrapper">
+                <img src="images/smart-navigation.png" alt="Smart Navigations">
+              </div>
+              <div class="ai-benefit-name">Smart Navigations</div>
+            </div>
+            <p class="ai-benefit-description ai-hidden-content" id="ai-navigation-content">AI can find traffic-free
+              roads
+              for food deliveries, it can save time and fuel.</p>
+          </div>
+
+          <div class="ai-benefit-box" id="ai-support" onclick="toggleAiBenefit('ai-support')">
+            <div class="ai-benefit-row">
+              <div class="ai-benefit-icon-wrapper">
+                <img src="images/customer-support.png" alt="Customer Support">
+              </div>
+              <div class="ai-benefit-name">Customer Support</div>
+            </div>
+            <p class="ai-benefit-description ai-hidden-content" id="ai-support-content">AI-powered chatbots can answer
+              customer questions 24/7, Our App AI ensures your customers are always happy.</p>
+          </div>
+        </div>
+
+        <div class="ai-visual-column">
+          <img src="images/tab-panel.png" alt="AI and Human Handshake" class="ai-showcase-image">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleAiBenefit(id) {
+        // Get all benefits and remove active class
+        const benefits = document.querySelectorAll('.ai-benefit-box');
+        benefits.forEach(benefit => {
+          benefit.classList.remove('ai-active');
+        });
+
+        // Add active class to clicked benefit
+        const clickedBenefit = document.getElementById(id);
+        clickedBenefit.classList.add('ai-active');
+
+        // For navigation and support, toggle hidden content
+        if (id === 'ai-navigation') {
+          document.getElementById('ai-navigation-content').classList.add('ai-visible');
+          document.getElementById('ai-support-content').classList.remove('ai-visible');
+        } else if (id === 'ai-support') {
+          document.getElementById('ai-support-content').classList.add('ai-visible');
+          document.getElementById('ai-navigation-content').classList.remove('ai-visible');
+        } else {
+          document.getElementById('ai-navigation-content').classList.remove('ai-visible');
+          document.getElementById('ai-support-content').classList.remove('ai-visible');
+        }
+      }
+    </script>
+
+    <!--Benefits-section-->
+    <section class="benefits-section">
+      <div class="curve-container">
+        <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
+      </div>
+      <h1 class="section-benefits-title">
+        Benefits of Grubhub Clone with <br> Code Regime Technologies
+      </h1>
+      <p class="section-subwords">
+        When you choose Code Regime Technologies for your Grubhub Clone, you get
+
       </p>
-      <a href="https://wa.me/918072218602" class="cta-button">Live Chat ></a>
+      <div class="benefits-container">
+        <div class="benefit-card">
+          <div class="icon">
+            <img src="images/money-saves.png" alt="money saves">
+          </div>
+          <h3>Money Saves</h3>
+          <p>
+            Developing from scratch can be expensive. A Grubhub Clone is a more affordable option.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">
+            <img src="images/reliability.png" alt="">
+          </div>
+          <h3>Reliability</h3>
+          <p>
+            As your business grows, the Grubhub Clone can grow with you.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">
+            <img src="images/bespoke.png" alt="">
+          </div>
+          <h3>Bespoke</h3>
+          <p>
+            We craft the app to match your brand and specific needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Why choose Section -->
+    <section class="why-section">
+      <div class="why-container">
+        <!-- Left Column: Text Content -->
+        <div class="offer-text">
+          <p class="subheading-why">Why Choose</p>
+          <h2 class="main-heading-why">Why Choose Code Regime for Your Grubhub Clone?</h2>
+          <p class="description-why">
+            Code Regime Technologies is a Premier choice for developing <br> on-demand apps.
+          </p>
+          <ul class="why-list">
+            <div class="why-list1st-box">
+              <li>
+                <div class="list-content">
+                  <strong>1. Expertise.</strong> We have more than six years of experience in <br> creating reliable and
+                  high-featured applications.
+                </div>
+              </li>
+
+            </div>
+
+            <li>
+              <div class="list-content">
+                <strong>2. Eye On Customer.</strong> We work perfectly with you to ensure the final <br> product result
+                meets your specific needs.
+              </div>
+            </li>
+            <li>
+              <div class="list-content">
+                <strong>3. Long-term Support.</strong> We don’t want to just display your app-we <br> provide continuous
+                support to keep it running smoothly.
+                reports.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div class="why-image">
+          <img src="images/whychoose.png" alt="Mobile App Features">
+        </div>
+      </div>
+    </section>
+
+    <!-- Revenue For Business section -->
+    <section class="revenue-growth">
+      <div class="content-wrap">
+        <!-- Image Section -->
+        <div class="image-wrap">
+          <img src="images/revenue.png" alt="Globe in Hands">
+        </div>
+        <!-- Text Section -->
+        <div class="text-page">
+          <p class="subheading-text">Revenue For Business</p>
+          <h2 class="main-heading-text">How does the Grubhub App generates Revenue for your Business?</h2>
+          <p class="description-page">
+            Unlock your food delivery business potential with a Grubhub Clone app. This customizable, ready-made
+            solution
+            enables you to quickly launch a similar to the Ubereats App, designed to your brand’s needs.
+          </p>
+          <p class="description-page">
+            With features like AI-driven order suggestions, smart delivery routing, and 24/7 customer support, the
+            Grubhub
+            Clone app ensures operational efficiency and customer satisfaction.
+
+          </p>
+          <p class="description-page">
+            By choosing this cost-effective option, you can save on development time and
+            expenses while scaling your business effortlessly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offer-section">
+      <div class="offer-container">
+        <!-- Left Column: Text Content -->
+        <div class="offer-text">
+          <p class="subheading-offer">We Offer</p>
+          <h2 class="main-heading-offer">What Do We Offer?</h2>
+          <p class="description-offer">
+            At Code Regime Technologies, we offer a complete Grubhub <br> Clone package that includes:
+
+          </p>
+          <ul class="offer-list">
+            <div class="offer-list1st-box">
+              <li>
+                <div class="list-content">
+                  <strong>1. Customer App.</strong> Our app is useful for customers to browse, <br> order, and track
+                  their
+                  ordered foods.
+                </div>
+              </li>
+            </div>
+            <li>
+              <div class="list-content">
+                <strong>2. Driver App.</strong> A powerful app for drivers to manage orders.
+              </div>
+            </li>
+            <li>
+              <div class="list-content">
+                <strong>3. Admin Panel.</strong> A control panel for managing users, orders, and generating reports.
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Right Column: Image -->
+        <div class="offer-image">
+          <img src="images/offer.png" alt="Mobile App Features">
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra Addon section -->
+    <section class="extra-section">
+      <div class="curve-container2">
+        <img src="images/Vector.png" alt="Decorative Curve" class="curve-image2">
+      </div>
+      <h2 class="section-title-extra">Extra Addons For <br> Grubhub Clone?</h2>
+      <p class="section-description-extra">
+        To make your Grubhub Clone even better. We offer some special options <br> and discounts through which you can
+        easily complete the marketing <br> work on online.
+      </p>
+      <div class="extra-container">
+        <div class="extra-box">
+          <div class="icon-container">
+            <img src="images/multiple-payment-option.png" alt="Tracking Icon" class="feature-icon">
+          </div>
+          <h3 class="extra-title">Multiple Payment Options</h3>
+          <p class="extra-description">
+            We can give customers access easily to digital payment modes.
+          </p>
+        </div>
+        <div class="extra-box">
+          <div class="icon-container">
+            <img src="images/real-time-tracking.png" alt="Payment Icon" class="feature-icon">
+          </div>
+          <h3 class="extra-title">Real-Time Tracking</h3>
+          <p class="extra-description">
+            Customers and drivers can track orders in real time.
+          </p>
+        </div>
+        <div class="extra-box">
+          <div class="icon-container">
+            <img src="images/promotion.png" alt="Chatbot Icon" class="feature-icon">
+          </div>
+          <h3 class="extra-title">Promotions and discounts</h3>
+          <p class="extra-description">
+            Run special offers directly through the app to boost sales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra addon Section -->
+    <section class="addons-section">
+      <div class="curve-container3">
+        <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
+      </div>
+      <h1 class="section-title2">Advanced Aide For <br>Grubhub Clone</h1>
+      <p class="section-subtitle">For business that want to stay ahead, we offer advanced features like.</p>
+
+      <div class="addons-grid">
+        <div class="addon-item">
+          <img src="images/ai.png" alt="AI Recommendations" class="addon-image">
+          <h2 class="addon-title">AI Recommendations</h2>
+          <p class="addon-description">We display all those dishes, menus, and <br>food varieties to you.</p>
+        </div>
+        <div class="addon-item">
+          <img src="images/voice-search.png" alt="Voice Search" class="addon-image">
+          <h2 class="addon-title">Voice Search</h2>
+          <p class="addon-description">We enhance the facility as much useful <br>to the customers.</p>
+        </div>
+        <div class="addon-item">
+          <img src="images/loyality.jpg" alt="Loyality program" class="addon-image">
+          <h2 class="addon-title">Loyalty Programs</h2>
+          <p class="addon-description">Recent discounts and rewards can <br>be purchased.</p>
+        </div>
+        <div class="addon-item">
+          <img src="images/trip-history.jpg" alt="Trip history" class="addon-image">
+          <h2 class="addon-title">Trip history</h2>
+          <p class="addon-description">The App can let you know the details of <br>your riding history.</p>
+        </div>
+        <div class="addon-item">
+          <img src="images/reports.jpg" alt="Reports of earnings" class="addon-image">
+          <h2 class="addon-title">Reports of Earnings</h2>
+          <p class="addon-description">This will remind you to know the ride, <br>surge plus earnings.</p>
+        </div>
+        <div class="addon-item">
+          <img src="images/tips-option.png" alt="tips option" class="addon-image">
+          <h2 class="addon-title">Tips Options</h2>
+          <p class="addon-description">Customers can use this option as <br> what they thought.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faq Section -->
+    <div class="faq-container">
+      <div class="faq-header">
+        <h2 class="faq-title">Frequently Asked Questions (FAQ)</h2>
+        <p class="faq-subtitle">To make your Swiggy Clone even better. We offer some special services through which you
+          can easily complete the marketing work on social media.</p>
+      </div>
+
+      <div class="faq-content">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Tell me about Grubhub Clone?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>A Grubhub clone is a quick-made revolution that reflects the offering of Grubhub, enabling businesses to
+              establish their own delivery food path fastly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Is it Grubhub Clone be bespoke?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, the Grubhub Clone can be fully customized to meet your business needs. You can tailor its features,
+              design, and functionality to align with your brand and operations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Which path does the Grubhub Clone support?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>The Grubhub Clone supports multiple order fulfillment paths, including delivery, pickup, and dine-in. It
+              ensures a seamless experience for customers, restaurants, and delivery partners.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How many days does it take to publish a Grubhub Clone?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>The time to publish a Grubhub Clone depends on customization and app store approvals. Typically, it takes
+              around 7 to 14 days for deployment and launch.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Is the Grubhub Clone scalable for future growth?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, the Grubhub Clone is highly scalable to support future growth. It can handle increasing users,
+              orders,
+              and new features as your business expands.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="images/header-img.png" alt="Mobile App Preview" class="mobile-img">
-    </div>
-  </div>
-  </div>
+    <script>
+      function toggleFaq(element) {
+        // Toggle the active class on the clicked element
+        const answer = element.nextElementSibling;
+        const toggle = element.querySelector('.faq-toggle');
 
-  <script>
-    // Mobile menu toggle functionality
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const dropdownItems = document.querySelectorAll('.nav-item');
+        // Close all other open FAQs
+        const allAnswers = document.querySelectorAll('.faq-answer');
+        const allToggles = document.querySelectorAll('.faq-toggle');
 
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Mobile dropdown functionality
-    dropdownItems.forEach(item => {
-      const link = item.querySelector('.nav-link');
-      const dropdown = item.querySelector('.dropdown');
-
-      if (dropdown) {
-        link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            item.classList.toggle('dropdown-open');
+        allAnswers.forEach(item => {
+          if (item !== answer) {
+            item.classList.remove('active');
           }
         });
-      }
-    });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-      }
-    });
-
-    // Close mobile menu on window resize
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        dropdownItems.forEach(item => {
-          item.classList.remove('dropdown-open');
+        allToggles.forEach(item => {
+          if (item !== toggle) {
+            item.classList.remove('active');
+            item.textContent = '+';
+          }
         });
-      }
-    });
-  </script>
 
-  <section class="uber-clone-section">
-    <div class="content-container">
-      <!-- Text Content -->
-      <div class="text-contents">
-        <h1>Grubhub Clone App Script and what are the major uses of the Grubhub Clone App?</h1>
-        <p>A Grubhub clone is a very resourceful, ready-made solution designed to reflect the success
-          of Grubhub, but with enhanced uses crafted to today’s business needs. In
-          response to the Unhandle pandemic, the clone includes COVID-19 safety features such as
-          contactless delivery and health status tracking for delivery personnel. </p>
-        <p> This app will aide the business makes your dreams come true as soon as possible. Easily
-          accessible to admin, driver, and restaurant zones. It saves you money and time. we can make it
-          operationally efficient, reliable, and sustainable.</p>
-      </div>
-      <!-- Image uberclone -->
-      <div class="gradient-box">
-        <img src="images/second-img.png" alt="Uber Clone App Phone" class="phone-image">
-      </div>
-    </div>
-  </section>
+        // Toggle the current FAQ
+        answer.classList.toggle('active');
+        toggle.classList.toggle('active');
 
-  <!-- Third section -->
-  <div class="ai-section-wrapper">
-    <div class="ai-section-tag">ARTIFICIAL INTELLIGENCE</div>
-    <h1 class="ai-section-heading">How Our AI-Powered System Can Help Your Ubereats Clone Business?</h1>
-
-    <div class="ai-content-grid">
-      <div class="ai-benefits-column">
-        <div class="ai-benefit-box ai-active" id="ai-ordering" onclick="toggleAiBenefit('ai-ordering')">
-          <div class="ai-benefit-row">
-            <div class="ai-benefit-icon-wrapper">
-              <img src="images/ease-on-ordering.png" alt="Ease on Ordering">
-            </div>
-            <div class="ai-benefit-name">Ease on Ordering</div>
-          </div>
-          <p class="ai-benefit-description">AI can learn what customers like and suggest dishes they might want to
-            order, which can increase sales</p>
-          <div class="ai-accent-diamond"></div>
-        </div>
-
-        <div class="ai-benefit-box" id="ai-navigation" onclick="toggleAiBenefit('ai-navigation')">
-          <div class="ai-benefit-row">
-            <div class="ai-benefit-icon-wrapper">
-              <img src="images/smart-navigation.png" alt="Smart Navigations">
-            </div>
-            <div class="ai-benefit-name">Smart Navigations</div>
-          </div>
-          <p class="ai-benefit-description ai-hidden-content" id="ai-navigation-content">AI can find traffic-free roads
-            for food deliveries, it can save time and fuel.</p>
-        </div>
-
-        <div class="ai-benefit-box" id="ai-support" onclick="toggleAiBenefit('ai-support')">
-          <div class="ai-benefit-row">
-            <div class="ai-benefit-icon-wrapper">
-              <img src="images/customer-support.png" alt="Customer Support">
-            </div>
-            <div class="ai-benefit-name">Customer Support</div>
-          </div>
-          <p class="ai-benefit-description ai-hidden-content" id="ai-support-content">AI-powered chatbots can answer
-            customer questions 24/7, Our App AI ensures your customers are always happy.</p>
-        </div>
-      </div>
-
-      <div class="ai-visual-column">
-        <img src="images/tab-panel.png" alt="AI and Human Handshake" class="ai-showcase-image">
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function toggleAiBenefit(id) {
-      // Get all benefits and remove active class
-      const benefits = document.querySelectorAll('.ai-benefit-box');
-      benefits.forEach(benefit => {
-        benefit.classList.remove('ai-active');
-      });
-
-      // Add active class to clicked benefit
-      const clickedBenefit = document.getElementById(id);
-      clickedBenefit.classList.add('ai-active');
-
-      // For navigation and support, toggle hidden content
-      if (id === 'ai-navigation') {
-        document.getElementById('ai-navigation-content').classList.add('ai-visible');
-        document.getElementById('ai-support-content').classList.remove('ai-visible');
-      } else if (id === 'ai-support') {
-        document.getElementById('ai-support-content').classList.add('ai-visible');
-        document.getElementById('ai-navigation-content').classList.remove('ai-visible');
-      } else {
-        document.getElementById('ai-navigation-content').classList.remove('ai-visible');
-        document.getElementById('ai-support-content').classList.remove('ai-visible');
-      }
-    }
-  </script>
-
-  <!--Benefits-section-->
-  <section class="benefits-section">
-    <div class="curve-container">
-      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image">
-    </div>
-    <h1 class="section-benefits-title">
-      Benefits of Grubhub Clone with <br> Code Regime Technologies
-    </h1>
-    <p class="section-subwords">
-      When you choose Code Regime Technologies for your Grubhub Clone, you get
-
-    </p>
-    <div class="benefits-container">
-      <div class="benefit-card">
-        <div class="icon">
-          <img src="images/money-saves.png" alt="money saves">
-        </div>
-        <h3>Money Saves</h3>
-        <p>
-          Developing from scratch can be expensive. A Grubhub Clone is a more affordable option.
-        </p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">
-          <img src="images/reliability.png" alt="">
-        </div>
-        <h3>Reliability</h3>
-        <p>
-          As your business grows, the Grubhub Clone can grow with you.
-        </p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">
-          <img src="images/bespoke.png" alt="">
-        </div>
-        <h3>Bespoke</h3>
-        <p>
-          We craft the app to match your brand and specific needs.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Why choose Section -->
-  <section class="why-section">
-    <div class="why-container">
-      <!-- Left Column: Text Content -->
-      <div class="offer-text">
-        <p class="subheading-why">Why Choose</p>
-        <h2 class="main-heading-why">Why Choose Code Regime for Your Grubhub Clone?</h2>
-        <p class="description-why">
-          Code Regime Technologies is a Premier choice for developing <br> on-demand apps.
-        </p>
-        <ul class="why-list">
-          <div class="why-list1st-box">
-            <li>
-              <div class="list-content">
-                <strong>1. Expertise.</strong> We have more than six years of experience in <br> creating reliable and
-                high-featured applications.
-              </div>
-            </li>
-
-          </div>
-
-          <li>
-            <div class="list-content">
-              <strong>2. Eye On Customer.</strong> We work perfectly with you to ensure the final <br> product result
-              meets your specific needs.
-            </div>
-          </li>
-          <li>
-            <div class="list-content">
-              <strong>3. Long-term Support.</strong> We don’t want to just display your app-we <br> provide continuous
-              support to keep it running smoothly.
-              reports.
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Right Column: Image -->
-      <div class="why-image">
-        <img src="images/whychoose.png" alt="Mobile App Features">
-      </div>
-    </div>
-  </section>
-
-  <!-- Revenue For Business section -->
-  <section class="revenue-growth">
-    <div class="content-wrap">
-      <!-- Image Section -->
-      <div class="image-wrap">
-        <img src="images/revenue.png" alt="Globe in Hands">
-      </div>
-      <!-- Text Section -->
-      <div class="text-page">
-        <p class="subheading-text">Revenue For Business</p>
-        <h2 class="main-heading-text">How does the Grubhub App generates Revenue for your Business?</h2>
-        <p class="description-page">
-          Unlock your food delivery business potential with a Grubhub Clone app. This customizable, ready-made solution
-          enables you to quickly launch a similar to the Ubereats App, designed to your brand’s needs.
-        </p>
-        <p class="description-page">
-          With features like AI-driven order suggestions, smart delivery routing, and 24/7 customer support, the Grubhub
-          Clone app ensures operational efficiency and customer satisfaction.
-
-        </p>
-        <p class="description-page">
-          By choosing this cost-effective option, you can save on development time and
-          expenses while scaling your business effortlessly.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Offer Section -->
-  <section class="offer-section">
-    <div class="offer-container">
-      <!-- Left Column: Text Content -->
-      <div class="offer-text">
-        <p class="subheading-offer">We Offer</p>
-        <h2 class="main-heading-offer">What Do We Offer?</h2>
-        <p class="description-offer">
-          At Code Regime Technologies, we offer a complete Grubhub <br> Clone package that includes:
-
-        </p>
-        <ul class="offer-list">
-          <div class="offer-list1st-box">
-            <li>
-              <div class="list-content">
-                <strong>1. Customer App.</strong> Our app is useful for customers to browse, <br> order, and track their
-                ordered foods.
-              </div>
-            </li>
-          </div>
-          <li>
-            <div class="list-content">
-              <strong>2. Driver App.</strong> A powerful app for drivers to manage orders.
-            </div>
-          </li>
-          <li>
-            <div class="list-content">
-              <strong>3. Admin Panel.</strong> A control panel for managing users, orders, and generating reports.
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- Right Column: Image -->
-      <div class="offer-image">
-        <img src="images/offer.png" alt="Mobile App Features">
-      </div>
-    </div>
-  </section>
-
-  <!-- Extra Addon section -->
-  <section class="extra-section">
-    <div class="curve-container2">
-      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image2">
-    </div>
-    <h2 class="section-title-extra">Extra Addons For <br> Grubhub Clone?</h2>
-    <p class="section-description-extra">
-      To make your Grubhub Clone even better. We offer some special options <br> and discounts through which you can
-      easily complete the marketing <br> work on online.
-    </p>
-    <div class="extra-container">
-      <div class="extra-box">
-        <div class="icon-container">
-          <img src="images/multiple-payment-option.png" alt="Tracking Icon" class="feature-icon">
-        </div>
-        <h3 class="extra-title">Multiple Payment Options</h3>
-        <p class="extra-description">
-          We can give customers access easily to digital payment modes.
-        </p>
-      </div>
-      <div class="extra-box">
-        <div class="icon-container">
-          <img src="images/real-time-tracking.png" alt="Payment Icon" class="feature-icon">
-        </div>
-        <h3 class="extra-title">Real-Time Tracking</h3>
-        <p class="extra-description">
-          Customers and drivers can track orders in real time.
-        </p>
-      </div>
-      <div class="extra-box">
-        <div class="icon-container">
-          <img src="images/promotion.png" alt="Chatbot Icon" class="feature-icon">
-        </div>
-        <h3 class="extra-title">Promotions and discounts</h3>
-        <p class="extra-description">
-          Run special offers directly through the app to boost sales.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Extra addon Section -->
-  <section class="addons-section">
-    <div class="curve-container3">
-      <img src="images/Vector.png" alt="Decorative Curve" class="curve-image3">
-    </div>
-    <h1 class="section-title2">Advanced Aide For <br>Grubhub Clone</h1>
-    <p class="section-subtitle">For business that want to stay ahead, we offer advanced features like.</p>
-
-    <div class="addons-grid">
-      <div class="addon-item">
-        <img src="images/ai.png" alt="AI Recommendations" class="addon-image">
-        <h2 class="addon-title">AI Recommendations</h2>
-        <p class="addon-description">We display all those dishes, menus, and <br>food varieties to you.</p>
-      </div>
-      <div class="addon-item">
-        <img src="images/voice-search.png" alt="Voice Search" class="addon-image">
-        <h2 class="addon-title">Voice Search</h2>
-        <p class="addon-description">We enhance the facility as much useful <br>to the customers.</p>
-      </div>
-      <div class="addon-item">
-        <img src="images/loyality.jpg" alt="Loyality program" class="addon-image">
-        <h2 class="addon-title">Loyalty Programs</h2>
-        <p class="addon-description">Recent discounts and rewards can <br>be purchased.</p>
-      </div>
-      <div class="addon-item">
-        <img src="images/trip-history.jpg" alt="Trip history" class="addon-image">
-        <h2 class="addon-title">Trip history</h2>
-        <p class="addon-description">The App can let you know the details of <br>your riding history.</p>
-      </div>
-      <div class="addon-item">
-        <img src="images/reports.jpg" alt="Reports of earnings" class="addon-image">
-        <h2 class="addon-title">Reports of Earnings</h2>
-        <p class="addon-description">This will remind you to know the ride, <br>surge plus earnings.</p>
-      </div>
-      <div class="addon-item">
-        <img src="images/tips-option.png" alt="tips option" class="addon-image">
-        <h2 class="addon-title">Tips Options</h2>
-        <p class="addon-description">Customers can use this option as <br> what they thought.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Faq Section -->
-  <div class="faq-container">
-    <div class="faq-header">
-      <h2 class="faq-title">Frequently Asked Questions (FAQ)</h2>
-      <p class="faq-subtitle">To make your Swiggy Clone even better. We offer some special services through which you
-        can easily complete the marketing work on social media.</p>
-    </div>
-
-    <div class="faq-content">
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <span>Tell me about Grubhub Clone?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-answer">
-          <p>A Grubhub clone is a quick-made revolution that reflects the offering of Grubhub, enabling businesses to
-            establish their own delivery food path fastly.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <span>Is it Grubhub Clone be bespoke?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-answer">
-          <p>Yes, the Grubhub Clone can be fully customized to meet your business needs. You can tailor its features,
-            design, and functionality to align with your brand and operations.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <span>Which path does the Grubhub Clone support?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-answer">
-          <p>The Grubhub Clone supports multiple order fulfillment paths, including delivery, pickup, and dine-in. It
-            ensures a seamless experience for customers, restaurants, and delivery partners.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <span>How many days does it take to publish a Grubhub Clone?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-answer">
-          <p>The time to publish a Grubhub Clone depends on customization and app store approvals. Typically, it takes
-            around 7 to 14 days for deployment and launch.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <span>Is the Grubhub Clone scalable for future growth?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-answer">
-          <p>Yes, the Grubhub Clone is highly scalable to support future growth. It can handle increasing users, orders,
-            and new features as your business expands.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function toggleFaq(element) {
-      // Toggle the active class on the clicked element
-      const answer = element.nextElementSibling;
-      const toggle = element.querySelector('.faq-toggle');
-
-      // Close all other open FAQs
-      const allAnswers = document.querySelectorAll('.faq-answer');
-      const allToggles = document.querySelectorAll('.faq-toggle');
-
-      allAnswers.forEach(item => {
-        if (item !== answer) {
-          item.classList.remove('active');
+        if (toggle.classList.contains('active')) {
+          toggle.textContent = '−';
+        } else {
+          toggle.textContent = '+';
         }
-      });
-
-      allToggles.forEach(item => {
-        if (item !== toggle) {
-          item.classList.remove('active');
-          item.textContent = '+';
-        }
-      });
-
-      // Toggle the current FAQ
-      answer.classList.toggle('active');
-      toggle.classList.toggle('active');
-
-      if (toggle.classList.contains('active')) {
-        toggle.textContent = '−';
-      } else {
-        toggle.textContent = '+';
       }
-    }
-  </script>
+    </script>
 
 
-  </main><footer class="cr-footer">
+  </main>
+  <footer class="cr-footer">
     <div class="cr-footer__inner">
 
       <!-- TOP GRID -->
@@ -731,7 +738,7 @@
             <li><a href="/product/ubercab/index.html">CabRegime - Uber Clone</a></li>
             <li><a href="/product/ubereats/index.html">FoodRegime - Ubereats clone</a></li>
             <li><a href="/product/handyman/index.html">HandymanRegime - Uber for Handman</a></li>
-            <li><a href="/product/insurance/index.html">Insurance</a></li>
+            <li><a href="/product/fintech/index.html">Fintech App</a></li>
             <li><a href="/product/flightbooking/index.html">Flight Booking App</a></li>
           </ul>
         </div>
@@ -863,4 +870,3 @@
 </body>
 
 </html>
-

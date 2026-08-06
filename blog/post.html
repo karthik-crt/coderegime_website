@@ -127,10 +127,10 @@
     <!-- End Google tag (gtag.js) -->
 
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "xgjlgfjkhc");
     </script>
 </head>
@@ -205,7 +205,7 @@
                                 Handman</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="/insurance-software/" class="dropdown-link">Insurance</a>
+                            <a href="/product/fintech/index.html" class="dropdown-link">Fintech App</a>
                         </li>
                         <li class="dropdown-item">
                             <a href="/flight-booking-app/" class="dropdown-link">Flight Booking App</a>
@@ -480,7 +480,7 @@
                         <li><a href="/uber-clone/">CabRegime - Uber Clone</a></li>
                         <li><a href="/ubereats-clone/">FoodRegime - Ubereats clone</a></li>
                         <li><a href="/uber-for-handyman-app/">HandymanRegime - Uber for Handman</a></li>
-                        <li><a href="/insurance-software/">Insurance</a></li>
+                        <li><a href="/product/fintech/index.html">Fintech App</a></li>
                         <li><a href="/flight-booking-app/">Flight Booking App</a></li>
                     </ul>
                 </div>
@@ -636,7 +636,7 @@
                     slug = pathParts[pathParts.indexOf('post') + 1];
                     slug = slug.replace(/\.(html|php)$/i, '');
                 }
-                
+
                 // Fallback for old query param links
                 if (!slug || slug.trim() === '') {
                     const urlParams = new URLSearchParams(window.location.search);
@@ -660,7 +660,7 @@
                 const contentDisplay = document.getElementById('post-content-display');
                 // Only show loading if the server hasn't already injected the content
                 const hasSSRContent = contentDisplay.innerHTML.trim().length > 100 && !contentDisplay.innerHTML.includes('Loading content');
-                
+
                 if (!hasSSRContent) {
                     contentDisplay.innerHTML = '<p>Loading post...</p>';
                 }
@@ -715,8 +715,8 @@
                     el.setAttribute('content', contentVal);
                 }
 
-                const canonicalUrl  = `https://www.coderegimetechnologies.com/blog/${slug}/`;
-                const pageUrl       = window.location.href;
+                const canonicalUrl = `https://www.coderegimetechnologies.com/blog/${slug}/`;
+                const pageUrl = window.location.href;
                 const featuredImgUrl = getFeaturedImageUrl(post); // already called below for <img>
 
                 // Canonical URL
@@ -742,30 +742,30 @@
                 }
 
                 // Standard SEO
-                setMeta('meta[name="description"]',        'name',     'description',       metaDesc);
-                setMeta('meta[name="keywords"]',           'name',     'keywords',          metaKeywords);
-                setMeta('meta[name="author"]',             'name',     'author',            authorName);
+                setMeta('meta[name="description"]', 'name', 'description', metaDesc);
+                setMeta('meta[name="keywords"]', 'name', 'keywords', metaKeywords);
+                setMeta('meta[name="author"]', 'name', 'author', authorName);
 
                 // Crawling Directives
-                setMeta('meta[name="robots"]',             'name',     'robots',            'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+                setMeta('meta[name="robots"]', 'name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
                 // Open Graph (Facebook / LinkedIn previews)
-                setMeta('meta[property="og:site_name"]',   'property', 'og:site_name',      'Code Regime Technologies');
-                setMeta('meta[property="og:title"]',       'property', 'og:title',          titleText);
-                setMeta('meta[property="og:description"]', 'property', 'og:description',    metaDesc);
-                setMeta('meta[property="og:url"]',         'property', 'og:url',            canonicalUrl);
-                setMeta('meta[property="og:image"]',       'property', 'og:image',          featuredImgUrl);
-                setMeta('meta[property="og:image:alt"]',   'property', 'og:image:alt',      titleText);
-                setMeta('meta[property="og:type"]',        'property', 'og:type',           'article');
-                setMeta('meta[property="og:locale"]',      'property', 'og:locale',         'en_US');
+                setMeta('meta[property="og:site_name"]', 'property', 'og:site_name', 'Code Regime Technologies');
+                setMeta('meta[property="og:title"]', 'property', 'og:title', titleText);
+                setMeta('meta[property="og:description"]', 'property', 'og:description', metaDesc);
+                setMeta('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);
+                setMeta('meta[property="og:image"]', 'property', 'og:image', featuredImgUrl);
+                setMeta('meta[property="og:image:alt"]', 'property', 'og:image:alt', titleText);
+                setMeta('meta[property="og:type"]', 'property', 'og:type', 'article');
+                setMeta('meta[property="og:locale"]', 'property', 'og:locale', 'en_US');
 
                 // Twitter Card
-                setMeta('meta[name="twitter:card"]',        'name', 'twitter:card',        'summary_large_image');
-                setMeta('meta[name="twitter:site"]',        'name', 'twitter:site',        '@RegimeCode');
-                setMeta('meta[name="twitter:creator"]',     'name', 'twitter:creator',     '@RegimeCode');
-                setMeta('meta[name="twitter:title"]',       'name', 'twitter:title',        titleText);
-                setMeta('meta[name="twitter:description"]', 'name', 'twitter:description',  metaDesc);
-                setMeta('meta[name="twitter:image"]',       'name', 'twitter:image',        featuredImgUrl);
+                setMeta('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image');
+                setMeta('meta[name="twitter:site"]', 'name', 'twitter:site', '@RegimeCode');
+                setMeta('meta[name="twitter:creator"]', 'name', 'twitter:creator', '@RegimeCode');
+                setMeta('meta[name="twitter:title"]', 'name', 'twitter:title', titleText);
+                setMeta('meta[name="twitter:description"]', 'name', 'twitter:description', metaDesc);
+                setMeta('meta[name="twitter:image"]', 'name', 'twitter:image', featuredImgUrl);
 
                 // Table of Contents Extraction
                 const headings = Array.from(contentDisplay.querySelectorAll('h2, h3'));

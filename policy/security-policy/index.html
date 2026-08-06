@@ -29,16 +29,16 @@
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+  <link rel="stylesheet" type="text/css" href="/css/header.css" />
 
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xgjlgfjkhc");
-    </script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xgjlgfjkhc");
+  </script>
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
     {
@@ -93,16 +93,16 @@
       ]
     }
   </script>
-    <!-- Google Tag Manager -->
-<script>(function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-      'gtm.start':
-        new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-  })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
-<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
@@ -177,12 +177,12 @@
             <li class="dropdown-item">
               <a href="/ubereats-clone/" class="dropdown-link">FoodRegime - Ubereats clone</a>
             </li>
-            
+
             <li class="dropdown-item">
               <a href="/uber-for-handyman-app/" class="dropdown-link">HandymanRegime - Uber for Handman</a>
             </li>
             <li class="dropdown-item">
-              <a href="/insurance-software/" class="dropdown-link">Insurance</a>
+              <a href="/product/fintech/index.html" class="dropdown-link">Fintech App</a>
             </li>
             <li class="dropdown-item">
               <a href="/flight-booking-app/" class="dropdown-link">Flight Booking App</a>
@@ -222,217 +222,220 @@
         <span class="hamburger"></span>
       </div>
     </nav>
-  </header><main>
+  </header>
+  <main>
 
-  <!-- Hero Banner -->
-  <section class="hero-banner">
-    <div class="overlay"></div>
-    <img src="image/security-policy.png" alt="refund policy">
-  </section>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="overlay"></div>
+      <img src="image/security-policy.png" alt="refund policy">
+    </section>
 
-  <script>
-    // Mobile menu toggle functionality
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const dropdownItems = document.querySelectorAll('.nav-item');
+    <script>
+      // Mobile menu toggle functionality
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const dropdownItems = document.querySelectorAll('.nav-item');
 
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Mobile dropdown functionality
-    dropdownItems.forEach(item => {
-      const link = item.querySelector('.nav-link');
-      const dropdown = item.querySelector('.dropdown');
-
-      if (dropdown) {
-        link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            item.classList.toggle('dropdown-open');
-          }
-        });
-      }
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-      }
-    });
-
-    // Close mobile menu on window resize
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        dropdownItems.forEach(item => {
-          item.classList.remove('dropdown-open');
-        });
-      }
-    });
-  </script>
-
-  <!-- Security Content -->
-  <section class="policy-section">
-    <h2>Security Policy</h2>
-    <p>
-      At CodeRegime Technologies, we strive to provide reliable and efficient support to ensure our clients have the
-      best experience. Our support policy is designed to address your concerns promptly and professionally.
-    </p>
-
-    <div class="policy-point">
-      <h3>Multiple Support Channels:</h3>
-      <p>We offer support through live chat, Skype, WhatsApp, and email. These options allow you to choose the most
-        convenient way to reach us for quick assistance.</p>
-    </div>
-
-    <div class="policy-point">
-      <h3>Post-Purchase Assistance:</h3>
-      <p>All our clients receive 3 months of extended support after their purchase. During this period, our team is
-        available to address your queries and resolve any technical issues related to the product.</p>
-    </div>
-
-    <div class="policy-point">
-      <h3>Working Hours:</h3>
-      <p>Our team operates during Indian Standard Time (IST). If you reach out outside our working hours, we will
-        respond promptly on the next working day.</p>
-    </div>
-
-    <div class="policy-point">
-      <h3>Customizations and Liability:</h3>
-      <p>Once the source code of the product is modified by your development team, CodeRegime Technologies is not
-        responsible for any errors or issues that may occur. We recommend testing the product thoroughly before making
-        custom changes.</p>
-    </div>
-
-    <div class="policy-point">
-      <h3>Professional Guidance:</h3>
-      <p>Our technical team is full-fledged to addressing technical issues, answering your queries, and bringing
-        guidance on product usage to help you achieve your dream goals efficiently.</p>
-    </div>
-
-    <div class="policy-point">
-      <h3>Contact Us:</h3>
-      <p>Our team is here to assist. Contact us anytime through your suggested communication pipes, and our support team
-        will help you as soon as possible.</p>
-    </div>
-  </section>
-
-  <div class="container1">
-    <div class="header">
-      <div class="get-started">Get Started</div>
-      <h1>Get in touch with us. We're here to assist you.</h1>
-    </div>
-
-    <form id="contactForm" method="POST" action="https://formsubmit.co/sales@coderegimetechnologies.com"
-      class="form-container">
-      <!-- FormSubmit Configuration -->
-      <input type="hidden" name="_subject" value="New Contact Form Submission">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number (optional)</label>
-          <input type="tel" id="phone" name="phone">
-        </div>
-      </div>
-
-      <div class="form-group full-width">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
-      </div>
-
-      <button type="submit" class="submit-btn">
-        Leave us a Message
-        <span class="arrow">→</span>
-      </button>
-
-      <div id="successMessage" class="success-message">
-        Thank you for your message! We'll get back to you soon.
-      </div>
-
-      <div id="errorMessage" class="error-message">
-        Sorry, there was an error sending your message. Please try again.
-      </div>
-    </form>
-  </div>
-
-  <script>
-    const form = document.getElementById('contactForm');
-    const submitBtn = form.querySelector('.submit-btn');
-    const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
-
-    // Add smooth focus animations
-    const inputs = form.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-      input.addEventListener('focus', function () {
-        this.parentElement.style.transform = 'translateY(-2px)';
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
       });
 
-      input.addEventListener('blur', function () {
-        this.parentElement.style.transform = 'translateY(0)';
+      // Mobile dropdown functionality
+      dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const dropdown = item.querySelector('.dropdown');
+
+        if (dropdown) {
+          link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              item.classList.toggle('dropdown-open');
+            }
+          });
+        }
       });
-    });
 
-    // Handle form submission
-    form.addEventListener('submit', function (e) {
-      // Show loading state
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Sending... <span class="arrow">→</span>';
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+        }
+      });
 
-      // Reset button after 3 seconds (FormSubmit will redirect)
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Leave us a Message <span class="arrow">→</span>';
-      }, 1000);
-    });
-  </script>
+      // Close mobile menu on window resize
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+          dropdownItems.forEach(item => {
+            item.classList.remove('dropdown-open');
+          });
+        }
+      });
+    </script>
 
-  <!-- Contact Info Section -->
-  <section class="contact-info">
-    <div class="container">
-      <div class="form-row">
-        <div class="contact-info-column">
-          <h4 class="contact-intro">Contact Info</h4>
-          <h2 class="info-heading">We are always happy to assist you</h2>
+    <!-- Security Content -->
+    <section class="policy-section">
+      <h2>Security Policy</h2>
+      <p>
+        At CodeRegime Technologies, we strive to provide reliable and efficient support to ensure our clients have the
+        best experience. Our support policy is designed to address your concerns promptly and professionally.
+      </p>
+
+      <div class="policy-point">
+        <h3>Multiple Support Channels:</h3>
+        <p>We offer support through live chat, Skype, WhatsApp, and email. These options allow you to choose the most
+          convenient way to reach us for quick assistance.</p>
+      </div>
+
+      <div class="policy-point">
+        <h3>Post-Purchase Assistance:</h3>
+        <p>All our clients receive 3 months of extended support after their purchase. During this period, our team is
+          available to address your queries and resolve any technical issues related to the product.</p>
+      </div>
+
+      <div class="policy-point">
+        <h3>Working Hours:</h3>
+        <p>Our team operates during Indian Standard Time (IST). If you reach out outside our working hours, we will
+          respond promptly on the next working day.</p>
+      </div>
+
+      <div class="policy-point">
+        <h3>Customizations and Liability:</h3>
+        <p>Once the source code of the product is modified by your development team, CodeRegime Technologies is not
+          responsible for any errors or issues that may occur. We recommend testing the product thoroughly before making
+          custom changes.</p>
+      </div>
+
+      <div class="policy-point">
+        <h3>Professional Guidance:</h3>
+        <p>Our technical team is full-fledged to addressing technical issues, answering your queries, and bringing
+          guidance on product usage to help you achieve your dream goals efficiently.</p>
+      </div>
+
+      <div class="policy-point">
+        <h3>Contact Us:</h3>
+        <p>Our team is here to assist. Contact us anytime through your suggested communication pipes, and our support
+          team
+          will help you as soon as possible.</p>
+      </div>
+    </section>
+
+    <div class="container1">
+      <div class="header">
+        <div class="get-started">Get Started</div>
+        <h1>Get in touch with us. We're here to assist you.</h1>
+      </div>
+
+      <form id="contactForm" method="POST" action="https://formsubmit.co/sales@coderegimetechnologies.com"
+        class="form-container">
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_subject" value="New Contact Form Submission">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
         </div>
 
-        <div class="contact-info-column">
-          <p class="info-label">Email Address</p>
-          <p class="info-text">—</p>
-          <p class="info-text">sales@coderegimetechnologies.com</p>
-          <p class="hours-text">Assistance hours:</p>
-          <p class="hours-text">Monday - Saturday 10 am to 8 pm IST</p>
+        <div class="form-group full-width">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
         </div>
 
-        <div class="contact-info-column">
-          <p class="info-label">Number</p>
-          <p class="info-text">—</p>
-          <p class="info-text">+91-7418802770</p>
-          <p class="hours-text">Assistance hours:</p>
-          <p class="hours-text">Monday - Saturday 10 am to 8 pm IST</p>
+        <button type="submit" class="submit-btn">
+          Leave us a Message
+          <span class="arrow">→</span>
+        </button>
+
+        <div id="successMessage" class="success-message">
+          Thank you for your message! We'll get back to you soon.
+        </div>
+
+        <div id="errorMessage" class="error-message">
+          Sorry, there was an error sending your message. Please try again.
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById('contactForm');
+      const submitBtn = form.querySelector('.submit-btn');
+      const successMessage = document.getElementById('successMessage');
+      const errorMessage = document.getElementById('errorMessage');
+
+      // Add smooth focus animations
+      const inputs = form.querySelectorAll('input, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('focus', function () {
+          this.parentElement.style.transform = 'translateY(-2px)';
+        });
+
+        input.addEventListener('blur', function () {
+          this.parentElement.style.transform = 'translateY(0)';
+        });
+      });
+
+      // Handle form submission
+      form.addEventListener('submit', function (e) {
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending... <span class="arrow">→</span>';
+
+        // Reset button after 3 seconds (FormSubmit will redirect)
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Leave us a Message <span class="arrow">→</span>';
+        }, 1000);
+      });
+    </script>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+      <div class="container">
+        <div class="form-row">
+          <div class="contact-info-column">
+            <h4 class="contact-intro">Contact Info</h4>
+            <h2 class="info-heading">We are always happy to assist you</h2>
+          </div>
+
+          <div class="contact-info-column">
+            <p class="info-label">Email Address</p>
+            <p class="info-text">—</p>
+            <p class="info-text">sales@coderegimetechnologies.com</p>
+            <p class="hours-text">Assistance hours:</p>
+            <p class="hours-text">Monday - Saturday 10 am to 8 pm IST</p>
+          </div>
+
+          <div class="contact-info-column">
+            <p class="info-label">Number</p>
+            <p class="info-text">—</p>
+            <p class="info-text">+91-7418802770</p>
+            <p class="hours-text">Assistance hours:</p>
+            <p class="hours-text">Monday - Saturday 10 am to 8 pm IST</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
 
-  </main><footer class="cr-footer">
+  </main>
+  <footer class="cr-footer">
     <div class="cr-footer__inner">
 
       <!-- TOP GRID -->
@@ -506,7 +509,7 @@
             <li><a href="/uber-clone/">CabRegime - Uber Clone</a></li>
             <li><a href="/ubereats-clone/">FoodRegime - Ubereats clone</a></li>
             <li><a href="/uber-for-handyman-app/">HandymanRegime - Uber for Handman</a></li>
-            <li><a href="/insurance-software/">Insurance</a></li>
+            <li><a href="/product/fintech/index.html">Fintech App</a></li>
             <li><a href="/flight-booking-app/">Flight Booking App</a></li>
           </ul>
         </div>
@@ -638,7 +641,3 @@
 </body>
 
 </html>
-
-
-
-

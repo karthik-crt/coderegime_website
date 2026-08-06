@@ -31,13 +31,13 @@
   <link rel="stylesheet" type="text/css" href="/css/header.css" />
 
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xgjlgfjkhc");
-    </script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xgjlgfjkhc");
+  </script>
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
     {
@@ -92,16 +92,16 @@
       ]
     }
   </script>
-    <!-- Google Tag Manager -->
-<script>(function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-      'gtm.start':
-        new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-  })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
-<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
@@ -178,12 +178,12 @@
             <li class="dropdown-item">
               <a href="/ubereats-clone/" class="dropdown-link">FoodRegime - Ubereats clone</a>
             </li>
-            
+
             <li class="dropdown-item">
               <a href="/uber-for-handyman-app/" class="dropdown-link">HandymanRegime - Uber for Handman</a>
             </li>
             <li class="dropdown-item">
-              <a href="/insurance-software/" class="dropdown-link">Insurance</a>
+              <a href="/product/fintech/index.html" class="dropdown-link">Fintech App</a>
             </li>
             <li class="dropdown-item">
               <a href="/flight-booking-app/" class="dropdown-link">Flight Booking App</a>
@@ -220,179 +220,181 @@
         <span class="hamburger"></span>
       </div>
     </nav>
-  </header><main>
+  </header>
+  <main>
 
-  <!-- Hero Banner -->
-  <section class="hero-banner">
-    <div class="overlay"></div>
-    <img src="image/privacy-img.png" alt="Security Concept">
-  </section>
-  <script>
-    // Wait for DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="overlay"></div>
+      <img src="image/privacy-img.png" alt="Security Concept">
+    </section>
+    <script>
+      // Wait for DOM to be fully loaded
+      document.addEventListener('DOMContentLoaded', function () {
 
-      // Get elements
-      const mobileToggle = document.querySelector('.mobile-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      const dropdownItems = document.querySelectorAll('.nav-item');
+        // Get elements
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const dropdownItems = document.querySelectorAll('.nav-item');
 
-      // Mobile menu toggle
-      if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', function () {
-          mobileToggle.classList.toggle('active');
-          navMenu.classList.toggle('active');
-        });
-      }
-
-      // Handle dropdown clicks on mobile
-      dropdownItems.forEach(function (item) {
-        const link = item.querySelector('.nav-link');
-        const dropdown = item.querySelector('.dropdown');
-
-        if (dropdown && link) {
-          link.addEventListener('click', function (e) {
-            // Only prevent default and toggle on mobile
-            if (window.innerWidth <= 768) {
-              e.preventDefault();
-
-              // Close all other dropdowns
-              dropdownItems.forEach(function (otherItem) {
-                if (otherItem !== item) {
-                  otherItem.classList.remove('dropdown-active');
-                }
-              });
-
-              // Toggle current dropdown
-              item.classList.toggle('dropdown-active');
-            }
+        // Mobile menu toggle
+        if (mobileToggle && navMenu) {
+          mobileToggle.addEventListener('click', function () {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
           });
         }
-      });
 
-      // Close menu when clicking outside
-      document.addEventListener('click', function (e) {
-        if (navMenu && mobileToggle) {
-          if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-            navMenu.classList.remove('active');
-            mobileToggle.classList.remove('active');
+        // Handle dropdown clicks on mobile
+        dropdownItems.forEach(function (item) {
+          const link = item.querySelector('.nav-link');
+          const dropdown = item.querySelector('.dropdown');
+
+          if (dropdown && link) {
+            link.addEventListener('click', function (e) {
+              // Only prevent default and toggle on mobile
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+
+                // Close all other dropdowns
+                dropdownItems.forEach(function (otherItem) {
+                  if (otherItem !== item) {
+                    otherItem.classList.remove('dropdown-active');
+                  }
+                });
+
+                // Toggle current dropdown
+                item.classList.toggle('dropdown-active');
+              }
+            });
+          }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (e) {
+          if (navMenu && mobileToggle) {
+            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+              navMenu.classList.remove('active');
+              mobileToggle.classList.remove('active');
+
+              // Close all dropdowns
+              dropdownItems.forEach(function (item) {
+                item.classList.remove('dropdown-active');
+              });
+            }
+          }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768) {
+            if (navMenu && mobileToggle) {
+              navMenu.classList.remove('active');
+              mobileToggle.classList.remove('active');
+            }
 
             // Close all dropdowns
             dropdownItems.forEach(function (item) {
               item.classList.remove('dropdown-active');
             });
           }
-        }
-      });
-
-      // Handle window resize
-      window.addEventListener('resize', function () {
-        if (window.innerWidth > 768) {
-          if (navMenu && mobileToggle) {
-            navMenu.classList.remove('active');
-            mobileToggle.classList.remove('active');
-          }
-
-          // Close all dropdowns
-          dropdownItems.forEach(function (item) {
-            item.classList.remove('dropdown-active');
-          });
-        }
-      });
-
-      // Optional: Close menu when clicking dropdown links
-      const dropdownLinks = document.querySelectorAll('.dropdown-link');
-      dropdownLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-          if (window.innerWidth <= 768) {
-            if (navMenu && mobileToggle) {
-              navMenu.classList.remove('active');
-              mobileToggle.classList.remove('active');
-            }
-
-            dropdownItems.forEach(function (item) {
-              item.classList.remove('dropdown-active');
-            });
-          }
         });
+
+        // Optional: Close menu when clicking dropdown links
+        const dropdownLinks = document.querySelectorAll('.dropdown-link');
+        dropdownLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (window.innerWidth <= 768) {
+              if (navMenu && mobileToggle) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+              }
+
+              dropdownItems.forEach(function (item) {
+                item.classList.remove('dropdown-active');
+              });
+            }
+          });
+        });
+
       });
+    </script>
 
-    });
-  </script>
+    <!-- Privacy Policy -->
+    <section class="privacy-policy">
+      <div class="container">
+        <h1>Privacy Policy</h1>
 
-  <!-- Privacy Policy -->
-  <section class="privacy-policy">
-    <div class="container">
-      <h1>Privacy Policy</h1>
+        <div class="policy-content">
+          <p class="intro">
+            At CodeRegime Technologies, our team prefers securing your details. This Privacy Policy portrays how we
+            collect, use, and protect the data you provide when visiting or buying from our website, <a
+              href="https://www.coderegimetech.com">www.coderegimetech.com</a>.
+          </p>
 
-      <div class="policy-content">
-        <p class="intro">
-          At CodeRegime Technologies, our team prefers securing your details. This Privacy Policy portrays how we
-          collect, use, and protect the data you provide when visiting or buying from our website, <a
-            href="https://www.coderegimetech.com">www.coderegimetech.com</a>.
-        </p>
+          <div class="policy-section">
+            <h2>Information We Collect</h2>
+            <p><strong>Digital Footprint:</strong> Browser, IP, time zone, browsing behavior, referral sources.</p>
+            <p><strong>Smart Buy Info:</strong> Name, address, email, and phone when you purchase.</p>
+          </div>
 
-        <div class="policy-section">
-          <h2>Information We Collect</h2>
-          <p><strong>Digital Footprint:</strong> Browser, IP, time zone, browsing behavior, referral sources.</p>
-          <p><strong>Smart Buy Info:</strong> Name, address, email, and phone when you purchase.</p>
-        </div>
+          <div class="policy-section">
+            <h2>How We Use Your Information</h2>
+            <ul>
+              <li>Process orders and send confirmations</li>
+              <li>Improve website functionality</li>
+              <li>Ensure platform security and prevent fraud</li>
+            </ul>
+          </div>
 
-        <div class="policy-section">
-          <h2>How We Use Your Information</h2>
-          <ul>
-            <li>Process orders and send confirmations</li>
-            <li>Improve website functionality</li>
-            <li>Ensure platform security and prevent fraud</li>
-          </ul>
-        </div>
+          <div class="policy-section">
+            <h2>Sharing Your Data</h2>
+            <p>We may share data with trusted services like Google Analytics. We never sell or rent your data. See
+              Google’s Privacy Policy for details.</p>
+          </div>
 
-        <div class="policy-section">
-          <h2>Sharing Your Data</h2>
-          <p>We may share data with trusted services like Google Analytics. We never sell or rent your data. See
-            Google’s Privacy Policy for details.</p>
-        </div>
+          <div class="policy-section">
+            <h2>Your Rights</h2>
+            <p>EU residents may request access, correction, or deletion of personal data.</p>
+          </div>
 
-        <div class="policy-section">
-          <h2>Your Rights</h2>
-          <p>EU residents may request access, correction, or deletion of personal data.</p>
-        </div>
+          <div class="policy-section">
+            <h2>Data Retention</h2>
+            <p>Order-related data is retained for compliance and operations unless you request deletion.</p>
+          </div>
 
-        <div class="policy-section">
-          <h2>Data Retention</h2>
-          <p>Order-related data is retained for compliance and operations unless you request deletion.</p>
-        </div>
+          <div class="policy-section">
+            <h2>Children's Privacy</h2>
+            <p>Our services are not for individuals under 18. We do not collect data from minors.</p>
+          </div>
 
-        <div class="policy-section">
-          <h2>Children's Privacy</h2>
-          <p>Our services are not for individuals under 18. We do not collect data from minors.</p>
-        </div>
+          <div class="policy-section">
+            <h2>Policy Updates</h2>
+            <p>We may update this policy periodically. Please review it regularly.</p>
+          </div>
 
-        <div class="policy-section">
-          <h2>Policy Updates</h2>
-          <p>We may update this policy periodically. Please review it regularly.</p>
-        </div>
-
-        <div class="policy-section">
-          <h2>Contact Us</h2>
-          <p>Email: <a href="mailto:sales@coderegimetechnologies.com">sales@coderegimetechnologies.com</a></p>
-          <p>Address: CodeRegime Technologies, 231 C 3rd floor, Kamarajar Salai, Madurai-625009, Tamilnadu</p>
+          <div class="policy-section">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:sales@coderegimetechnologies.com">sales@coderegimetechnologies.com</a></p>
+            <p>Address: CodeRegime Technologies, 231 C 3rd floor, Kamarajar Salai, Madurai-625009, Tamilnadu</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    // Mobile Menu Toggle
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
+    <script>
+      // Mobile Menu Toggle
+      const toggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
 
-  <!-- Footer -->
+    <!-- Footer -->
 
-  </main><footer class="cr-footer">
+  </main>
+  <footer class="cr-footer">
     <div class="cr-footer__inner">
 
       <!-- TOP GRID -->
@@ -466,7 +468,7 @@
             <li><a href="/uber-clone/">CabRegime - Uber Clone</a></li>
             <li><a href="/ubereats-clone/">FoodRegime - Ubereats clone</a></li>
             <li><a href="/uber-for-handyman-app/">HandymanRegime - Uber for Handman</a></li>
-            <li><a href="/insurance-software/">Insurance</a></li>
+            <li><a href="/product/fintech/index.html">Fintech App</a></li>
             <li><a href="/flight-booking-app/">Flight Booking App</a></li>
           </ul>
         </div>
@@ -599,4 +601,3 @@
 </body>
 
 </html>
-

@@ -105,16 +105,16 @@
       }
     </script>
 
-    <!-- Google Tag Manager -->
-<script>(function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-      'gtm.start':
-        new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-  })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
-<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
@@ -126,13 +126,13 @@
     gtag('config', 'G-17LK163FGY');
   </script>
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xgjlgfjkhc");
-    </script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xgjlgfjkhc");
+  </script>
 </head>
 
 
@@ -197,12 +197,12 @@
             <li class="dropdown-item">
               <a href="/product/ubereats/index.html" class="dropdown-link">FoodRegime - Ubereats clone</a>
             </li>
-            
+
             <li class="dropdown-item">
               <a href="/product/handyman/index.html" class="dropdown-link">HandymanRegime - Uber for Handman</a>
             </li>
             <li class="dropdown-item">
-              <a href="/product/insurance/index.html" class="dropdown-link">Insurance</a>
+              <a href="/product/fintech/index.html" class="dropdown-link">Fintech App</a>
             </li>
             <li class="dropdown-item">
               <a href="/product/flightbooking/index.html" class="dropdown-link">Flight Booking App</a>
@@ -241,118 +241,119 @@
         <span class="hamburger"></span>
       </div>
     </nav>
-  </header><main>
-  <script>
-    // Mobile menu toggle functionality
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const dropdownItems = document.querySelectorAll('.nav-item');
+  </header>
+  <main>
+    <script>
+      // Mobile menu toggle functionality
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const dropdownItems = document.querySelectorAll('.nav-item');
 
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
 
-    // Mobile dropdown functionality
-    dropdownItems.forEach(item => {
-      const link = item.querySelector('.nav-link');
-      const dropdown = item.querySelector('.dropdown');
+      // Mobile dropdown functionality
+      dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const dropdown = item.querySelector('.dropdown');
 
-      if (dropdown) {
-        link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            item.classList.toggle('dropdown-open');
-          }
-        });
-      }
-    });
+        if (dropdown) {
+          link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              item.classList.toggle('dropdown-open');
+            }
+          });
+        }
+      });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-      }
-    });
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+        }
+      });
 
-    // Close mobile menu on window resize
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        dropdownItems.forEach(item => {
-          item.classList.remove('dropdown-open');
-        });
-      }
-    });
-  </script>
-  <!-- Contact Consultation Modal -->
-  <div class="modal fade" id="contactPopup" tabindex="-1" aria-labelledby="contactPopupLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="left-side col-lg-4 col-md-12 col-sm-12">
-              <div class="contact-info">
-                <p><span class="icon whatsapp"><i class="fab fa-whatsapp"></i></span> +91 8072218602</p>
-                <p><span class="icon email"><i class="fas fa-envelope"></i></span> sales@coderegimetechnologies.com</p>
-                <p><span class="icon mobile"><i class="fas fa-mobile-alt"></i></span> +91 9994212402</p>
+      // Close mobile menu on window resize
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+          dropdownItems.forEach(item => {
+            item.classList.remove('dropdown-open');
+          });
+        }
+      });
+    </script>
+    <!-- Contact Consultation Modal -->
+    <div class="modal fade" id="contactPopup" tabindex="-1" aria-labelledby="contactPopupLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="left-side col-lg-4 col-md-12 col-sm-12">
+                <div class="contact-info">
+                  <p><span class="icon whatsapp"><i class="fab fa-whatsapp"></i></span> +91 8072218602</p>
+                  <p><span class="icon email"><i class="fas fa-envelope"></i></span> sales@coderegimetechnologies.com
+                  </p>
+                  <p><span class="icon mobile"><i class="fas fa-mobile-alt"></i></span> +91 9994212402</p>
+                </div>
               </div>
-            </div>
-            <div class="right-side col-lg-8 col-md-12 col-sm-12">
-              <h5 class="modal-title" id="contactPopupLabel">Get A Free Project Consultation</h5>
-              <form>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+              <div class="right-side col-lg-8 col-md-12 col-sm-12">
+                <h5 class="modal-title" id="contactPopupLabel">Get A Free Project Consultation</h5>
+                <form>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <label for="country" class="form-label">Country</label>
+                      <input type="text" class="form-control" id="country" placeholder="Your Country">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <label for="mobile" class="form-label">Mobile</label>
+                      <input type="text" class="form-control" id="mobile" placeholder="Your Mobile">
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="country" class="form-label">Country</label>
-                    <input type="text" class="form-control" id="country" placeholder="Your Country">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <label for="service" class="form-label">Select Product/Service</label>
+                      <select class="form-select" id="service">
+                        <option value="">Select...</option>
+                        <option value="service1">Mobile App Services</option>
+                        <option value="service2">Web App Services</option>
+                        <option value="service3">Blockchain Services</option>
+                        <option value="service4">Clone Scrpits</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="mobile" class="form-label">Mobile</label>
-                    <input type="text" class="form-control" id="mobile" placeholder="Your Mobile">
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="requirements" class="form-label">Write your requirements in detail</label>
+                      <textarea class="form-control" id="requirements" rows="3"></textarea>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="service" class="form-label">Select Product/Service</label>
-                    <select class="form-select" id="service">
-                      <option value="">Select...</option>
-                      <option value="service1">Mobile App Services</option>
-                      <option value="service2">Web App Services</option>
-                      <option value="service3">Blockchain Services</option>
-                      <option value="service4">Clone Scrpits</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12">
-                    <label for="requirements" class="form-label">Write your requirements in detail</label>
-                    <textarea class="form-control" id="requirements" rows="3"></textarea>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>
-
