@@ -38,6 +38,7 @@
 /* Modal Content Container */
 .contact-modal-container {
     background: var(--modal-white);
+    font-family: 'Poppins', sans-serif;
     width: 98%;
     max-width: 1150px;
     max-height: 98vh;
