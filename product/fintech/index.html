@@ -839,8 +839,9 @@
         }
 
         .feature-item {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 2;
             padding: 24px;
             background: var(--bg-main);
             border-radius: 12px;
@@ -886,8 +887,13 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            min-height: 70px;
             margin-bottom: 12px;
+        }
+
+        .feature-header h3 {
+            margin: 0;
+            font-size: clamp(17px, 2vw, 20px);
+            color: var(--text-dark);
         }
 
         .feature-text h4,
@@ -1327,9 +1333,11 @@
         }
 
         .benefit-item {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: subgrid;
+            grid-row: span 2;
+            gap: 0 20px;
             background: var(--bg-main);
             padding: 30px;
             border-radius: 15px;
@@ -1356,6 +1364,9 @@
             color: var(--primary);
             font-size: 24px;
             transition: all 0.4s ease;
+            grid-row: 1 / -1;
+            align-self: start;
+            margin-top: 4px;
         }
 
         .benefit-item:hover .benefit-icon {
@@ -1364,11 +1375,16 @@
             transform: scale(1.1) rotate(5deg);
         }
 
-        .benefit-item h4 {
+        .benefit-content {
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 2;
+        }
+
+        .benefit-item h3 {
             margin: 0 0 8px 0;
             font-size: 19px;
             color: var(--text-dark);
-            min-height: 50px;
             display: flex;
             align-items: flex-end;
         }
@@ -2249,10 +2265,10 @@
 
             .benefit-item {
                 padding: 24px;
-                gap: 16px;
+                gap: 0 16px;
             }
 
-            .benefit-item h4 {
+            .benefit-item h3 {
                 min-height: auto;
             }
 
@@ -2646,9 +2662,9 @@
 
             /* Benefits */
             .benefit-item {
-                flex-direction: column;
+                grid-template-columns: 1fr;
                 text-align: center;
-                align-items: center;
+                justify-items: center;
                 padding: 24px 20px;
                 gap: 14px;
             }
@@ -2657,9 +2673,14 @@
                 width: 55px;
                 height: 55px;
                 font-size: 22px;
+                grid-row: auto;
             }
 
-            .benefit-item h4 {
+            .benefit-content {
+                grid-row: auto;
+            }
+
+            .benefit-item h3 {
                 font-size: 17px;
             }
 
@@ -4033,7 +4054,7 @@
 
                 <div class="benefit-item">
                     <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
-                    <div>
+                    <div class="benefit-content">
                         <h3>Faster Transactions</h3>
                         <p>We deliver sub-300ms transaction authorization for 99th percentile requests, which cuts cart
                             abandonment and gives modern consumers the instant payment experience they've come to
@@ -4043,7 +4064,7 @@
 
                 <div class="benefit-item">
                     <div class="benefit-icon"><i class="fas fa-smile"></i></div>
-                    <div>
+                    <div class="benefit-content">
                         <h3>Customer Experience</h3>
                         <p>We apply the same conversion principles that power high-performing fintech landing pages
                             across the whole product, from onboarding through daily use, which tends to drive organic
@@ -4053,7 +4074,7 @@
 
                 <div class="benefit-item">
                     <div class="benefit-icon"><i class="fas fa-lock"></i></div>
-                    <div>
+                    <div class="benefit-content">
                         <h3>Financial Security</h3>
                         <p>Clients typically report 70 to 90% reductions in security incident volume after moving to
                             platforms built under our development standards, which translates directly into fewer fraud
@@ -4063,7 +4084,7 @@
 
                 <div class="benefit-item">
                     <div class="benefit-icon"><i class="fas fa-arrow-down"></i></div>
-                    <div>
+                    <div class="benefit-content">
                         <h3>Reduced Operational Costs</h3>
                         <p>Automated KYC, digital loan origination, and AI-powered customer support consistently deliver
                             35 to 60% operational cost reductions for clients moving away from legacy financial
@@ -4073,7 +4094,7 @@
 
                 <div class="benefit-item">
                     <div class="benefit-icon"><i class="fas fa-magnet"></i></div>
-                    <div>
+                    <div class="benefit-content">
                         <h3>Customer Retention</h3>
                         <p>Clients using our personalization and engagement features report 40 to 65% improvements in
                             90-day customer retention, a number that matters a lot for lifetime value calculations and
@@ -4083,7 +4104,7 @@
 
                 <div class="benefit-item">
                     <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
-                    <div>
+                    <div class="benefit-content">
                         <h3>Revenue Opportunities</h3>
                         <p>We design modern architecture from the start to support embedded product cross-selling, API
                             monetization, data licensing, premium feature tiers, and embedded finance partnerships, so
@@ -4093,7 +4114,7 @@
 
                 <div class="benefit-item">
                     <div class="benefit-icon"><i class="fas fa-expand-arrows-alt"></i></div>
-                    <div>
+                    <div class="benefit-content">
                         <h3>Business Scalability</h3>
                         <p>Elastic cloud architecture and modular microservices design let you grow 10x, 100x, or 1000x
                             without the kind of architectural rewrite that has derailed plenty of fast-growing fintech
@@ -4103,7 +4124,7 @@
 
                 <div class="benefit-item">
                     <div class="benefit-icon"><i class="fas fa-chart-pie"></i></div>
-                    <div>
+                    <div class="benefit-content">
                         <h3>Real-Time Financial Insights</h3>
                         <p>We build real-time dashboards for both end-users and internal business teams, which enables
                             faster commercial decisions, more responsive risk management, and more personalized customer
