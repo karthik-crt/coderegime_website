@@ -700,6 +700,7 @@ nav {
     margin: 0 0;
   }
 }
+
 /* Tablet + Mobile */
 @media (max-width: 992px) {
   .hero-pic {
@@ -1050,6 +1051,9 @@ nav {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-lists .owl-carousel .item h3 {
@@ -1094,6 +1098,129 @@ nav {
 
 .testi-content {
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Google Reviews Specific Styling */
+.google-reviews-lists .owl-stage {
+  display: flex;
+  align-items: stretch;
+}
+
+.google-reviews-lists .owl-item {
+  display: flex;
+  flex-shrink: 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.dark-review-card {
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  padding: 20px !important;
+  border-radius: 12px !important;
+  background: #2a2a2a !important;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dark-review-card__title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.dark-review-card__date {
+  color: #999999;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.dark-review-card__stars {
+  color: #fbbc04;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.dark-review-card__content {
+  color: #dddddd;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.dark-review-card__content .read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #999999 !important;
+  font-size: 0.85rem !important;
+  font-weight: normal !important;
+  text-decoration: none;
+}
+
+.dark-review-card__content .read-more-btn:hover {
+  text-decoration: underline;
+}
+
+.google-reviews-lists .owl-carousel .item img {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  object-fit: cover;
+}
+
+.google-reviews-lists .owl-carousel .item .testi-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.google-reviews-lists .nav-icons {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: calc(100% + 40px);
+  bottom: auto;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  max-width: none;
+  pointer-events: none;
+}
+
+.google-reviews-lists .nav-icons button {
+  width: 40px;
+  height: 40px;
+  background-color: #2a2a2a;
+  color: #fff;
+  border-radius: 50%;
+  pointer-events: auto;
+  border: 1px solid #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-reviews-lists .nav-icons button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.google-reviews-lists .nav-icons button i {
+  font-size: 14px;
 }
 
 .nav-icons {
@@ -1799,13 +1926,13 @@ nav {
 }
 
 /* Highlight clickable techstack items */
-a > .teck-item {
+a>.teck-item {
   border: 1px solid rgba(0, 81, 200, 0.2);
   background: rgba(0, 81, 200, 0.03);
   position: relative;
 }
 
-a > .teck-item::after {
+a>.teck-item::after {
   content: '\f08e';
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
@@ -1818,18 +1945,18 @@ a > .teck-item::after {
   opacity: 0.8;
 }
 
-a > .teck-item:hover {
+a>.teck-item:hover {
   background-color: cornflowerblue;
   border-color: cornflowerblue;
 }
 
-a > .teck-item:hover h3,
-a > .teck-item:hover p,
-a > .teck-item:hover::after {
+a>.teck-item:hover h3,
+a>.teck-item:hover p,
+a>.teck-item:hover::after {
   color: #ffffff;
 }
 
-a > .teck-item:hover::after {
+a>.teck-item:hover::after {
   transform: translateX(2px) translateY(-2px);
   opacity: 1;
 }
@@ -3266,4 +3393,140 @@ a > .teck-item:hover::after {
     z-index: 1;
     overflow: hidden;
   }
+}
+/* --- New Client Reviews Section (Swiper) --- */
+.ourclients {
+  background-color: #f8f9fa;
+}
+
+.text-sky {
+  color: #007bff;
+}
+
+.text-primary {
+  color: #3c3852;
+}
+
+.fs-18 { font-size: 18px; }
+.fs-20 { font-size: 20px; }
+.fs-35 { font-size: 35px; }
+
+.google-review-box {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.google-img {
+  width: 120px;
+}
+
+.google-img img {
+  width: 100%;
+  height: auto;
+}
+
+.client-thumb-main {
+  margin-top: 40px;
+}
+
+.client-thumb-box {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.client-thumb-bg {
+  position: relative;
+  height: 220px;
+  cursor: pointer;
+}
+
+.client-thumb-img {
+  width: 100%;
+  height: 100%;
+}
+
+.client-thumb-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 15px;
+}
+
+.name-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name-div img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.client-name-txt {
+  color: white !important;
+  font-weight: bold;
+}
+
+.client-thumb-detail {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.client-review-txt {
+  color: #666 !important;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* --- Count Section --- */
+.countview .smallround {
+  margin-bottom: 20px;
+}
+
+.counttext {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.counttext:hover, .counttext.active {
+  background: #7257fa;
+  color: white;
+}
+
+.counttext h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.counttext .special {
+  font-size: 36px;
+  color: #7257fa;
+}
+
+.counttext:hover .special, .counttext.active .special {
+  color: white;
 }

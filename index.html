@@ -61,6 +61,9 @@
     as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="preload" as="image" href="/images/Gemini-hero-700.webp" imagesrcset="
     /images/Gemini-hero-700.webp 700w,
     /images/Gemini-hero-1400.webp 1400w" imagesizes="(max-width: 768px) 100vw, 679px">
@@ -1427,6 +1430,7 @@
     </div>
   </section> -->
 
+    <!-- Original Testimonials -->
     <section class="testimonial-section">
       <div class="container">
         <div class="row">
@@ -1439,7 +1443,7 @@
       </div>
       <div class="testimonial-lists">
         <div class="carousel-container">
-          <div class="owl-carousel">
+          <div class="owl-carousel testimonials-carousel">
             <div class="item">
               <img src="images/testimonial/testi-1.webp" alt="Testimonials" title="Olivia">
               <div class="testi-content">
@@ -1488,18 +1492,129 @@
           </div>
 
           <div class="nav-icons">
-            <button class="custom-owl-prev" aria-label="Previous slide" type="button">
+            <button class="testi-owl-prev" aria-label="Previous slide" type="button"
+              style="background: transparent; border: none; font-size: 20px; cursor: pointer;">
               <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
             </button>
-
-            <button class="custom-owl-next" aria-label="Next slide" type="button">
+            <button class="testi-owl-next" aria-label="Next slide" type="button"
+              style="background: transparent; border: none; font-size: 20px; cursor: pointer; margin-left: 10px;">
               <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </button>
-
           </div>
         </div>
       </div>
     </section>
+
+    <section class="testimonial-section google-reviews-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="testimonial-item">
+              <h2 style="display: flex; align-items: center; justify-content: center; gap: 10px;">Google Reviews <svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px">
+                  <path fill="#EA4335"
+                    d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                  <path fill="#4285F4"
+                    d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                  <path fill="#FBBC05"
+                    d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                  <path fill="#34A853"
+                    d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                </svg></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ourclients pt-5 py-md-5">
+    <div class="container">
+        <div class="client-main">
+            <div class="client-top-content d-flex align-items-center flex-wrap flex-md-nowrap justify-content-center justify-content-md-start">
+                <div>
+                    <p class="mb-0 text-sky fs-20 fw-bold">Listen to our clients</p>
+                    <p class="mb-0 text-primary fs-35 fw-bold">People Loves Us</p>
+                </div>
+                <div class="ms-md-auto mx-auto mx-md-0">
+                    <div class="google-review-box d-flex align-items-center gap-3">
+                        <div class="google-img img-contain" style="display: flex; align-items: center; justify-content: center;">
+                            <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" /><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" /><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" /><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" /></svg>
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold text-primary fs-18">Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="client-thumb-main mt-4">
+                <div class="swiper" id="clientTestiSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Dynamic slides will be injected here -->
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Count -->
+<!-- 
+    <div class="title my-lg-5 mt-4 pt-5">
+        <div class="container">
+            <div class="align-items-center d-flex flex-wrap justify-content-center">
+                <div class="text-center title_in">
+                    <span>What We Do</span>
+                    <h2 class="my-3">Our Impact in Numbers</h2>
+                    <p>A Proven Track Record of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="countview my-md-3 pb-md-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-12 smallround">
+                    <div class="counttext active shadow">
+                        <h3 class="special">250 +</h3>
+                        <h3>Happy Clients</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 smallround">
+                    <div class="counttext shadow">
+                        <h3 class="special">350 +</h3>
+                        <h3>Successful Projects</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 smallround">
+                    <div class="counttext shadow">
+                        <h3 class="special">60 +</h3>
+                        <h3>Countries Served</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 smallround">
+                    <div class="counttext shadow">
+                        <h3 class="special">100 +</h3>
+                        <h3>Expert Team Members</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+      </section>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reviewModalLabel">Review</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="reviewModalBody" style="font-size: 1rem; color: #333; line-height: 1.6;">
+            <!-- Full review text will go here -->
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="faq-section">
       <div class="container">
         <div class="row">
@@ -1512,68 +1627,139 @@
                 <div class="row">
                   <div class="col-md-6">
                     <!-- FAQ Items -->
-                    <div class="faq-title" data-title="What industries does Code Regime Technologies specialize in?">
+                    <div class="faq-title" data-title="What exactly does Code Regime Technologies do, and who do they build software for?">
                       <div class="faq-box-title">
-                        <span class="faq-round"></span> What industries does Code Regime Technologies specialize in?
+                        <span class="faq-round"></span> What exactly does Code Regime Technologies do, and who do they build software for?
                         <i class="fa-solid fa-chevron-right"></i>
                       </div>
-                      <p class="faq-para">Code Regime Technologies specializes in various
-                        industries, including mobile application development, web application development, and services
-                        like finance, healthcare, e-commerce, travel, aviation, and logistics.</p>
+                      <p class="faq-para">Code Regime Technologies is a full-service software development company based in Madurai, India, with clients spread across 8+ countries. We build custom web apps, mobile apps, enterprise software, blockchain solutions, and ready-to-launch clone scripts. Startups testing a new idea or enterprises digitising a complex workflow — we shape every project around what your business actually needs.</p>
                     </div>
 
-                    <div class="faq-title" data-title="What services does Code Regime Technologies offer?">
+                    <div class="faq-title" data-title="How is Code Regime Technologies different from other software development companies in India?">
                       <div class="faq-box-title">
-                        <span class="faq-round"></span> What services does Code Regime Technologies offer?
+                        <span class="faq-round"></span> How is Code Regime Technologies different from other software development companies in India?
                         <i class="fa-solid fa-chevron-right"></i>
                       </div>
-                      <p class="faq-para">Code Regime Technologies offers a wide range of
-                        services,
-                        including custom software development, blockchain technologies, mobile apps, and web solutions.
-                      </p>
+                      <p class="faq-para">Most companies go one of two ways — custom builds or off-the-shelf products. We do both, and that gap is where we add real value. Our clone script products give businesses a fast launchpad. Our custom development capability means we can extend or build entirely from scratch without piling up technical debt. We work as a strategic technology partner, not just a delivery vendor you hand a spec sheet to.</p>
                     </div>
 
-                    <div class="faq-title"
-                      data-title="What kind of support does Code Regime Technologies offer post-deployment?">
+                    <div class="faq-title" data-title="What industries does Code Regime Technologies serve?">
                       <div class="faq-box-title">
-                        <span class="faq-round"></span> What kind of support does Code Regime Technologies offer
-                        post-deployment?
+                        <span class="faq-round"></span> What industries does Code Regime Technologies serve?
                         <i class="fa-solid fa-chevron-right"></i>
                       </div>
-                      <p class="faq-para">We offer comprehensive post-deployment support,
-                        including
-                        maintenance, updates, and troubleshooting.</p>
+                      <p class="faq-para">We've shipped projects across food delivery, ride-hailing, home services, fintech, healthcare, e-commerce, logistics, travel, education, beauty, entertainment, and super-app platforms. Every vertical has its own regulatory and UX demands — we bring domain-specific experience to each one. You're not paying for developers learning your industry on the job.</p>
                     </div>
 
-                    <div class="faq-title"
-                      data-title="Can Code Regime Technologies integrate new software with our existing systems?">
+                    <div class="faq-title" data-title="What is a clone script, and is it the right choice for my business?">
                       <div class="faq-box-title">
-                        <span class="faq-round"></span> Can Code Regime Technologies integrate new software with our
-                        existing systems?
+                        <span class="faq-round"></span> What is a clone script, and is it the right choice for my business?
                         <i class="fa-solid fa-chevron-right"></i>
                       </div>
-                      <p class="faq-para">Yes, we specialize in endless integration with your
-                        existing systems to ensure smooth operation.</p>
+                      <p class="faq-para">A clone script is a pre-built, fully functional platform that replicates the core features of a market leader — think Uber or UberEats — and comes with 100% source code you own outright. It makes sense when speed-to-market matters and you want to validate a business model without spending 12–18 months on a custom build. Our clone scripts are independently engineered, fully customisable, and white-labelled under your brand.</p>
                     </div>
 
-                    <div class="faq-title"
-                      data-title="Is Code Regime Technologies experienced in developing mobile applications?">
+                    <div class="faq-title" data-title="Do I get the full source code when I buy a clone script or commission a custom build?">
                       <div class="faq-box-title">
-                        <span class="faq-round"></span> Is Code Regime Technologies experienced in developing mobile
-                        applications?
+                        <span class="faq-round"></span> Do I get the full source code when I buy a clone script or commission a custom build?
                         <i class="fa-solid fa-chevron-right"></i>
                       </div>
-                      <p class="faq-para">Absolutely! Our team has extensive experience in
-                        developing user-friendly mobile applications for Android and iOS platforms.</p>
+                      <p class="faq-para">Always. Whether you buy a clone script or commission a bespoke app, you walk away with complete, unencrypted source code after final payment — no licensing fees, no black-box dependencies, no strings attached. Your team can maintain, extend, or migrate the codebase freely. We're not in the business of manufactured dependency.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="What is CabRegime, and how quickly can I launch a ride-hailing business with it?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> What is CabRegime, and how quickly can I launch a ride-hailing business with it?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">CabRegime is our enterprise-grade ride-hailing platform — a fully engineered Uber alternative with passenger and driver apps, real-time dispatch, surge pricing, in-app payments, and a complete admin dashboard. Most clients finish white-labelling, branding, and deployment within 2–4 weeks of purchase. It's built for entrepreneurs, taxi operators, and fleet managers who want a production-ready product without building from the ground up.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="What is FoodRegime, and does it support multi-restaurant operations?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> What is FoodRegime, and does it support multi-restaurant operations?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">FoodRegime is our food delivery and restaurant management platform built along the same lines as UberEats or DoorDash — covering customer ordering, restaurant management, and delivery partner tracking with real-time GPS. Yes, multi-restaurant operations are fully supported, with a single admin panel handling commissions, payouts, and analytics. It works equally well for city-wide aggregators, dark kitchen operators, and enterprise restaurant chains.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="What is HandymanRegime, and what types of home services can it support?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> What is HandymanRegime, and what types of home services can it support?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">HandymanRegime is our on-demand home services marketplace that connects customers with verified professionals for plumbing, electrical work, cleaning, carpentry, painting, appliance repair, and more. Slot-based booking, in-app chat, GPS tracking, and customer reviews come built in. It's a solid fit for entrepreneurs launching a local services marketplace or businesses looking to bring their field operations online.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="Does Code Regime Technologies develop native iOS and Android apps, or only cross-platform apps?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> Does Code Regime Technologies develop native iOS and Android apps, or only cross-platform apps?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">Both — native (Swift for iOS, Kotlin for Android) and cross-platform using Flutter. We don't push one approach on every client. We lay out the trade-offs honestly and let your timeline and budget drive the call. Flutter tends to be our pick when launch speed and cost efficiency are the priority.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="What is Code Regime Technologies' software development process from start to finish?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> What is Code Regime Technologies' software development process from start to finish?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">Every project runs through four stages: Discovery &amp; Planning, Development in agile sprints with regular demos, Quality Assurance, and Deployment &amp; Support. Clients stay in the loop throughout via a dedicated project manager, sprint reviews, and a shared tracking environment. Nothing moves forward without your input and sign-off at each phase.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="How long does it typically take to develop a custom mobile or web application?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> How long does it typically take to develop a custom mobile or web application?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">A focused MVP generally runs 8–14 weeks. A full-featured business application with multiple user roles and integrations typically takes 4–6 months. Enterprise systems with more complex workflows fall on a 6–12 month horizon. After the initial discovery session, we put together a detailed project roadmap with clear milestone dates — so you know what's coming before a single line of code is written.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="How does Code Regime Technologies price its services — fixed price or time-and-material?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> How does Code Regime Technologies price its services — fixed price or time-and-material?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">We offer both, depending on what fits your project. Fixed-price works best for well-defined scopes. Time-and-material suits evolving products where requirements may shift based on user feedback. During the proposal stage, we walk you through both options with honest trade-offs — you pick what matches your risk tolerance and planning horizon.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="Does Code Regime Technologies offer support and maintenance after my application is launched?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> Does Code Regime Technologies offer support and maintenance after my application is launched?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">Yes — and it's a structured commitment, not an informal handshake. Our maintenance packages cover bug fixes, security patches, OS updates, performance monitoring, and feature enhancements, all under agreed SLAs with defined response times by severity level. You'll never be stuck with a production issue and no one picking up the phone.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="Is my business data and source code secure when working with Code Regime Technologies?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> Is my business data and source code secure when working with Code Regime Technologies?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">Every engagement starts with a mutual NDA, and source code is transferred with signed IP documentation confirming your sole ownership at project completion. Our development environments run on access-controlled repositories, encrypted communications, and role-based permissions. We follow OWASP security standards and run full security audits before every production deployment.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="Does Code Regime Technologies work with international clients, and how do they manage remote collaboration?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> Does Code Regime Technologies work with international clients, and how do they manage remote collaboration?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">We serve clients across 8+ countries, and our delivery process is built around remote, cross-timezone work — not retrofitted for it. International clients get a dedicated account manager, scheduled sprint review calls, async communication through Slack or whichever tool you prefer, and real-time visibility into project progress. Time zone differences are a logistics question we solved years ago. They've never touched delivery quality.</p>
+                    </div>
+
+                    <div class="faq-title" data-title="How do I get started with Code Regime Technologies — what does the first conversation look like?">
+                      <div class="faq-box-title">
+                        <span class="faq-round"></span> How do I get started with Code Regime Technologies — what does the first conversation look like?
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                      <p class="faq-para">It starts with a free discovery call — no pressure, no sales pitch. You walk us through your business problem, target audience, timeline, and any technical constraints. We listen and give you a straight recommendation. Within a few days, you receive a written proposal covering solution architecture, scope, timeline, team structure, and a cost estimate. You can also request a live demo of any flagship product before you decide anything.</p>
                     </div>
                   </div>
 
                   <!-- FAQ Description Container -->
                   <div class="col-md-6">
                     <div class="description-container" id="descriptionContainer">
-                      <p id="activePara">Code Regime Technologies specializes in various
-                        industries, including mobile application development, web application development, and services
-                        like finance, healthcare, e-commerce, travel, aviation, and logistics.</p>
+                      <p id="activePara">Code Regime Technologies is a full-service software development company based in Madurai, India, with clients spread across 8+ countries. We build custom web apps, mobile apps, enterprise software, blockchain solutions, and ready-to-launch clone scripts. Startups testing a new idea or enterprises digitising a complex workflow — we shape every project around what your business actually needs.</p>
                     </div>
                   </div>
 
@@ -1830,7 +2016,7 @@
     //   }
     // });
     $(document).ready(function () {
-      var owl = $('.owl-carousel').owlCarousel({
+      var testiOwl = $('.testimonials-carousel').owlCarousel({
         loop: true,
         margin: 20,
         center: true, // Center the active item
@@ -1851,12 +2037,38 @@
       });
 
       // Custom Navigation
-      $('.custom-owl-prev').click(function () {
-        owl.trigger('prev.owl.carousel');
+      $('.testi-owl-prev').click(function () {
+        testiOwl.trigger('prev.owl.carousel');
+      });
+      $('.testi-owl-next').click(function () {
+        testiOwl.trigger('next.owl.carousel');
       });
 
-      $('.custom-owl-next').click(function () {
-        owl.trigger('next.owl.carousel');
+      var googleOwl = $('.google-reviews-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        center: false,
+        items: 5,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+          0: {
+            items: 2
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 5
+          }
+        }
+      });
+
+      $('.google-owl-prev').click(function () {
+        googleOwl.trigger('prev.owl.carousel');
+      });
+      $('.google-owl-next').click(function () {
+        googleOwl.trigger('next.owl.carousel');
       });
     });
 
@@ -2175,6 +2387,25 @@
         }
       });
     });
+
+    // Auto-truncate long reviews and Review Modal functionality
+    $(document).ready(function () {
+      $('.google-reviews-carousel .item .dark-review-card__content').each(function() {
+        var fullText = $(this).text().trim();
+        if(fullText.length > 120) {
+          var shortText = fullText.substring(0, 120) + '...';
+          var name = $(this).closest('.item').find('.dark-review-card__title').text().trim();
+          $(this).html(shortText + '<br><a href="javascript:void(0)" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="' + name + '" data-fulltext="' + fullText.replace(/"/g, '&quot;') + '">Read more</a>');
+        }
+      });
+
+      $(document).on('click', '.read-more-btn', function () {
+        var fullText = $(this).attr('data-fulltext');
+        var name = $(this).attr('data-name');
+        $('#reviewModalLabel').text(name + "'s Review");
+        $('#reviewModalBody').text(fullText);
+      });
+    });
   </script>
   <script src="/js/footer.js"></script>
   <!-- <script src="https://embed.tawk.to/5f6c49d44704467e89f1d85d/1ejcnpkpa" async="true" charset="UTF-8" crossorigin="*"
@@ -2228,6 +2459,175 @@
   </script>
 
   <!--End of Tawk.to Script-->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiperContainer = document.getElementById('clientTestiSwiper');
+      if (swiperContainer) {
+        const wrapper = swiperContainer.querySelector('.swiper-wrapper');
+        const apiUrl = "https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJCc4yVNvFADsRusdEIH-zpaw&fields=reviews,rating,user_ratings_total&key=AIzaSyDgwiku1Uf7JNryNkvj27DNkLPupQfofss";
+
+        // Optional CORS Proxy for local testing if needed, though direct fetch is attempted first
+        // const proxyUrl = "https://cors-anywhere.herokuapp.com/"; 
+
+        fetch(apiUrl)
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === "OK" && data.result && data.result.reviews) {
+              wrapper.innerHTML = ""; // Clear wrapper
+              
+              data.result.reviews.forEach(review => {
+                // Generate stars HTML
+                let starsHtml = '';
+                for (let i = 0; i < 5; i++) {
+                  if (i < review.rating) {
+                     starsHtml += '<i class="fa-solid fa-star" style="color:#fbbc04;"></i>';
+                  } else {
+                     starsHtml += '<i class="fa-regular fa-star" style="color:#ccc;"></i>';
+                  }
+                }
+
+                // Truncate logic if review is too long
+                let text = review.text;
+                let readMoreHtml = '';
+                if (text.length > 150) {
+                  text = text.substring(0, 150) + '...';
+                  readMoreHtml = `<br><a href="javascript:void(0)" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</a>`;
+                }
+
+                const slideHtml = `
+                  <div class="swiper-slide client-thumb-box">
+                      <div class="client-thumb-bg" style="height: 120px; background: #2a2a2a; display: flex; align-items: center; justify-content: center; position: relative;">
+                          <div style="position:absolute; top: 15px; right: 15px;">
+                             <svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" /><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" /><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" /><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" /></svg>
+                          </div>
+                          <img src="${review.profile_photo_url}" alt="${review.author_name}" style="width: 90px; height: 90px; border-radius: 50%; border: 2px solid #fff;">
+                      </div>
+                      <div class="client-thumb-detail" style="text-align:center;">
+                          <p class="mb-1 mt-2 fw-bold text-primary fs-20">${review.author_name}</p>
+                          <div class="mb-2" style="font-size: 14px;">${starsHtml} <span style="color:#999; margin-left: 5px;">${review.relative_time_description}</span></div>
+                          <p class="mb-0 fw-medium text-primary pb-2 client-review-txt" style="font-size: 14px; text-align: left;">${text}${readMoreHtml}</p>
+                      </div>
+                  </div>
+                `;
+                wrapper.innerHTML += slideHtml;
+              });
+              
+              // Initialize Swiper after injecting slides
+              initSwiper();
+            } else {
+              console.error("Failed to load reviews or no reviews found");
+              initSwiper();
+            }
+          })
+          .catch(error => {
+             console.error("Error fetching Google Reviews:", error);
+             // Use fallback data if fetch fails (e.g. CORS)
+             loadFallbackReviews(wrapper);
+          });
+
+        function initSwiper() {
+          const swiper = new Swiper('#clientTestiSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }
+          });
+        }
+        
+        function loadFallbackReviews(wrapper) {
+            const fallbackData = [
+                {
+                    "author_name": "Maha Vignesh.G.V",
+                    "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVXdavv7voHujt2Mzx7-NUoh30o_YSWyVulk6RPF20dJRtiyehT=s128-c0x00000000-cc-rp-mo",
+                    "rating": 5,
+                    "relative_time_description": "a year ago",
+                    "text": "Their support and professionalism are truly commendable. A lot of value for businesses looking for quality work. Nice experience with their team. The designs are excellent, and the service is top-notch. Outstanding service and design expertise. A company that delivers quality and professionalism every time. The best in web development and software solutions. Friendly team, great skills, and excellent service."
+                },
+                {
+                    "author_name": "Logesh Sriramar",
+                    "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWU9X4OjkOOTKTYFQ1JH8mjENeKhc_giFCAFaBN1hQD69CZhUU8=s128-c0x00000000-cc-rp-mo",
+                    "rating": 5,
+                    "relative_time_description": "a year ago",
+                    "text": "Excellent team with great professionalism and top-notch web development services. Highly recommended!"
+                },
+                {
+                    "author_name": "முருகன் ரா",
+                    "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVExXXoPIR3GnzJoY5KnLH-fleTHU9eaY3Ph_2bX9JtVvk9j0Ye=s128-c0x00000000-cc-rp-mo",
+                    "rating": 5,
+                    "relative_time_description": "a year ago",
+                    "text": "The team delivered an excellent web development experience. Great value and professionalism throughout."
+                },
+                {
+                    "author_name": "INR OFFICIAL",
+                    "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXgrxl9UJlryQ9z0qK43OiM8viH-9voW6WJCPr4UKjkgPkjldCJ=s128-c0x00000000-cc-rp-mo",
+                    "rating": 4,
+                    "relative_time_description": "a year ago",
+                    "text": "A friendly and professional environment. They provide great support and deliver top-notch results."
+                },
+                {
+                    "author_name": "Thalapathy Mani",
+                    "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVLwh5MDiAuIgdZTTKLntHeg1Sg2EkwmTo90LAg-bCus9UK7DaX=s128-c0x00000000-cc-rp-mo",
+                    "rating": 5,
+                    "relative_time_description": "a year ago",
+                    "text": "Their web development expertise is excellent. Nice team and a good experience overall!"
+                }
+            ];
+            
+            wrapper.innerHTML = "";
+            fallbackData.forEach(review => {
+                let starsHtml = '';
+                for (let i = 0; i < 5; i++) {
+                  if (i < review.rating) {
+                     starsHtml += '<i class="fa-solid fa-star" style="color:#fbbc04;"></i>';
+                  } else {
+                     starsHtml += '<i class="fa-regular fa-star" style="color:#ccc;"></i>';
+                  }
+                }
+                
+                let text = review.text;
+                let readMoreHtml = '';
+                if (text.length > 150) {
+                  text = text.substring(0, 150) + '...';
+                  readMoreHtml = `<br><a href="javascript:void(0)" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</a>`;
+                }
+                
+                const slideHtml = `
+                  <div class="swiper-slide client-thumb-box">
+                      <div class="client-thumb-bg" style="height: 120px; background: #2a2a2a; display: flex; align-items: center; justify-content: center; position: relative;">
+                          <div style="position:absolute; top: 15px; right: 15px;">
+                             <svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" /><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" /><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" /><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" /></svg>
+                          </div>
+                          <img src="${review.profile_photo_url}" alt="${review.author_name}" style="width: 90px; height: 90px; border-radius: 50%; border: 2px solid #fff;">
+                      </div>
+                      <div class="client-thumb-detail" style="text-align:center;">
+                          <p class="mb-1 mt-2 fw-bold text-primary fs-20">${review.author_name}</p>
+                          <div class="mb-2" style="font-size: 14px;">${starsHtml} <span style="color:#999; margin-left: 5px;">${review.relative_time_description}</span></div>
+                          <p class="mb-0 fw-medium text-primary pb-2 client-review-txt" style="font-size: 14px; text-align: left;">${text}${readMoreHtml}</p>
+                      </div>
+                  </div>
+                `;
+                wrapper.innerHTML += slideHtml;
+            });
+            initSwiper();
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
