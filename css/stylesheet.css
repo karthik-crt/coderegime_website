@@ -2926,7 +2926,6 @@ a>.teck-item:hover::after {
 } */
 
 .counttext h3 {
-  color: #ffffff !important;
   margin: 0;
   font-family: var(--header-family);
 }
@@ -3520,6 +3519,11 @@ a>.teck-item:hover::after {
   font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
+  color: #2b2b2b;
+}
+
+.counttext:hover h3, .counttext.active h3 {
+  color: white;
 }
 
 .counttext .special {
