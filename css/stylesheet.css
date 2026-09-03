@@ -168,14 +168,13 @@ textarea:focus {
 /* Home Page Start */
 header {
   background-color: #f9f9ff;
-  padding: 0 20px;
+  padding: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding-top: 10px;
 }
 
 nav {
@@ -185,6 +184,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   height: 70px;
+  padding: 0 20px;
 }
 
 /* Logo Styles */
@@ -600,6 +600,141 @@ nav {
     flex-direction: row;
     gap: 20px;
     padding: 0;
+  }
+}
+
+/* ============================================
+   Top Announcement / Marquee Bar
+   ============================================ */
+.marquee-bar {
+  height: 48px;
+  border-bottom: 1px solid #e8e8f0;
+  overflow: hidden;
+}
+
+/* Latest Blog Button */
+.btn-latest-blog {
+  background-color: var(--heading-color);
+  color: var(--white-color);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-right: 50px;
+}
+
+.btn-latest-blog:hover {
+  background-color: var(--link-color);
+  color: var(--white-color);
+}
+
+/* Marquee Container */
+.cr-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 48px;
+  background-color: #FCAA2D;
+}
+
+.cr-marquee {
+  display: flex;
+  animation: cr-scroll-left 25s linear infinite;
+  white-space: nowrap;
+}
+
+.cr-marquee p {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--text-color);
+  line-height: 48px !important;
+  white-space: nowrap;
+}
+
+@keyframes cr-scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.cr-marquee-wrapper:hover .cr-marquee {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   Phone / Call Dropdown
+   ============================================ */
+.cr-call-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #e8f0fe;
+  transition: background-color 0.3s;
+}
+
+.cr-call-btn:hover {
+  background-color: #d0e2fc;
+}
+
+/* Pulse ring animation */
+.cr-call-pulse {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--link-color);
+  border-radius: 50%;
+  animation: cr-pulse-ring 2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes cr-pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Contact Popup */
+.cr-contact-popup {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+}
+
+.cr-contact-popup h5 {
+  font-family: var(--header-family);
+  font-size: 18px !important;
+  color: var(--heading-color);
+}
+
+.cr-contact-popup h6 {
+  font-family: var(--header-family);
+  font-size: 14px !important;
+  color: var(--heading-color);
+}
+
+.cr-contact-popup a:hover {
+  color: var(--link-color) !important;
+}
+
+/* ============================================
+   Marquee Bar — Print Styles
+   ============================================ */
+@media print {
+  .marquee-bar,
+  .cr-call-btn {
+    display: none !important;
   }
 }
 
@@ -2328,7 +2463,7 @@ a>.teck-item:hover::after {
   position: absolute;
   left: 0;
   top: 0;
-  width: 300px;
+  width: 340px;
   padding: 30px;
   height: 100%;
   background: linear-gradient(90deg, #093eb0, #002d97) !important;

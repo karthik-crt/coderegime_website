@@ -130,4 +130,10 @@
 <changefreq>daily</changefreq>
 <priority>0.80</priority>
 </url>
+
+<url>
+<loc>https://www.coderegimetechnologies.com/hire-developers/</loc>
+<changefreq>daily</changefreq>
+<priority>0.80</priority>
+</url>
 </urlset>

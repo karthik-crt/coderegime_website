@@ -283,6 +283,33 @@ a:hover {
     color: var(--white-color);
 }
 
+/* Table styles */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: var(--white-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.post-content th,
+.post-content td {
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(118, 118, 118, 0.2);
+    text-align: left;
+}
+
+.post-content th {
+    background-color: var(--background-color);
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+.post-content tr:nth-child(even) {
+    background-color: rgba(243, 244, 255, 0.5);
+}
+
+
 /* Post Actions (Tags & Share) */
 .post-footer-actions {
     margin-top: 4rem;

@@ -23,6 +23,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             });
+
+            // Auto-show Contact Modal after 5-8 seconds
+            setTimeout(() => {
+                const contactPopup = document.getElementById("contactPopup");
+                console.log("Checking for contactPopup:", contactPopup);
+                
+                if (contactPopup) {
+                    if (window.bootstrap) {
+                        console.log("Bootstrap found, showing modal");
+                        const modal = new bootstrap.Modal(contactPopup);
+                        modal.show();
+                    } else {
+                        console.error("Bootstrap is not defined. Ensure bootstrap.bundle.min.js is loaded.");
+                    }
+                } else {
+                    console.error("contactPopup element not found in the DOM.");
+                }
+            }, 6500);
         });
 
     // Load Footer
