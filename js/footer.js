@@ -310,19 +310,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     .then(() => {
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = originalBtnHTML;
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Success!',
-                            text: 'Thank you! Your message has been sent successfully.'
-                        });
                         
                         if (window.bootstrap) {
                             const modalEl = document.getElementById("contactPopup");
-                            const modal = bootstrap.Modal.getInstance(modalEl);
-                            if (modal) modal.hide();
+                            if (modalEl) {
+                                const modal = bootstrap.Modal.getInstance(modalEl);
+                                if (modal) modal.hide();
+                            }
                         }
-                        
                         contactPopupForm.reset();
+                        window.location.href = '/thank-you/';
                     })
                     .catch(err => {
                         submitBtn.disabled = false;

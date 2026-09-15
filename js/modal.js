@@ -209,13 +209,7 @@
             .then(() => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnHTML;
-                
-                // Switch to success state with square box
-                const modalContainer = document.querySelector('.contact-modal-container');
-                modalContainer.classList.add('success-active');
-                
-                formBody.style.display = 'none';
-                successScreen.style.display = 'flex';
+                window.location.href = '/thank-you/';
             })
             .catch(err => {
                 submitBtn.disabled = false;

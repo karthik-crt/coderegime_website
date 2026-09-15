@@ -991,19 +991,8 @@
           .then(() => {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalHTML;
-
-            if (typeof Swal !== 'undefined') {
-              Swal.fire({
-                icon: 'success',
-                title: 'Inquiry Submitted!',
-                text: 'Thank you! Our team will reach out within 24 hours to discuss your hiring needs.',
-                confirmButtonColor: '#0051C8'
-              });
-            } else {
-              alert('Thank you! Your inquiry has been submitted successfully.');
-            }
-
             document.getElementById('hireForm').reset();
+            window.location.href = '/thank-you/';
           })
           .catch(err => {
             submitBtn.disabled = false;
