@@ -23,5 +23,6 @@ Thumbs.db
 *.log
 *.sqlite
 # Server file
-coderegime_websiteblog/__pycache__/
+coderegime_website
+blog/__pycache__/
 blog/venv/
