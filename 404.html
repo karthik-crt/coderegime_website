@@ -72,6 +72,8 @@
             -webkit-font-smoothing: antialiased;
             overflow: hidden;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* ── NAV ──────────────────────────────────────────── */
@@ -1320,11 +1322,11 @@
             }
         });
     </script>
-    <main>
+    <main style="flex: 1; display: flex; flex-direction: column;">
         <!-- HERO BANNER -->
-        <section class="page-hero" style="min-height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #e2e8f0; background-image: radial-gradient(#94a3b8 2px, transparent 2px); background-size: 20px 20px;">
+        <section class="page-hero" style="flex: 1; padding: 2rem 5%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #e2e8f0; background-image: radial-gradient(#94a3b8 2px, transparent 2px); background-size: 20px 20px;">
             <div class="fade-up delay-1" style="margin-bottom: 10px;">
-                <img src="/images/404-computer.jpg" alt="404 Computer" style="max-width: 100%; height: auto; max-height: 400px; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.15); border: 2px solid #cbd5e1;">
+                <img src="/images/404-computer.jpg" alt="404 Computer" style="max-width: 100%; height: auto; max-height: 280px; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.15); border: 2px solid #cbd5e1;">
             </div>
             
             <h1 class="fade-up delay-2" style="color: #1e293b; font-size: clamp(2rem, 4vw, 3rem); font-family: 'Courier New', Courier, monospace; font-weight: 800; text-shadow: 2px 2px 0px rgba(255,255,255,0.8); margin-bottom: 8px;">404 NOT FOUND</h1>
@@ -1358,7 +1360,7 @@
         <!-- Footer -->
 
     </main>
-    <footer class="cr-footer">
+    <footer class="cr-footer" style="display: none;">
         <div class="cr-footer__inner">
 
             <!-- TOP GRID -->
