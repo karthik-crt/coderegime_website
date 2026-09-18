@@ -27,392 +27,11 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-
+  <link rel="stylesheet" type="text/css" href="/css/footer.css" />
   <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       background: #111;
       font-family: 'Outfit', 'Segoe UI', sans-serif;
-    }
-
-    /* ── FOOTER WRAPPER ── */
-    .cr-footer {
-      background: linear-gradient(0deg, rgb(0, 7, 23), rgb(0, 45, 151));
-      color: #B6B7D3;
-      padding-top: 56px;
-    }
-
-    .cr-footer__inner {
-      /* max-width: 1260px; */
-      margin: 0 auto;
-      padding: 0 28px;
-    }
-
-    /* ── TOP GRID ── */
-    .cr-footer__grid {
-      display: grid;
-      grid-template-columns: 1.7fr 0.9fr 1fr 1.1fr 0.85fr 1.3fr;
-      gap: 36px;
-      padding-bottom: 40px;
-      align-items: start;
-      /* ← KEY FIX: all columns start at same top */
-    }
-
-    /* ── Brand column ── */
-    .cr-footer__col {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .footer-logo {
-      margin-bottom: 16px;
-    }
-
-    .footer-logo img {
-      height: 40px;
-      object-fit: contain;
-      display: block;
-    }
-
-    .footer-logo img {
-      height: 80px;
-      width: auto;
-      object-fit: contain;
-      display: block;
-    }
-
-    .logo-text {
-      font-size: 20px;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -0.3px;
-    }
-
-    .logo-text span {
-      color: #4f9cf9;
-    }
-
-    .cr-footer__desc {
-      font-size: 15px;
-      line-height: 1.75;
-      color: #B6B7D3;
-      margin-bottom: 20px;
-    }
-
-    /* Registered office */
-    .cr-footer__office-block {
-      border-top: 1px solid #222;
-      padding-top: 18px;
-    }
-
-    .cr-footer__office-block h5 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.9px;
-      margin-bottom: 7px;
-    }
-
-    .cr-footer__office-block p {
-      font-size: 15px;
-      color: #B6B7D3;
-      line-height: 1.7;
-    }
-
-    /* ── Column headings ── */
-    .cr-footer__col h3 {
-      font-size: 15px !important;
-      font-weight: 700 !important;
-      color: #fff !important;
-      margin-bottom: 18px !important;
-      letter-spacing: 0.1px !important;
-    }
-
-    /* ── Link lists ── */
-    .cr-footer__list {
-      list-style: none;
-    }
-
-    .cr-footer__list li {
-      margin-bottom: 10px;
-    }
-
-    .cr-footer__list li a {
-      color: #B6B7D3;
-      text-decoration: none;
-      font-size: 15px;
-      line-height: 1.45;
-      transition: color 0.18s;
-    }
-
-    .cr-footer__list li a:hover {
-      color: #fff;
-    }
-
-    /* ── Contact column ── */
-    .cr-footer__contact-list {
-      list-style: none;
-    }
-
-    .cr-footer__contact-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .cr-footer__contact-icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 7px;
-      /* background: #1a1a1a;
-      border: 1px solid #272727; */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: #aaa;
-      margin-top: 2px;
-    }
-
-    .cr-footer__contact-icon svg,
-    .cr-footer__contact-icon i {
-      width: 14px;
-      height: 14px;
-    }
-
-    /* --- OG Colors for Contact Icons --- */
-    .cr-footer__contact-list li:nth-child(1) .cr-footer__contact-icon {
-      color: #25D366;
-    }
-
-    /* WhatsApp */
-    .cr-footer__contact-list li:nth-child(2) .cr-footer__contact-icon {
-      color: #34b7f1;
-    }
-
-    /* Phone */
-    .cr-footer__contact-list li:nth-child(3) .cr-footer__contact-icon {
-      color: #EA4335;
-    }
-
-    /* Address */
-    .cr-footer__contact-list li:nth-child(4) .cr-footer__contact-icon {
-      color: #4285F4;
-    }
-
-    /* Email */
-
-    .cr-footer__contact-text {
-      font-size: 15px;
-      color: #B6B7D3;
-      line-height: 1.6;
-    }
-
-    .cr-footer__contact-text a {
-      color: #B6B7D3;
-      text-decoration: none;
-      transition: color 0.18s;
-    }
-
-    .cr-footer__contact-text a:hover {
-      color: #fff;
-    }
-
-    .cr-footer__contact-text strong {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.7px;
-      margin-bottom: 2px;
-    }
-
-    /* ── DIVIDER ── */
-    .cr-footer__divider {
-      border: none;
-      border-top: 1px solid #1e1e1e;
-    }
-
-    /* ── BOTTOM ROW ── */
-    .cr-footer__bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      /* padding-top: 32px; */
-      gap: 40px;
-    }
-
-    /* .cr-footer__disclaimer {
-      max-width: 520px;
-    } */
-
-    .cr-footer__disclaimer h5 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .cr-footer__disclaimer p {
-      font-size: 12px !important;
-      color: #B6B7D3;
-      line-height: 1.75 !important;
-    }
-
-    /* Social + copyright */
-    .cr-footer__right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 14px;
-      flex-shrink: 0;
-    }
-
-    .cr-footer__social-label {
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 8px;
-      text-align: right;
-    }
-
-    .cr-footer__social-icons {
-      display: flex;
-      gap: 8px;
-    }
-
-    .cr-footer__social-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      border-radius: 7px;
-      /* background: #1a1a1a; */
-      border: 1px solid #272727;
-      color: #aaa;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
-    }
-
-    /* --- OG Colors for Social Icons --- */
-    .cr-footer__social-icons a[aria-label*="LinkedIn"] {
-      color: #0077b5;
-    }
-
-    .cr-footer__social-icons a[aria-label*="Twitter"],
-    .cr-footer__social-icons a[aria-label*="X"] {
-      color: #ffffff;
-    }
-
-    .cr-footer__social-icons a[aria-label*="Instagram"] {
-      color: #E4405F;
-    }
-
-    .cr-footer__social-icons a[aria-label*="Facebook"] {
-      color: #1877F2;
-    }
-
-    .cr-footer__social-icons a[aria-label*="Threads"] {
-      color: #ffffff;
-    }
-
-    .cr-footer__social-icons a:hover {
-      background: #252525;
-      color: #fff;
-      border-color: #383838;
-      transform: translateY(-2px);
-    }
-
-    .cr-footer__social-icons a svg {
-      width: 15px;
-      height: 15px;
-    }
-
-    .cr-footer__copyright {
-      font-size: 11.5px !important;
-      color: #B6B7D3;
-      text-align: center;
-    }
-
-    /* ── WATERMARK ── */
-    .cr-footer__watermark {
-      border-top: 1px solid #1a1a1a;
-      overflow: hidden;
-      line-height: 1;
-      padding-top: 4px;
-    }
-
-    .cr-footer__watermark span {
-      display: block;
-      font-size: clamp(56px, 9.5vw, 148px);
-      font-weight: 900;
-      color: transparent;
-      -webkit-text-stroke: 1px #1d1d1d;
-      letter-spacing: -3px;
-      white-space: nowrap;
-      user-select: none;
-      line-height: 0.88;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1200px) {
-      .cr-footer__grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 28px;
-      }
-
-      .cr-footer__col:first-child {
-        grid-column: 1 / -1;
-      }
-    }
-
-    @media (max-width: 860px) {
-      .cr-footer__grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-      }
-
-      .cr-footer__col:first-child {
-        grid-column: 1 / -1;
-      }
-
-      .cr-footer__bottom {
-        flex-direction: column;
-        gap: 24px;
-      }
-
-      .cr-footer__right {
-        align-items: flex-start;
-        width: 100%;
-      }
-
-      .cr-footer__copyright {
-        text-align: left;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .cr-footer__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cr-footer__watermark span {
-        font-size: 46px;
-        letter-spacing: -1px;
-      }
     }
   </style>
 
@@ -531,179 +150,174 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <footer class="cr-footer">
-    <div class="cr-footer__inner">
+  <div class="cr-footer__inner">
 
-      <!-- TOP GRID -->
-      <div class="cr-footer__grid">
+    <!-- TOP GRID -->
+    <div class="cr-footer__grid">
 
-        <!-- Column 1: Brand -->
-        <div class="cr-footer__col">
-          <h3>Code Regime</h3>
-          <p class="cr-footer__desc">
-            Code Regime Technologies is a leading software development company delivering innovative web, mobile, and
-            enterprise solutions, as well as a ready-made clone script product. We help businesses grow with scalable
-            technology, custom applications, and reliable digital transformation services.
-          </p>
-          <div class="cr-footer__social-icons">
-            <a href="https://www.linkedin.com/company/coderegime/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <img src="/images/linkedin.png" alt="LinkedIn Icon" width="24" height="24">
-            </a>
-            <a href="https://x.com/RegimeCode" target="_blank" rel="noopener" aria-label="Twitter / X">
+      <!-- Column 1: Brand -->
+      <div class="cr-footer__col">
+        <h3>Code Regime</h3>
+        <p class="cr-footer__desc">
+          Code Regime Technologies is a leading software development company delivering innovative web,
+          mobile, and
+          enterprise solutions, as well as a ready-made clone script product. We help businesses grow with
+          scalable
+          technology, custom applications, and reliable digital transformation services.
+        </p>
+        <div class="cr-footer__social-icons">
+          <a href="https://www.linkedin.com/company/coderegime/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="/images/linkedin.png" alt="LinkedIn Icon" width="24" height="24">
+          </a>
+          <a href="https://x.com/RegimeCode" target="_blank" rel="noopener" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/coderegimetechnologies/" target="_blank" rel="noopener"
+            aria-label="Instagram">
+            <img src="/images/instagram.png" alt="Instagram Icon" width="24" height="24">
+          </a>
+          <a href="https://www.facebook.com/Coderegimetech/" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="/images/facebook.png" alt="Facebook Icon" width="24" height="24">
+          </a>
+          <a href="https://www.threads.net/@coderegimetechnologies" target="_blank" rel="noopener" aria-label="Threads">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.785-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.81 11.618 4.81c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Useful Links -->
+      <div class="cr-footer__col">
+        <h3>Useful Links</h3>
+        <ul class="cr-footer__list">
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/Portfolio/">Portfolio</a></li>
+          <li><a href="/contact-us/">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Services -->
+      <div class="cr-footer__col">
+        <h3>Services</h3>
+        <ul class="cr-footer__list">
+          <li><a href="/blockchain-development-services/">Blockchain Development</a></li>
+          <li><a href="/mobile-app-development/">Mobile App Development</a></li>
+          <li><a href="/ios-app-development/">iOS App Development</a></li>
+          <li><a href="/flutter-app-development/">Flutter Development</a></li>
+          <li><a href="/android-app-development/">Android App Development</a></li>
+          <li><a href="/web-app-development/">Web App Development</a></li>
+          <li><a href="/enterprise-app-development/">Enterprise App Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Products -->
+      <div class="cr-footer__col">
+        <h3>Products</h3>
+        <ul class="cr-footer__list">
+          <li><a href="/uber-clone/">CabRegime - Uber Clone</a></li>
+          <li><a href="/ubereats-clone/">FoodRegime - Ubereats clone</a></li>
+          <li><a href="/uber-for-handyman-app/">HandymanRegime - Uber for Handman</a></li>
+          <li><a href="/fintech-app-development/">Fintech App</a></li>
+          <li><a href="/flight-booking-app/">Flight Booking App</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5: Legal -->
+      <div class="cr-footer__col">
+        <h3>Legal</h3>
+        <ul class="cr-footer__list">
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/refund-policy/">Refund Policy</a></li>
+          <li><a href="/security-policy/">Support</a></li>
+          <li><a href="/disclaimer/">Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 6: Contact Us -->
+      <div class="cr-footer__col">
+        <h3>Get in touch</h3>
+        <ul class="cr-footer__contact-list">
+          <li>
+            <div class="cr-footer__contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="cr-footer__contact-text">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/918072218602">+91 80722 18602</a>
+            </div>
+          </li>
+          <li>
+            <div class="cr-footer__contact-icon">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
-              <!-- <img src="/images/twitter.png" alt="LinkedIn Icon" width="24" height="24"> -->
-            </a>
-            <a href="https://www.instagram.com/coderegimetechnologies/" target="_blank" rel="noopener"
-              aria-label="Instagram">
-              <img src="/images/instagram.png" alt="LinkedIn Icon" width="24" height="24">
-            </a>
-            <a href="https://www.facebook.com/Coderegimetech/" target="_blank" rel="noopener" aria-label="Facebook">
-              <img src="/images/facebook.png" alt="LinkedIn Icon" width="24" height="24">
-            </a>
-            <a href="https://www.threads.net/@coderegimetechnologies" target="_blank" rel="noopener"
-              aria-label="Threads">
-              <!-- <img src="/images/threads.png" alt="LinkedIn Icon" width="24" height="24"> -->
+            </div>
+            <div class="cr-footer__contact-text">
+              <strong>Phone</strong>
+              <a href="tel:+918072218602">+91 80722 18602</a>
+            </div>
+          </li>
+          <li>
+            <div class="cr-footer__contact-icon">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
-                  d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.74-1.8-.365-.468-.702-.84-1.685-.84-1.201 0-2.07.24-2.595.717-.35.318-.537.727-.612 1.157l-1.968-.35c.186-1.018.714-1.86 1.517-2.528C8.976 5.073 10.205 4.81 11.618 4.81c.6 0 1.118.058 1.621.18.914.22 1.629.544 2.157 1.008.914.805 1.405 1.868 1.405 3.177 0 .5-.043.998-.129 1.487.85.513 1.511 1.201 1.9 2.016.543 1.14.465 2.715-.263 4.13-1.094 2.132-3.344 3.174-6.895 3.194z" />
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
               </svg>
-            </a>
-          </div>
-          <!-- <div class="cr-footer__office-block">
-            <h5>Registered Office</h5>
-            <p>74, 75 HDFC Bank Building, 2nd floor, Kamarajar Salai,<br>Madurai, Tamil Nadu – 625009, India</p>
-          </div> -->
-        </div>
+            </div>
+            <div class="cr-footer__contact-text">
+              <strong>Address</strong>
+              74, 75 HDFC Bank Building,<br>
+              2nd floor, Kamarajar Salai,<br>
+              Madurai, Tamil Nadu – 625009
+            </div>
+          </li>
+          <li>
+            <div class="cr-footer__contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+            </div>
+            <div class="cr-footer__contact-text">
+              <strong>Business Enquiry</strong>
+              <a href="mailto:sales@coderegimetechnologies.com" target="_blank"
+                aria-label="sales@coderegimetechnologies.com"
+                rel="noopener"><span>sales@coderegimetechnologies.com</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-        <!-- Column 2: Useful Links -->
-        <div class="cr-footer__col">
-          <h3>Useful Links</h3>
-          <ul class="cr-footer__list">
-            <li><a href="/about-us/index.html">About Us</a></li>
-            <li><a href="/Portfolio/index.html">Portfolio</a></li>
-            <li><a href="/contact-us/index.html">Contact Us</a></li>
-          </ul>
-        </div>
+    </div><!-- /grid -->
 
-        <!-- Column 3: Services -->
-        <div class="cr-footer__col">
-          <h3>Services</h3>
-          <ul class="cr-footer__list">
-            <li><a href="/service/blockchain/index.html">Blockchain Development</a></li>
-            <li><a href="/service/custom/index.html">Mobile App Development</a></li>
-            <li><a href="/service/ios/index.html">iOS App Development</a></li>
-            <li><a href="/service/flutter/index.html">Flutter Development</a></li>
-            <li><a href="/service/android/index.html">Android App Development</a></li>
-            <li><a href="/service/best/index.html">Web App Development</a></li>
-            <li><a href="/service/enterprise/index.html">Enterprise App Development</a></li>
-          </ul>
-        </div>
+    <hr class="cr-footer__divider">
 
-        <!-- Column 4: Products -->
-        <div class="cr-footer__col">
-          <h3>Products</h3>
-          <ul class="cr-footer__list">
-            <li><a href="/product/ubercab/index.html">CabRegime - Uber Clone</a></li>
-            <li><a href="/product/ubereats/index.html">FoodRegime - Ubereats clone</a></li>
-            <li><a href="/product/handyman/index.html">HandymanRegime - Uber for Handman</a></li>
-            <li><a href="/fintech-app-development/">Fintech App</a></li>
-            <li><a href="/product/flightbooking/index.html">Flight Booking App</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 5: Legal -->
-        <div class="cr-footer__col">
-          <h3>Legal</h3>
-          <ul class="cr-footer__list">
-            <li><a href="/policy/privacy-policy/index.html">Privacy Policy</a></li>
-            <li><a href="/policy/refund-policy/index.html">Refund Policy</a></li>
-            <li><a href="/policy/security-policy/index.html">Support</a></li>
-            <li><a href="/policy/disclaimer/index.html">Disclaimer</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 6: Contact Us -->
-        <div class="cr-footer__col">
-          <h3>Get in touch</h3>
-          <ul class="cr-footer__contact-list">
-            <li>
-              <div class="cr-footer__contact-icon">
-                <!-- <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                </svg> -->
-                <i class="fab fa-whatsapp"></i>
-              </div>
-              <div class="cr-footer__contact-text">
-                <strong>WhatsApp</strong>
-                <a href="https://wa.me/918072218602">+91 80722 18602</a>
-              </div>
-            </li>
-            <li>
-              <div class="cr-footer__contact-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-              </div>
-              <div class="cr-footer__contact-text">
-                <strong>Phone</strong>
-                <a href="tel:+918072218602">+91 80722 18602</a>
-              </div>
-            </li>
-            <li>
-              <div class="cr-footer__contact-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-              </div>
-              <div class="cr-footer__contact-text">
-                <strong>Address</strong>
-                74, 75 HDFC Bank Building, 2nd floor, Kamarajar Salai,<br>
-                Madurai, Tamil Nadu – 625009
-              </div>
-            </li>
-            <li>
-              <div class="cr-footer__contact-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </div>
-              <div class="cr-footer__contact-text">
-                <strong>Business Enquiry</strong>
-                <a href="mailto:sales@coderegimetechnologies.com" target="_blank"
-                  rel="noopener">sales@coderegimetechnologies.com</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div><!-- /grid -->
-
-      <hr class="cr-footer__divider">
-
-      <!-- BOTTOM ROW -->
-      <div class="cr-footer__bottom">
-        <div class="cr-footer__disclaimer">
-          <h4>Disclaimer</h4>
-          <p>The terms Uber, UberEats, Grubhub, DoorDash, and Foodora are used strictly for marketing and illustrative
-            purposes. Code Regime Technologies is in no way affiliated with, endorsed by, or connected to any of the
-            listed companies. We entirely own the custom source code and design of our products, and we do not use any
-            of their proprietary intellectual property.</p>
-        </div>
-        <div class="cr-footer__right">
-        </div>
-      </div><!-- /bottom -->
-      <hr class="cr-footer__divider">
-      <p class="cr-footer__copyright">
-        © Copyright <span id="year"></span>, All Rights Reserved by Code Regime Technologies.
-      </p>
-    </div><!-- /inner -->
-  </footer>
+    <!-- BOTTOM ROW -->
+    <div class="cr-footer__bottom">
+      <div class="cr-footer__disclaimer">
+        <p class="cr-footer__disclaimer-title">Disclaimer</p>
+        <p>The terms Uber, UberEats, Grubhub, DoorDash, and Foodora are used strictly for marketing and
+          illustrative
+          purposes. Code Regime Technologies is in no way affiliated with, endorsed by, or connected to
+          any of the
+          listed companies. We entirely own the custom source code and design of our products, and we
+          do not use any
+          of their proprietary intellectual property.</p>
+      </div>
+    </div><!-- /bottom -->
+    <hr class="cr-footer__divider">
+    <p class="cr-footer__copyright">
+      © Copyright <span id="year"></span>, All Rights Reserved by Code Regime Technologies.
+    </p>
+  </div><!-- /inner -->
+</footer>
 
   <!-- Script -->
   <script src="js/jquery.min.js"></script>
@@ -960,6 +574,7 @@
       });
     });
   </script>
+  <script src="/js/footer.js"></script>
 </body>
 
 </html>
