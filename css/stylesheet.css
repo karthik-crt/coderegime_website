@@ -2476,7 +2476,7 @@ a>.teck-item:hover::after {
   content: '';
   left: 0;
   top: 0;
-  background-image: url(../images/ser_shape.png);
+  background-image: url(../images/ser_shape.webp);
   width: 323px;
   height: 1024px;
   opacity: 0.1;
