@@ -134,19 +134,79 @@
             transform: translateX(4px);
         }
 
+        .error-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 22px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(8px);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.32);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        .action-btn-primary {
+            background: linear-gradient(135deg, #c943fa, #8b5cf6);
+            border: 1px solid rgba(201, 67, 250, 0.4);
+            box-shadow: 0 4px 18px rgba(201, 67, 250, 0.35);
+        }
+
+        .action-btn-primary:hover {
+            background: linear-gradient(135deg, #d946ef, #9333ea);
+            border-color: rgba(217, 70, 239, 0.6);
+            box-shadow: 0 6px 24px rgba(201, 67, 250, 0.55);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
         @media (max-width: 480px) {
             .error-illustration {
-                max-width: 240px;
-                margin-bottom: 18px;
+                max-width: 260px;
+                margin-bottom: 14px;
+            }
+
+            .error-illustration img {
+                max-height: 38vh;
             }
 
             .error-title {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
             }
 
             .error-desc {
-                font-size: 0.9rem;
+                font-size: 0.88rem;
                 padding: 0 8px;
+            }
+
+            .error-actions {
+                margin-top: 16px;
+                gap: 10px;
+            }
+
+            .action-btn {
+                padding: 8px 20px;
+                font-size: 0.88rem;
             }
         }
     </style>
@@ -201,6 +261,10 @@
             <p class="error-desc">
                 The link you followed may be broken, or the page may have been removed. Go back to <a href="/" class="home-link">Home Page <span>&rarr;</span></a>
             </p>
+            <div class="error-actions">
+                <a href="/blog/" class="action-btn">Blog</a>
+                <a href="/contact-us/" class="action-btn action-btn-primary">Contact Us</a>
+            </div>
         </div>
     </main>
 
