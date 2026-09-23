@@ -906,6 +906,13 @@
     cursor: pointer;
     transition: var(--transition-fast);
     text-decoration: none;
+    white-space: nowrap;
+}
+
+.pagination-btn.prev-btn,
+.pagination-btn.next-btn {
+    width: auto;
+    padding: 0 var(--space-sm);
 }
 
 .pagination-btn:hover:not(.disabled):not(.active) {
@@ -1378,6 +1385,12 @@
         width: 36px;
         height: 36px;
         font-size: 13px;
+    }
+
+    .pagination-btn.prev-btn,
+    .pagination-btn.next-btn {
+        width: auto;
+        padding: 0 8px;
     }
 }
 
