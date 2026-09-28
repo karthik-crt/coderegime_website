@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
     // ─────────────────────────────────────────────
     // Centralized Footer Loader
     // ─────────────────────────────────────────────
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </svg>
             </div>
             <div class="cr-footer__contact-text">
-              <strong>Corporate Office Address</strong>
+              <strong>Corporate Address</strong>
               235 Beaverbrae Dr, Markham,<br>
               Ontario, L6C 3K6
             </div>
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </svg>
             </div>
             <div class="cr-footer__contact-text">
-              <strong>Development Address</strong>
+              <strong>Development Office</strong>
               74, 75 HDFC Bank Building,<br>
               2nd floor, Kamarajar Salai,<br>
               Madurai, Tamil Nadu – 625009
