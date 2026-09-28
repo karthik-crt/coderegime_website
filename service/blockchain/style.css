@@ -2322,3 +2322,78 @@ p {
   font-weight: 600 !important;
   line-height: 28px !important;
 }
+
+/* New Blockchain Sections Styling */
+.advantages-container, .features-container, .benefits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 15px;
+}
+
+.advantages-header, .features-header, .benefits-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.advantages-title, .features-title, .benefits-title {
+  font-size: 2.5rem !important;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, white 0%, #a0a0ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.advantages-description, .features-description, .benefits-description {
+  color: #c0c0ff;
+  font-size: 1rem;
+}
+
+.advantages-grid, .features-list-grid, .benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .advantages-grid, .features-list-grid, .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .advantages-grid, .features-list-grid, .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.advantage-card, .feature-item-card, .benefit-card {
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(74, 0, 114, 0.1));
+  backdrop-filter: blur(8px);
+  padding: 2.5rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(147, 51, 234, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.advantage-card:hover, .feature-item-card:hover, .benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(147, 51, 234, 0.3);
+}
+
+.advantage-card h3, .feature-item-card h3, .benefit-card h3 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.advantage-card p, .feature-item-card p, .benefit-card p {
+  color: #a0aec0;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
