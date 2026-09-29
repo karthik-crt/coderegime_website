@@ -2356,15 +2356,58 @@ p {
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .advantages-grid, .features-list-grid, .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advantages-grid > :nth-child(5),
+  .features-list-grid > :nth-child(5),
+  .benefits-grid > :nth-child(5),
+  .platforms-grid > :nth-child(5) {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 480px;
+    justify-self: center;
   }
 }
 
 @media (min-width: 1024px) {
-  .advantages-grid, .features-list-grid, .benefits-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .advantages-grid, .features-list-grid, .benefits-grid, .platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .advantages-grid > :nth-child(1),
+  .advantages-grid > :nth-child(2),
+  .advantages-grid > :nth-child(3),
+  .features-list-grid > :nth-child(1),
+  .features-list-grid > :nth-child(2),
+  .features-list-grid > :nth-child(3),
+  .benefits-grid > :nth-child(1),
+  .benefits-grid > :nth-child(2),
+  .benefits-grid > :nth-child(3),
+  .platforms-grid > :nth-child(1),
+  .platforms-grid > :nth-child(2),
+  .platforms-grid > :nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .advantages-grid > :nth-child(4),
+  .features-list-grid > :nth-child(4),
+  .benefits-grid > :nth-child(4),
+  .platforms-grid > :nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .advantages-grid > :nth-child(5),
+  .features-list-grid > :nth-child(5),
+  .benefits-grid > :nth-child(5),
+  .platforms-grid > :nth-child(5) {
+    grid-column: 4 / span 2;
+    max-width: none;
+    width: auto;
+    justify-self: auto;
   }
 }
 
