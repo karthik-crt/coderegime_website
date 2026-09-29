@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // ─────────────────────────────────────────────
     // Centralized Footer Loader
     // ─────────────────────────────────────────────
@@ -604,7 +604,12 @@
         >
             <img
                 src="/images/robot.webp"
+                srcset="/images/robot-sm.webp 1x, /images/robot.webp 2x"
                 alt="Chat with us"
+                width="90"
+                height="90"
+                loading="lazy"
+                decoding="async"
             >
         </button>
     `;
