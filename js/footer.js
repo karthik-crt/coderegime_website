@@ -195,11 +195,23 @@ document.addEventListener("DOMContentLoaded", function () {
         siteFooterPlaceholder.outerHTML = canonicalFooterHTML;
     }
 
-    // Inject SweetAlert2 dynamically
-    if (typeof Swal === 'undefined') {
+    // Inject SweetAlert2 dynamically with long-lived 1-year cache (pinned version)
+    function ensureSwal(callback) {
+        if (typeof Swal !== 'undefined') {
+            if (callback) callback();
+            return;
+        }
         const swalScript = document.createElement('script');
-        swalScript.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
+        swalScript.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js';
+        if (callback) swalScript.onload = callback;
         document.head.appendChild(swalScript);
+    }
+
+    // Preload SweetAlert2 during idle time (without blocking critical rendering)
+    if (typeof window.requestIdleCallback === 'function') {
+        window.requestIdleCallback(() => ensureSwal());
+    } else {
+        setTimeout(ensureSwal, 4000);
     }
 
     // Update copyright year
