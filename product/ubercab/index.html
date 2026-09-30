@@ -18,31 +18,35 @@
   <meta name="twitter:image" content="https://www.coderegimetechnologies.com/images/color-logo.png" />
   <meta name="twitter:image:secure_url" content="https://www.coderegimetechnologies.com/images/color-logo.png" />
   <meta name="twitter:image:alt" content="Code Regime Technologies" />
+  <link rel="preload" href="style.css" as="style">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+  
   <link rel="icon" type="image/png" href="/images/favicon-96x96.png">
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  
   <title>Uber Clone Script – White Label Taxi App & Source Code</title>
   <meta name="description"
     content="Launch your own taxi booking app in weeks. Get a white-label Uber Clone with full source code, free setup, store submission & lifetime support. Book a demo!">
-  <link rel="stylesheet" href="/css/footer.css">
-  <link rel="stylesheet" href="/css/header.css" />
-  <link rel="stylesheet" href="/css/modal.css">
+  
+  <link rel="preload" href="/css/header.css" as="style">
+  <link rel="stylesheet" href="/css/header.css" media="print" onload="this.media='all'">
+  
+  <link rel="preload" href="/css/footer.css" as="style">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  
+  <link rel="preload" href="/css/modal.css" as="style">
+  <link rel="stylesheet" href="/css/modal.css" media="print" onload="this.media='all'">
 
-  <!-- EmailJS initialization -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init('mtyXCsYdD3ElJGNum');
-      console.log('EmailJS initialized for UberCab page ✅');
-    })();
-  </script>
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -3003,7 +3007,8 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
-  <!-- AOS Animation JS -->
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -3011,6 +3016,17 @@
       once: true,
       offset: 100,
       easing: 'ease-in-out',
+    });
+  </script>
+
+  <!-- EmailJS initialization -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script>
+    window.addEventListener('load', function () {
+      if(window.emailjs) {
+        emailjs.init('mtyXCsYdD3ElJGNum');
+        console.log('EmailJS initialized for UberCab page ✅');
+      }
     });
   </script>
 </body>
