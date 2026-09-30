@@ -552,7 +552,7 @@ nav {
 .heading {
   max-width: 63%;
   font-family: 'Poppins', sans-serif;
-  color: #FFB72B;
+  color: #C48A00;
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -573,10 +573,10 @@ nav {
   display: inline-block;
   padding: 15px 30px;
   background-color: #FFB72B;
-  color: white;
+  color: #1a1a2e;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 5px;
   transition: all 0.3s ease;
   min-width: 200px;
@@ -1999,7 +1999,7 @@ p {
 }
 
 .specs-caption {
-  color: #FFB72B;
+  color: #B07D00;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
@@ -2085,7 +2085,7 @@ p {
 
 .spec-intro {
   font-size: 14px;
-  color: #777;
+  color: #555;
   margin-bottom: 25px;
   font-style: italic;
   font-family: 'Roboto', sans-serif;
@@ -2132,7 +2132,7 @@ p {
 
 .pricing-toggle-btn {
   background-color: #FFB72B;
-  color: white;
+  color: #1a1a2e;
   border: none;
   padding: 15px 40px;
   font-size: 16px;
@@ -3522,7 +3522,7 @@ a.tech-marquee-item:hover::after {
   height: 100%;
 }
 
-.user-info h4 {
+.user-info h3 {
   font-size: 18px !important;
   color: #fff !important;
   margin: 0 !important;
