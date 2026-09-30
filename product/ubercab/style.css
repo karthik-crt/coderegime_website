@@ -597,6 +597,7 @@ nav {
 
   .heading {
     font-size: 48px;
+    max-width: 55%;
   }
 
   .description {
@@ -3720,7 +3721,6 @@ a.tech-marquee-item:hover::after {
   padding: 80px 20px;
   background-color: #f9f9ff;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
 }
 
 .custom-process-header {
@@ -3866,10 +3866,101 @@ a.tech-marquee-item:hover::after {
   z-index: 3;
 }
 
-@media screen and (max-width: 768px) {
-  .custom-process-header h2 {
-    font-size: 32px;
+/* Desktop/Mobile toggle for the SVG timeline */
+.process-mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .process-desktop-only {
+    display: none;
   }
+  .process-mobile-only {
+    display: block;
+  }
+  .custom-process-header h2 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .custom-process-header h2 {
+    font-size: 22px;
+  }
+  .custom-process-header p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Vertical Timeline Styles */
+.mobile-timeline {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 45px;
+}
+
+.mobile-timeline::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #7CB342, #4CAF50);
+  border-radius: 3px;
+}
+
+.mobile-timeline-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.mobile-timeline-step:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-step-number {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: #7CB342;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -45px;
+  z-index: 2;
+  box-shadow: 0 3px 10px rgba(124, 179, 66, 0.35);
+}
+
+.mobile-step-content {
+  background: #fff;
+  border: 1px solid #7CB342;
+  border-radius: 12px;
+  padding: 16px 20px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-step-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 18px rgba(124, 179, 66, 0.15);
+}
+
+.mobile-step-content h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
 }
 
 /* CabRegime Benefits 12-Card Section — overridden below at line ~4592 */
