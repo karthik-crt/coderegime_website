@@ -24,7 +24,29 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
-  
+  <style>
+    /* Force font-display: swap on external CDN fonts */
+    @font-face {
+      font-family: 'Font Awesome 6 Free';
+      font-style: normal; font-weight: 900; font-display: swap;
+      src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: 'Font Awesome 6 Free';
+      font-style: normal; font-weight: 400; font-display: swap;
+      src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: 'Font Awesome 6 Brands';
+      font-style: normal; font-weight: 400; font-display: swap;
+      src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: 'devicon';
+      font-style: normal; font-weight: normal; font-display: swap;
+      src: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.ttf?qd25fp') format('truetype');
+    }
+  </style>
   <link rel="icon" type="image/png" href="/images/favicon-96x96.png">
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
@@ -38,8 +60,7 @@
   <meta name="description"
     content="Launch your own taxi booking app in weeks. Get a white-label Uber Clone with full source code, free setup, store submission & lifetime support. Book a demo!">
   
-  <link rel="preload" href="/css/header.css" as="style">
-  <link rel="stylesheet" href="/css/header.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/header.css">
   
   <link rel="preload" href="/css/footer.css" as="style">
   <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
