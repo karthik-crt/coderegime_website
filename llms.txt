@@ -1,13 +1,13 @@
-Code Regime Technologies
+# Code Regime Technologies
 Code Regime Technologies is a software development company based in Madurai, Tamil Nadu, India. It provides custom software, web app, mobile app, enterprise, blockchain, and ready-made clone script solutions for startups, businesses, and enterprises.
 
-Company
+## Company
 Code Regime Technologies focuses on scalable digital solutions, custom application development, on-demand platforms, enterprise software, and ready-to-launch clone script products.
--   Website: https://www.coderegimetechnologies.com/
--   About: https://www.coderegimetechnologies.com/about-us/
--   Portfolio: https://www.coderegimetechnologies.com/Portfolio/
--   Contact: https://www.coderegimetechnologies.com/contact-us/
--   Hire Developers: https://www.coderegimetechnologies.com/hire-developers/
+-   [Website](https://www.coderegimetechnologies.com/)
+-   [About Us](https://www.coderegimetechnologies.com/about-us/)
+-   [Portfolio](https://www.coderegimetechnologies.com/Portfolio/)
+-   [Contact Us](https://www.coderegimetechnologies.com/contact-us/)
+-   [Hire Developers](https://www.coderegimetechnologies.com/hire-developers/)
 
 Core Services
 Custom Software Development
