@@ -2535,7 +2535,7 @@
         if (fullText.length > 120) {
           var shortText = fullText.substring(0, 120) + '...';
           var name = $(this).closest('.item').find('.dark-review-card__title').text().trim();
-          $(this).html(shortText + '<br><a href="javascript:void(0)" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="' + name + '" data-fulltext="' + fullText.replace(/"/g, '&quot;') + '">Read more</a>');
+          $(this).html(shortText + '<br><button type="button" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="' + name + '" data-fulltext="' + fullText.replace(/"/g, '&quot;') + '">Read more</button>');
         }
       });
 
@@ -2633,7 +2633,7 @@
                 let readMoreHtml = '';
                 if (text.length > 150) {
                   text = text.substring(0, 150) + '...';
-                  readMoreHtml = `<br><a href="javascript:void(0)" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</a>`;
+                  readMoreHtml = `<br><button type="button" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</button>`;
                 }
 
                 const slideHtml = `
@@ -2743,7 +2743,7 @@
             let readMoreHtml = '';
             if (text.length > 150) {
               text = text.substring(0, 150) + '...';
-              readMoreHtml = `<br><a href="javascript:void(0)" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</a>`;
+              readMoreHtml = `<br><button type="button" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</button>`;
             }
 
             const slideHtml = `
