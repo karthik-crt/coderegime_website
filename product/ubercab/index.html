@@ -21,8 +21,6 @@
   <link rel="preload" href="style.css" as="style">
   <link rel="stylesheet" href="style.css">
   
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
   <style>
     /* Force font-display: swap on external CDN fonts */
@@ -53,14 +51,15 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
   
   <title>Uber Clone Script – White Label Taxi App & Source Code</title>
   <meta name="description"
     content="Launch your own taxi booking app in weeks. Get a white-label Uber Clone with full source code, free setup, store submission & lifetime support. Book a demo!">
   
-  <link rel="stylesheet" href="/css/header.css">
+  <link rel="preload" href="/css/header.css" as="style">
+  <link rel="stylesheet" href="/css/header.css" media="print" onload="this.media='all'">
   
   <link rel="preload" href="/css/footer.css" as="style">
   <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
@@ -210,34 +209,43 @@
     }
   </script>
 
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY"></script>
+  <!-- Analytics: delayed until 3s or first interaction to avoid blocking FCP -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    (function () {
+      var loaded = false;
+      function loadAnalytics() {
+        if (loaded) return;
+        loaded = true;
 
-    gtag('config', 'G-17LK163FGY');
-  </script>
+        // Google Tag Manager
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W396DGWQ');
 
+        // Google Analytics (gtag.js)
+        var gs = document.createElement('script');
+        gs.async = true; gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-17LK163FGY';
+        document.head.appendChild(gs);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date()); gtag('config', 'G-17LK163FGY');
 
-  <script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "xgjlgfjkhc");
+        // Microsoft Clarity
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+          t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, 'clarity', 'script', 'xgjlgfjkhc');
+      }
+      setTimeout(loadAnalytics, 3000);
+      ['scroll', 'click', 'keydown'].forEach(function (e) {
+        window.addEventListener(e, loadAnalytics, { once: true, passive: true });
+      });
+    })();
   </script>
 </head>
 
@@ -1791,7 +1799,7 @@
     </section>
 
     <!-- Technology Stack Section -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="print" onload="this.media='all'">
     <section class="tech-stack-section">
       <div class="tech-container">
         <div class="tech-header" data-aos="fade-up">
@@ -3001,10 +3009,10 @@
   </div><!-- /inner -->
 </footer>
 
-  <script src="/js/footer.js"></script>
+  <script src="/js/footer.js" defer></script>
   <!-- <script src="//code.tidio.co/soskl3532irzhiujw4d3zebtxyg9jwus.js" async></script> -->
   <!-- Request Demo Modal JS -->
-  <script src="/js/modal.js"></script>
+  <script src="/js/modal.js" defer></script>
 
   <!--Start of Tawk.to Script-->
   <script>
@@ -3038,16 +3046,8 @@
   </script>
   <!--End of Tawk.to Script-->
   <!-- AOS Animation -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 600,
-      once: true,
-      offset: 100,
-      easing: 'ease-in-out',
-    });
-  </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js" onload="AOS.init({ duration: 600, once: true, offset: 100, easing: 'ease-in-out' })"></script>
 
   <!-- EmailJS initialization -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
