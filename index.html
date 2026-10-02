@@ -37,7 +37,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-  <!-- Google Fonts (Non-render-blocking) -->
+  <!-- Google Fonts Preload & Non-render-blocking Stylesheet -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v44/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6FxZCJgg.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap" media="print" onload="this.media='all'">
   <noscript>
@@ -46,6 +48,9 @@
 
   <!-- Critical Above-the-Fold CSS -->
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     :root {
       --primary-color: #007bff;
       --secondary-color: #555555;
@@ -56,8 +61,10 @@
       --link-hover-color: #0056b3;
       --white-color: #ffffff;
       --black-color: #000000;
-      --font-family: 'Open Sans', sans-serif;
-      --header-family: 'Poppins', sans-serif;
+      --font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --header-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
     }
     body {
       font-family: var(--font-family);
@@ -65,7 +72,55 @@
       padding: 0;
       color: var(--text-color);
       background-color: #fff;
+      overflow-x: hidden;
     }
+
+    /* --- Critical Grid System (Prevents Container & Row CLS) --- */
+    .container, .container-fluid {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      width: 100%;
+      padding-right: calc(var(--bs-gutter-x) * .5);
+      padding-left: calc(var(--bs-gutter-x) * .5);
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media (min-width: 576px) { .container { max-width: 540px; } }
+    @media (min-width: 768px) { .container { max-width: 720px; } }
+    @media (min-width: 992px) { .container { max-width: 960px; } }
+    @media (min-width: 1200px) { .container { max-width: 1140px; } }
+    @media (min-width: 1400px) { .container { max-width: 1320px; } }
+
+    .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * var(--bs-gutter-y));
+      margin-right: calc(-.5 * var(--bs-gutter-x));
+      margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+    .row > * {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 100%;
+      padding-right: calc(var(--bs-gutter-x) * .5);
+      padding-left: calc(var(--bs-gutter-x) * .5);
+      margin-top: var(--bs-gutter-y);
+    }
+    .col-sm-12 { flex: 0 0 auto; width: 100%; }
+    @media (min-width: 768px) {
+      .col-md-6 { flex: 0 0 auto; width: 50%; }
+      .col-md-7 { flex: 0 0 auto; width: 58.33333%; }
+      .col-md-5 { flex: 0 0 auto; width: 41.66667%; }
+    }
+    @media (min-width: 992px) {
+      .col-lg-6 { flex: 0 0 auto; width: 50%; }
+      .col-lg-7 { flex: 0 0 auto; width: 58.33333%; }
+      .col-lg-5 { flex: 0 0 auto; width: 41.66667%; }
+    }
+
+    /* --- Critical Header & Nav (Prevents Nav Menu CLS) --- */
     header {
       background-color: #f9f9ff;
       padding: 10px 20px 0;
@@ -86,21 +141,67 @@
       height: 70px;
     }
     .logo { display: flex; align-items: center; z-index: 1001; }
-    .logo img { width: 124px; height: auto; }
-    .nav-menu { display: flex; gap: 20px; align-items: center; margin: 0; padding: 0; list-style: none; }
-    .nav-link { color: #333; text-decoration: none; font-family: var(--header-family); font-weight: 500; font-size: 15px; }
-    .nav-link.active, .nav-link:hover { color: var(--link-color); }
+    .logo img { width: 124px; height: auto; aspect-ratio: 1 / 1; display: block; }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+    .nav-item {
+      position: relative;
+    }
+    .nav-link {
+      color: #333;
+      text-decoration: none;
+      font-family: var(--header-family);
+      font-weight: 500;
+      font-size: 16px;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s ease;
+    }
+    .nav-link.active {
+      color: var(--link-color);
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      color: var(--link-color);
+    }
     .dropdown { display: none; }
+    .dropdown-arrow {
+      display: inline-flex;
+      align-items: center;
+      font-size: 12px;
+    }
+    .dropdown-arrow img {
+      width: 10px;
+      height: auto;
+      aspect-ratio: 16 / 10;
+    }
     .mobile-toggle { display: none; cursor: pointer; }
     @media (max-width: 991px) {
       .nav-menu { display: none; }
       .mobile-toggle { display: flex; flex-direction: column; gap: 5px; }
       .hamburger { width: 25px; height: 3px; background-color: #1E2460; border-radius: 3px; }
     }
+
+    /* --- Critical Hero Section --- */
     .hero-section {
       background: linear-gradient(180deg, #F3F4FF 0%, rgba(221, 225, 254, 0.5) 62%);
       padding: 90px 0px;
       margin-top: 4rem;
+    }
+    @media (max-width: 991.98px) {
+      .hero-section {
+        padding: 40px 0px;
+      }
     }
     .hero-content label {
       color: var(--heading-color);
@@ -131,6 +232,11 @@
       background-size: 100%;
       background-repeat: no-repeat;
     }
+    @media (max-width: 991.98px) {
+      .hero-content h1:after {
+        width: min(350px, 100%);
+      }
+    }
     .hero-content p {
       font-size: 18px;
       font-weight: 600;
@@ -152,6 +258,7 @@
       width: 100%;
       height: auto;
       max-width: 679px;
+      aspect-ratio: 679 / 454;
       display: block;
     }
   </style>
@@ -402,7 +509,7 @@
         <li class="nav-item">
           <a href="" class="nav-link">
             Services
-            <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span>
+            <span class="dropdown-arrow"><img src="images/dropdown.png" alt="" width="16" height="10"></span>
           </a>
           <ul class="dropdown">
             <li class="dropdown-item">
@@ -431,7 +538,7 @@
         <li class="nav-item">
           <a href="" class="nav-link">
             Products
-            <span class="dropdown-arrow"><img src="images/dropdown.png" alt=""></span>
+            <span class="dropdown-arrow"><img src="images/dropdown.png" alt="" width="16" height="10"></span>
           </a>
           <ul class="dropdown">
             <li class="dropdown-item">
@@ -489,7 +596,7 @@
     <section class="hero-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right">
+          <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="hero-content">
               <label>Shape Up Your Future</label>
               <h1>Custom Software, Mobile App & Clone Script Development Company</h1>
@@ -506,7 +613,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-left" data-aos-delay="200">
+          <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="hero-pic">
               <img src="/images/Gemini-hero-700.webp" srcset="/images/Gemini-hero-700.webp 1x, 
           /images/Gemini-hero-1400.webp 2x" alt="Software Development Company" width="679" height="454"
@@ -584,7 +691,7 @@
           </div>
           <div class="col-lg-5 col-md-5 col-sm-12">
             <div class="about-pic">
-              <img src="/images/about-pic-optimized.webp" alt="About" title="Project Planning" />
+              <img src="/images/about-pic-optimized.webp" alt="About" title="Project Planning" width="679" height="454" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 679 / 454; display: block;" />
             </div>
           </div>
         </div>
