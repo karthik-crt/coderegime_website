@@ -3707,3 +3707,102 @@ a>.teck-item:hover::after {
 .counttext:hover .special, .counttext.active .special {
   color: white;
 }
+
+/* ============================================
+   Contact Consultation Popup Modal (#contactPopup)
+   Accessibility & High Contrast Styles
+   ============================================ */
+#contactPopup .modal-content {
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff !important;
+}
+
+#contactPopup .modal-body {
+  padding: 0 !important;
+  position: relative;
+  background-color: #ffffff !important;
+  overflow: hidden;
+}
+
+#contactPopup .modal-title {
+  margin-bottom: 15px !important;
+  font-weight: 800;
+  color: #1E2460 !important;
+  font-family: 'Poppins', 'Outfit', sans-serif;
+  font-size: 24px;
+}
+
+#contactPopup .left-side {
+  background: linear-gradient(135deg, #093eb0, #002d97) !important;
+  padding: 40px 30px !important;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contactPopup .contact-info {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  font-size: 14px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+#contactPopup .right-side {
+  padding: 35px 30px !important;
+  background-color: #ffffff !important;
+  position: relative;
+  z-index: 2;
+}
+
+#contactPopup .right-side label,
+#contactPopup .right-side .form-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0f172a !important;
+  font-family: 'Open Sans', 'Outfit', sans-serif;
+  display: inline-block;
+}
+
+#contactPopup .right-side .form-control,
+#contactPopup .right-side .form-select {
+  border: 1px solid #94a3b8 !important;
+  box-shadow: none;
+  font-size: 14px;
+  height: 42px;
+  border-radius: 6px;
+  font-family: 'Open Sans', 'Outfit', sans-serif;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+#contactPopup .right-side .form-control:focus,
+#contactPopup .right-side .form-select:focus {
+  border-color: #0051C8 !important;
+  box-shadow: 0 0 0 3px rgba(0, 81, 200, 0.15) !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+#contactPopup .right-side .form-control::placeholder,
+#contactPopup .right-side .form-control::-webkit-input-placeholder,
+#contactPopup .right-side .form-control::-moz-placeholder,
+#contactPopup .right-side .form-control:-ms-input-placeholder {
+  color: #475569 !important;
+  opacity: 1 !important;
+}
+
+#contactPopup .right-side textarea.form-control {
+  height: 80px !important;
+}
+

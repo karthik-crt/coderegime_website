@@ -381,11 +381,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const contactModalHTML = `
     <div class="modal fade" id="contactPopup" tabindex="-1" aria-labelledby="contactPopupLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content" style="background-color: #ffffff;">
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" style="background-color: #ffffff;">
             <div class="row">
               <div class="left-side col-lg-5 col-md-12 col-sm-12">
                 <div class="contact-info">
@@ -394,33 +394,33 @@ document.addEventListener("DOMContentLoaded", function () {
                   <p><span class="icon mobile"><i class="fas fa-mobile-alt"></i></span> <a href="tel:+918072218602" target="_blank" rel="noopener">+91 8072218602</a></p>
                 </div>
               </div>
-              <div class="right-side col-lg-7 col-md-12 col-sm-12">
-                <h5 class="modal-title" id="contactPopupLabel">Get A Free Project Consultation</h5>
+              <div class="right-side col-lg-7 col-md-12 col-sm-12" style="background-color: #ffffff;">
+                <h3 class="modal-title" id="contactPopupLabel" style="color: #1E2460;">Get A Free Project Consultation</h3>
                 <form>
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                      <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Your Name">
+                      <label for="name" class="form-label" style="color: #0f172a;">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Your Name" style="background-color: #ffffff; color: #0f172a; border-color: #94a3b8;">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                      <label for="country" class="form-label">Country</label>
-                      <input type="text" class="form-control" id="country" placeholder="Your Country">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                      <label for="mobile" class="form-label">Mobile</label>
-                      <input type="text" class="form-control" id="mobile" placeholder="Your Mobile">
+                      <label for="email" class="form-label" style="color: #0f172a;">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Your Email" style="background-color: #ffffff; color: #0f172a; border-color: #94a3b8;">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                      <label for="service" class="form-label">Select Product/Service</label>
-                      <select class="form-select" id="service">
+                      <label for="country" class="form-label" style="color: #0f172a;">Country</label>
+                      <input type="text" class="form-control" id="country" placeholder="Your Country" style="background-color: #ffffff; color: #0f172a; border-color: #94a3b8;">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <label for="mobile" class="form-label" style="color: #0f172a;">Mobile</label>
+                      <input type="text" class="form-control" id="mobile" placeholder="Your Mobile" style="background-color: #ffffff; color: #0f172a; border-color: #94a3b8;">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <label for="service" class="form-label" style="color: #0f172a;">Select Product/Service</label>
+                      <select class="form-select" id="service" style="background-color: #ffffff; color: #0f172a; border-color: #94a3b8;">
                         <option value="">Select...</option>
                         <option value="service1">Mobile App Services</option>
                         <option value="service2">Web App Services</option>
@@ -431,8 +431,8 @@ document.addEventListener("DOMContentLoaded", function () {
                   </div>
                   <div class="row">
                     <div class="col-12">
-                      <label for="requirements" class="form-label">Write your requirements in detail</label>
-                      <textarea class="form-control" id="requirements" rows="3"></textarea>
+                      <label for="requirements" class="form-label" style="color: #0f172a;">Write your requirements in detail</label>
+                      <textarea class="form-control" id="requirements" rows="3" style="background-color: #ffffff; color: #0f172a; border-color: #94a3b8;"></textarea>
                     </div>
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
