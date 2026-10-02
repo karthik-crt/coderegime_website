@@ -65,7 +65,7 @@
     as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
   <link rel="preload" as="image" href="/images/Gemini-hero-700.webp" imagesrcset="
     /images/Gemini-hero-700.webp 700w,
     /images/Gemini-hero-1400.webp 1400w" imagesizes="(max-width: 768px) 100vw, 679px">
@@ -187,11 +187,26 @@
   <!-- End Google tag (gtag.js) -->
 
   <script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "xgjlgfjkhc");
+    (function () {
+      var clarityLoaded = false;
+      function loadClarity() {
+        if (clarityLoaded) return;
+        clarityLoaded = true;
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "xgjlgfjkhc");
+      }
+      ['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (e) {
+        window.addEventListener(e, loadClarity, { once: true, passive: true });
+      });
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(function () { setTimeout(loadClarity, 4000); });
+      } else {
+        setTimeout(loadClarity, 4500);
+      }
+    })();
   </script>
   <!-- FAQPage Schema Markup -->
   <script type="application/ld+json">
@@ -2568,81 +2583,78 @@
     })();
   </script> -->
 
-  <script>
-    (function () {
-      let loaded = false;
-
-      function loadTawk() {
-        if (loaded) return;
-        loaded = true;
-
-        // Safely fall back if requestIdleCallback is not supported (Safari)
-        const requestIdle = window.requestIdleCallback || function (cb) { setTimeout(cb, 1) };
-
-        requestIdle(() => {
-          var s = document.createElement("script");
-          s.src = 'https://embed.tawk.to/69ce73d36f1c161c3ca0ae40/1jl778te5';
-          s.async = true;
-          s.charset = "UTF-8";
-          // REMOVED: s.setAttribute("crossorigin", "*"); 
-          document.body.appendChild(s);
-        });
-      }
-
-      // Minimal interaction trigger
-      window.addEventListener("pointerdown", loadTawk, { once: true, passive: true });
-      window.addEventListener("scroll", loadTawk, { once: true, passive: true }); // Added scroll for mobile coverage
-
-      // Fallback (only if no interaction)
-      setTimeout(loadTawk, 10000);
-    })();
-  </script>
-
-  <!--End of Tawk.to Script-->
   <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/js/swiper-bundle.min.js" defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const swiperContainer = document.getElementById('clientTestiSwiper');
       if (swiperContainer) {
         const wrapper = swiperContainer.querySelector('.swiper-wrapper');
-        const apiUrl = "https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJCc4yVNvFADsRusdEIH-zpaw&fields=reviews,rating,user_ratings_total&key=AIzaSyDgwiku1Uf7JNryNkvj27DNkLPupQfofss";
 
-        // Optional CORS Proxy for local testing if needed, though direct fetch is attempted first
-        // const proxyUrl = "https://cors-anywhere.herokuapp.com/"; 
+        const reviewsData = [
+          {
+            "author_name": "Maha Vignesh.G.V",
+            "profile_photo_url": "/images/reviews/reviewer-maha-vignesh.webp",
+            "rating": 5,
+            "relative_time_description": "a year ago",
+            "text": "Their support and professionalism are truly commendable. A lot of value for businesses looking for quality work. Nice experience with their team. The designs are excellent, and the service is top-notch. Outstanding service and design expertise. A company that delivers quality and professionalism every time. The best in web development and software solutions. Friendly team, great skills, and excellent service."
+          },
+          {
+            "author_name": "Logesh Sriramar",
+            "profile_photo_url": "/images/reviews/reviewer-logesh-sriramar.webp",
+            "rating": 5,
+            "relative_time_description": "a year ago",
+            "text": "Excellent team with great professionalism and top-notch web development services. Highly recommended!"
+          },
+          {
+            "author_name": "முருகன் ரா",
+            "profile_photo_url": "/images/reviews/reviewer-murugan-ra.webp",
+            "rating": 5,
+            "relative_time_description": "a year ago",
+            "text": "The team delivered an excellent web development experience. Great value and professionalism throughout."
+          },
+          {
+            "author_name": "INR OFFICIAL",
+            "profile_photo_url": "/images/reviews/reviewer-inr-official.webp",
+            "rating": 4,
+            "relative_time_description": "a year ago",
+            "text": "A friendly and professional environment. They provide great support and deliver top-notch results."
+          },
+          {
+            "author_name": "Thalapathy Mani",
+            "profile_photo_url": "/images/reviews/reviewer-thalapathy-mani.webp",
+            "rating": 5,
+            "relative_time_description": "a year ago",
+            "text": "Their web development expertise is excellent. Nice team and a good experience overall!"
+          }
+        ];
 
-        fetch(apiUrl)
-          .then(response => response.json())
-          .then(data => {
-            if (data.status === "OK" && data.result && data.result.reviews) {
-              wrapper.innerHTML = ""; // Clear wrapper
+        function renderReviews() {
+          wrapper.innerHTML = "";
+          reviewsData.forEach(review => {
+            let starsHtml = '';
+            for (let i = 0; i < 5; i++) {
+              if (i < review.rating) {
+                starsHtml += '<i class="fa-solid fa-star" style="color:#fbbc04;"></i>';
+              } else {
+                starsHtml += '<i class="fa-regular fa-star" style="color:#ccc;"></i>';
+              }
+            }
 
-              data.result.reviews.forEach(review => {
-                // Generate stars HTML
-                let starsHtml = '';
-                for (let i = 0; i < 5; i++) {
-                  if (i < review.rating) {
-                    starsHtml += '<i class="fa-solid fa-star" style="color:#fbbc04;"></i>';
-                  } else {
-                    starsHtml += '<i class="fa-regular fa-star" style="color:#ccc;"></i>';
-                  }
-                }
+            let text = review.text;
+            let readMoreHtml = '';
+            if (text.length > 150) {
+              text = text.substring(0, 150) + '...';
+              readMoreHtml = `<br><button type="button" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</button>`;
+            }
 
-                // Truncate logic if review is too long
-                let text = review.text;
-                let readMoreHtml = '';
-                if (text.length > 150) {
-                  text = text.substring(0, 150) + '...';
-                  readMoreHtml = `<br><button type="button" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</button>`;
-                }
-
-                const slideHtml = `
+            const slideHtml = `
                   <div class="swiper-slide client-thumb-box">
                       <div class="client-thumb-bg" style="height: 120px; background: #2a2a2a; display: flex; align-items: center; justify-content: center; position: relative;">
                           <div style="position:absolute; top: 15px; right: 15px;">
                              <svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" /><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" /><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" /><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" /></svg>
                           </div>
-                          <img src="${review.profile_photo_url}" alt="${review.author_name}" style="width: 90px; height: 90px; border-radius: 50%; border: 2px solid #fff;">
+                          <img src="${review.profile_photo_url}" alt="${review.author_name}" width="90" height="90" loading="lazy" style="width: 90px; height: 90px; border-radius: 50%; border: 2px solid #fff; object-fit: cover;">
                       </div>
                       <div class="client-thumb-detail" style="text-align:center;">
                           <p class="mb-1 mt-2 fw-bold text-primary fs-20">${review.author_name}</p>
@@ -2651,21 +2663,11 @@
                       </div>
                   </div>
                 `;
-                wrapper.innerHTML += slideHtml;
-              });
-
-              // Initialize Swiper after injecting slides
-              initSwiper();
-            } else {
-              console.error("Failed to load reviews or no reviews found");
-              initSwiper();
-            }
-          })
-          .catch(error => {
-            console.error("Error fetching Google Reviews:", error);
-            // Use fallback data if fetch fails (e.g. CORS)
-            loadFallbackReviews(wrapper);
+            wrapper.innerHTML += slideHtml;
           });
+
+          initSwiper();
+        }
 
         function initSwiper() {
           const swiper = new Swiper('#clientTestiSwiper', {
@@ -2689,82 +2691,7 @@
           });
         }
 
-        function loadFallbackReviews(wrapper) {
-          const fallbackData = [
-            {
-              "author_name": "Maha Vignesh.G.V",
-              "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVXdavv7voHujt2Mzx7-NUoh30o_YSWyVulk6RPF20dJRtiyehT=s128-c0x00000000-cc-rp-mo",
-              "rating": 5,
-              "relative_time_description": "a year ago",
-              "text": "Their support and professionalism are truly commendable. A lot of value for businesses looking for quality work. Nice experience with their team. The designs are excellent, and the service is top-notch. Outstanding service and design expertise. A company that delivers quality and professionalism every time. The best in web development and software solutions. Friendly team, great skills, and excellent service."
-            },
-            {
-              "author_name": "Logesh Sriramar",
-              "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWU9X4OjkOOTKTYFQ1JH8mjENeKhc_giFCAFaBN1hQD69CZhUU8=s128-c0x00000000-cc-rp-mo",
-              "rating": 5,
-              "relative_time_description": "a year ago",
-              "text": "Excellent team with great professionalism and top-notch web development services. Highly recommended!"
-            },
-            {
-              "author_name": "முருகன் ரா",
-              "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVExXXoPIR3GnzJoY5KnLH-fleTHU9eaY3Ph_2bX9JtVvk9j0Ye=s128-c0x00000000-cc-rp-mo",
-              "rating": 5,
-              "relative_time_description": "a year ago",
-              "text": "The team delivered an excellent web development experience. Great value and professionalism throughout."
-            },
-            {
-              "author_name": "INR OFFICIAL",
-              "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXgrxl9UJlryQ9z0qK43OiM8viH-9voW6WJCPr4UKjkgPkjldCJ=s128-c0x00000000-cc-rp-mo",
-              "rating": 4,
-              "relative_time_description": "a year ago",
-              "text": "A friendly and professional environment. They provide great support and deliver top-notch results."
-            },
-            {
-              "author_name": "Thalapathy Mani",
-              "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVLwh5MDiAuIgdZTTKLntHeg1Sg2EkwmTo90LAg-bCus9UK7DaX=s128-c0x00000000-cc-rp-mo",
-              "rating": 5,
-              "relative_time_description": "a year ago",
-              "text": "Their web development expertise is excellent. Nice team and a good experience overall!"
-            }
-          ];
-
-          wrapper.innerHTML = "";
-          fallbackData.forEach(review => {
-            let starsHtml = '';
-            for (let i = 0; i < 5; i++) {
-              if (i < review.rating) {
-                starsHtml += '<i class="fa-solid fa-star" style="color:#fbbc04;"></i>';
-              } else {
-                starsHtml += '<i class="fa-regular fa-star" style="color:#ccc;"></i>';
-              }
-            }
-
-            let text = review.text;
-            let readMoreHtml = '';
-            if (text.length > 150) {
-              text = text.substring(0, 150) + '...';
-              readMoreHtml = `<br><button type="button" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#reviewModal" data-name="${review.author_name}" data-fulltext="${review.text.replace(/"/g, '&quot;')}">Read more</button>`;
-            }
-
-            const slideHtml = `
-                  <div class="swiper-slide client-thumb-box">
-                      <div class="client-thumb-bg" style="height: 120px; background: #2a2a2a; display: flex; align-items: center; justify-content: center; position: relative;">
-                          <div style="position:absolute; top: 15px; right: 15px;">
-                             <svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" /><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" /><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" /><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" /></svg>
-                          </div>
-                          <img src="${review.profile_photo_url}" alt="${review.author_name}" style="width: 90px; height: 90px; border-radius: 50%; border: 2px solid #fff;">
-                      </div>
-                      <div class="client-thumb-detail" style="text-align:center;">
-                          <p class="mb-1 mt-2 fw-bold text-primary fs-20">${review.author_name}</p>
-                          <div class="mb-2" style="font-size: 14px;">${starsHtml} <span style="color:#999; margin-left: 5px;">${review.relative_time_description}</span></div>
-                          <p class="mb-0 fw-medium text-primary pb-2 client-review-txt" style="font-size: 14px; text-align: left;">${text}${readMoreHtml}</p>
-                      </div>
-                  </div>
-                `;
-            wrapper.innerHTML += slideHtml;
-          });
-          initSwiper();
-        }
+        renderReviews();
       }
     });
   </script>
