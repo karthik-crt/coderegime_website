@@ -3550,12 +3550,20 @@ a>.teck-item:hover::after {
   background-color: #f8f9fa;
 }
 
-.text-sky {
-  color: #007bff;
+.text-sky,
+.ourclients .text-sky {
+  color: #0056b3 !important;
 }
 
-.text-primary {
-  color: #3c3852;
+.text-primary,
+.ourclients .text-primary,
+.client-thumb-box .text-primary {
+  color: #2b273d !important;
+}
+
+.review-time {
+  color: #555555 !important;
+  margin-left: 5px;
 }
 
 .fs-18 { font-size: 18px; }
