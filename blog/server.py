@@ -17,7 +17,7 @@ def get_featured_image(post):
     """Extract featured image from WordPress v1 post data"""
     if post.get('featured_image'):
         return post['featured_image']
-    return 'https://coderegime.com/images/logo.png'
+    return 'https://www.coderegimetechnologies.com/images/color-logo.png'
 
 @app.route('/blog/<slug>')
 def serve_blog_post(slug):
@@ -58,7 +58,7 @@ def serve_blog_post(slug):
         title = "Code Regime Blog - Tech Insights & Dev Updates"
         description = "Explore expert articles on mobile app development, web apps, SaaS, AI tools, and clone scripts. Stay updated with Code Regime Technologies' blog page."
         keywords = "Code Regime, blog, software development"
-        image = "https://coderegime.com/images/logo.png"
+        image = "https://www.coderegimetechnologies.com/images/color-logo.png"
         content = "<p>Loading content...</p>"
 
     # 3. Read the post.html template
