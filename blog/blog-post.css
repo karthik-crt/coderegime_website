@@ -219,7 +219,8 @@ a:hover {
 
 .post-featured-image-container img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 760 / 600;
+    object-fit: cover;
     display: block;
 }
 

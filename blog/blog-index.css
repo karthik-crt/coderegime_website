@@ -529,14 +529,14 @@
 }
 
 .featured-post-image {
-    height: 260px;
+    aspect-ratio: 760 / 600;
     position: relative;
     overflow: hidden;
 }
 
 @media (min-width: 768px) {
     .featured-post-image {
-        height: 480px;
+        aspect-ratio: 760 / 600;
     }
 }
 
@@ -758,7 +758,7 @@
 
 .post-card-image {
     width: 100%;
-    height: 192px;
+    aspect-ratio: 760 / 600;
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, var(--surface-container) 0%, var(--surface-dim) 100%);
